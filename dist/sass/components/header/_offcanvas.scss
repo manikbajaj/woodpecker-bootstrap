@@ -1,0 +1,554 @@
+// =============================>
+//  All Styling for OffCanvas Menu
+// <============================
+
+// =============================>
+//  Setting The Variables For The Sheet
+// <============================
+
+// Offcanvas Menu Classes
+//
+// Classes for Offcanvas Menu
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-offCanvas | Class added to the the navbar to enable the offcanvas menu on the mobile |
+// | wdpk-offcanvas-plus | Added to the `+` icon container for toggling the menu items |
+// | wdpk-social-offcanvas | Added to social icons on the offcanvas menu |
+// | wdpk-offcanvas-overlay | Class added to the overlay element of the offcanvas menu |
+//
+// Styleguide CSS Classes.Offcanvas Menu
+
+// TODO: IMPORTANT: Distance from Top and Left Needs to be changed and a better method of positioning needs to be adopted for the close button on the OffCanvas Menu
+
+
+.wdpk-navbar, .wdpk-offCanvas
+{
+	@if ($wdpk-enable-on-desktop == true)
+	{
+		@include wdpk-shadow($wdpk-off-canvas-shadow);
+	}
+	@include from ($wdpk-mobile-header-breakpoint)
+	{
+		.wdpk-mobile-menu-close
+		{
+			display: none;
+		}
+	}
+
+
+	// Mobile Menu Query - Offcanvas
+	@include to($wdpk-mobile-header-breakpoint)
+	{
+
+		height:           100%;
+		width:            0px;
+		position:         fixed;
+		top:              0;
+		@if ($wdpk-off-canvas-open-from == right)
+		{
+			right: 0;
+		} @else if ($wdpk-off-canvas-open-from == left)
+		{
+			left:  0;
+		}
+		display:          flex !important;
+		overflow-x:       hidden;
+		overflow-y:       scroll;
+		background-color: $wdpk-off-canvas-background-color !important;
+		font-size:        $wdpk-off-canvas-font-size;
+		color:            $wdpk-off-canvas-font-color;
+
+
+		.wdpk-offcanvas-active
+		{
+			display:    block !important;
+			visibility: visible !important;
+			opacity:    1 !important;
+			overflow:   hidden;
+		}
+
+		.wdpk-mobile-menu-close
+		{
+			position:         absolute;
+			display:          inline;
+			top:              $wdpk-off-canvas-close-button-top;
+			right:            $wdpk-off-canvas-close-button-right;
+			color:            $wdpk-off-canvas-close-button-color;
+			background-color: $wdpk-off-canvas-close-button-background-color;
+			padding:          $wdpk-off-canvas-close-button-padding;
+			z-index:          100;
+		}
+
+		.container
+		{
+			.row
+			{
+				@include to($wdpk-mobile-header-breakpoint)
+				{
+					height: auto !important;
+				}
+			}
+		}
+
+		.wdpk-nav-branding
+		{
+			text-align: $wdpk-off-canvas-logo-align;
+			margin-top: $wdpk-off-canvas-section-margin;
+		}
+
+
+		.wdpk-nav-wrap
+		{
+
+			height:          auto;
+			justify-content: $wdpk-off-canvas-menu-align !important;
+			margin-top:      $wdpk-off-canvas-section-margin;
+
+			.wdpk-menu-extras
+			{
+				@if ($wdpk-off-canvas-display-extras == false)
+				{
+					display: none !important;
+				}
+				padding: ($wdpk-off-canvas-top-bottom-padding * 4) 0px;
+
+				a
+				{
+					padding:       0px; // Reset Padding From the Desktop View
+					padding-right: $wdpk-off-canvas-extras-padding;
+				}
+
+				a, a i
+				{
+					font-size: $wdpk-off-canvas-font-size;
+					color:     $wdpk-off-canvas-font-color;
+				}
+			}
+
+
+			.wdpk-nav
+			{
+				width: 100%;
+
+				.wdpk-menu
+				{
+					color:          $wdpk-off-canvas-font-color;
+					flex-direction: column;
+
+
+					i
+					{
+						color:      scale-color($wdpk-off-canvas-font-color, $lightness: 40%, $saturation: 0%);;
+						font-size:  $wdpk-off-canvas-font-size * .80;
+						transition: all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+						transform:  rotate(0deg);
+
+					}
+
+					.wdpk-plus-transdform
+					{
+						transform: rotate(45deg);
+					}
+
+					.wdpkDropdownCaret
+					{
+						display: none;
+					}
+
+
+					li
+					{
+						display:       block;
+						// Resetting all Transitions, Animations And Transformations
+						@include wdpk-removeAnimations;
+						text-align:    $wdpk-off-canvas-menu-text-align;
+						font-size:     $wdpk-off-canvas-font-size;
+						margin-bottom: 0px;
+
+
+						> a
+						{
+							display: block;
+							width:   100%;
+						}
+
+						a
+						{
+							color:          $wdpk-off-canvas-font-color;
+							display:        block;
+							padding:        0px auto;
+							padding-top:    $wdpk-off-canvas-top-bottom-padding;
+							padding-bottom: $wdpk-off-canvas-top-bottom-padding;
+							@if ($wdpk-off-canvas-separator == true)
+							{
+								border-bottom: $wdpk-off-canvas-separator-weight solid $wdpk-off-canvas-separator-color;
+							}
+
+							else
+							{
+								border-bottom: none;
+							}
+
+							&:hover
+							{
+								color: $wdpk-off-canvas-font-hover-color;
+							}
+
+						}
+
+						.wdpk-hasDropdown
+						{
+
+							.wdpk-offcanvas-plus
+							{
+								display:     inline-block !important;
+								float:       right !important;
+								text-align:  right;
+								padding-top: $wdpk-off-canvas-font-size * .25;
+							}
+						}
+
+						.wdpk-menu-container
+						{
+							@include wdpk-removeAnimations;
+							position:      unset !important;
+							text-align:    $wdpk-off-canvas-menu-text-align;
+							visibility:    hidden;
+							opacity:       0;
+							box-shadow:    none;
+							width:         100%;
+							border:        none; // Resetting Border
+							display:       none;
+							margin-bottom: 0px;
+							//transition:    all 1s ease !important;
+
+
+							.wdpk-dropDown
+							{
+								li
+								{
+									text-align: left;
+
+									.wdpk-dropDown-item
+									{
+										background: none;
+										font-size:  $wdpk-off-canvas-font-size * .95;
+										padding:    $wdpk-off-canvas-top-bottom-padding auto;
+										color:      $wdpk-off-canvas-font-color;
+
+
+										&:hover
+										{
+											color:        $wdpk-off-canvas-font-hover-color;
+											padding-left: $wdpk-dropdown-menu-item-left-right-padding;
+										}
+									}
+
+								}
+
+								.wdpk-hasSubMenu
+								{
+									.wdpk-submenu-caret
+									{
+										display: none !important;
+									}
+
+									.wdpk-menu-container
+									{
+
+										.wdpk-dropDown
+										{
+
+											li
+											{
+												padding-left:  $wdpk-padding-menu-items * 2;
+												padding-right: $wdpk-padding-menu-items * 2;
+
+											}
+
+										}
+									}
+
+									.wdpk-offcanvas-plus
+									{
+										display:    inline-block !important;
+										text-align: right;
+									}
+
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+
+		// SCSS Specificaly for Mega Menu
+		.wdpk-has-mega-menu
+		{
+
+			.wdpk-mega-menu
+			{
+				margin-top: 0px;
+
+				.wdpk-mega-menu-wrapper
+				{
+					background: none;
+					border:     none;
+					padding:    0px;
+					box-shadow: none;
+
+					.wdpk-mega-menu-section
+					{
+						border:  none;
+						padding: auto $wdpk-padding-menu-items;
+
+
+						.wdpk-mega-title
+						{
+							display: none;
+						}
+
+						.wdpk-dropDown
+						{
+							.wdpk-dropDown-item
+							{
+
+							}
+						}
+
+
+					}
+				}
+			}
+		}
+
+		// CSS for the OffCanvas Menu
+		.wdpk-social-offcanvas
+		{
+
+			display:         -webkit-box;
+			display:         -ms-flexbox;
+			display:         flex;
+			justify-content: center;
+			margin-top:      $wdpk-off-canvas-section-margin;
+
+			a
+			{
+				display:     inline-flex;
+				padding:     $wdpk-off-canvas-social-padding;
+				margin:      0px $wdpk-off-canvas-social-margin;
+				font-size:   $wdpk-off-canvas-social-size;
+				line-height: $wdpk-off-canvas-social-size;
+				width:       $wdpk-off-canvas-social-size * 2.5;
+				height:      $wdpk-off-canvas-social-size * 2.5;
+				//transition:  all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+				overflow:    hidden;
+				@if ($wdpk-off-canvas-social-shape == square)
+				{
+					border-radius: 0;
+				} @else if ($wdpk-off-canvas-social-shape == circle)
+				{
+					border-radius: 50%;
+				} @else if ($wdpk-off-canvas-social-shape == round)
+				{
+					border-radius: 2%;
+				}
+
+
+				@if ($wdpk-off-canvas-social-shadow == true)
+				{
+					&:hover
+					{
+						@include wdpk-shadow($wdpk-off-canvas-shadow)
+					}
+				}
+
+				&:hover i
+				{
+					@include bounceInDown(
+							$duration: .8s,
+							$count:    1,
+							$delay:    0s,
+							$function: ease,
+							$fill:     both
+					);
+				}
+
+				span
+				{
+					width:      100%;
+					text-align: center;
+				}
+
+				i
+				{
+					color: #ffffff;
+
+				}
+			}
+		}
+
+	}
+
+}
+
+
+.wdpk-offcanvas-overlay
+{
+	@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+	@include to($wdpk-mobile-header-breakpoint)
+	{
+		position:         fixed;
+		top:              0;
+		@if ($wdpk-off-canvas-open-from == right)
+		{
+			right: $wdpk-off-canvas-width;
+		} @else if ($wdpk-off-canvas-open-from == left)
+		{
+			left:  $wdpk-off-canvas-width;
+		}
+		width:            100%;
+		height:           100%;
+		background-color: rgba(0, 0, 0, .85);
+		z-index:          1003;
+	}
+}
+
+.wdpk-social-offcanvas
+{
+	@if ($wdpk-enable-on-desktop == false)
+	{
+		@include from($wdpk-mobile-header-breakpoint)
+		{
+			display: none;
+		}
+	} @else if ($wdpk-enable-on-desktop == true)
+	{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+
+
+// =============================>
+//  Abstraction Layer For OffSide
+// <============================
+/* offside-js 1.4.0 26-03-2018
+* Minimal JavaScript kit without library dependencies to push things off-canvas using just class manipulation
+* https://github.com/toomuchdesign/offside.git
+*
+* by Andrea Carraro
+* Available under the MIT license
+*/
+
+
+@include to($wdpk-mobile-header-breakpoint)
+{
+	/* Off-canvas element CSS */
+	.offside
+	{
+		position:                   fixed; /* Does not play well with some old browsers (see: README) */
+		width:                      $wdpk-off-canvas-width;
+		height:                     100%;
+		top:                        0;
+		z-index:                    9999;
+		overflow:                   auto;
+		-webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+	}
+
+	/* Left off-canvas elements default status: out of the page */
+	.offside,
+	.offside--left
+	{
+		left: -$wdpk-off-canvas-width;
+	}
+
+	/* Right off-canvas elements default status: out of the page */
+	.offside--right
+	{
+		left:  auto;
+		right: -$wdpk-off-canvas-width;
+	}
+
+	/*
+	 * Left off-canvas element is open:
+	 * - off-canvas element slides in
+	 * - container elements slides out
+	 */
+	.offside--left.is-open,
+	.offside-js--is-left .offside-sliding-element
+	{
+		transform: translate3d($wdpk-off-canvas-width, 0, 0);
+	}
+
+	/*
+	 * Right off-canvas element is open:
+	 * - off-canvas element slides in
+	 * - container elements slides out
+	 */
+	.offside--right.is-open,
+	.offside-js--is-right .offside-sliding-element
+	{
+		transform: translate3d(-$wdpk-off-canvas-width, 0, 0);
+	}
+
+	/* Elements Transitions */
+	.offside-js--interact .offside,
+	.offside-js--interact .offside-sliding-element
+	{
+		transition:                  transform .2s cubic-bezier(.16, .68, .43, .99);
+
+		/* improves performance issues on mobile*/
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective:         1000;
+	}
+
+	/* Body overflow */
+	.offside-js--init
+	{
+		overflow-x: hidden;
+	}
+
+
+	/* Fallback movements for browser not supporting CSS 3d Transitions
+	----------------------------------------------- */
+
+	/* Modernizr false negative csstransforms3d fix, reset CSS 3d Transitions */
+	.no-csstransforms3d .offside
+	{
+		-webkit-transform: translate3d(0, 0, 0);
+		transform:         translate3d(0, 0, 0);
+	}
+
+	.no-csstransforms3d .offside-sliding-element
+	{
+		overflow-x: hidden;
+		position:   relative;
+	}
+
+	/* Element is open: off-canvas element slides in */
+	.no-csstransforms3d .offside--left.is-open
+	{
+		left: 0;
+	}
+
+	.no-csstransforms3d .offside--right.is-open
+	{
+		right: 0;
+	}
+
+	/* Element is open: container elements slide out */
+	.no-csstransforms3d > .offside-js--is-left .offside-sliding-element
+	{
+		right: -$wdpk-off-canvas-width;
+	}
+
+	.no-csstransforms3d > .offside-js--is-right .offside-sliding-element
+	{
+		left: -$wdpk-off-canvas-width;
+	}
+}

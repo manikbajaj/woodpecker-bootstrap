@@ -1,0 +1,435 @@
+// =============================>
+// File To Override All Bootstrap Variables
+// <==============================
+
+// =============================>
+//  Grid Variables
+// <============================
+$grid-columns: $wdpk-grid-columns !default;
+$grid-gutter-width: $wdpk-grid-gutter-width !default;
+
+// =============================>
+// Bootstrap base colors being overriden within WoodPecker
+// Variables declared for the same colors.
+// <============================
+$blue: $wdpk-blue !default;
+$indigo: $wdpk-indigo !default;
+$purple: $wdpk-purple !default;
+$pink: $wdpk-pink !default;
+$red: $wdpk-red !default;
+$orange: $wdpk-orange !default;
+$yellow: $wdpk-yellow !default;
+$green: $wdpk-green !default;
+$teal: $wdpk-teal !default;
+$cyan: $wdpk-cyan !default;
+
+
+// =============================>
+// Override Gray Color Values From Bootstrap
+// <============================
+$white: $wdpk-white !default;
+$gray-100: $wdpk-gray-100 !default;
+$gray-200: $wdpk-gray-200 !default;
+$gray-300: $wdpk-gray-300 !default;
+$gray-400: $wdpk-gray-400 !default;
+$gray-500: $wdpk-gray-500 !default;
+$gray-600: $wdpk-gray-600 !default;
+$gray-700: $wdpk-gray-700 !default;
+$gray-800: $wdpk-gray-800 !default;
+$gray-900: $wdpk-gray-900 !default;
+$black: $wdpk-black !default;
+
+
+// =============================>
+// Overriding the Bootstrap Colors With the
+// WoodPecker Variables
+// <============================
+$primary: $wdpk-primary-color !default;
+$secondary: $wdpk-secondary !default;
+$success: $wdpk-success !default;
+$info: $wdpk-info !default;
+$warning: $wdpk-warning !default;
+$danger: $wdpk-danger !default;
+$light: $wdpk-light !default;
+$dark: $wdpk-dark !default;
+
+
+// =============================>
+// Overriding the Bootstrap Body Color Variables
+// <============================
+$body-bg: $wdpk-body-bg !default;
+$body-color: $wdpk-body-color !default;
+
+
+// =============================>
+//  Overidding Bootstap Component Variables
+// <============================
+$line-height-lg: $wdpk-line-height-lg !default;
+$line-height-sm: $wdpk-line-height-sm !default;
+
+$border-width: $wdpk-border-width !default;
+$border-color: $wdpk-border-color !default;
+
+$border-radius: $wdpk-border-radius !default;
+$border-radius-lg: $wdpk-border-radius-lg !default;
+$border-radius-sm: $wdpk-border-radius-sm !default;
+
+$box-shadow-sm: $wdpk-box-shadow-sm !default;
+$box-shadow: $wdpk-box-shadow !default;
+$box-shadow-lg: $wdpk-box-shadow-lg !default;
+
+$component-active-color: $wdpk-component-active-color !default;
+$component-active-bg: $wdpk-component-active-bg !default;
+
+$caret-width: $wdpk-caret-width !default;
+
+$transition-base: $wdpk-transition-base !default;
+$transition-fade: $wdpk-transition-fade !default;
+$transition-collapse: $wdpk-transition-collapse !default;
+
+
+// =============================>
+//  Overriding Paragraphs Variables
+// Style p element.
+// <============================
+$paragraph-margin-bottom: $wdpk-paragraph-margin-bottom !default;
+
+// =============================>
+//  Overriding Links Variables
+// <============================
+$link-color: $wdpk-link-color !default;
+$link-decoration: $wdpk-link-decoration !default;
+$link-hover-color: $wdpk-link-hover-color !default;
+$link-hover-decoration: $wdpk-link-hover-decoration !default;
+
+
+// =============================>
+//  Overriding Fonts Variables
+// <============================
+$form-group-margin-bottom: $wdpk-form-group-margin-bottom !default;
+$font-family-sans-serif: $wdpk-font-family-sans-serif !default;
+$font-family-monospace: $wdpk-font-family-monospace !default;
+$font-family-base: $wdpk-font-family-base !default;
+
+$font-size-base: $wdpk-font-size-base !default;
+$font-size-lg: $wdpk-font-size-lg !default;
+$font-size-sm: $wdpk-font-size-sm !default;
+
+$font-weight-light: $wdpk-font-weight-light !default;
+$font-weight-normal: $wdpk-font-weight-normal !default;
+$font-weight-bold: $wdpk-font-weight-bold !default;
+
+$font-weight-base: $wdpk-font-weight-base !default;
+$line-height-base: $wdpk-line-height-base !default;
+
+$h1-font-size: $wdpk-h1-font-size !default;
+$h2-font-size: $wdpk-h2-font-size !default;
+$h3-font-size: $wdpk-h3-font-size !default;
+$h4-font-size: $wdpk-h4-font-size !default;
+$h5-font-size: $wdpk-h5-font-size !default;
+$h6-font-size: $wdpk-h6-font-size !default;
+$font-weight-base: $wdpk-font-weight-normal !default;
+$line-height-base: $wdpk-line-height-base !default;
+$headings-margin-bottom: $wdpk-headings-margin-bottom !default;
+$headings-font-family: $wdpk-headings-font-family !default;
+$headings-font-weight: $wdpk-headings-font-weight !default;
+$headings-line-height: $wdpk-headings-line-height !default;
+$headings-color: $wdpk-headings-color !default;
+
+$display1-size: $wdpk-display1-size !default;
+$display2-size: $wdpk-display2-size !default;
+$display3-size: $wdpk-display3-size !default;
+$display4-size: $wdpk-display4-size !default;
+
+$display1-weight: $wdpk-display1-weight !default;
+$display2-weight: $wdpk-display2-weight !default;
+$display3-weight: $wdpk-display3-weight !default;
+$display4-weight: $wdpk-display4-weight !default;
+$text-muted: $wdpk-text-muted !default;
+
+// =============================>
+//  Overridding Button+ Input Variables
+// <============================
+$input-btn-padding-y: $wdpk-input-btn-padding-y !default;
+$input-btn-padding-x: $wdpk-input-btn-padding-x !default;
+$input-btn-padding-y-sm: $wdpk-input-btn-padding-y-sm !default;
+$input-btn-padding-x-sm: $wdpk-input-btn-padding-x-sm !default;
+$input-btn-font-size-sm: $wdpk-input-btn-font-size-sm !default;
+$input-btn-line-height-sm: $wdpk-input-btn-line-height-sm !default;
+$input-btn-padding-y-lg: $wdpk-input-btn-padding-y-lg !default;
+$input-btn-padding-x-lg: $wdpk-input-btn-padding-x-lg !default;
+$input-btn-font-size-lg: $wdpk-input-btn-font-size-lg !default;
+$input-btn-line-height-lg: $wdpk-input-btn-line-height-lg !default;
+$input-btn-font-family: $wdpk-input-btn-font-family !default;
+$input-btn-font-size: $wdpk-input-btn-font-size !default;
+$input-btn-line-height: $wdpk-input-btn-line-height !default;
+$input-btn-focus-width: $wdpk-input-btn-focus-width !default;
+$input-btn-focus-color: $wdpk-input-btn-focus-color !default;
+$input-btn-focus-box-shadow: $wdpk-input-btn-focus-box-shadow !default;
+$input-btn-border-width: $wdpk-input-btn-border-width !default;
+
+
+// =============================>
+//  Overridding Buttons
+// <============================
+$btn-padding-y: $wdpk-btn-padding-y !default;
+$btn-padding-x: $wdpk-btn-padding-x !default;
+$btn-font-family: $wdpk-btn-font-family !default;
+$btn-font-size: $wdpk-btn-font-size !default;
+$btn-line-height: $wdpk-btn-line-height !default;
+
+$btn-padding-y-sm: $wdpk-btn-padding-y-sm !default;
+$btn-padding-x-sm: $wdpk-btn-padding-x-sm !default;
+$btn-font-size-sm: $wdpk-btn-font-size-sm !default;
+$btn-line-height-sm: $wdpk-btn-line-height-sm !default;
+
+$btn-padding-y-lg: $wdpk-btn-padding-y-lg !default;
+$btn-padding-x-lg: $wdpk-btn-padding-x-lg !default;
+$btn-font-size-lg: $wdpk-btn-font-size-lg !default;
+$btn-line-height-lg: $wdpk-btn-line-height-lg !default;
+
+$btn-border-width: $wdpk-btn-border-width !default;
+
+$btn-font-weight: $wdpk-btn-font-weight !default;
+$btn-box-shadow: $wdpk-btn-box-shadow !default;
+$btn-focus-width: $wdpk-btn-focus-width !default;
+$btn-focus-box-shadow: $wdpk-btn-focus-box-shadow !default;
+$btn-disabled-opacity: $wdpk-btn-disabled-opacity !default;
+$btn-active-box-shadow: $wdpk-btn-active-box-shadow !default;
+
+$btn-link-disabled-color: $wdpk-btn-link-disabled-color !default;
+
+$btn-block-spacing-y: $wdpk-btn-block-spacing-y !default;
+
+// =============================>
+//  Overriding Form variables
+// <============================
+$label-margin-bottom: $wdpk-label-margin-bottom !default;
+$input-bg: $wdpk-input-bg !default;
+$input-disabled-bg: $wdpk-input-disabled-bg !default;
+$input-color: $wdpk-input-color !default;
+$input-border-color: $wdpk-input-border-color !default;
+$input-box-shadow: $wdpk-input-box-shadow !default;
+$input-placeholder-color: $wdpk-input-placeholder-color !default;
+$input-transition: $wdpk-input-transition !default;
+$input-border-width: $wdpk-input-border-width !default;
+$input-border-radius: $wdpk-input-border-radius !default;
+$input-border-radius-lg: $wdpk-input-border-radius-lg !default;
+$input-border-radius-sm: $wdpk-input-border-radius-sm !default;
+$input-focus-bg: $wdpk-input-focus-bg !default;
+$input-focus-border-color: $wdpk-input-focus-border-color !default;
+$input-focus-color: $wdpk-input-focus-color !default;
+$input-focus-width: $wdpk-input-focus-width !default;
+$input-focus-box-shadow: $wdpk-input-focus-box-shadow !default;
+$input-plaintext-color: $wdpk-input-plaintext-color !default;
+
+$wdpk-label-margin-bottom: $label-margin-bottom !default;
+
+$input-padding-y: $wdpk-input-padding-y !default;
+$input-padding-x: $wdpk-input-padding-x !default;
+$input-font-family: $wdpk-input-font-family !default;
+$input-font-size: $wdpk-input-font-size !default;
+$input-font-weight: $wdpk-input-font-weight !default;
+$input-line-height: $wdpk-input-line-height !default;
+
+$input-padding-y-sm: $wdpk-input-padding-y-sm !default;
+$input-padding-x-sm: $wdpk-input-padding-x-sm !default;
+$input-font-size-sm: $wdpk-input-font-size-sm !default;
+$input-line-height-sm: $wdpk-input-line-height-sm !default;
+
+$input-padding-y-lg: $wdpk-input-padding-y-lg !default;
+$input-padding-x-lg: $wdpk-input-padding-x-lg !default;
+$input-font-size-lg: $wdpk-input-font-size-lg !default;
+$input-line-height-lg: $wdpk-input-line-height-lg !default;
+
+
+// =============================>
+//  Component Variables
+// <============================
+$breadcrumb-divider: $wdpk-breadcrumb-divider !default;
+
+// =============================>
+//  Bootstrap Card Variables
+// <============================
+$card-spacer-y: $wdpk-card-spacer-y !default;
+$card-spacer-x: $wdpk-card-spacer-x !default;
+$card-border-width: $wdpk-card-border-width !default;
+$card-border-radius: $wdpk-card-border-radius !default;
+$card-border-color: $wdpk-card-border-color !default;
+$card-inner-border-radius: $wdpk-card-inner-border-radius !default;
+$card-img-overlay-padding: $wdpk-card-img-overlay-padding !default;
+
+$card-group-margin: $wdpk-card-group-margin !default;
+$card-deck-margin: $wdpk-card-deck-margin !default;
+
+$card-columns-count: $wdpk-card-columns-count !default;
+$card-columns-gap: $wdpk-card-columns-gap !default;
+$card-columns-margin: $wdpk-card-columns-margin !default;
+
+// =============================>
+//  Bootstrap Dropdown Variables
+// <============================
+$dropdown-min-width: $wdpk-dropdown-min-width !default;
+$dropdown-padding-y: $wdpk-dropdown-padding-y !default;
+$dropdown-spacer: $wdpk-dropdown-spacer !default;
+$dropdown-font-size: $wdpk-dropdown-font-size !default;
+$dropdown-color: $wdpk-dropdown-color !default;
+$dropdown-bg: $wdpk-dropdown-bg !default;
+$dropdown-border-color: $wdpk-dropdown-border-color !default;
+$dropdown-border-radius: $wdpk-dropdown-border-radius !default;
+$dropdown-border-width: $wdpk-dropdown-border-width !default;
+$dropdown-divider-bg: $wdpk-dropdown-divider-bg !default;
+$dropdown-divider-margin-y: $wdpk-dropdown-divider-margin-y !default;
+$dropdown-box-shadow: $wdpk-dropdown-box-shadow !default;
+
+$dropdown-link-color: $wdpk-dropdown-link-color !default;
+$dropdown-link-hover-color: $wdpk-dropdown-link-hover-color !default;
+$dropdown-link-hover-bg: $wdpk-dropdown-link-hover-bg !default;
+
+$dropdown-link-active-color: $wdpk-dropdown-link-active-color !default;
+$dropdown-link-active-bg: $wdpk-dropdown-link-active-bg !default;
+
+$dropdown-link-disabled-color: $wdpk-dropdown-link-disabled-color !default;
+
+$dropdown-item-padding-y: $wdpk-dropdown-item-padding-y !default;
+$dropdown-item-padding-x: $wdpk-dropdown-item-padding-x !default;
+
+$dropdown-header-color: $wdpk-dropdown-header-color !default;
+
+
+// =============================>
+// Progress Bars Variables
+// <============================
+$progress-height: $wdpk-progress-height !default;
+$progress-font-size: $wdpk-progress-font-size !default;
+$progress-bg: $wdpk-progress-bg !default;
+$progress-border-radius: $wdpk-progress-border-radius !default;
+$progress-box-shadow: $wdpk-progress-box-shadow !default;
+$progress-bar-color: $wdpk-progress-bar-color !default;
+$progress-bar-bg: $wdpk-progress-bar-bg !default;
+$progress-bar-animation-timing: $wdpk-progress-bar-animation-timing !default;
+$progress-bar-transition: $wdpk-progress-bar-transition !default;
+
+
+// =============================>
+//  Pagination Variables
+// <============================
+$pagination-padding-y: $wdpk-pagination-padding-y !default;
+$pagination-padding-x: $wdpk-pagination-padding-x !default;
+$pagination-padding-y-sm: $wdpk-pagination-padding-y-sm !default;
+$pagination-padding-x-sm: $wdpk-pagination-padding-x-sm !default;
+$pagination-padding-y-lg: $wdpk-pagination-padding-y-lg !default;
+$pagination-padding-x-lg: $wdpk-pagination-padding-x-lg !default;
+$pagination-line-height: $wdpk-pagination-line-height !default;
+$pagination-color: $wdpk-pagination-color !default;
+$pagination-bg: $wdpk-pagination-bg !default;
+$pagination-border-width: $wdpk-pagination-border-width !default;
+$pagination-border-color: $wdpk-pagination-border-color !default;
+$pagination-focus-box-shadow: $wdpk-pagination-focus-box-shadow !default;
+$pagination-focus-outline: $wdpk-pagination-focus-outline !default;
+$pagination-hover-color: $wdpk-pagination-hover-color !default;
+$pagination-hover-bg: $wdpk-pagination-hover-bg !default;
+$pagination-hover-border-color: $wdpk-pagination-hover-border-color !default;
+$pagination-active-color: $wdpk-pagination-active-color !default;
+$pagination-active-bg: $wdpk-pagination-active-bg !default;
+$pagination-active-border-color: $wdpk-pagination-active-border-color !default;
+$pagination-disabled-color: $wdpk-pagination-disabled-color !default;
+$pagination-disabled-bg: $wdpk-pagination-disabled-bg !default;
+$pagination-disabled-border-color: $wdpk-pagination-disabled-border-color !default;
+
+
+// =============================>
+//  Jumbotron
+// <============================
+$jumbotron-padding: $wdpk-jumbotron-padding !default;
+$jumbotron-color: $wdpk-jumbotron-color !default;
+
+
+// =============================>
+//  Tables
+// <============================
+$table-cell-padding: $wdpk-table-cell-padding !default;
+$table-cell-padding-sm: $wdpk-table-cell-padding-sm !default;
+
+$table-color: $wdpk-table-color !default;
+$table-bg: $wdpk-table-bg !default;
+$table-accent-bg: $wdpk-table-accent-bg !default;
+$table-hover-color: $wdpk-table-hover-color !default;
+$table-hover-bg: $wdpk-table-hover-bg !default;
+$table-active-bg: $wdpk-table-active-bg !default;
+
+$table-border-width: $wdpk-table-border-width !default;
+$table-border-color: $wdpk-table-border-color !default;
+
+$table-head-bg: $wdpk-table-head-bg !default;
+$table-head-color: $wdpk-table-head-color !default;
+
+$table-dark-color: $wdpk-table-dark-color !default;
+$table-dark-bg: $wdpk-table-dark-bg !default;
+$table-dark-accent-bg: $wdpk-table-dark-accent-bg !default;
+$table-dark-hover-color: $wdpk-table-dark-hover-color !default;
+$table-dark-hover-bg: $wdpk-table-dark-hover-bg !default;
+$table-dark-border-color: $wdpk-table-dark-border-color !default;
+$table-dark-color: $wdpk-table-dark-color !default;
+
+$table-striped-order: $wdpk-table-striped-order !default;
+
+$table-caption-color: $wdpk-table-caption-color !default;
+
+$table-bg-level: $wdpk-table-bg-level !default;
+$table-border-level: $wdpk-table-border-level !default;
+
+
+// =============================>
+//  Carousel
+// <============================
+
+$carousel-control-color: $wdpk-carousel-control-color;
+$carousel-control-width: $wdpk-carousel-control-width;
+$carousel-control-opacity: $wdpk-carousel-control-opacity;
+$carousel-control-hover-opacity: $wdpk-carousel-control-hover-opacity;
+$carousel-control-transition: $wdpk-carousel-control-transition;
+
+$carousel-indicator-width: $wdpk-carousel-indicator-width;
+$carousel-indicator-height: $wdpk-carousel-indicator-height;
+$carousel-indicator-hit-area-height: $wdpk-carousel-indicator-hit-area-height;
+$carousel-indicator-spacer: $wdpk-carousel-indicator-spacer;
+$carousel-indicator-active-bg: $wdpk-carousel-indicator-active-bg;
+$carousel-indicator-transition: $wdpk-carousel-indicator-transition;
+
+$carousel-caption-width: $wdpk-carousel-caption-width;
+$carousel-caption-color: $wdpk-carousel-caption-color;
+
+$carousel-control-icon-width: $wdpk-carousel-control-icon-width;
+
+$carousel-transition-duration: $wdpk-carousel-transition-duration;
+$carousel-transition: $wdpk-carousel-transition;
+
+
+// =============================>
+//  Badges
+// <============================
+
+$badge-font-size : $wdpk-badge-font-size;
+$badge-font-weight : $wdpk-badge-font-weight;
+$badge-padding-y : $wdpk-badge-padding-y;
+$badge-padding-x : $wdpk-badge-padding-x;
+$badge-border-radius : $wdpk-badge-border-radius;
+
+$badge-transition : $wdpk-badge-transition;
+$badge-focus-width : $wdpk-badge-focus-width;
+
+$badge-pill-padding-x : $wdpk-badge-pill-padding-x;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius : $wdpk-badge-pill-border-radius;
+
+// =============================>
+//  Alerts
+// <============================
+$alert-padding-y: $wdpk-alert-padding-y;
+$alert-padding-x: $wdpk-alert-padding-x;
+$alert-margin-bottom: $wdpk-alert-margin-bottom;
+$alert-border-radius: $wdpk-alert-border-radius;
+$alert-link-font-weight: $wdpk-alert-link-font-weight;
+$alert-border-width: $wdpk-alert-border-width;

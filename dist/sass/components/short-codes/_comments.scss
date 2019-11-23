@@ -1,0 +1,70 @@
+// =============================>
+//  Style Partial For Comments Shortcode
+// <============================
+
+.wdpk-comments
+{
+	.wdpk-comments-section
+	{
+		background-color: $wdpk-comments-bg-color;
+		border-radius: $wdpk-border-radius;
+
+
+		.wdpk-comment-primary
+		{
+			margin: 30px auto;
+
+		}
+
+		.wdpk-comment-reply
+		{
+			margin-top:    calc(30px - 1rem);
+			margin-bottom: 30px;
+		}
+
+		.wdpk-comment-profile
+		{
+			text-align: center;
+
+			img
+			{
+				width: $wdpk-comments-author-img-width;
+				border-radius: $wdpk-comments-author-img-border-radius;
+			}
+		}
+
+		.wdpk-comment-text
+		{
+			.wdpk-comment-title
+			{
+				margin-bottom: 8px;
+				font-size:     $wdpk-font-size-base * 1.2;
+			}
+
+			.wdpk-comment-date
+			{
+				font-size:     $wdpk-font-size-base * .9;
+				margin-bottom: 15px;
+			}
+
+			.wdpk-comment-text
+			{
+				margin-bottom: 0;
+			}
+
+			.wdpk-comment-reply-link
+			{
+				margin-top: 15px;
+				display: inline-block;
+				@include wdpk-transitions(color, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+				
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+	}
+
+
+}

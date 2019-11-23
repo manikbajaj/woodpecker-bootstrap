@@ -1,0 +1,36 @@
+// =============================>
+//  Breadcrump Menu Partial
+// <============================
+
+.breadcrumb.wdpk-breadcrumbs
+{
+	margin-bottom:    $wdpk-global-element-margin;
+	background-color: $wdpk-breadcrumbs-background-color;
+	color: $wdpk-breadcrumbs-font-color;
+	justify-content: $wdpk-breadcrumbs-text-align;
+
+
+	.breadcrumb-item
+	{
+		a
+		{
+			-webkit-transition: all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-moz-transition:    all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-ms-transition:     all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-o-transition:      all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			text-decoration: $wdpk-breadcrumbs-text-decoration;
+
+			&:hover {
+				text-decoration: $wdpk-breadcrumbs-hover-text-decoration;
+				color: $wdpk-breadcrumbs-hover-color;
+			}
+		}
+
+	}
+
+	.breadcrumb-item.active {
+		color: $wdpk-breadcrumbs-font-color;
+	}
+
+}

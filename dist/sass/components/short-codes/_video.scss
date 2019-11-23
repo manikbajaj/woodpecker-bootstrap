@@ -1,0 +1,9 @@
+// =============================>
+//  Styling Partial For Video
+// <============================
+
+// TODO: For colored version come up with light and dark variations for Audio as well as the video
+
+.wdpk-plyr-video-embed {
+	@extend .plyr__video-embed;
+}

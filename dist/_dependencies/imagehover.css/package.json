@@ -1,0 +1,58 @@
+{
+  "_from": "git+https://github.com/ciar4n/imagehover.css.git",
+  "_id": "imagehover.css@2.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/imagehover.css",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "imagehover.css@git+https://github.com/ciar4n/imagehover.css.git",
+    "name": "imagehover.css",
+    "escapedName": "imagehover.css",
+    "rawSpec": "git+https://github.com/ciar4n/imagehover.css.git",
+    "saveSpec": "git+https://github.com/ciar4n/imagehover.css.git",
+    "fetchSpec": "https://github.com/ciar4n/imagehover.css.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/ciar4n/imagehover.css.git#614c0175ab9db17bb78c2471cdaaa1e982ec9b9f",
+  "_spec": "imagehover.css@git+https://github.com/ciar4n/imagehover.css.git",
+  "_where": "/Volumes/Business/apps/woodpecker",
+  "author": "",
+  "browserslist": [
+    "last 1 version"
+  ],
+  "bugs": {
+    "url": "https://github.com/ciar4n/imagehover.css/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "*A Scaleable & Light Image Hover CSS Library*",
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "homepage": "https://github.com/ciar4n/imagehover.css#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "imagehover.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciar4n/imagehover.css.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.0"
+}

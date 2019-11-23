@@ -1,0 +1,49 @@
+// =============================>
+//  Styling Partial for Blockquotes
+// <============================
+
+blockquote.wdpk-blockquote
+{
+	@if ($wdpk-blockquote-align == left)
+	{
+		text-align: left;
+	} @else if ($wdpk-blockquote-align == right)
+	{
+		text-align: right;
+	} @else if ($wdpk-blockquote-align == center)
+	{
+		text-align: center;
+	}
+	@include wdpk-background($wdpk-blockquote-background);
+	@include wdpk-addBorder($wdpk-blockquote-border-map);
+
+	padding:       $wdpk-blockquote-padding;
+	margin-bottom: $wdpk-global-element-margin;
+	color:         $wdpk-blockquote-font-color;
+	position: relative;
+
+
+	p
+	{
+		font-size:     $wdpk-blockquote-font-size;
+		margin-bottom: $wdpk-blockquote-font-size * .5;
+
+		&::before
+		{
+			color:     $wdpk-quote-color;
+			content:   '"';
+			display:   block;
+			font-size: $wdpk-blockquote-font-size * 5;
+			left:      $wdpk-blockquote-padding * .25;
+			position:  absolute;
+			top:       0px;
+		}
+	}
+
+	footer
+	{
+		font-size: $wdpk-blockquote-font-size * .85;
+		color:    scale_color($wdpk-blockquote-font-color, $lightness: 15%);
+	}
+
+}

@@ -1,0 +1,244 @@
+// =============================>
+//  Imoporting Google Fonts
+// <============================
+@import url('https://fonts.googleapis.com/css?family=Kreon:400,600,700&display=swap');
+$wdpk-font-family-sans-serif: 'Poppins', Arial, Helvetica, sans-serif !default;
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$wdpk-primary-color: #D69B60 !default;
+$wdpk-gradient-1: $wdpk-primary-color !default;
+$wdpk-gradient-2: #71532c !default;
+$wdpk-secondary: #231910 !default;
+
+
+// Social Media Colors
+$wdpk-facebook-color: $wdpk-primary-color;
+$wdpk-twitter-color: $wdpk-primary-color;
+$wdpk-google-color: $wdpk-primary-color;
+$wdpk-youtube-color: $wdpk-primary-color;
+$wdpk-linkedin-color: $wdpk-primary-color;
+$wdpk-behance-color: $wdpk-primary-color;
+$wdpk-dribble-color: $wdpk-primary-color;
+$wdpk-pinterest-color: $wdpk-primary-color;
+$wdpk-vimeo-color: $wdpk-primary-color;
+$wdpk-rss-color: $wdpk-primary-color;
+
+// Topbar
+$wdpk-topbar-font-color: #ffffff !default;
+
+// Navigation
+$wdpk-menu-height: 70px !default;
+$wdpk-menu-logo-width: 120px !default;
+$wdpk-hover-effect: (
+							hoverType: 1,
+							paddingBottom: 8px,
+							hoverThickness: 2px,
+							hoverColorType: color,
+							animationType: bottomToTop,
+							animationDistance: 10px,
+							animationDuration: 0.3s,
+							animationDelay: 0s,
+							col1: $wdpk-primary-color,
+							col2: $wdpk-primary-color
+					) !default;
+$wdpk-transparent-menu-font-color-hover: $wdpk-primary-color !default;
+
+// Font Variables
+$wdpk-font-size-base: 1rem !default;
+$wdpk-headings-font-family: 'Kreon', serif;
+$wdpk-headings-font-weight: 600 !default;
+
+
+// Menu variables
+$wdpk-primary-menu-border-map: (
+									   borderTop: false,
+									   borderTopColor: #000000,
+									   borderTopWidth: 0px,
+									   borderTopStyle: solid,
+									   borderRight: false,
+									   borderRightColor: #dddddd,
+									   borderRightWidth: 0px,
+									   borderRightStyle: solid,
+									   borderBottom: false,
+									   borderBottomColor: #000000,
+									   borderBottomWidth: 0px,
+									   borderBottomStyle: solid,
+									   borderLeft: false,
+									   borderLeftColor: #dddddd,
+									   borderLeftWidth: 0px,
+									   borderLeftStyle: solid
+							   ) !default;
+
+$wdpk-menu-align-items: center;
+$wdpk-bottom-bar-enabled: true;
+$wdpk-menu-logo-align: center;
+$wdpk-bottom-height: 60px !default;
+
+// Buttons
+$wdpk-btn-border-radius: 50% !default;
+$wdpk-btn-border-radius-lg: 50% !default;
+$wdpk-btn-border-radius-sm: 50% !default;
+
+// Page Transitions
+$wdpk-page-trans-bg-color: (
+								   backgroundType: gradient,
+								   gradientType: radial,
+								   color1: $wdpk-primary-color,
+								   color2: $wdpk-gradient-2,
+								   degree: 90deg,
+								   backgroundImage: url(../../assets/images/grey.png),
+								   backgroundRepeat: repeat-x,
+								   backgroundHorPos: center,
+								   backgroundVerPos: center,
+								   backgroundSize: initial
+						   ) !default;
+$wdpk-page-trans-spinner-color: #ffffff;
+$wdpk-page-trans-spinner-type: '.spinner-border';
+
+// Page Title
+$wdpk-page-title-top-space: 18rem !default;
+$wdpk-page-title-bottom-space: 12rem !default;
+
+$wdpk-page-title-head-font-size: 3rem !default;
+$wdpk-page-title-head-line-height: 3.5rem !default;
+$wdpk-page-title-head-color: $wdpk-primary-color !default;
+$wdpk-page-title-head-margin-bottom: 1rem !default;
+$wdpk-page-title-head-font-family: 'Kreon', serif !default;
+
+$wdpk-page-title-separator-icon-color: #ffffff !default;
+$wdpk-page-title-separator-margin-bottom: 1.2rem !default;
+$wdpk-page-title-separator-height: 4px !default;
+
+$wdpk-page-title-desc-font-size: 2rem !default;
+$wdpk-page-title-desc-font-family: $wdpk-font-family-sans-serif;
+$wdpk-page-title-desc-line-height: 1.4 !default;
+$wdpk-page-title-desc-color: #eeeeee !default;
+$wdpk-page-title-desc-margin-bottom: 1rem !default;
+
+
+$wdpk-page-title-spearator-bg-map: (
+										   backgroundType: color,
+										   gradientType: linear,
+										   color1: $wdpk-primary-color,
+										   color2: $wdpk-primary-color,
+										   degree: 0deg,
+										   backgroundImage: url(../../assets/images/background-black.jpg),
+										   backgroundRepeat: repeat-x,
+										   backgroundHorPos: center,
+										   backgroundVerPos: center,
+										   backgroundSize: initial
+								   ) ;
+
+$wdpk-page-title-bg-map: (
+								 backgroundType: color,
+								 gradientType: linear,
+								 color1: $wdpk-secondary,
+								 color2: $wdpk-gradient-2,
+								 degree: 0deg,
+								 backgroundImage: url(../../assets/images/page-title.jpg),
+								 backgroundRepeat: none,
+								 backgroundHorPos: top,
+								 backgroundVerPos: center,
+								 backgroundSize: cover
+						 ) !default;
+
+$wdpk-page-title-overlay-color: rgba(0, 0, 0, .75) !default;
+
+
+// Headings
+$wdpk-heading-head-font-size: 2.5rem !default;
+$wdpk-heading-head-font-family: 'Kreon', serif !default;
+$wdpk-heading-head-color: $wdpk-primary-color !default;
+$wdpk-heading-head-margin-bottom: .5rem !default;
+
+
+$wdpk-heading-separator-margin-bottom: 1rem !default;
+$wdpk-heading-separator-height: 2px !default;
+$wdpk-heading-separator-width: 15% !default;
+
+
+$wdpk-heading-separator-icon-font-size: 1.3rem !default;
+$wdpk-heading-separator-icon-color: $wdpk-gradient-1 !default;
+$wdpk-heading-separator-icon-xpadding: .5rem !default;
+
+
+$wdpk-heading-desc-font-size: 1.5rem !default;
+$wdpk-heading-desc-font-family: inherit !default;
+$wdpk-heading-desc-line-height: 1.4 !default;
+$wdpk-heading-desc-color: #696562 !default;
+$wdpk-heading-desc-margin-bottom: 1rem !default;
+
+
+$wdpk-heading-spearator-bg-map: (
+										backgroundType: color,
+										gradientType: linear,
+										color1: #696562,
+										color2: $wdpk-gradient-2,
+										degree: 0deg,
+										backgroundImage: url(../../assets/images/background-black.jpg),
+										backgroundRepeat: repeat-x,
+										backgroundHorPos: center,
+										backgroundVerPos: center,
+										backgroundSize: initial
+								) !default;
+
+
+// Lightbox Cards
+$wdpk-card-border-width: 0px !default;
+$wdpk-card-border-radius: 0px !default;
+$wdpk-card-columns-gap: 0px !default;
+$wdpk-card-columns-margin: 0px !default;
+$wdpk-card-inner-border-radius: 0px !default;
+$wdpk-light-gallery-hover-bg-color: rgba(214, 155, 96, 0.8) !default;
+$wdpk-light-gallery-icon-border-radius: 50% !default;
+
+// Cards
+$wdpk-card-columns-count: 5 !default;
+
+
+
+$wdpk-footer-copyright-bg: #000000 !default;
+
+$wdpk-footer-bg-map: (
+							 backgroundType: image,
+							 gradientType: linear,
+							 color1: $wdpk-secondary,
+							 color2: $wdpk-secondary,
+							 degree: 0deg,
+							 backgroundImage: url(../../assets/demos/salon-demo/contact-hero-image.jpg),
+							 backgroundRepeat: none,
+							 backgroundHorPos: top,
+							 backgroundVerPos: center,
+							 backgroundSize: cover
+					 ) !default;
+
+
+// Mobile Header
+$wdpk-mobile-header-background: (
+										backgroundType: color,
+										gradientType: linear,
+										color1: #000000,
+										color2: rgba(0, 0, 0, 0.7),
+										degree: 90deg,
+										backgroundImage: url(../../assets/images/grey.png),
+										backgroundRepeat: repeat-x,
+										backgroundHorPos: center,
+										backgroundVerPos: center,
+										backgroundSize: initial
+								) !default;
+
+$wdpk-mobile-header-logo-width: 120px !default;
+$wdpk-mobile-header-vertical-padding: .75rem !default;
+// =============================>
+//  Dark Theme Override
+//  If you you need to use the dark theme just uncomment the below line
+// <============================
+//@import "../../../sass/variables/variables-wdpk-dark";
+
+
+// =============================>
+// Import the main Scss file to import everything
+// ==============================
+@import "../../../sass/woodpecker.scss";

@@ -1,0 +1,684 @@
+// =============================>
+// WoodPecker Sass Mixins
+// Contains all the mixins used by the WoodPecker theme
+// Naming Convection For Mixins:
+// wdpk(prefix)-taskInCamelCase
+// <============================
+
+// @mixin wdpk-prefix - Mixin to prefix several properties at once
+// @author Hugo Giraudel
+// @param {Map} $declarations - Declarations to prefix
+// @param {List} $prefixes (()) - List of prefixes to print
+@mixin wdpk-prefix($declarations, $prefixes: ())
+{
+	@each $property, $value in $declarations
+	{
+		@each $prefix in $prefixes
+		{
+			#{'-' + $prefix + '-' + $property}: $value;
+		}
+
+		// Output standard non-prefixed declaration
+		#{$property}: $value;
+	}
+}
+
+// =============================>
+//  Mixin For Styling Links
+// <===============================
+// @mixin - wdpk-styleLinks
+// Values: $link - Default color Of The Link
+// @author Uneebox
+// @param $visit - Color Of The Visited State
+// @param $hover - Color Of The Hover State
+// @param $active - Color Of The Active State
+@mixin wdpk-styleLinks($link, $visit, $hover, $active)
+{
+	text-decoration: none;
+	color:           $link;
+	&:visited
+	{
+		color: $visit;
+	}
+	&:hover
+	{
+		color: $hover;
+	}
+	&:active
+	{
+		color: $active;
+	}
+}
+
+// =============================>
+// Add Borders To Elements
+// <===============================
+
+// @mixin wdpk-addBorder
+// Assigns a border to the element
+// @author Uneebox
+// @param {map} $map containing border properties
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+@mixin wdpk-addBorder($map)
+{
+	@if map-get($map, borderTop) == true
+	{
+		border-top: map-get($map, borderTopWidth) map-get($map, borderTopStyle) map-get($map, borderTopColor);
+	}
+	@if map-get($map, borderRight) == true
+	{
+		border-right: map-get($map, borderRightWidth) map-get($map, borderRightStyle) map-get($map, borderRightColor);
+	}
+	@if map-get($map, borderBottom) == true
+	{
+		border-bottom: map-get($map, borderBottomWidth) map-get($map, borderBottomStyle) map-get($map, borderBottomColor);
+	}
+	@if map-get($map, borderLeft) == true
+	{
+		border-left: map-get($map, borderLeftWidth) map-get($map, borderLeftStyle) map-get($map, borderLeftColor);
+	}
+	border-radius: map-get($map, borderRadius);
+}
+
+// =============================>
+// Styling Backgrounds
+// <===============================
+// @mixin wdpk-background
+// creates a background of any kind
+// @author Uneebox
+// @since Version 1.0.0
+// @param {map} $map - Contains Following keys and possible values For background
+// @key backgroundType: Type of backgrounf needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+@mixin wdpk-background($map)
+{
+	@if map-get($map, backgroundType) == color
+	{
+		background-color: map-get($map, color1);
+	}
+	@if map-get($map, backgroundType) ==
+    gradient and
+    map-get($map, gradientType) ==
+    linear
+	{
+		background-image: linear-gradient(
+										  map-get($map, degree),
+										  map-get($map, color1),
+										  map-get($map, color2)
+						  );
+		background-image: -webkit-linear-gradient(
+										  map-get($map, degree),
+										  map-get($map, color1),
+										  map-get($map, color2)
+						  );
+		background-image: -o-linear-gradient(
+										  map-get($map, degree),
+										  map-get($map, color1),
+										  map-get($map, color2)
+						  );
+		background-image: -webkit-gradient(
+										  linear,
+										  left top,
+										  left bottom,
+										  color-stop(white, 90)
+						  );
+	} @else if map-get($map, backgroundType) ==
+    gradient and
+    map-get($map, gradientType) ==
+    radial
+	{
+		background-image: radial-gradient(
+										  map-get($map, color1),
+										  map-get($map, color2)
+						  );
+		background-image: -webkit-radial-gradient(
+										  map-get($map, color1),
+										  map-get($map, color2)
+						  );
+		background-image: -o-radial-gradient(
+										  map-get($map, color1),
+										  map-get($map, color2)
+						  );
+	}
+
+	@if map-get($map, backgroundType) == image
+	{
+		background-image:    map-get($map, backgroundImage);
+		background-color:    map-get($map, color1);
+		background-position: map-get($map, backgroundHorPos) map-get($map, backgroundVerPos);
+		background-repeat:   map-get($map, backgroundRepeat);
+		background-size:     map-get($map, backgroundSize);
+	}
+
+	@if map-get($map, backgroundType) == overlay
+	{
+		position:          relative;
+		width:             100%;
+		height:            100%;
+		background-image:  map-get($map, backgroundImage);
+		background-repeat: map-get($map, backgroundRepeat);
+		background-size:   map-get($map, backgroundSize);
+
+		&:before
+		{
+			content:  "";
+			position: absolute;
+			top:      0;
+			right:    0;
+			bottom:   0;
+			left:     0;
+			@if map-get($map, gradientType) == linear
+			{
+				background-image: linear-gradient(
+												  map-get($map, degree),
+												  map-get($map, color1),
+												  map-get($map, color2)
+								  );
+				background-image: -webkit-linear-gradient(
+												  map-get($map, degree),
+												  map-get($map, color1),
+												  map-get($map, color2)
+								  );
+				background-image: -o-linear-gradient(
+												  map-get($map, degree),
+												  map-get($map, color1),
+												  map-get($map, color2)
+								  );
+			} @else if map-get($map, gradientType) ==
+    radial
+			{
+				background-image: radial-gradient(
+												  map-get($map, color1),
+												  map-get($map, color2)
+								  );
+				background-image: -webkit-radial-gradient(
+												  map-get($map, color1),
+												  map-get($map, color2)
+								  );
+				background-image: -o-radial-gradient(
+												  map-get($map, color1),
+												  map-get($map, color2)
+								  );
+			}
+		}
+	}
+}
+
+// =============================>
+// Adding Shadows To Elements
+// <============================
+// @mixin wdpk-shadow - applies a shadow to the element
+// @key shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// @key hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// @key vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// @key blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// @key shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// @key shadowColor: The color of the shadow
+@mixin wdpk-shadow($map)
+{
+	@if map-get($map, shadowOn) == true
+	{
+		box-shadow:         map-get($map, hOffset) map-get($map, vOffset) map-get($map, blurRadius) map-get($map, shadowSpread) map-get($map, shadowColor);
+		-webkit-box-shadow: map-get($map, hOffset) map-get($map, vOffset) map-get($map, blurRadius) map-get($map, shadowSpread) map-get($map, shadowColor);
+	}
+}
+
+// =============================>
+// Hover Effects For Menu Items
+// <============================
+// @mixin - wdpk-menuHover
+// @author Uneebox
+// @since Version 1.0.0
+// @param {map} $map - Contains following keys and possible values for menu hover effects
+// hoverType: Type of Over Effects Can Use the followwing values
+// @key paddingTop -  padding from top for hover effect
+// @key paddingBottom - padding from bottom for the hover effect
+// @key paddingRight - padding from right for the hover effect
+// @key padingleft - padding from left for the hover effect
+// @key hoverThickness - thickness of the hover item, value in px
+// @key hoverColorType - Background color type for the hover effect, possible values: color, gradient
+// @key animationType - type of animation possible values topToBottom, bottomToTop, rightToLeft, leftToRight
+// @key animationDistance - Distance of the animation
+// @key animationDuration - Duration of the animation in seconds like: 0.3s
+// @key animationDelay - The Delay In Transition
+// @key col1 - Color 1 For the Hover Effect
+// @key col2 - Color 2 for the Hover effect
+
+@mixin wdpk-menuHover($map)
+{
+	@if $wdpk-enable-on-desktop == false
+	{
+		@include from($wdpk-mobile-header-breakpoint + 1)
+		{
+
+			@if map-get($map, hoverType) == 0
+			{
+			}
+			// All CSS for Hover Effect Type 1
+			@if map-get($map, hoverType) == 1
+			{
+				padding: map-get($map, paddingBottom) 0;
+
+				&::after
+				{
+					position:           absolute;
+					top:                100%;
+					left:               0;
+					width:              100%;
+					height:             map_get($map, hoverThickness);
+					@if map-get($map, hoverColorType) == color
+					{
+						background-color: map-get($map, col1);
+					} @else if map-get($map, hoverColorType) == gradient
+					{
+						background-image: -webkit-gradient(
+														  linear,
+														  left top,
+														  right top,
+														  from(map-get($map, col1)),
+														  to(map-get($map, col2))
+										  );
+						background-image: -webkit-linear-gradient(
+														  left,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+						background-image: -o-linear-gradient(
+														  left,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+						background-image: linear-gradient(
+														  90deg,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+					}
+					content:            "";
+					opacity:            0;
+					border-radius: map_get($map, hoverBorderRadius);
+
+					-webkit-transition: opacity map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+					transition:         opacity map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+					-o-transition:      opacity map_get($map, animationDuration),
+										transform map_get($map, animationDuration);
+					transition:         opacity map_get($map, animationDuration),
+										transform map_get($map, animationDuration);
+					transition:         opacity map_get($map, animationDuration),
+										transform map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+
+					@if map_get($map, animationType) == bottomToTop
+					{
+						-webkit-transform: translateY(map_get($map, animationDistance));
+						-ms-transform:     translateY(map_get($map, animationDistance));
+						transform:         translateY(map_get($map, animationDistance));
+					} @else if map_get($map, animationType) == topToBottom
+					{
+						-webkit-transform: translateY(
+														   unquote("-") map_get($map, animationDistance)
+										   );
+						-ms-transform:     translateY(
+														   unquote("-") map_get($map, animationDistance)
+										   );
+						transform:         translateY(unquote("-") map_get($map, animationDistance));
+					} @else if map_get($map, animationType) == rightToLeft
+					{
+						-webkit-transform: translateX(map_get($map, animationDistance));
+						-ms-transform:     translateX(map_get($map, animationDistance));
+						transform:         translateX(map_get($map, animationDistance));
+					} @else if map_get($map, animationType) == leftToRight
+					{
+						-webkit-transform: translateX(
+														   unquote("-") map_get($map, animationDistance)
+										   );
+						-ms-transform:     translateX(
+														   unquote("-") map_get($map, animationDistance)
+										   );
+						transform:         translateX(unquote("-") map_get($map, animationDistance));
+					}
+				}
+
+				&:hover::after,
+				&:focus::after
+				{
+					opacity:           1;
+					-webkit-transform: translateY(0px);
+					-moz-transform:    translateY(0px);
+					transform:         translateY(0px);
+				}
+			}
+
+			// End Of CSS For Hover Effect Type 1
+
+			@if map-get($map, hoverType) == 2
+			{
+				padding: map-get($map, paddingBottom) 0;
+				// color: #566473;
+				//text-shadow: none;
+				//font-weight: 700;
+
+				&::before,
+				&::after
+				{
+					position:           absolute;
+					top:                100%;
+					left:               0;
+					width:              100%;
+					height:             map_get($map, hoverThickness);
+					@if map-get($map, hoverColorType) == color
+					{
+						background-color: map-get($map, col1);
+					} @else if map-get($map, hoverColorType) == gradient
+					{
+						background-image: -o-linear-gradient(
+														  left,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+						background-image: -webkit-gradient(
+														  linear,
+														  left top,
+														  right top,
+														  from(map-get($map, col1)),
+														  to(map-get($map, col2))
+										  );
+						background-image: linear-gradient(
+														  90deg,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+					}
+					content:            "";
+					border-radius: map_get($map, hoverBorderRadius);
+					-webkit-transition: -webkit-transform map_get($map, animationDuration);
+					transition:         -webkit-transform map_get($map, animationDuration);
+					-o-transition:      transform map_get($map, animationDuration);
+					transition:         transform map_get($map, animationDuration);
+					transition:         transform map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+					-webkit-transform:  scale(0.85);
+					-ms-transform:      scale(0.85);
+					transform:          scale(0.85);
+				}
+
+				&::after
+				{
+					opacity:            0;
+					opacity:            0;
+					-webkit-transition: top map_get($map, animationDuration),
+										opacity map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+					transition:         top map_get($map, animationDuration),
+										opacity map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+					-o-transition:      top map_get($map, animationDuration),
+										opacity map_get($map, animationDuration),
+										transform map_get($map, animationDuration);
+					transition:         top map_get($map, animationDuration),
+										opacity map_get($map, animationDuration),
+										transform map_get($map, animationDuration);
+					transition:         top map_get($map, animationDuration),
+										opacity map_get($map, animationDuration),
+										transform map_get($map, animationDuration),
+										-webkit-transform map_get($map, animationDuration);
+				}
+
+				&:hover::before,
+				&:hover::after,
+				&:focus::before,
+				&:focus::after
+				{
+					-webkit-transform: scale(1);
+					-moz-transform:    scale(1);
+					transform:         scale(1);
+				}
+
+				&:hover::after,
+				&:focus::after
+				{
+					top:     0%;
+					opacity: 1;
+				}
+			}
+			// End Of Effect 2
+
+			@if map-get($map, hoverType) == 3
+			{
+				padding: map-get($map, paddingBottom) 0;
+				&::after
+				{
+					position:   absolute;
+					content:    "";
+					display:    block;
+					width:      0;
+					height:     map_get($map, hoverThickness);
+					border-radius: map_get($map, hoverBorderRadius);
+					@if map-get($map, hoverColorType) == color
+					{
+						background-color: map-get($map, col1);
+					} @else if map-get($map, hoverColorType) == gradient
+					{
+						background-image: -o-linear-gradient(
+														  left,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+						background-image: -webkit-gradient(
+														  linear,
+														  left top,
+														  right top,
+														  from(map-get($map, col1)),
+														  to(map-get($map, col2))
+										  );
+						background-image: linear-gradient(
+														  90deg,
+														  map-get($map, col1),
+														  map-get($map, col2)
+										  );
+					}
+					transition: width 0.3s;
+					top:        100%;
+				}
+				&:hover::after
+				{
+					width: 100%;
+				}
+			}
+			// End Of Effect 3
+
+			@if map-get($map, hoverType) == 4
+			{
+				// Left Blank Because Implements Background Hover color so do not change
+			}
+		}
+	}
+}
+
+// =============================>
+// Assign Animation To Drodown Menu
+// <=============================
+// @mixin - wdpk-dropdownAnimate
+// @author Uneebox
+// @since Version 1.0.0
+// @param {map} $map - Contains following keys and possible values for menu hover effects
+// @key animationType - Type of animation needed for the dropdown menu
+////=> Available options:
+////=> none, fadeIn, fadeInDown, fadeInLeft, fadeInRight, fadeInUp, slideInDown, slideInUp, zoomIn
+// @key duration - Duration for the animation can be set in 's' or 'ms'
+// @key delay - The delay in animation upon mouse over can be set in 's' or 'ms'
+// @key function - Transition timing function for dropdown menu animation. Can use any functions from https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp
+
+@mixin wdpk-dropdownAnimate($map)
+{
+	@if map-get($map, animationType) == none
+	{
+		// Do not chnage this applies default transitions
+	}
+	@if map-get($map, animationType) == fadeIn
+	{
+		@include fadeIn(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == fadeInDown
+	{
+		@include fadeInDown(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == fadeInLeft
+	{
+		@include fadeInLeft(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == fadeInRight
+	{
+		@include fadeInRight(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == fadeInUp
+	{
+		@include fadeInUp(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == slideInDown
+	{
+		@include slideInDown(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == slideInUp
+	{
+		@include slideInUp(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	} @else if map-get($map, animationType) == zoomIn
+	{
+		@include zoomIn(
+				$duration: map-get($map, duration),
+				$count: 1,
+				$delay: map-get($map, delay),
+				$function: map-get($map, function),
+				$fill: both
+		);
+	}
+}
+
+// =============================>
+// Remove All Transitions, Tranformations And Animations
+// <=============================
+// @mixin - wdpk-dropdownAnimate
+// @author Uneebox
+// @since Version 1.0.0
+//
+// =============================>
+//  Resetting All Transitions, Transformation
+//  and Animations From Desktop Menu
+// <============================
+/*CSS transitions*/
+@mixin wdpk-removeAnimations
+{
+	-o-transition-property:      none;
+	-webkit-transition-property: none;
+	transition-property:         none;
+	/*CSS transforms*/
+	-o-transform:                none;
+	-moz-transform:              none;
+	-ms-transform:               none;
+	-webkit-transform:           none;
+	transform:                   none;
+	/*CSS animations*/
+	-webkit-animation:           none;
+	-moz-animation:              none;
+	-o-animation:                none;
+	-ms-animation:               none;
+	animation:                   none;
+}
+
+
+// =============================>
+// Adds Hover Animations
+// <=============================
+// @mixin - wdpk-hoverAnimations
+// @author Uneebox
+// @since Version 1.0.0
+//
+// =============================>
+// Adds hover animations to the selector
+// <============================
+@mixin wdpk-hoverAnimations($animation)
+{
+	@if ($animation == 'zoomIn')
+	{
+		transform: scale(1.15) translateZ(0);
+		-webkit-font-smoothing: subpixel-antialiased;
+		backface-visibility: hidden;
+		-webkit-filter: blur(0);
+	} @else if ($animation == 'zoomOut')
+	{
+		transform: scale(.9) translateZ(0);
+		-webkit-font-smoothing: subpixel-antialiased;
+		backface-visibility: hidden;
+		-webkit-filter: blur(0);
+	}
+}
+
+// =============================>
+// Adds Transition Effects to the chosen properties
+// <=============================
+// @mixin - wdpk-transitions
+// @author Uneebox
+// @since Version 1.0.0
+//
+// =============================>
+// Adds hover animations to the selector
+// <============================
+@mixin wdpk-transitions($property,$duration,$function)
+{
+	-webkit-transition: $property $duration $function;
+	-moz-transition:    $property $duration $function;
+	-ms-transition:     $property $duration $function;
+	-o-transition:      $property $duration $function;
+	transition:         $property $duration $function;
+}
+
+

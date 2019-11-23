@@ -1,0 +1,145 @@
+// =============================>
+//  Footer Styling Partial
+// <============================
+// TODO: Remove the inline properties of self alignment and flexbox and move them to the core CSS
+
+.wdpk-footer
+{
+	@include wdpk-background($wdpk-footer-bg-map);
+	padding-top:    $wdpk-footer-padding-top;
+	padding-bottom: $wdpk-footer-padding-bottom;
+	font-size:      $wdpk-footer-font-size;
+	color:          $wdpk-footer-color;
+	line-height:    inherit;
+	font-family:    $wdpk-footer-font-family;
+
+
+	.wdpk-footer-column
+	{
+	margin-bottom: $wdpk-footer-column-margin-bottom;
+	}
+
+	.wdpk-footer-heading
+	{
+		font-size:   $wdpk-footer-heading-font-size;
+		color:       $wdpk-footer-heading-color;
+		font-family: $wdpk-footer-heading-font-family;
+
+	}
+
+	.wdpk-footer-list
+	{
+		@extend .list-group;
+
+		.wdpk-footer-list-link
+		{
+			@extend .list-group-item;
+			@extend .list-group-item-action;
+			@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+
+			background:   none;
+			color:        $wdpk-footer-color;
+			padding:      $wdpk-footer-list-x-padding $wdpk-footer-list-y-padding;
+
+			@if ($wdpk-footer-list-separators == true)
+			{
+				border-top:   none; // reset the border set by bootstrap
+				border-left:  none; // reset the border set by bootstrap
+				border-right: none; // reset the border set by bootstrap
+			} @else
+			{
+				border:       none;
+			}
+
+			border-color: $wdpk-footer-list-separators-color;
+
+			&:hover
+			{
+				background-color: inherit;
+				color:            $wdpk-footer-hover-color;
+			}
+
+			&:first-child
+			{
+				border-radius: 0; // Reset the border radius assigned by bootstrap
+			}
+
+			&:last-child
+			{
+				border-radius: 0; // Reset the border radius assigned by bootstrap
+			}
+
+			&:active, &:focus
+			{
+				background: none !important;
+				color:      $wdpk-footer-hover-color;
+			}
+		}
+	}
+}
+
+.wdpk-footer-copyright
+{
+	background-color: $wdpk-footer-copyright-bg;
+	padding-top:      $wdpk-footer-copyright-top-padding;
+	padding-bottom:   $wdpk-footer-copyright-bottom-padding;
+
+	.wdpk-footer-social
+	{
+		display:  flex;
+		overflow: hidden;
+
+		@if ($wdpk-footer-social-icon-align == 'right')
+		{
+			justify-content: flex-end;
+		} @else if ($wdpk-footer-social-icon-align == 'left')
+		{
+			justify-content: flex-start;
+		} @else if ($wdpk-footer-social-icon-align == 'center')
+		{
+			justify-content: center;
+		}
+
+		.wdpk-footer-social-wrap
+		{
+			@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+			display:         -webkit-box;
+			display:         -ms-flexbox;
+			display:         flex;
+			line-height:     0;
+			margin-right:    $wdpk-footer-social-icon-margin;
+			text-decoration: none;
+
+			&:hover i
+			{
+				@include bounceInDown(
+						$duration: .8s,
+						$count:    1,
+						$delay:    0s,
+						$function: ease,
+						$fill:     both
+				);
+				color:           $wdpk-footer-social-icon-hover-color;
+				text-decoration: none !important;
+			}
+		}
+
+		.wdpk-footer-social-item
+		{
+			display: inline-flex;
+			padding: $wdpk-footer-social-icon-padding;
+
+			i
+			{
+				font-size:       $wdpk-footer-social-icon-size;
+				line-height:     $wdpk-footer-social-icon-size;
+				display:         inline-flex;
+				min-width:       $wdpk-footer-social-icon-size * .3;
+				min-height:      $wdpk-footer-social-icon-size * .3;
+				justify-content: center;
+				align-self:      center;
+				color:           $wdpk-footer-social-icon-color;
+			}
+		}
+	}
+}

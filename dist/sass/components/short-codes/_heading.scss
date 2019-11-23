@@ -1,0 +1,57 @@
+// =============================>
+//  Styling Partial For Heading
+// <============================
+.wdpk-heading
+{
+
+	.wdpk-heading-head
+	{
+		font-size:     $wdpk-heading-head-font-size;
+		font-family:   $wdpk-heading-head-font-family;
+		line-height:   $wdpk-heading-head-line-height;
+		color:         $wdpk-heading-head-color;
+		margin-bottom: $wdpk-heading-head-margin-bottom;
+
+	}
+
+	.wdpk-heading-separator-wrapper
+	{
+		display: flex;
+		margin-bottom: $wdpk-heading-separator-margin-bottom;
+
+		.wdpk-heading-separator
+		{
+			@include wdpk-background($wdpk-heading-spearator-bg-map);
+			@include wdpk-addBorder($wdpk-heading-spearator-border);
+			height:        $wdpk-heading-separator-height;
+			width:         $wdpk-heading-separator-width;
+			display:       inline-flex;
+			align-self:    center;
+
+		}
+
+		i
+		{
+			color:     $wdpk-heading-separator-icon-color;
+			font-size: $wdpk-heading-separator-icon-font-size;
+			width: $wdpk-heading-separator-icon-font-size * 1.1;
+			height: $wdpk-heading-separator-icon-font-size * 1.1;
+			align-self: center;
+			justify-content: center;
+			display: inline-flex;
+			box-sizing: content-box;
+			padding: 0 $wdpk-heading-separator-icon-xpadding;
+		}
+	}
+
+	.wdpk-heading-description
+	{
+		font-size:     $wdpk-heading-desc-font-size;
+		font-family:   $wdpk-heading-desc-font-family;
+		line-height:   $wdpk-heading-desc-line-height;
+		color:         $wdpk-heading-desc-color;
+		margin-bottom: $wdpk-heading-desc-margin-bottom;
+	}
+
+
+}

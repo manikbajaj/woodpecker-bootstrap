@@ -1,0 +1,17 @@
+// =============================>
+//  Declare All Your Custom Variables Below This Section
+// <============================
+$wdpk-example-variable: red;
+
+
+// =============================>
+//  Dark Theme Override
+//  If you you need to use the dark theme just uncomment the below line
+// <============================
+// @import "../sass/variables/variables-wdpk-dark";
+
+
+// =============================>
+// Import the main Scss file to import everything
+// ==============================
+@import "../sass/woodpecker";

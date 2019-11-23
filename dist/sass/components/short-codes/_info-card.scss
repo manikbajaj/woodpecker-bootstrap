@@ -1,0 +1,84 @@
+// =============================>
+//  Info Card Partial
+// <============================
+
+.wdpk-info-card
+{
+	@include wdpk-background($wdpk-infocard-background-map);
+	@include wdpk-addBorder($wdpk-infocard-border);
+
+	padding:                      $wdpk-infocard-padding-y $wdpk-infocard-padding-x;
+	margin-bottom: $wdpk-infocard-margin-bottom;
+
+
+	.wdpk-info-card-img-wrap
+	{
+		text-align:      center;
+		display:         flex;
+		justify-content: center;
+
+		@include to($wdpk-infocard-mobile-device-breakpoint)
+		{
+			margin-bottom: $wdpk-infocard-desc-margin-bottom;
+		}
+
+		.wdpk-info-card-img-outer
+		{
+			@include wdpk-background($wdpk-infocard-img-background);
+			@include wdpk-addBorder($wdpk-infocard-img-border);
+			height:     max-content;
+			padding:    $wdpk-infocard-img-padding;
+			display:    flex;
+			align-self: $wdpk-infocard-img-align-self;
+		}
+
+		.wdpk-infocard-img-closure
+		{
+
+			width:      $wdpk-infocard-img-width;
+			height:     $wdpk-infocard-img-width;
+			text-align: center;
+			display:    flex;
+
+			.wdpk-info-card-img
+			{
+				width:           $wdpk-infocard-img-width;
+				height:          auto;
+				align-self:      center;
+				justify-content: center;
+			}
+		}
+	}
+
+
+	.wdpk-info-card-body
+	{
+		@include to($wdpk-infocard-mobile-device-breakpoint)
+		{
+			text-align: center;
+		}
+
+		.wdpk-info-card-heading
+		{
+			font-family:   $wdpk-infocard-heading-font-family;
+			font-size:     $wdpk-infocard-heading-font-size;
+			font-weight:   $wdpk-infocard-heading-font-weight;
+			line-height:   $wdpk-infocard-heading-line-height;
+			color:         $wdpk-infocard-heading-color;
+			margin-bottom: $wdpk-infocard-heading-margin-bottom;
+
+		}
+
+		.wdpk-info-card-desc
+		{
+			font-family:   $wdpk-infocard-desc-font-family;
+			font-size:     $wdpk-infocard-desc-font-size;
+			font-weight:   $wdpk-infocard-desc-font-weight;
+			line-height:   $wdpk-infocard-desc-line-height;
+			color:         $wdpk-infocard-desc-color;
+			margin-bottom: $wdpk-infocard-desc-margin-bottom;
+
+		}
+
+	}
+}

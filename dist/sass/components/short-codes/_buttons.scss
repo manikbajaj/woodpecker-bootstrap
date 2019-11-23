@@ -1,0 +1,88 @@
+// =============================>
+//  Buttons CSS Partial
+// <============================
+
+
+.btn.wdpk-button
+{
+	-webkit-transition: all $wdpk-global-transition-duration $wdpk-global-transition-function;
+	-moz-transition:    all $wdpk-global-transition-duration $wdpk-global-transition-function;
+	-ms-transition:     all $wdpk-global-transition-duration $wdpk-global-transition-function;
+	-o-transition:      all $wdpk-global-transition-duration $wdpk-global-transition-function;
+	transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+	@include wdpk-shadow($wdpk-btn-shadow);
+	border-radius:      $wdpk-input-btn-radius;
+
+	i
+	{
+		padding: 0 .3rem;
+	}
+}
+
+.btn.wdpk-button.wdpk-button-gradient
+{
+	position:      relative;
+	z-index:       1;
+	border:        none;
+	border-radius: $wdpk-input-btn-radius;
+
+	$wdpk-input-btn-gradient: (
+									  backgroundType: gradient,
+									  gradientType: linear,
+									  color1: $wdpk-gradient-1,
+									  color2: $wdpk-gradient-2,
+									  degree: $wdpk-input-btn-gradient-direction,
+									  backgroundImage: url(../../assets/images/grey.png),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  );
+
+	@include wdpk-background($wdpk-input-btn-gradient);
+
+	$wdpk-input-btn-gradient-hover: (
+											backgroundType: gradient,
+											gradientType: linear,
+											color1: scale_color($wdpk-gradient-1, $lightness: $wdpk-lightness-value),
+											color2: scale_color($wdpk-gradient-2, $lightness: $wdpk-lightness-value),
+											degree: $wdpk-input-btn-gradient-direction,
+											backgroundImage: url(../../assets/images/grey.png),
+											backgroundRepeat: repeat-x,
+											backgroundHorPos: center,
+											backgroundVerPos: center,
+											backgroundSize: initial
+									);
+
+	&::before
+	{
+		-webkit-transition: all $wdpk-global-transition-duration $wdpk-global-transition-function;
+		-moz-transition:    all $wdpk-global-transition-duration $wdpk-global-transition-function;
+		-ms-transition:     all $wdpk-global-transition-duration $wdpk-global-transition-function;
+		-o-transition:      all $wdpk-global-transition-duration $wdpk-global-transition-function;
+		transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+		position:           absolute;
+		content:            "";
+		top:                0;
+		right:              0;
+		bottom:             0;
+		left:               0;
+		z-index:            0;
+		opacity:            0;
+		@include wdpk-background($wdpk-input-btn-gradient-hover);
+		border-radius:      $wdpk-input-btn-radius;
+	}
+
+	&:hover::before
+	{
+		opacity: 1;
+	}
+
+
+	.wdpk-button-content
+	{
+		z-index:  2;
+		position: relative;
+	}
+
+}

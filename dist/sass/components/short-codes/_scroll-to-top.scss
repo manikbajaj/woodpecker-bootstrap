@@ -1,0 +1,33 @@
+// =============================>
+//  Scroll To Top Styling Partial
+// <============================
+
+.wdpk-scroll-to-top
+{
+	display:          inline;
+	position:         fixed;
+	background-color: #000000;
+	bottom:           20px;
+	right:            20px;
+	padding:          19px 15px 5px 15px;
+	opacity:          .3;
+	@include wdpk-transitions(opacity, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+	z-index:          100;
+
+	&:hover
+	{
+		opacity: .6;
+	}
+
+	.wdpk-scroll-up-arrow
+	{
+		border-width:      0 5px 5px 0;
+		display:           inline-block;
+		padding:           5px;
+		border-bottom:     6px solid #ffffff;
+		border-right:      6px solid #ffffff;
+		border-radius:     4px;
+		transform:         rotate(-135deg);
+		-webkit-transform: rotate(-135deg);
+	}
+}

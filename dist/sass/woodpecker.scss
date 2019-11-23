@@ -1,0 +1,26 @@
+// =============================>
+// The main Scss file to import everything
+// ==============================
+// =============================>
+//  Improvement Tasks
+//
+// <============================
+
+// IMPORTANT: TO IMPORT THE FILES IN THIS SEQUENCE
+@import "variables/variables-style";
+
+// Import the WoodPecker Mixins
+@import "mixins/mixins";
+
+// Import WoodPecker Functions
+@import "functions/functions";
+
+// Include the third party dependencies
+@import "libraries/libraries";
+
+// Import the WoodPecker Partials
+@import "globals/globals";
+
+// Import all Demo Static Style Partials
+@import "components/components";
+

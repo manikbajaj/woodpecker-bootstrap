@@ -1,0 +1,141 @@
+// =============================>
+// CSS for accordion Shortcode
+// <============================
+
+.wdpk-accordion
+{
+	@if ($wdpk-accordion-border-enable == false)
+	{
+		border: none;
+	}
+
+	.card
+	{
+		@if ($wdpk-accordion-border-enable == true)
+		{
+			@include wdpk-addBorder($wdpk-accordion-border-map);
+		} @else
+		{
+			border: none;
+		}
+
+		&:first-of-type
+		{
+			border-top-right-radius: $wdpk-accordion-border-radius !important;
+			border-top-left-radius:  $wdpk-accordion-border-radius !important;
+		}
+
+		&:last-of-type
+		{
+			border-bottom-right-radius: $wdpk-accordion-border-radius !important;
+			border-bottom-left-radius:  $wdpk-accordion-border-radius !important;
+
+			.card-header
+			{
+				@if ($wdpk-accordion-border-enable == false and map-get($wdpk-accordion-header-border-map, borderBottom) == true)
+				{
+					margin-bottom: 1px;
+				}
+
+			}
+		}
+
+
+		color:            $wdpk-accordion-body-font-color;
+		background-color: $wdpk-accordion-body-color;
+
+		.collapse
+		{
+			.card-body
+			{
+				background-color: $wdpk-accordion-body-color;
+			}
+
+		}
+
+		.card-header
+		{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			@include wdpk-background($wdpk-accordion-header-color);
+			@include wdpk-addBorder($wdpk-accordion-header-border-map);
+
+
+			.wdpk-accordion-heading
+			{
+				display:                   -webkit-box;
+				display:                   -ms-flexbox;
+				display:                   flex;
+				-webkit-box-ordinal-group: 1;
+				-ms-flex-order:            0;
+				order:                     0;
+				width:                     80%;
+				-webkit-box-pack:          start;
+				-ms-flex-pack:             start;
+				justify-content:           flex-start;
+
+				h1, h2, h3, h4, h5, h6
+				{
+					margin:              0px;
+					-ms-flex-item-align: center;
+					align-self:          center;
+					display:             -webkit-box;
+					display:             -ms-flexbox;
+					display:             flex;
+					color:               $wdpk-accordion-title-color;
+				}
+
+			}
+
+			.wdpk-accordion-button
+			{
+				display:                   -webkit-box;
+				display:                   -ms-flexbox;
+				display:                   flex;
+				width:                     20%;
+				-webkit-box-ordinal-group: 2;
+				-ms-flex-order:            1;
+				order:                     1;
+				-webkit-box-pack:          end;
+				-ms-flex-pack:             end;
+				justify-content:           flex-end;
+
+
+				&:hover > a
+				{
+					-webkit-transform: rotate(45deg);
+					-ms-transform:     rotate(45deg);
+					transform:         rotate(45deg);
+				}
+
+				a
+				{
+					display:             -webkit-box;
+					display:             -ms-flexbox;
+					display:             flex;
+					padding:             0px;
+					-ms-flex-item-align: center;
+					align-self:          center;
+					cursor:              pointer;
+					-webkit-transition:  $wdpk-global-transition-function $wdpk-global-transition-duration;
+					-o-transition:       $wdpk-global-transition-function $wdpk-global-transition-duration;
+					transition:          $wdpk-global-transition-function $wdpk-global-transition-duration;
+
+					i
+					{
+						color: $wdpk-accordion-title-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.wdpk-trans-button
+{
+	-webkit-transform: rotate(45deg);
+	-ms-transform:     rotate(45deg);
+	transform:         rotate(45deg);
+}

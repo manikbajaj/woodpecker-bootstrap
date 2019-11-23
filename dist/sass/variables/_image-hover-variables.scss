@@ -1,0 +1,11 @@
+// =============================>
+// Abstraction layer for overriding the
+// ImageHover Variables
+// <============================
+
+$image-bg: $wdpk-image-hover-image-bg !default;
+$figcaption-bg: $wdpk-image-hover-figcaption-bg !default;
+$figcaption-padding: $wdpk-image-hover-figcaption-padding !default;
+$text-color: $wdpk-image-hover-text-color !default;
+$transition-duration: $wdpk-image-hover-transition-duration !default;
+$shift-distance: $wdpk-image-hover-shift-distance !default;

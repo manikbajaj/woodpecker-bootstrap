@@ -1,0 +1,61 @@
+// =============================>
+// Sidebar Style Partial
+// <============================
+
+// Sidebar Classes
+//
+// Classes for Sidebar.
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-sidebar | Parent class assigned to the wrapper div of the sidebar |
+// | wdpk-sidebar-section | Class assigned to each section of the sidebar |
+// | wdpk-sidebar-left | Assign this class to the wrapper div if the sidebar is on the left side |
+// | wdpk-sidebar-right | Assign this class to the wrapper div if the sidebar is on the right side |
+//
+// Styleguide CSS Classes.Sidebar
+
+.wdpk-sidebar
+{
+	width: 100%;
+
+	@include wdpk-shadow($wdpk-sidebar-shadow);
+
+	@if ($wdpk-sidebar-type == 1 )
+	{
+		background-color: $wdpk-sidebar-background-color;
+		padding:          $wdpk-sidebar-padding;
+	}
+
+	.wdpk-sidebar-section
+	{
+		margin-bottom: $wdpk-margin-sections;
+
+		@if ($wdpk-sidebar-type == 2 or $wdpk-sidebar-type == 3 )
+		{
+			background-color: $wdpk-sidebar-background-color;
+			padding:          $wdpk-sidebar-padding;
+		}
+
+		@if ($wdpk-sidebar-type == 3)
+		{
+			border: 1px solid $wdpk-side-border-color;
+		}
+	}
+}
+
+.wdpk-sidebar-left
+{
+	@if ($wdpk-side-border == true)
+	{
+		border-right: 1px solid $wdpk-side-border-color;
+	}
+}
+
+.wdpk-sidebar-right
+{
+	@if ($wdpk-side-border == true)
+	{
+		border-left: 1px solid $wdpk-side-border-color;
+	}
+}

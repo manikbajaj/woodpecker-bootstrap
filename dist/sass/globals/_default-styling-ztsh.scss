@@ -1,0 +1,202 @@
+// =============================>
+// Override the Styling Of The Base HTML Elements
+// With The CSS variables Declared So That The
+// WoodPecker Styling Is Inherited By Bootstrap 4
+// <==============================
+
+
+// Global Classes
+//
+// Classes that can be assigned to any component thoughout the theme and have been defined with a Global Scope in the theme.
+//
+// | Class  | Utility |
+// |----------|-------|
+// | ztsh-facebook | Class assigned to facebook icon to assign the set backgrodun color for the social network |
+// | ztsh-twitter | Class assigned to twitter icon to assign the set backgrodun color for the social network |
+// | ztsh-google | Class assigned to Google icon to assign the set backgrodun color for the social network |
+// | ztsh-youtube | Class assigned to YouTube icon to assign the set backgrodun color for the social network |
+// | ztsh-linkedin | Class assigned to LinkedIn icon to assign the set backgrodun color for the social network |
+// | ztsh-behance | Class assigned to Behance icon to assign the set backgrodun color for the social network |
+// | ztsh-dribble | Class assigned to Dribble icon to assign the set backgrodun color for the social network |
+// | ztsh-pinterest | Class assigned to Pinterest icon to assign the set backgrodun color for the social network |
+// | ztsh-rss | Class assigned to RSS icon to assign the set backgrodun color for the social network |
+//
+// Styleguide CSS Classes.Global
+
+
+html
+{
+	#ztsh-main
+	{
+		transition:         margin-right .5s ease;
+		-o-transition:      margin-right .5s ease;
+		-webkit-transition: margin-right .5s ease;
+	}
+
+	.ztsh-offcanvas-margin
+	{
+		@include to($ztsh-mobile-header-breakpoint)
+		{
+			@if ($ztsh-off-canvas-open-from == right)
+			{
+				margin-right: $ztsh-off-canvas-width !important;
+				.ztsh-menu-icon
+				{
+					a
+					{
+						right: $ztsh-off-canvas-width + 10px;
+					}
+				}
+			} @else if ($ztsh-off-canvas-open-from == left)
+			{
+				margin-left:  $ztsh-off-canvas-width !important;
+				.ztsh-menu-icon
+				{
+					a
+					{
+						left: $ztsh-off-canvas-width + 10px;
+					}
+				}
+			}
+
+			.ztsh-menu-icon
+			{
+
+				a
+				{
+					position:         fixed;
+					top:              10px;
+					z-index:          1004;
+					background-color: rgba(0, 0, 0, .8);
+					padding:          5px 10px;
+					color:            #ffffff;
+
+					&:hover
+					{
+						color: #ffffff;
+					}
+				}
+
+
+			}
+
+		}
+	}
+
+
+	@include rem-baseline; // Default zoom to 100%
+
+	// Social Icon Classes
+	.ztsh-facebook
+	{
+		overflow:         hidden;
+		background-color: $ztsh-facebook-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-facebook-color, $lightness: $ztsh-lightness-value);
+		}
+
+	}
+
+	.ztsh-twitter
+	{
+		overflow:         hidden;
+		background-color: $ztsh-twitter-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-twitter-color, $lightness: $ztsh-lightness-value);
+		}
+
+	}
+
+	.ztsh-google
+	{
+		overflow:         hidden;
+		background-color: $ztsh-google-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-google-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-youtube
+	{
+		overflow:         hidden;
+		background-color: $ztsh-youtube-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-youtube-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-linkedin
+	{
+		overflow:         hidden;
+		background-color: $ztsh-linkedin-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-linkedin-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-behance
+	{
+		overflow:         hidden;
+		background-color: $ztsh-behance-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-behance-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-dribble
+	{
+		overflow:         hidden;
+		background-color: $ztsh-dribble-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-dribble-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-pinterest
+	{
+		overflow:         hidden;
+		background-color: $ztsh-pinterest-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-pinterest-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-vimeo
+	{
+		overflow:         hidden;
+		background-color: $ztsh-vimeo-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-vimeo-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+	.ztsh-rss
+	{
+		overflow:         hidden;
+		background-color: $ztsh-rss-color;
+
+		&:hover
+		{
+			background-color: scale_color($ztsh-rss-color, $lightness: $ztsh-lightness-value);
+		}
+	}
+
+}

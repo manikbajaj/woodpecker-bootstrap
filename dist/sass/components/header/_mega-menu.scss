@@ -1,0 +1,94 @@
+// =============================>
+//  Mega Menu Header Partial
+// <============================
+
+// Mega Menu Classes
+//
+// Classes for Mega Menu
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-has-mega-menu | Applied to primary menu `li` which nests the Mega Menu |
+// | wdpk-mega-menu | When applied to the `.wdpk-menu-container` class makes the converts the container into a Mega Menu and pick up properties related to Mega Menu from `SCSS` |
+// | wdpk-mega-menu-wrapper | The wrapper class for Mega Menu, child of the `.wdpk-mega-menu` class |
+// | wdpk-mega-menu-section | Class added to each section of the Mega Menu |
+// | wdpk-mega-title | The class applied to Mega Menu title |
+//
+// Styleguide CSS Classes.Mega Menu
+
+
+.wdpk-has-mega-menu
+{
+	position: inherit !important;
+
+	.wdpk-menu-container
+	{
+		border: none !important;
+	}
+
+	.wdpk-mega-menu
+	{
+		position:         absolute !important;
+		width:            100% !important;
+		top:              unset !important;
+		left:             0 !important;
+		margin-top:       wdpkCalculateTop(
+										  $wdpk-bottom-bar-enabled,
+										  $wdpk-bottom-height,
+										  $wdpk-menu-height,
+										  $wdpk-bottom-bar-menu-border-map,
+										  $wdpk-primary-menu-border-map
+						  );
+		background-color: transparent !important;
+		box-shadow:       none !important;
+		transition:       all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+
+		.wdpk-mega-menu-wrapper
+		{
+			background-color: $wdpk-dropdown-menu-background-color;
+			padding-top:      $wdpk-mega-menu-vertical-padding;
+			padding-bottom:   $wdpk-mega-menu-vertical-padding;
+			border:           none; // This it to reset the border
+			@include wdpk-shadow($wdpk-dropdown-menu-shadow-map);
+			@include wdpk-addBorder($wdpk-dropdown-menu-border-map);
+		}
+
+		.wdpk-mega-menu-section
+		{
+			// Conditionally add border if it has been set to true
+			@if (map-get($wdpk-mega-menu-separators, separatorsOn) == true)
+			{
+				border-right: map-get($wdpk-mega-menu-separators, separatorThickness) solid map-get($wdpk-mega-menu-separators, separatorColor);
+			}
+
+			.wdpk-mega-title
+			{
+				color:          $wdpk-dropdown-menu-font-color;
+				font-size:      $wdpk-menu-font-size;
+				font-weight:    $wdpk-mega-menu-titlee-font-weight;
+				padding-top:    .5rem;
+				padding-bottom: .5rem;
+			}
+
+			ul
+			{
+				li:last-of-type
+				{
+					a
+					{
+						border-bottom: none !important;
+					}
+				}
+			}
+
+			li .wdpk-dropDown-item i
+			{
+				display:       inline-block !important;
+				padding-right: $wdpk-dropdown-menu-font-size / 2.5;
+				width:         .9rem;
+				box-sizing:    content-box;
+				text-align:    center;
+			}
+		}
+	}
+}

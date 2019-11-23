@@ -1,0 +1,85 @@
+// =============================>
+//  Stylink Partial For Lightbox
+// <============================
+// TODO: Add hover animations and Scale for the zoom icon
+// TODO: **IMPORTANT** Change the FB Comment Code To Your Own Page and Enable FB Comments
+
+.wdpk-light-gallery
+{
+	//margin-left:  -10px;
+	//margin-right: -10px;
+	position: relative;
+
+
+	.wdpk-light-gallery-img
+	{
+		@extend .card-img-top;
+		@extend .card-img-bottom;
+
+	}
+
+	.card
+	{
+		overflow: hidden !important;
+		display: inline-flex;
+
+		.wdpk-light-gallery-cont
+		{
+			overflow: hidden !important;
+			@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+			cursor:   pointer;
+
+			&:hover
+			{
+				.wdpk-light-gallery-hover
+				{
+					visibility: visible;
+					opacity:    1;
+				}
+
+			}
+
+			.wdpk-light-gallery-hover
+			{
+				width:            100%;
+				height:           100%;
+				background-color: $wdpk-light-gallery-hover-bg-color;
+				position:         absolute;
+				display:          flex;
+				top:              0;
+				left:             0;
+				visibility:       hidden;
+				opacity:          0;
+				@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+				text-align:       center;
+
+				i
+				{
+					font-size:       $wdpk-light-gallery-icon-size;
+					color:           $wdpk-light-gallery-icon-color;
+					display:         inline-flex;
+					align-self:      center;
+					justify-content: center;
+					width:           $wdpk-light-gallery-icon-size * 1.1;
+					height:          $wdpk-light-gallery-icon-size * 1.1;
+					@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+					box-sizing:      content-box;
+					position:        absolute;
+					left:            50%;
+					top:             50%;
+					transform:       translate(-50%, -50%);
+					padding: $wdpk-light-gallery-icon-padding;
+					background-color: $wdpk-light-gallery-icon-bg-color;
+					border-radius: $wdpk-light-gallery-icon-border-radius;
+					border: $wdpk-light-gallery-icon-border;
+
+					&:hover
+					{
+						background-color: $wdpk-light-gallery-icon-hover-bg-color;
+					}
+				}
+			}
+
+		}
+	}
+}

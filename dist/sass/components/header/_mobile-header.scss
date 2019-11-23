@@ -1,0 +1,106 @@
+// =============================>
+// Mobile Header Style Partial
+// <=============================
+
+// Mobile Header Classes
+//
+// Classes for Mobile Header
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-mobile-header | Added to the container div of the mobile header |
+// | wdpk-menu-icon	| Class for the mobile menu toggle icon in the mobile header |
+// | wdpk-mobile-header-branding | Class for the logo of the mobile header |
+//
+// Styleguide CSS Classes.Mobile Header
+
+.wdpk-mobile-header
+{
+	display: none;
+	@include to($wdpk-mobile-header-breakpoint)
+	{
+		@include wdpk-shadow($wdpk-mobile-header-shadow);
+		@include wdpk-background($wdpk-mobile-header-background);
+		font-size: $wdpk-off-canvas-font-size * 1.5;
+		padding:   $wdpk-mobile-header-vertical-padding 0px;
+		z-index:   1002;
+		display:   -webkit-box;
+		display:   -ms-flexbox;
+		display:   flex;
+
+		@if ($wdpk-off-canvas-open-from == left)
+		{
+			.wdpk-menu-icon
+			{
+				-webkit-box-ordinal-group: 1;
+				-ms-flex-order:            0;
+				order:                     0;
+				-webkit-box-pack:          start;
+				-ms-flex-pack:             start;
+				justify-content:           flex-start;
+			}
+			.wdpk-mobile-header-branding
+			{
+				-webkit-box-ordinal-group: 2;
+				-ms-flex-order:            1;
+				order:                     1;
+				-webkit-box-pack:          end;
+				-ms-flex-pack:             end;
+				justify-content:           flex-end;
+			}
+		} @else if ($wdpk-off-canvas-open-from == right)
+		{
+			.wdpk-menu-icon
+			{
+				-webkit-box-ordinal-group: 2;
+				-ms-flex-order:            1;
+				order:                     1;
+				-webkit-box-pack:          end;
+				-ms-flex-pack:             end;
+				justify-content:           flex-end;
+			}
+			.wdpk-mobile-header-branding
+			{
+				-webkit-box-ordinal-group: 1;
+				-ms-flex-order:            0;
+				order:                     0;
+				-webkit-box-pack:          start;
+				-ms-flex-pack:             start;
+				justify-content:           flex-start;
+			}
+		}
+
+
+		.wdpk-menu-icon
+		{
+			align-self: center;
+			display:    -webkit-box;
+			display:    -ms-flexbox;
+			display:    flex;
+			cursor:     pointer;
+
+			a
+			{
+				i
+				{
+					vertical-align: middle;
+				}
+			}
+
+		}
+
+		.wdpk-mobile-header-branding
+		{
+			align-self: center;
+			display:    -webkit-box;
+			display:    -ms-flexbox;
+			display:    flex;
+
+			img
+			{
+				align-self: center;
+				width:      $wdpk-mobile-header-logo-width;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+// =============================>
+// Sets the breakpoint slices for
+// Breakpoint slicer Sass
+// <============================
+
+// Responsive Breakpoints
+//
+// The WoodPecker® Theme depends on Bootstrap Grids for layouts. However there are components that are specific to WoodPecker. For those components we use the [Breakpoint Slicer](https://github.com/lolmaus/breakpoint-slicer). following are the breakpoints that we use.
+//
+// - `xs` = between 0px to 576px
+// - `sm` = between 577px to 768px
+// - `md` = between 769 to 992px
+// - `lg` = between 993px to 1200px
+// - `xl` = above 1200px
+//
+
+  $slicer-breakpoints:      0      576px      768px       992px       1200px ;
+//                          |________|__________|___________|____________|_______
+//                              |          |          |            |             |
+// Slice Numbers:               1          2          3            4             5
+  $slicer-breakpoint-names: (  'xs'       'sm'       'md'         'lg'          'xl');

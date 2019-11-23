@@ -1,0 +1,107 @@
+// =============================>
+//  Counter Styling Partial
+// <============================
+
+.wdpk-counter
+{
+	text-align:  $wdpk-counter-text-align;
+	font-size:   $wdpk-counter-font-size;
+	font-family: $wdpk-counter-font-family;
+	color:       $wdpk-counter-font-color;
+	font-weight: $wdpk-counter-font-weight;
+	line-height: 1;
+	cursor:      pointer;
+
+	.wdpk-counter-wrapper
+	{
+
+		padding-top:    $wdpk-counter-vertical-padding;
+		padding-bottom: $wdpk-counter-vertical-padding;
+		width:          100%;
+		@include wdpk-background($wdpk-counter-background-map);
+		@include wdpk-addBorder($wdpk-counter-border);
+		@include wdpk-shadow($wdpk-counter-shadow);
+
+		.wdpk-counter-icon-wrapper
+		{
+			display:    inline-flex;
+			min-height: $wdpk-counter-icon-font-size * 1.1;
+			min-width:  $wdpk-counter-icon-font-size * 1.1;
+		}
+
+
+		&:hover i
+		{
+			color: $wdpk-counter-icon-font-hover-color !important;
+		}
+
+
+		&:hover .wdpk-counter-icon
+		{
+			border-color:     $wdpk-counter-icon-border-hover-color;
+			background-color: $wdpk-counter-icon-background-hover-color;
+			@include wdpk-hoverAnimations($wdpk-counter-icon-font-hover-animation);
+		}
+
+		.wdpk-counter-icon
+		{
+			display:            inline-flex;
+			padding:            $wdpk-counter-icon-padding;
+			border:             $wdpk-counter-icon-border-width solid $wdpk-counter-icon-border-color;
+			border-radius:      $wdpk-counter-icon-border-radius;
+			background-color:   $wdpk-counter-icon-background-color;
+			margin-bottom:      $wdpk-counter-icon-bottom-margin;
+
+			-webkit-transition: all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-moz-transition:    all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-ms-transition:     all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-o-transition:      all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+
+			font-size:          $wdpk-counter-icon-font-size;
+
+
+			i
+			{
+				color:              $wdpk-counter-icon-font-color;
+				-webkit-transition: all $wdpk-global-transition-duration $wdpk-global-transition-function;
+				-moz-transition:    all $wdpk-global-transition-duration $wdpk-global-transition-function;
+				-ms-transition:     all $wdpk-global-transition-duration $wdpk-global-transition-function;
+				-o-transition:      all $wdpk-global-transition-duration $wdpk-global-transition-function;
+				transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+
+				line-height:        1;
+				margin:             auto;
+			}
+
+		}
+
+
+	}
+
+	.wdpk-counter-prefix
+	{
+		font-size:    $wdpk-counter-prefix-font-size;
+		font-family:  $wdpk-counter-prefix-font-family;
+		color:        $wdpk-counter-prefix-font-color;
+		margin-right: $wdpk-counter-prefix-margin-right;
+	}
+
+	.wdpk-counter-suffix
+	{
+		font-size:   $wdpk-counter-suffix-font-size;
+		font-family: $wdpk-counter-suffix-font-family;
+		color:       $wdpk-counter-suffix-font-color;
+		margin-left: $wdpk-counter-suffix-margin-left;
+	}
+
+	.wdpk-counter-footnote
+	{
+		padding:     $wdpk-counter-footnote-vertical-padding auto;
+		font-size:   $wdpk-counter-footnote-font-size;
+		font-family: $wdpk-counter-footnote-font-family;
+		color:       $wdpk-counter-footnote-font-color;
+		font-weight: $wdpk-counter-footnote-font-weight;
+		margin-top:  $wdpk-counter-footnote-top-margin;
+	}
+}

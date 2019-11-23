@@ -1,0 +1,27 @@
+// =============================>
+//  Carousel Styling Partial
+// <============================
+
+
+.flickity-viewport
+{
+	margin: 0 0 40px 0;
+
+	.carousel-cell
+	{
+		margin-right: $wdpk-carousel-items-gap;
+
+		img
+		{
+			width:  $wdpk-carousel-image-width;
+			height: $wdpk-carousel-image-height;
+		}
+
+	}
+
+}
+
+.flickity-page-dots
+{
+	bottom: -35px;
+}

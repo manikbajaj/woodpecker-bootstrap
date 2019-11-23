@@ -1,0 +1,93 @@
+// =============================>
+//  Page Title Styling Partial
+// <============================
+// TODO: Font Weight and Sytle variables are missing in page titles need to be added over here
+// TODO: Take font alignment to Sass variables till now it's being managed by classes same applies for the separator alignment as well
+
+.wdpk-page-title
+{
+
+	@include wdpk-background($wdpk-page-title-bg-map);
+
+	.wdpk-page-title-wrapper
+	{
+		background-color: $wdpk-page-title-overlay-color;
+		position:         relative;
+
+		.wdpk-page-title-content
+		{
+			padding-top:    $wdpk-page-title-top-space;
+			padding-bottom: $wdpk-page-title-bottom-space;
+
+		}
+
+		.wdpk-page-title-heading
+		{
+			font-size:     $wdpk-page-title-head-font-size;
+			font-family:   $wdpk-page-title-head-font-family;
+			line-height:   $wdpk-page-title-head-line-height;
+			color:         $wdpk-page-title-head-color;
+			margin-bottom: $wdpk-page-title-head-margin-bottom;
+		}
+
+		.wdpk-page-title-separator-wrapper
+		{
+			display: flex;
+			margin-bottom: $wdpk-page-title-separator-margin-bottom;
+
+			.wdpk-page-title-separator
+			{
+				@include wdpk-background($wdpk-page-title-spearator-bg-map);
+				@include wdpk-addBorder($wdpk-page-title-spearator-border-map);
+				height:        $wdpk-page-title-separator-height;
+				width:         $wdpk-page-title-separator-width;
+				display:       inline-flex;
+				align-self:    center;
+
+			}
+
+			i
+			{
+				color:     $wdpk-page-title-separator-icon-color;
+				font-size: $wdpk-page-title-separator-icon-font-size;
+				width: $wdpk-page-title-separator-icon-font-size * 1.1;
+				height: $wdpk-page-title-separator-icon-font-size * 1.1;
+				align-self: center;
+				justify-content: center;
+				display: inline-flex;
+				box-sizing: content-box;
+				padding: 0 $wdpk-page-title-separator-icon-xpadding;
+			}
+		}
+
+		.wdpk-page-title-description
+		{
+			font-size:     $wdpk-page-title-desc-font-size;
+			font-family:   $wdpk-page-title-desc-font-family;
+			line-height:   $wdpk-page-title-desc-line-height;
+			color:         $wdpk-page-title-desc-color;
+			margin-bottom: $wdpk-page-title-desc-margin-bottom;
+		}
+
+	}
+
+
+}
+
+.wdpk-bg-video
+{
+	overflow: hidden;
+	position: relative;
+
+	video
+	{
+		position:   absolute;
+		width:      auto;
+		height:     auto;
+		top:        50%;
+		left:       50%;
+		min-width:  100%;
+		min-height: 100%;
+		transform:  translateX(-50%) translateY(-50%);
+	}
+}

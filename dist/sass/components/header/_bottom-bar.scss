@@ -1,0 +1,33 @@
+// =============================>
+// Bottom Bar Style Partial
+// <=============================
+
+.wdpk-bottombar
+{
+	border: none; // resetting the border
+	@include wdpk-background($wdpk-bottom-bar-background);
+	@include wdpk-shadow($wdpk-bottom-bar-menu-shadow);
+	@include wdpk-addBorder($wdpk-bottom-bar-menu-border-map);
+	width: 100%;
+	@if ($wdpk-bottom-bar-enabled == true){
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	@else {
+		display: none;
+	}
+	
+	font-family: $wdpk-menu-font-family;
+	font-weight: $wdpk-menu-font-weight;
+	text-transform: $wdpk-menu-text-transform;
+	height: $wdpk-bottom-height;
+	line-height: $wdpk-menu-font-line-height;
+	z-index: 1003 !important; // this has been set because with fixed z-index it interfers with cart dropdown
+
+	.wdpk-nav-wrap
+	{
+		height: 100%;
+
+	}
+}

@@ -1,0 +1,99 @@
+// =============================>
+//  Shopping Cart Dropdown Partial
+// <============================
+
+.wdpk-cart-dropdown
+{
+	position:         absolute;
+	width:            $wdpk-dropdown-menu-width;
+	top:              $wdpk-menu-height * 1.3;
+	visibility:       hidden;
+	display:          none;
+	@include wdpk-shadow($wdpk-dropdown-menu-shadow-map);
+	@include wdpk-dropdownAnimate($wdpk-dropdown-menu-animation);
+	@include wdpk-addBorder($wdpk-dropdown-menu-border-map);
+	background-color: $wdpk-dropdown-menu-background-color;
+
+	.wdpk-cartdrop-prdct-wrap
+	{
+		display:    inline-table;
+		width:      100%;
+		margin-top: 7px;
+
+		.wdpk-cartdrop-img
+		{
+			float: left;
+			width: 25%;
+
+			img
+			{
+				width: 50px;
+			}
+
+		}
+
+		.wdpk-cartdrop-name
+		{
+			float:        left;
+			width:        65%;
+			padding-left: 15px;
+
+			.wdpk-product-name
+			{
+				display: inline-block;
+			}
+
+			.wdpk-product-subtitle
+			{
+				display:   inline-block;
+				font-size: $wdpk-menu-font-size;
+				color:     $wdpk-dropdown-menu-font-color;
+			}
+		}
+
+		.wdpk-cartdrop-close
+		{
+			float: left;
+			width: 10%;
+			color: scale_color($wdpk-dropdown-menu-font-color, $lightness: 30%);
+		}
+	}
+
+	.wdpk-cartdrop-totals
+	{
+		display: inline-table;
+		width:   100%;
+
+		.wdpk-cartdrop-taxname
+		{
+			display:    inline-table;
+			width:      70%;
+			text-align: left;
+			font-size:  $wdpk-menu-font-size;
+			color:      $wdpk-dropdown-menu-font-color;
+		}
+
+		.wdpk-cartdrop-amount
+		{
+			display:    inline-table;
+			width:      30%;
+			text-align: right;
+			font-size:  $wdpk-menu-font-size;
+			color:      scale_color($wdpk-dropdown-menu-font-color, $lightness: 30%);
+		}
+	}
+}
+
+.wdpk-menu-cart
+{
+	&:hover .wdpk-cart-dropdown
+	{
+		display:    block;
+		visibility: visible;
+	}
+}
+
+.wdpk-cartEdge
+{
+	right: 20px !important;
+}

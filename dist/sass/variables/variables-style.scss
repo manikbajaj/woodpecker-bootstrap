@@ -1,0 +1,16 @@
+// =============================>
+// The Final Import File For All The Variable Partials
+// <==============================
+
+// Variables
+//
+// Woodpecer SASS variables that have been used throughout the application.
+//
+// **Overiding Variables:** The variables that can be overriden have been declared using the `!default` flag in SASS files. Please check the theme documentation on how you can override variables and customized the theme.
+//
+@import "variables-wdpk";
+@import "do-not-edit";
+@import "bootstrap-variables";
+@import "breakpoint-slicer-variables";
+@import "image-hover-variables";
+@import "variables-plyr";

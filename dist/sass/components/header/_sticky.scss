@@ -1,0 +1,162 @@
+// =============================>
+//  Sticky header partial
+// <============================
+
+// Sticky Navbar Classes
+//
+// Classes for Sticky Navbar
+//
+// | Class  | Utility |
+// |----------|-------|
+// | .wdpk-sticky-navbar | When applied to the `.wdpk-navbar` class makes the Navbar Sticky and applies Stikcy Navbar Properties defined in `SCSS`  |
+//
+//
+// Styleguide CSS Classes.Sticky Navbar
+// TODO: Think of an elegant way of adding a separate logo to the sticky header
+
+.wdpk-header-container, .wdpk-transparent-navbar
+{
+	@if $wdpk-enable-on-desktop == false
+	{
+		@include from($wdpk-mobile-header-breakpoint + 1)
+		{
+			.wdpk-sticky
+			{
+				position: fixed !important;
+				top:      0;
+				border:   none; // To reset the inherited border
+				@include wdpk-background($wdpk-sticky-menu-background) ;
+				@include wdpk-shadow($wdpk-sticky-menu-shadow);
+				@include wdpk-addBorder($wdpk-sticky-menu-border-map);
+				@if (map-get($wdpk-sticky-menu-shadow, shadowOn))== false
+				{
+					-webkit-box-shadow: none;
+					box-shadow:         none;
+				}
+
+				.wdpk-menu
+				{
+					justify-content: $wdpk-menu-align-items !important;
+					font-size:       $wdpk-sticky-menu-font-size;
+					color:           $wdpk-sticky-menu-font-color;
+
+					li
+					{
+						&:hover > a
+						{
+							color: $wdpk-sticky-menu-font-color-hover;
+						}
+
+						a
+						{
+							transition: color map-get($wdpk-hover-effect, animationDuration) ease;
+							color:           $wdpk-sticky-menu-font-color;
+							&:hover
+							{
+								color: $wdpk-sticky-menu-font-color-hover;
+							}
+						}
+					}
+				}
+
+				.wdpk-menu-extras
+				{
+					font-size: $wdpk-menu-font-size;
+					display:   -webkit-box;
+					display:   -ms-flexbox;
+					display:   flex !important;
+					height:    100%;
+					border:    none;
+					cursor:    pointer;
+
+					.wdpk-menu-cart
+					{
+
+						padding: 0 $wdpk-padding-menu-items;
+
+						i
+						{
+							position:   relative;
+							align-self: center;
+						}
+
+						.wdpk-menu-cart-items
+						{
+							color:            $wdpk-cart-number-font-color;
+							font-size:        ($wdpk-menu-extras-font-size * .75);
+							display:          -webkit-box;
+							display:          -ms-flexbox;
+							display:          flex;
+							position:         absolute;
+							top:              -60%;
+							left:             50%;
+							z-index:          101;
+							padding:          3px;
+							border-radius:    50%;
+							background-color: $wdpk-primary-color;
+
+						}
+
+					}
+
+					.wdpk-menu-search
+					{
+
+						padding: 0 $wdpk-padding-menu-items;
+
+						i
+						{
+							position:   relative;
+							align-self: center;
+						}
+					}
+
+
+					.wdpk-menu-extra-item
+					{
+						a
+						{
+							color:           $wdpk-sticky-menu-extras-font-color;
+							font-size:       $wdpk-sticky-menu-extras-font-size;
+							cursor:          pointer;
+							display:         flex;
+							text-decoration: none;
+							transition:      color map-get($wdpk-hover-effect, animationDuration) ease;
+
+							i
+							{
+								color:      $wdpk-sticky-menu-extras-font-color;
+								transition: color map-get($wdpk-hover-effect, animationDuration) ease;
+							}
+
+							&:hover
+							{
+								color: $wdpk-sticky-menu-extras-font-hover-color;
+
+								i
+								{
+									color: $wdpk-sticky-menu-extras-font-hover-color;
+								}
+							}
+						}
+
+						@if $wdpk-menu-extras-border == true
+						{
+							border-right: none;
+
+							&:first-child
+							{
+								border-left: none;
+							}
+
+						} @else
+						{
+							border:       none;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

@@ -1,0 +1,3424 @@
+// ===========================================>
+// Contains all the variables for the WoodPecker Theme
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $wdpk-nav-link-disabled-color
+// and $wdpk-modal-content-box-shadow-xs.
+// IMPORTANT: It is mandatory to use 'wdpk' prefix for all variables
+// <===========================================
+// =============================>
+//  Import the required fonts
+// <============================
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
+
+
+// General Layout And Styling Options
+//
+// | Variable  | Options  |
+// |-----------|:--------:|
+// |$wdpk-orientation | 'ltr' for Left To Right Text And 'rtl' For Right To Left Text |
+// | $wdpk-sm-breakpoint | Break for Breakpoint Slicer for Small Devices |
+// | $wdpk-md-breakpoint | Break for Breakpoint Slicer for Medium Device |
+// | $wdpk-lg-breakpoint | Break for Breakpoint Slicer for For Desktop Resolutions|
+// | $wdpk-xl-breakpoint | Break for Breakpoint Slicer for Xtra Large Screens |
+// | $wdpk-enable-on-desktop | Set this to true if offCanvas menu needs to be wna |
+// | $wdpk-mobile-header-breakpoint | '1' for xs, '2' for sm, '3' for md, '4' for lg set ot 5 to display on desktop only if `$wdpk-enable-on-desktop` is set to true else sass compiler will throw an error |
+// | $wdpk-code-block-style: light | Select the style of the code block `light` or `dark` |
+// | $wdpk-global-transition-duration | Transition duration set for theme animations |
+// | $wdpk-global-transition-function | Transition function used for animations for the theme |
+// | $wdpk-global-element-margin | Bottom margin used Globally for shortcodes|
+// | $wdpk-lightness-value | Lightness value used Globally throughout the theme. Needs to be negativ in case of a light theme and positive in case of a dark theme |
+//
+// Styleguide Theme.Layout and Styling
+
+
+// =============================>
+//  Set this to either 'light' or 'dark'
+// TODO: Write a function to change values throughout the SCSS based on the value assigned here
+// <============================
+$wdpk-orientation:                              'ltr' !default;
+$wdpk-sm-breakpoint:                            576px !default;
+$wdpk-md-breakpoint:                            768px !default;
+$wdpk-lg-breakpoint:                            992px !default;
+$wdpk-xl-breakpoint:                            1200px !default;
+$wdpk-mobile-header-breakpoint:                 3 !default;
+$wdpk-code-block-style:                         'light' !default;
+$wdpk-global-transition-duration:               .5s !default;
+$wdpk-global-transition-function:               ease !default;
+$wdpk-global-element-margin:                    2rem !default;
+$wdpk-lightness-value:                          -20% !default;
+
+// =============================>
+//  Grid columns
+// <============================
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+//
+$wdpk-grid-columns:                             12 !default;
+$wdpk-grid-gutter-width:                        30px !default;
+
+
+// =============================>
+// The Bootstrap Base Colors
+// <============================
+
+// Bootstrap Colors
+//
+// The default colors that are used by by Bootstrap and inherited by WoodPecker as well.
+//
+// $wdpk-blue -    #0056c6; Blue
+// $wdpk-indigo -  #6610f2; Indigo
+// $wdpk-purple -  #6f42c1; Purple
+// $wdpk-pink -    #e83e8c; Pink
+// $wdpk-red -     #f03a47; Red
+// $wdpk-orange -  #fd7e14; Orange
+// $wdpk-yellow -  #ffc107; Yellow
+// $wdpk-green -   #38c07b; Green
+// $wdpk-teal -    #20c997; Teal
+// $wdpk-cyan -    #0dbdcd; Cyan
+//
+// Styleguide Colors.Bootstrap Colors
+$wdpk-blue:                                     #0056c6 !default;
+$wdpk-indigo:                                   #6610f2 !default;
+$wdpk-purple:                                   #6f42c1 !default;
+$wdpk-pink:                                     #e83e8c !default;
+$wdpk-red:                                      #f03a47 !default;
+$wdpk-orange:                                   #fd7e14 !default;
+$wdpk-yellow:                                   #ffc107 !default;
+$wdpk-green:                                    #38c07b !default;
+$wdpk-teal:                                     #20c997 !default;
+$wdpk-cyan:                                     #0dbdcd !default;
+
+// Bootstrap Grays
+//
+// Overriding the grays used by Bootsrap.
+//
+//$wdpk-white -     #fff; White
+//$wdpk-gray-100 -  #f8f9fa; Gray 100
+//$wdpk-gray-200 -  #e9ecef; Gray 200
+//$wdpk-gray-300 -  #dee2e6; Gray 300
+//$wdpk-gray-400 -  #ced4da; Gray 400
+//$wdpk-gray-500 -  #adb5bd; Gray 500
+//$wdpk-gray-600 -  #6c757d; Gray 600
+//$wdpk-gray-700 -  #495057; Gray 700
+//$wdpk-gray-800 -  #343a40; Gray 800
+//$wdpk-gray-900 -  #212529; Gray 900
+//$wdpk-black -     #000; Black
+//
+// Styleguide Colors.Bootstrap Grays
+$wdpk-white:                                    #fff !default;
+$wdpk-gray-100:                                 #f8f9fa !default;
+$wdpk-gray-200:                                 #e9ecef !default;
+$wdpk-gray-300:                                 #dee2e6 !default;
+$wdpk-gray-400:                                 #ced4da !default;
+$wdpk-gray-500:                                 #adb5bd !default;
+$wdpk-gray-600:                                 #6c757d !default;
+$wdpk-gray-700:                                 #495057 !default;
+$wdpk-gray-800:                                 #343a40 !default;
+$wdpk-gray-900:                                 #212529 !default;
+$wdpk-black:                                    #000 !default;
+
+// 	Colors
+//
+//	WoodPecker uses these colors throughout the theme. These colors have been overriden for the default Bootstrap components as well. So overiding these colors will directly set the colors for Bootstarp as well to match the theme and you dont need to change any of the Bootstrap variables.
+//
+// ### Theme Default Values
+//
+// $wdpk-primary-color - #0056c6; Primary Color
+// $wdpk-secondary - #6c757d; Secondary Color
+// $wdpk-gradient-1: #0056c6;
+// $wdpk-gradient-2: #0BC9CD;
+// $wdpk-success - #38c07b; Success
+// $wdpk-info -  #0dbdcd; Info
+// $wdpk-warning - #ffc107; Warning
+// $wdpk-danger - #f03a47; Danger
+// $wdpk-light - #e9ecef; Light
+// $wdpk-dark - #343a40; Dark
+//
+// Styleguide Colors
+
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$wdpk-primary-color:                            #0056c6 !default;
+$wdpk-secondary:                                $wdpk-gray-600 !default;
+$wdpk-gradient-1:                               #0056c6 !default;
+$wdpk-gradient-2:                               #0bc9cd !default;
+$wdpk-success:                                  $wdpk-green !default;
+$wdpk-info:                                     $wdpk-cyan !default;
+$wdpk-warning:                                  $wdpk-yellow !default;
+$wdpk-danger:                                   $wdpk-red !default;
+$wdpk-light:                                    $wdpk-gray-200 !default;
+$wdpk-dark:                                     $wdpk-gray-800 !default;
+
+// Body Colors
+//
+// Colors Applied to the `<body>` element
+//
+//| Variable| Options |
+//|--------|:--------:|
+//|$wdpk-body-bg | Background Color for the body of the document |
+//|$wdpk-body-color | Default Font Color For the document |
+//
+// $wdpk-body-bg -  		#ffffff; Body Background
+// $wdpk-body-color - 	#212529; Body Color
+//
+// Styleguide Colors.Body Colors
+$wdpk-body-bg:                                  $wdpk-white !default;
+$wdpk-body-color:                               $wdpk-gray-600 !default;
+
+
+// Social Media Colors
+//
+// Colors used for various social media channels
+//
+// $wdpk-facebook-color -  #3b5998; Facebook Color
+// $wdpk-twitter-color -  #1da1f2; Twitter Color
+// $wdpk-google-color -  #db3236; Google Color
+// $wdpk-youtube-color -  #c4302b; YouTube Color
+// $wdpk-linkedin-color -  #0077b5; Linkedin Color
+// $wdpk-behance-color -  #053eff; Behnace Color
+// $wdpk-dribble-color -  #ea4c89; Dribble Color
+// $wdpk-pinterest-color -  #c8232c; Pinterest Color
+// $wdpk-vimeo-color -  #19b7ea; Vimeo Color
+// $wdpk-rss-color -  #ee802f; RSS Color
+//
+// Styleguide Colors.Social Media Colors
+$wdpk-facebook-color:                           #3b5998 !default;
+$wdpk-twitter-color:                            #1da1f2 !default;
+$wdpk-google-color:                             #db3236 !default;
+$wdpk-youtube-color:                            #c4302b !default;
+$wdpk-linkedin-color:                           #0077b5 !default;
+$wdpk-behance-color:                            #053eff !default;
+$wdpk-dribble-color:                            #ea4c89 !default;
+$wdpk-pinterest-color:                          #c8232c !default;
+$wdpk-vimeo-color:                              #19b7ea !default;
+$wdpk-rss-color:                                #ee802f !default;
+
+
+// Components
+//
+// Define common padding and border radius sizes etc for various components. All the components use values from these variables to calculate the values.
+//
+//| Variable  | Options  |
+//|-----------|:--------:|
+//|$wdpk-line-height-lg  | 'lg' Line height for text used in components such as buttons |
+//|$wdpk-line-height-sm  | 'sm' Line height for text used in components such as buttons |
+//|$wdpk-border-width  | Border width used in components |
+//|$wdpk-border-color  | Border color used in components |
+//|$wdpk-border-radius | Border radius used in components |
+//|$wdpk-border-radius-lg | 'lg' Border radius used in components |
+//|$wdpk-border-radius-sm | 'sm' Border radius used in components |
+//|$wdpk-box-shadow-sm | 'sm' Box Shadow used in components |
+//|$wdpk-box-shadow  | Box Shadow used in components |
+//|$wdpk-box-shadow-lg | 'lg' Box Shadow used in components |
+//|$wdpk-component-active-color	| Active color used for components |
+//|$wdpk-component-active-bg | Active background color used for components |
+//|$wdpk-caret-width | Caret width used for components |
+//|$wdpk-transition-base | base transition properties for components |
+//|$wdpk-transition-fade | fade transition properties for components |
+//|$wdpk-transition-collapse | collapse transition properties for components |
+//
+// Styleguide Theme.Components
+
+$wdpk-line-height-lg:                           1.5 !default;
+$wdpk-line-height-sm:                           1.5 !default;
+
+$wdpk-border-width:                             1px !default;
+$wdpk-border-color:                             $wdpk-gray-300 !default;
+
+$wdpk-border-radius:                            .25rem !default;
+$wdpk-border-radius-lg:                         .3rem !default;
+$wdpk-border-radius-sm:                         .2rem !default;
+
+$wdpk-box-shadow-sm:                            0 .125rem .25rem rgba($wdpk-black, .075) !default;
+$wdpk-box-shadow:                               0 .5rem 1rem rgba($wdpk-black, .15) !default;
+$wdpk-box-shadow-lg:                            0 1rem 3rem rgba($wdpk-black, .175) !default;
+
+$wdpk-component-active-color:                   $wdpk-white !default;
+$wdpk-component-active-bg:                      $wdpk-primary-color !default;
+
+$wdpk-caret-width:                              .3em !default;
+
+$wdpk-transition-base:                          all .2s ease-in-out !default;
+$wdpk-transition-fade:                          opacity .15s linear !default;
+$wdpk-transition-collapse:                      height .35s ease !default;
+
+
+// Font Variables
+//
+// Variables for font sizes use throught the theme. We use rem values for the fonts. By Overriding these variables various fonr sizes can be set through the theme. Can directly use rem, px, em values in these variables.
+//
+//| Variable  | Options |
+//|-----------|:-------:|
+//| $wdpk-font-size-base |	default font size applied to `<body>` rem value only |
+//| $wdpk-font-family-sans-serif  | The default Sans Serif font family |
+//| $wdpk-font-family-secondary  | Secondary font family used in various components  |
+//| $wdpk-font-weight-light | Font weight for light font |
+//| $wdpk-font-weight-normal | Font weight for regular font |
+//| $wdpk-font-weight-bold | Font weight for bold font |
+//| $wdpk-line-height-base | Base line height for all fonts |
+//| $wdpk-h1-font-size | default font size applied to `<h1>` rem value only |
+//| $wdpk-h2-font-size | default font size applied to `<h2>` rem value only |
+//| $wdpk-h3-font-size | default font size applied to `<h3>` rem value only |
+//| $wdpk-h4-font-size | default font size applied to `<h4>` rem value only |
+//| $wdpk-h5-font-size | default font size applied to `<h5>` rem value only |
+//| $wdpk-h6-font-size | default font size applied to `<h6>` rem value only |
+//|$wdpk-headings-margin-bottom | Bottom margin given to each heading rem values |
+//|$wdpk-headings-font-family | Font family assigned to headings |
+//|$wdpk-headings-font-weight | Font Weight assigned to headings |
+//|$wdpk-headings-line-height | Line height assigned to headings |
+//|$wdpk-headings-color | Color assigned to headings |
+//|$wdpk-display1-size:	| display1 Font Size |
+//|$wdpk-display2-size: | display2 Font Size |
+//|$wdpk-display3-size: | display3 Font Size |
+//|$wdpk-display4-size: | display4 Font Size |
+//|$wdpk-display1-weight: | display1 Font Weight |
+//|$wdpk-display2-weight: | display2 Font Weight |
+//|$wdpk-display3-weight: | display3 Font Weight |
+//|$wdpk-display4-weight: |	display4 Font Weight |
+//|$wdpk-paragraph-margin-bottom | Margin below the <p> tag |
+//|$wdpk-link-color |  Assign a color for links	|
+//|$wdpk-link-decoration | Default link decoration |
+//|$wdpk-link-hover-color | Link Hover Color |
+//|$wdpk-link-hover-decoration | Link Hover Decoration |
+//
+// Styleguide Theme.Fonts
+$wdpk-font-size-base:                           .9rem !default;
+$wdpk-font-size-lg:                             $wdpk-font-size-base * 1.25 !default;
+$wdpk-font-size-sm:                             $wdpk-font-size-base * .875 !default;
+
+// The default Sans Serif font family
+$wdpk-font-family-sans-serif:                   'Poppins', Arial, Helvetica, sans-serif !default;
+$wdpk-font-family-monospace:                    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$wdpk-font-family-base:                         $wdpk-font-family-sans-serif !default;
+$wdpk-font-family-secondary:                    $wdpk-font-family-sans-serif !default;
+
+// cd
+$wdpk-font-weight-light:                        300 !default;
+$wdpk-font-weight-normal:                       400 !default;
+$wdpk-font-weight-bold:                         700 !default;
+$wdpk-line-height-base:                         1.5 !default;
+
+$wdpk-font-weight-base:                         $wdpk-font-weight-normal !default;
+$wdpk-line-height-base:                         1.5 !default;
+
+$wdpk-h1-font-size:                             $wdpk-font-size-base * 2.5 !default;
+$wdpk-h2-font-size:                             $wdpk-font-size-base * 2 !default;
+$wdpk-h3-font-size:                             $wdpk-font-size-base * 1.75 !default;
+$wdpk-h4-font-size:                             $wdpk-font-size-base * 1.5 !default;
+$wdpk-h5-font-size:                             $wdpk-font-size-base * 1.25 !default;
+$wdpk-h6-font-size:                             $wdpk-font-size-base * 1.1 !default;
+$wdpk-headings-margin-bottom:                   .5rem !default;
+$wdpk-headings-font-family:                     inherit !default;
+$wdpk-headings-font-weight:                     400 !default;
+$wdpk-headings-line-height:                     1.2 !default;
+$wdpk-headings-color:                           inherit !default;
+
+$wdpk-display1-size:                            6rem !default;
+$wdpk-display2-size:                            5.5rem !default;
+$wdpk-display3-size:                            4.5rem !default;
+$wdpk-display4-size:                            3.5rem !default;
+
+$wdpk-display1-weight:                          300 !default;
+$wdpk-display2-weight:                          300 !default;
+$wdpk-display3-weight:                          300 !default;
+$wdpk-display4-weight:                          300 !default;
+
+$wdpk-paragraph-margin-bottom:                  2rem !default;
+
+$wdpk-link-color:                               $wdpk-primary-color !default;
+$wdpk-link-decoration:                          none !default;
+$wdpk-link-hover-color:                         darken($wdpk-link-color, 15%) !default;
+$wdpk-link-hover-decoration:                    underline !default;
+
+$wdpk-text-muted:                               $wdpk-gray-600 !default;
+
+
+// Button + Forms Common Variables
+//
+// These are the varibales which have been commonly used to modify the look of the buttons as well as the input fields to bring about consistency in the look and feel of the forms.Shared variables that are reassigned to `$input-` and `$btn-` specific variables. Follows the same pattern as Bootstrap
+//
+// ### Button+Input Fields Variables And Their Options
+//
+//| Variable                    | Options  		         			|
+//|-----------------------------|:---------------------------------:|
+// | $wdpk-input-btn-radius | Border Radius for buttons and input fields  |
+// | $wdpk-input-btn-padding-y | Y-axis padding for buttons and input fields  |
+// | $wdpk-input-btn-padding-x | X-axis padding for buttons and input fields |
+// | $wdpk-input-btn-font-family | Font Family for buttons and input fields  |
+// | $wdpk-input-btn-line-height | Font Size for buttons and input fields  |
+// | $wdpk-input-btn-focus-width | Focus border width for buttons and input fields  |
+// | $wdpk-input-btn-focus-color | Focus border color for buttons and input fields |
+// | $wdpk-input-btn-focus-box-shadow | Box shadow properties on focus for buttons and input fields  |
+// | $wdpk-input-btn-padding-y-sm |Y-axis padding for `sm` buttons and input fields |
+// | $wdpk-input-btn-padding-x-sm |X-axis padding for `sm` buttons and input fields  |
+// | $wdpk-input-btn-font-size-sm | Font Size for `sm` buttons and input fields  |
+// | $wdpk-input-btn-line-height-sm | Line height for `sm` buttons and input fields |
+// | $wdpk-input-btn-padding-y-lg | Y-axis padding for `lg` buttons and input fields |
+// | $wdpk-input-btn-padding-x-lg | X-axis padding for `lg` buttons and input fields |
+// | $wdpk-input-btn-font-size-lg | Font size for `lg` buttons and input fields |
+// | $wdpk-input-btn-line-height-lg | Line heioght for `lg` buttons and input fields |
+// | $wdpk-input-btn-gradient-direction | Gradient direction  |
+// | $wdpk-input-btn-border-width | Border width  |
+//
+// Styleguide Shortcodes.Buttons And Forms Common Variables
+
+$wdpk-input-btn-radius:                         .2rem !default;
+$wdpk-input-btn-padding-y:                      .375rem !default;
+$wdpk-input-btn-padding-x:                      .75rem !default;
+$wdpk-input-btn-font-family:                    null !default;
+$wdpk-input-btn-font-size:                      $wdpk-font-size-base !default;
+$wdpk-input-btn-line-height:                    $wdpk-line-height-base !default;
+$wdpk-input-btn-focus-width:                    .2rem !default;
+$wdpk-input-btn-focus-color:                    rgba($wdpk-component-active-bg, .25) !default;
+$wdpk-input-btn-focus-box-shadow:               0 0 0 $wdpk-input-btn-focus-width $wdpk-input-btn-focus-color !default;
+
+$wdpk-input-btn-padding-y-sm:                   .25rem !default;
+$wdpk-input-btn-padding-x-sm:                   .5rem !default;
+$wdpk-input-btn-font-size-sm:                   $wdpk-font-size-sm !default;
+$wdpk-input-btn-line-height-sm:                 $wdpk-line-height-sm !default;
+
+$wdpk-input-btn-padding-y-lg:                   .5rem !default;
+$wdpk-input-btn-padding-x-lg:                   1rem !default;
+$wdpk-input-btn-font-size-lg:                   $wdpk-font-size-lg !default;
+$wdpk-input-btn-line-height-lg:                 $wdpk-line-height-lg !default;
+
+$wdpk-input-btn-gradient-direction:             0deg !default;
+$wdpk-input-btn-border-width:                   $wdpk-border-width !default;
+
+// Buttons Variables
+//
+// For each of buttons, define text, background, and border color.
+//
+//| Variable | Options |
+//|----------|:-------:|
+// | $wdpk-btn-padding-y | Y-axis padding for buttons |
+// | $wdpk-btn-padding-x | X-axis padding for buttons |
+// | $wdpk-btn-font-family | FOnt fmaily for buttons |
+// | $wdpk-btn-font-size | Font size for buttons |
+// | $wdpk-btn-line-height | Line height for buttons  |
+// | $wdpk-btn-padding-y-sm | Y-axis padding for `sm` buttons  |
+// | $wdpk-btn-padding-x-sm | x-axis padding for `sm` buttons |
+// | $wdpk-btn-font-size-sm | Font Size for `sm` buttons |
+// | $wdpk-btn-line-height-sm | Line Height for `sm` buttons  |
+// | $wdpk-btn-padding-y-lg | Y-axis padding for `lg` buttons  |
+// | $wdpk-btn-padding-x-lg | X-axis padding for `lg` buttons |
+// | $wdpk-btn-font-size-lg | Font size for `lg` buttons |
+// | $wdpk-btn-line-height-lg | Line height for `lg` buttons  |
+// | $wdpk-btn-border-width | Border width for buttons |
+// | $wdpk-btn-font-weight | Font weight for buttons |
+// | $wdpk-btn-box-shadow | Box shadow for buttons |
+// | $wdpk-btn-focus-width | Focus border width for buttons |
+// | $wdpk-btn-focus-box-shadow | Box shadow for buttons  |
+// | $wdpk-btn-disabled-opacity | Disbaled opacity for buttons  |
+// | $wdpk-btn-active-box-shadow |  Active state shadow properties for buttons |
+// | $wdpk-btn-link-disabled-color | Link Disabled color for buttons |
+// | $wdpk-btn-block-spacing-y | Y-axis spacing for `block` buttons  |
+// | $wdpk-btn-border-radius | Border radius for buttons  |
+// | $wdpk-btn-border-radius-lg | Bordeer radius for `lg` buttons |
+// | $wdpk-btn-border-radius-sm | Border radius for `sm` buttons  |
+// | $wdpk-btn-transition | Transition properties for buttons |
+// | $wdpk-btn-shadow | Shodow properties for buttons  |
+//
+// Styleguide Theme.Buttons
+
+$wdpk-btn-padding-y:                            $wdpk-input-btn-padding-y !default;
+$wdpk-btn-padding-x:                            $wdpk-input-btn-padding-x !default;
+$wdpk-btn-font-family:                          $wdpk-input-btn-font-family !default;
+$wdpk-btn-font-size:                            $wdpk-input-btn-font-size !default;
+$wdpk-btn-line-height:                          $wdpk-input-btn-line-height !default;
+
+$wdpk-btn-padding-y-sm:                         $wdpk-input-btn-padding-y-sm !default;
+$wdpk-btn-padding-x-sm:                         $wdpk-input-btn-padding-x-sm !default;
+$wdpk-btn-font-size-sm:                         $wdpk-input-btn-font-size-sm !default;
+$wdpk-btn-line-height-sm:                       $wdpk-input-btn-line-height-sm !default;
+
+$wdpk-btn-padding-y-lg:                         $wdpk-input-btn-padding-y-lg !default;
+$wdpk-btn-padding-x-lg:                         $wdpk-input-btn-padding-x-lg !default;
+$wdpk-btn-font-size-lg:                         $wdpk-input-btn-font-size-lg !default;
+$wdpk-btn-line-height-lg:                       $wdpk-input-btn-line-height-lg !default;
+
+$wdpk-btn-border-width:                         $wdpk-input-btn-border-width !default;
+
+$wdpk-btn-font-weight:                          $wdpk-font-weight-normal !default;
+$wdpk-btn-box-shadow:                           inset 0 1px 0 rgba($wdpk-white, .15), 0 1px 1px rgba($wdpk-black, .075) !default;
+$wdpk-btn-focus-width:                          $wdpk-input-btn-focus-width !default;
+$wdpk-btn-focus-box-shadow:                     $wdpk-input-btn-focus-box-shadow !default;
+$wdpk-btn-disabled-opacity:                     .65 !default;
+$wdpk-btn-active-box-shadow:                    inset 0 3px 5px rgba($wdpk-black, .125) !default;
+
+$wdpk-btn-link-disabled-color:                  $wdpk-gray-600 !default;
+
+$wdpk-btn-block-spacing-y:                      .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$wdpk-btn-border-radius:                        $wdpk-border-radius !default;
+$wdpk-btn-border-radius-lg:                     $wdpk-border-radius-lg !default;
+$wdpk-btn-border-radius-sm:                     $wdpk-border-radius-sm !default;
+
+$wdpk-btn-transition:                           color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$wdpk-btn-shadow:                               (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 6px,
+														shadowSpread: 0px,
+														shadowColor: rgba(0, 0, 0, 0.6)
+												) !default;
+
+
+// Form Variables
+//
+// Variables used for modifying the look of the form input fields in forms.
+//
+//
+//| Variable | Options |
+//|----------|:-------:|
+// | $wdpk-label-font-size | Form label font size   |
+// | $wdpk-label-line-height | Form label line height  |
+// | $wdpk-label-font-weight | Form label font weight   |
+// | $wdpk-label-font-color | Form label font color  |
+// | $wdpk-input-checkbox-size | Form Checbox input size |
+// | $wdpk-form-group-margin-bottom | Form group bottom margin |
+// | $wdpk-input-bg | Input field backgrodun color by default  |
+// | $wdpk-input-disabled-bg | Input field background color in disabled state |
+// | $wdpk-input-color | Input field font color  |
+// | $wdpk-input-border-color | Input field border color  |
+// | $wdpk-input-border-width | Input field border width  |
+// | $wdpk-input-box-shadow | Input field box shadow |
+// | $wdpk-input-border-radius | Input field border radius  |
+// | $wdpk-input-border-radius-lg | Input field border radies of `lg` |
+// | $wdpk-input-border-radius-sm | Input field border radius for `sm` |
+// | $wdpk-input-focus-bg | Input field focus background color |
+// | $wdpk-input-focus-border-color | Input field focus border color |
+// | $wdpk-input-focus-color | Input field focus font color |
+// | $wdpk-input-focus-width | Input field focus border width |
+// | $wdpk-input-focus-box-shadow | Input field focus box shadow  |
+// | $wdpk-input-placeholder-color | Input field placeholder font color  |
+// | $wdpk-input-plaintext-color |  Input field plaintext color |
+// | $wdpk-input-transition | Input field placeholder transition properties |
+// | $wdpk-label-margin-bottom | Input field placeholder bottom margin  |
+// | $wdpk-input-padding-y | Y-axis padding for input fields  |
+// | $wdpk-input-padding-x | X-axis padding for input fields  |
+// | $wdpk-input-font-family | Input field font family  |
+// | $wdpk-input-font-size | Input field font size  |
+// | $wdpk-input-font-weight | Input field font weight  |
+// | $wdpk-input-line-height | Input field line height |
+// | $wdpk-input-padding-y-sm | Y-axis padding for `sm` input fields  |
+// | $wdpk-input-padding-x-sm | X-axis padding for `sm` input fields |
+// | $wdpk-input-font-size-sm | Font size for `sm` input fields |
+// | $wdpk-input-line-height-sm | Line height for `sm` input fields |
+// | $wdpk-input-padding-y-lg | Y-axis padding for `lg` input fields   |
+// | $wdpk-input-padding-x-lg | X-axis padding for `lg` input fields   |
+// | $wdpk-input-font-size-lg | Font size for `lg` input fields     |
+// | $wdpk-input-line-height-lg | Line height for `lg` input fields    |
+//
+// Styleguide Theme.Form Fields
+
+// Styling Variables
+
+$wdpk-label-font-size:                          1rem !default;
+$wdpk-label-line-height:                        $wdpk-label-font-size !default;
+$wdpk-label-font-weight:                        500 !default;
+$wdpk-label-font-color:                         inherit !default;
+
+// Checkbox Variables
+$wdpk-input-checkbox-size:                      1.25rem; // accepts only units in rem
+
+$wdpk-form-group-margin-bottom:                 1.5rem !default;
+$wdpk-input-bg:                                 $wdpk-white !default;
+$wdpk-input-disabled-bg:                        $wdpk-gray-200 !default;
+$wdpk-input-color:                              $wdpk-gray-700 !default;
+$wdpk-input-border-color:                       $wdpk-gray-400 !default;
+
+$wdpk-input-border-width:                       $wdpk-input-btn-border-width !default;
+$wdpk-input-box-shadow:                         inset 0 1px 1px rgba($wdpk-black, .075) !default;
+$wdpk-input-border-radius:                      $wdpk-border-radius !default;
+$wdpk-input-border-radius-lg:                   $wdpk-border-radius-lg !default;
+$wdpk-input-border-radius-sm:                   $wdpk-border-radius-sm !default;
+
+$wdpk-input-focus-bg:                           $wdpk-input-bg !default;
+$wdpk-input-focus-border-color:                 lighten($wdpk-component-active-bg, 25%) !default;
+$wdpk-input-focus-color:                        $wdpk-input-color !default;
+$wdpk-input-focus-width:                        $wdpk-input-btn-focus-width !default;
+$wdpk-input-focus-box-shadow:                   $wdpk-input-btn-focus-box-shadow !default;
+
+$wdpk-input-placeholder-color:                  $wdpk-gray-600 !default;
+$wdpk-input-plaintext-color:                    $wdpk-body-color !default;
+$wdpk-input-transition:                         border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// Sizing variables For Forms - Edit only if necessary impacts the sizes of input fields
+$wdpk-label-margin-bottom:                      .5rem !default;
+$wdpk-input-padding-y:                          $wdpk-input-btn-padding-y !default;
+$wdpk-input-padding-x:                          $wdpk-input-btn-padding-x !default;
+$wdpk-input-font-family:                        $wdpk-input-btn-font-family !default;
+$wdpk-input-font-size:                          $wdpk-input-btn-font-size !default;
+$wdpk-input-font-weight:                        $wdpk-font-weight-base !default;
+$wdpk-input-line-height:                        $wdpk-input-btn-line-height !default;
+$wdpk-input-padding-y-sm:                       $wdpk-input-btn-padding-y-sm !default;
+$wdpk-input-padding-x-sm:                       $wdpk-input-btn-padding-x-sm !default;
+$wdpk-input-font-size-sm:                       $wdpk-input-btn-font-size-sm !default;
+$wdpk-input-line-height-sm:                     $wdpk-input-btn-line-height-sm !default;
+$wdpk-input-padding-y-lg:                       $wdpk-input-btn-padding-y-lg !default;
+$wdpk-input-padding-x-lg:                       $wdpk-input-btn-padding-x-lg !default;
+$wdpk-input-font-size-lg:                       $wdpk-input-btn-font-size-lg !default;
+$wdpk-input-line-height-lg:                     $wdpk-input-btn-line-height-lg !default;
+
+
+// =============================>
+// Navigation Menu Variables
+// <============================
+
+// Navigation Variables
+//
+// Variables impacting the Header Navigation for the theme.
+//
+// | Variable | Options |
+// |----------|:-------:|
+// |$wdpk-menu-height | Sets the height of the header default `60px` |
+// |$wdpk-menu-logo-width | Sets the width of the header default `200px` `flex-start` `flex-end` `center`|
+// $wdpk-menu-logo-align | Set the alignment for the logo in the header |
+// |$wdpk-menu-align-items | Align menu items `flex-start` `flex-end` `center` |
+// |$wdpk-padding-menu-items | Sets the padding between the primary menu items |
+// |$wdpk-menu-background | Map for mixin setting the background for Primary Menu |
+// |$wdpk-primary-menu-shadow | Map for mixin to create a shadow for Primary Menu |
+// |$wdpk-primary-menu-border-map | Map for mixin to assign a Border to Primary Menu |
+// |$wdpk-menu-extras-font-size | Font size for extras in primary menu |
+// |$wdpk-menu-extras-font-color | Font color for extras in primary menu |
+// |$wdpk-menu-extras-font-hover-color| Font hover color for extras in primary menu |
+// |$wdpk-menu-font-size | Font size for parent menu items |
+// |$wdpk-menu-font-color | Font color of the menu items |
+// |$wdpk-menu-font-family | Font family for menu items default `Arial, Helvetica, sans-serif` |
+// |$wdpk-menu-font-weight | Font weight for the menu items |
+// |$wdpk-menu-text-transform | Text Tranform for menu items 'uppercase' 'lowercase' 'capitalize' 'none' |
+// |$wdpk-menu-font-line-height | Default line height for menu items |
+// |$wdpk-menu-items-side-border | Whether to enable the border for primary menu items 'true' 'false' |
+// |$wdpk-menu-display-caret | Display caret for the dropdown menu 'true' 'false' |
+// |$wdpk-menu-extras-display-search | Enables the search icon on the primiary menu 'true' 'false' |
+// |wdpk-menu-extras-border | Enables the border for extras items in the primary menu bar |
+// |$wdpk-menu-extras-border-width | Border width for the extras section of the primary menu bar |
+// |$wdpk-menu-extras-boder-color  | Border color for the extras section of the primary menu |
+// |$wdpk-hover-effect | Map for the mixin to add hover effects to the primary items in menu |
+// |$wdpk-cart-number-font-color | Font Color for the Cart Number |
+// | $wdpk-menu-extras-font-size | Header extras font size  |
+// | $wdpk-menu-extras-font-color | Header extras font color |
+// | $wdpk-menu-extras-font-hover-color | Header extras font hover color |
+// | $wdpk-menu-split-menu | Set to `true` if the split menu is enabled else set to `false` |
+//
+//
+// Styleguide Theme.Navigation
+
+// $wdpk-menu-height - Sets the height of the header
+$wdpk-menu-height:                              60px !default;
+// $wdpk-menu-logo-width - Set the width of the logo in the navbar
+$wdpk-menu-logo-width:                          200px !default;
+// $wdpk-menu-logo-align - Set the alignment for the logo in the header
+$wdpk-menu-logo-align:                          flex-start !default;
+// $wdpk-menu-align-items - Align menu items 'flex-start' 'flex-end' 'center'
+$wdpk-menu-align-items:                         flex-end !default;
+// $wdpk-padding-menu-items - Sets the padding between the primary menu items
+$wdpk-padding-menu-items:                       10px !default;
+
+// $wdpk-menu-background - All settings for the dropdown menu background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-menu-background:                          (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 1),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $wdpk-primary-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-primary-menu-shadow:                      (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 1px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+// $wdpk-primary-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-primary-menu-border-map:                  (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+// Font size for parent menu items
+$wdpk-menu-font-size:                           .85rem !default;
+$wdpk-menu-font-color:                          $wdpk-gray-700 !default;
+$wdpk-menu-font-color-hover:                    $wdpk-primary-color !default;
+
+// Font family for menu items
+$wdpk-menu-font-family:                         'Poppins', Arial, Helvetica, sans-serif !default;
+// Font weight for the menu items
+$wdpk-menu-font-weight:                         400 !default;
+// Text Tranform properties for menu items 'uppercase' 'lowercase' 'capitalize' 'none'
+$wdpk-menu-text-transform:                      capitalize !default;
+// Default line height for menu items
+$wdpk-menu-font-line-height:                    1.4 !default;
+// Display caret for the dropdown menu 'true' 'false'
+$wdpk-menu-display-caret:                       true !default;
+// Whether to the enable the border for primary menu items or not. 'true' 'false'
+$wdpk-menu-items-side-border:                   false !default;
+// Thickness of the border on the sides of the items
+$wdpk-menu-items-side-border-thickness:         1px !default;
+// color of the border for the menu items
+$wdpk-menu-items-side-border-color:             #bbbbbb !default;
+// Border Around Extras In The Navigation Bar
+$wdpk-menu-extras-border:                       false !default;
+// Border width for the extras section of the primary menu bar
+$wdpk-menu-extras-border-width:                 1px !default;
+// Border color for the extras section of the primary menu
+$wdpk-menu-extras-boder-color:                  #666666 !default;
+// Font Color for the Cart Number
+$wdpk-cart-number-font-color:                   #ffffff !default;
+$wdpk-menu-extras-font-size:                    $wdpk-menu-font-size !default;
+$wdpk-menu-extras-font-color:                   $wdpk-menu-font-color !default;
+$wdpk-menu-extras-font-hover-color:             $wdpk-menu-font-color-hover !default;
+$wdpk-menu-split-menu:                          false !default;
+$wdpk-menu-split1-align:                        flex-start !default;
+$wdpk-menu-split2-align:                        flex-end !default;
+
+// $wdpk-hover-effect
+// map{} - Type of Over Effects Can Use the following values
+// @key hoverType - Type of hover effect for primary menu items range from 1-4
+// @key paddingTop -  padding from top for hover effect
+// @key paddingBottom - padding from bottom for the hover effect
+// @key paddingRight - padding from right for the hover effect
+// @key padingleft - padding from left for the hover effect
+// @key hoverThickness - thickness of the hover item, value in px
+// @key hoverColorType - Background color type for the hover effect, possible values: color, gradient
+// @key animationType - type of animation possible values topToBottom, bottomToTop, rightToLeft, leftToRight
+// @key animationDistance - Distance of the animation
+// @key animationDuration - Duration of the animation in seconds like: 0.3s
+// @key animationDelay - The Delay In Transition
+// @key col1 - Color 1 For the Hover Effect
+// @key col2 - Color 2 for the Hover effect
+$wdpk-hover-effect:                             (
+														hoverType: 3,
+														paddingBottom: 8px,
+														hoverThickness: 2px,
+														hoverColorType: color,
+														animationType: bottomToTop,
+														animationDistance: 10px,
+														animationDuration: 0.3s,
+														animationDelay: 0s,
+														col1: $wdpk-primary-color,
+														col2: yellow,
+														hoverBorderRadius:0px,
+												) !default;
+
+
+// =============================>
+// Dropdown Menu Variables
+// <============================
+
+// Dropdown Menu Variables
+//
+// Variables impacting the dropdown menu
+//
+// | Variable  | Options |
+// |----------|-------|
+// | $wdpk-dropdown-menu-width  |Width of the dropdown menu	|
+// | $wdpk-dropdown-menu-background-color  | Background color for dropdown menu |
+// | $wdpk-dropdown-menu-item-top-bottom-padding  | Top and bottom padding for items in the dropdown menu |
+// | $wdpk-dropdown-menu-item-left-right-padding  | Left and right padding for menu items |
+// | $wdpk-dropdown-menu-text-align  | Text align for dropdown menu items 'left' 'right' 'center' |
+// | $wdpk-dropdown-menu-item-separators  | Map for mixin to enable separators |
+// | $wdpk-dropdown-menu-shadow-map  | Map for shadow to be applied on the dropdown menu |
+// | $wdpk-dropdown-menu-animation  | Map for assigning animation to teh dropdown menu |
+// | $wdpk-dropdown-menu-font-color | The color of the font for the dropdown menu |
+// | $wdpk-dropdown-menu-font-hover-color |  Hover color for the font in the dropdown menu |
+// | $wdpk-dropdown-menu-font-animate | Set `true` if you need the dropdown items to animate on hover else set it to `false` |
+// | $wdpk-dropdown-menu-background-hover-color | Background color on hover for items in dropdown |
+// | $wdpk-dropdown-menu-border-map | Map to input various parameters of assigning a border to the dropdown menu |
+//
+// Styleguide Theme.Dropdown Menu
+
+$wdpk-dropdown-menu-width:                      250px !default;
+$wdpk-dropdown-menu-background-color:           $wdpk-white !default;
+$wdpk-dropdown-menu-font-size:                  $wdpk-menu-font-size * .95;
+$wdpk-dropdown-menu-font-weight:                $wdpk-menu-font-weight;
+$wdpk-dropdown-menu-font-color:                 $wdpk-gray-600 !default;
+$wdpk-dropdown-menu-font-hover-color:           $wdpk-primary-color !default;
+$wdpk-dropdown-menu-font-animate:               true !default;
+$wdpk-dropdown-menu-background-hover-color:     $wdpk-gray-100 !default;
+$wdpk-dropdown-menu-item-top-bottom-padding:    10px !default;
+$wdpk-dropdown-menu-item-left-right-padding:    15px !default;
+$wdpk-dropdown-menu-text-align:                 left !default;
+$wdpk-dropdown-menu-item-separators:            (
+														separatorsOn: true,
+														separatorColor: $wdpk-gray-100,
+														separatorThickness: 1px
+												) !default;
+
+// $wdpk-dropdown-menu-shadow-map
+// Map for shadow to be applied on the dropdown menu
+// @key shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// @key hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// @key vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// @key blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// @key shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// @key shadowColor: The color of the shadow
+$wdpk-dropdown-menu-shadow-map:                 (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 16px,
+														blurRadius: 15px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.15)
+												) !default;
+
+
+// $wdpk-dropdown-menu-animation - {map} For assigning animation to the dropdown menu
+// @key animationType - Type of animation needed for the dropdown menu
+////=> Available options: **none still applies default transitions
+////=> none, fadeIn, fadeInDown, fadeInLeft, fadeInRight, fadeInUp, slideInDown, slideInUp, zoomIn
+// @key duration - Duration for the animation can be set in 's' or 'ms'
+// @key delay - The delay in animation upon mouse over can be set in 's' or 'ms'
+// @key function - Transition timing function for dropdown menu animation. Can use any functions from https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp
+$wdpk-dropdown-menu-animation:                  (
+														animationType: fadeInUp,
+														duration: .5s,
+														delay: 0s,
+														function: ease,
+												) !default;
+
+// $wdpk-dropdown-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+// @key borderRadius - Border radius to be applied to the border
+$wdpk-dropdown-menu-border-map:                 (
+														borderTop: true,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 3px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// =============================>
+// Mega Menu Variables
+// <============================
+
+// Mega Menu Variables
+//
+// Variables impacting the Mega Menu
+//
+// | Variable  | Options |
+// |----------|-------|
+// | $wdpk-mega-menu-separators |  Set this to True if you need dividers between Mega Menu Sections and set the rest of the properties of the map accordingly |
+// | $wdpk-mega-menu-vertical-padding | Vertical padding For Mega Menu Wrapper |
+$wdpk-mega-menu-separators:                     (
+														separatorsOn: true,
+														separatorColor: $wdpk-gray-100,
+														separatorThickness: 1px
+												) !default;
+$wdpk-mega-menu-vertical-padding:               15px !default;
+$wdpk-mega-menu-titlee-font-weight:             500 !default;
+
+
+// =============================>
+// Sticky Navbar Variables
+// <============================
+
+// Sticky Navbar Variables
+//
+// Variables impacting the Sticky Navbar Theme
+//
+// | Variable | Options |
+// |----------|:-------:|
+// | $wdpk-sticky-menu-font-color | The font color for Sticky Navbar |
+// | $wdpk-sticky-menu-font-color-hover | Hover font color for Sticky Navbar  |
+// | $wdpk-sticky-menu-height | Height of the Sticky Navbar |
+// | $wdpk-sticky-menu-logo-width | Width of the logo for sticky Navbar |
+// | $wdpk-sticky-menu-background |  Sticky Navbar background Map |
+// | $wdpk-sticky-menu-shadow | Shadow properties for Sticky Navbar |
+// | $wdpk-sticky-menu-font-size | The size of the font for the Sticky Navbar |
+// | $wdpk-sticky-menu-font-family | Font fmaily for Sticky Navbar |
+//
+// Styleguide Theme.Sticky Navbar
+$wdpk-sticky-menu-font-color:                   $wdpk-gray-700 !default;
+$wdpk-sticky-menu-font-color-hover:             $wdpk-primary-color !default;
+$wdpk-sticky-menu-height:                       60px !default;
+$wdpk-sticky-menu-logo-width:                   200px !default;
+$wdpk-sticky-menu-font-size:                    .9rem !default;
+$wdpk-sticky-menu-font-family:                  'Poppins', Arial, Helvetica, sans-serif !default;
+$wdpk-sticky-menu-extras-font-size:             1rem !default;
+$wdpk-sticky-menu-extras-font-color:            $wdpk-sticky-menu-font-color !default;
+$wdpk-sticky-menu-extras-font-hover-color:      $wdpk-sticky-menu-font-color-hover !default;
+
+//$wdpk-sticky-menu-background - All settings for the Sticky Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-sticky-menu-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 1),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $wdpk-sticky-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-sticky-menu-shadow:                       (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+
+
+// $wdpk-sticky-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-sticky-menu-border-map:                   (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 3px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// =============================>
+// Transparent Navbar Variables
+// <============================
+
+// Transparent Navbar Variables
+//
+// Variables impacting the Transparent Navbar Theme
+//
+// | Variable | Options |
+// |----------|:-------:|
+// | $wdpk-transparent-menu-font-color | The font color for Sticky Navbar |
+// | $wdpk-transparent-menu-font-color-hover | Hover font color for Sticky Navbar  |
+// | $wdpk-transparent-menu-height | Height of the Sticky Navbar |
+// | $wdpk-transparent-menu-logo-width | Width of the logo for sticky Navbar |
+// | $wdpk-transparent-menu-background |  Sticky Navbar background Map |
+// | $wdpk-transparent-menu-shadow | Shadow properties for Sticky Navbar |
+// | $wdpk-transparent-menu-font-size | The size of the font for the Sticky Navbar |
+// | $wdpk-transparent-menu-font-family | Font fmaily for Sticky Navbar |
+//
+// Styleguide Theme.Transparent Navbar
+$wdpk-transparent-menu-font-color:              $wdpk-gray-200 !default;
+$wdpk-transparent-menu-font-color-hover:        $wdpk-white !default;
+$wdpk-transparent-menu-height:                  60px !default;
+$wdpk-transparent-menu-logo-width:              200px !default;
+$wdpk-transparent-menu-extras-font-color:       $wdpk-transparent-menu-font-color !default;
+$wdpk-transparent-menu-extras-font-hover-color: $wdpk-transparent-menu-font-color-hover !default;
+
+//$wdpk-transparent-menu-background - All settings for the transparent Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-transparent-menu-background:              (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 0),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $wdpk-transparent-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-transparent-menu-shadow:                  (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+
+
+// =============================>
+// Top Bar Variables
+// <============================
+
+// Top Bar Variables
+//
+// Variables impacting the Top Bar
+//
+// | Variable  |Options|
+// |----------|-------|
+// |$wdpk-topbar-item-padding | left and right padding for the elements in the topbar|
+// |$wdpk-topbar-font-color | Font color|
+// |$wdpk-topbar-font-color-hover | Mouse over font color|
+// |$wdpk-topbar-height | Total height Of The Topbar|
+// |$wdpk-topbar-hover-transition-duration | Transition Duration On Mouseover|
+// |$wdpk-topbar-font-size | Font size for Topbar|
+// |$wdpk-topbar-font-family | Font family for Topbar|
+// |$wdpk-topbar-font-weight | Font weight for the Topbar|
+// |$wdpk-topbar-text-transform | Text Tranform properties for menu items 'uppercase' 'lowercase' 'capitalize' 'none'|
+// |$wdpk-topbar-font-line-height | Default line height for Topbar|
+// |$wdpk-topbar-background | All settings for the topbar background |
+// |$wdpk-topbar-border-map | Map for styling the borders of the topbar |
+//
+// Styleguide Theme.Topbar
+$wdpk-topbar-item-padding:                      0px 10px !default;
+$wdpk-topbar-font-color:                        $wdpk-gray-700 !default;
+$wdpk-topbar-font-color-hover:                  $wdpk-primary-color !default;
+$wdpk-topbar-height:                            35px !default;
+$wdpk-topbar-hover-transition-duration:         1s !default;
+
+// Font size for Topbar
+$wdpk-topbar-font-size:                         .8rem !default;
+// Font family for Topbar
+$wdpk-topbar-font-family:                       Arial, Helvetica, sans-serif !default;
+// Font weight for the Topbar
+$wdpk-topbar-font-weight:                       400 !default;
+// Text Tranform properties for menu items 'uppercase' 'lowercase' 'capitalize' 'none'
+$wdpk-topbar-text-transform:                    none !default;
+// Default line height for Topbar
+$wdpk-topbar-font-line-height:                  1.4 !default;
+
+// $wdpk-topbar-background - All settings for the topbar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-topbar-background:                        (
+														backgroundType: color,
+														gradientType: linear,
+														color1: #f2f2f2,
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+// $wdpk-topbar-border-map
+// Map for styling the borders of the topbar
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-topbar-border-map:                        (
+														borderTop: false,
+														borderTopColor: #0081a3,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #dddddd,
+														borderBottomWidth: 5px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// =============================>
+// Bottom Bar Variables
+// <============================
+
+// Bottom Bar Variables
+//
+// Variables impacting the Bottom Bar
+//
+// | Variable  | Options |
+// |----------|-------|
+// |$wdpk-bottom-bar-enabled | Whether Bottom bar is enabled or not |
+// |$wdpk-bottom-height | Height for the bottom bar |
+// |$wdpk-bottom-bar-background | Background properties for the bottom bar |
+// |$wdpk-bottom-bar-menu-shadow | Shadow properties for the bottom bar |
+// |$wdpk-bottom-bar-menu-border-map | Bottom bar border properties |
+//
+// Styleguide Theme.Bottom Bar
+$wdpk-bottom-bar-enabled:                       false !default;
+$wdpk-bottom-height:                            50px !default;
+
+
+// $wdpk-bottom-bar-background - All settings for the bottom bar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-bottom-bar-background:                    (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $wdpk-bottom-bar-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-bottom-bar-menu-shadow:                   (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+
+// $wdpk-bottom-bar-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-bottom-bar-menu-border-map:               (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #dddddd,
+														borderBottomWidth: 5px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+// =============================>
+// Off Canvas | Mobile Header Variables
+// <============================
+
+// Off Canvas | Mobile Header Variables
+//
+// Variables impacting the Off Canvas | Mobile Header
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-off-canvas-open-from | Which side the menu should open from `left` or `right` |
+// | $wdpk-off-canvas-width | The width of the OffCanvas Menu  |
+// | $wdpk-off-canvas-section-margin | The vertical margin between the sections of the OffCanvas Menu |
+// | $wdpk-off-canvas-logo-align | The alignment of the logo values that can be used are `flex-start`, `center` and flex-end`  |
+// | $wdpk-off-canvas-menu-align | The alignment of the menu values that can be used are `flex-start`, `center` and flex-end`    |
+// | $wdpk-off-canvas-menu-text-align | Alignment of the text for the menu values that can be used are `left`, `right` and `center` |
+// | $wdpk-off-canvas-font-color |  The color of the font for the OffCanvas Menu  |
+// | $wdpk-off-canvas-font-hover-color |  The hover color for the font  |
+// | $wdpk-off-canvas-font-size |  The size of the font   |
+// | $wdpk-off-canvas-background-color | Background color for the OffCanvas menu  |
+// | $wdpk-off-canvas-separator | Use either `true` or `false` to enable of disable the separators for the OffCanvas Menu |
+// | $wdpk-off-canvas-separator-color | The color of the separators between the menu items  |
+// | $wdpk-off-canvas-separator-weight |  The thickness of the separators between menu items |
+// | $wdpk-off-canvas-top-bottom-padding |  The vertical padding for the menu items  |
+// | $wdpk-off-canvas-display-extras |  Set to true if the extras items need to be displayed  |
+// | $wdpk-off-canvas-extras-padding | Padding between the extras items |
+// | $wdpk-enable-on-desktop |  Set to true if you need the OffCanvas menu to be displayed on the Desktop as well  |
+// | $wdpk-off-canvas-display-social |  Set this to true if the social icons need to be displayed on the OffCanvas Menu  |
+// | $wdpk-off-canvas-social-shape |  The shape of the social icons, possible values `round`, `circle` and `square` |
+// | $wdpk-off-canvas-social-padding |  Padding around the social icons  |
+// | $wdpk-off-canvas-social-margin |  Margin between social icons in OffCanavas menu  |
+// | $wdpk-off-canvas-social-size | The size of the social icons |
+// | $wdpk-off-canvas-social-shadow | Set this to `true` if shadows are needed on hover else it can be set to `false` |
+// | $wdpk-off-canvas-shadow | The shodow map for the offcanvas menu |
+// | $wdpk-mobile-header-logo-width | The width of the logo for the mobilee header |
+// | $wdpk-mobile-header-vertical-padding | Vertical padding for mobile header |
+// | $wdpk-mobile-header-background | Mobile header background map |
+// | $wdpk-mobile-header-shadow | Mobile header shadow map |
+//
+// Styleguide Theme.Off Canvas Menu
+$wdpk-off-canvas-open-from:                     right !default;
+$wdpk-off-canvas-width:                         320px !default;
+$wdpk-off-canvas-section-margin:                1.5rem !default;
+$wdpk-off-canvas-logo-align:                    center !default;
+$wdpk-off-canvas-menu-align:                    center !default;
+$wdpk-off-canvas-menu-text-align:               left !default;
+$wdpk-off-canvas-font-color:                    $wdpk-menu-font-color !default;
+$wdpk-off-canvas-font-hover-color:              $wdpk-menu-font-color-hover !default;
+$wdpk-off-canvas-font-size:                     1rem !default;
+$wdpk-off-canvas-background-color:              #ffffff !default;
+$wdpk-off-canvas-separator:                     true !default;
+$wdpk-off-canvas-separator-color:               $wdpk-gray-100 !default;
+$wdpk-off-canvas-separator-weight:              1px !default;
+$wdpk-off-canvas-top-bottom-padding:            .6rem !default;
+$wdpk-off-canvas-extras-padding:                1.5rem !default;
+$wdpk-enable-on-desktop:                        false !default;
+$wdpk-off-canvas-display-extras:                false !default;
+$wdpk-off-canvas-display-social:                true !default;
+$wdpk-off-canvas-social-shape:                  circle !default;
+$wdpk-off-canvas-social-padding:                .6rem !default;
+$wdpk-off-canvas-social-margin:                 .5rem !default;
+$wdpk-off-canvas-social-size:                   .8rem !default;
+$wdpk-off-canvas-social-shadow:                 false !default;
+$wdpk-off-canvas-body-color:                    rgba(0, 0, 0, .5) !default;
+$wdpk-off-canvas-close-button-top:              10px !default;
+$wdpk-off-canvas-close-button-right:            15px !default;
+$wdpk-off-canvas-close-button-color:            white !default;
+$wdpk-off-canvas-close-button-background-color: $wdpk-gray-600 !default;
+$wdpk-off-canvas-close-button-padding:          4px 6px !default;
+
+
+// $wdpk-off-canvas-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-off-canvas-shadow:                        (
+														shadowOn: true,
+														hOffset: 3px,
+														vOffset: 0px,
+														blurRadius: 7px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+// =============================>
+// Mobile Header Section For Variables
+// <============================
+$wdpk-mobile-header-logo-width:                 175px !default;
+$wdpk-mobile-header-vertical-padding:           .5rem !default;
+
+
+// $wdpk-mobile-menu-background - All settings for the mobile menu background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-mobile-header-background:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 1),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+// $wdpk-mobile-menu-shadow
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-mobile-header-shadow:                     (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// =============================>
+// Sidebar Variables
+// <============================
+
+// Sidebar Variables
+//
+// Variables impacting the Sidebar
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-sidebar-type | `1` - Clean, `2` - Sectioned, `3` - Outlined|
+// | $wdpk-sidebar-padding | The inner padding that is applied to the sidebar |
+// | $wdpk-margin-sections | The margin between the sidebar section |
+// | $wdpk-sidebar-background-color | Background color for sidebar |
+// | $wdpk-side-border | Set to `true` to enable tyhe divider else set to false |
+// | $wdpk-side-border-color | The color of the sidebar border  |
+// | $wdpk-sidebar-shadow | Shadow map for Sidebars |
+//
+// Styleguide Theme.Sidebar
+$wdpk-sidebar-type:                             2 !default;
+$wdpk-sidebar-padding:                          1rem !default;
+$wdpk-margin-sections:                          1rem !default;
+$wdpk-sidebar-background-color:                 $wdpk-gray-100 !default;
+$wdpk-side-border:                              false !default;
+$wdpk-side-border-color:                        $wdpk-gray-200 !default;
+$wdpk-sidebar-shadow:                           (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+// Page Transitions
+//
+// Variables impacting the behaviour of animated page transitions
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-page-trans-enabled | `true` if you want the page transitions to work `false` if you want to disable the page transitions   |
+// | $wdpk-page-trans-bg-color | Background color map for animated page transistions  |
+// | $wdpk-page-trans-spinner-type |  Option of `.spinner-grow` and `.spinner-border` . Ensure the classes are passed as it iss else Sass compiler will throw an error |
+// | $wdpk-page-trans-spinner-color | Page transitions spinner color   |
+//
+// Styleguide Theme.Page Transitions
+$wdpk-page-trans-enabled:                       true !default;
+$wdpk-page-trans-bg-color:                      (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-white,
+														color2: $wdpk-gradient-2,
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$wdpk-page-trans-spinner-type:                  '.spinner-grow' !default; // Option of `.spinner-grow` and `.spinner-border` . Ensure the classes are passed as it iss else Sass compiler will throuw an error
+$wdpk-page-trans-spinner-color:                 $wdpk-primary-color !default;
+
+
+// =============================>
+//  Shortcode Variables
+// <============================
+
+// Accordion
+//
+// Variables setting the look and feel of the accordion for the theme
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-accordion-title-color | The color of the title and the button of the accordion |
+// | $wdpk-accordion-body-color | The background color of the body of the accordion  |
+// | $wdpk-accordion-body-font-color |  Body font color for the accordion |
+// | $wdpk-accordion-header-color | The background color map for the header of the accordion  |
+// | $wdpk-accordion-border-enable | Ste this to `true` if you need a border around the entire acccordion |
+// | $wdpk-accordion-border-map | Accordion Border Map |
+// | $wdpk-accordion-header-border-map | Header Border Map for the accordion |
+//
+// Styleguide Shortcodes.Accordion
+$wdpk-accordion-title-color:                    $wdpk-gray-700 !default;
+$wdpk-accordion-body-color:                     none !default;
+$wdpk-accordion-body-font-color:                $wdpk-gray-600 !default;
+$wdpk-accordion-border-enable:                  true !default;
+$wdpk-accordion-border-radius:                  .2rem !default;
+$wdpk-accordion-header-color:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$wdpk-accordion-border-map:                     (
+														borderTop: true,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: $wdpk-accordion-border-radius,
+												) !default;
+$wdpk-accordion-header-border-map:              (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// List Groups
+//
+// Variables setting the look and feel of the Listy Group for the theme
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-listgroup-top-radius | The border radius for the top of the Group List |
+// | $wdpk-listgroup-bottom-radius | The border radius for the bottom of the Group List |
+// | $wdpk-listgroup-background-color | Background color for the listgroup items |
+// | $wdpk-listgroup-hover-background-color | Backgeround hover color for the background of list group items |
+// | $wdpk-listgroup-font-color | The color of the font for the items of the list group |
+// | $wdpk-listgroup-font-hover-color | The hover color for the font of the items of the list group |
+// | $wdpk-listgroup-vertical-padding | Vertical padding for the list group items  |
+// | $wdpk-listgroup-horizontal-padding | Horizontal padding for the list group items  |
+// | $wdpk-listgroup-border | Border properties for the list group items |
+// | $wdpk-listgroup-border-color | Color for the list group items  |
+//
+// Styleguide Shortcodes.List Group
+$wdpk-listgroup-top-radius:                     0rem !default;
+$wdpk-listgroup-bottom-radius:                  0rem !default;
+$wdpk-listgroup-background-color:               transparent !default;
+$wdpk-listgroup-hover-background-color:         $wdpk-gray-300 !default;
+$wdpk-listgroup-font-color:                     $wdpk-gray-600 !default;
+$wdpk-listgroup-font-hover-color:               $wdpk-gray-700 !default;
+$wdpk-listgroup-vertical-padding:               .6rem !default;
+$wdpk-listgroup-horizontal-padding:             1rem !default;
+$wdpk-listgroup-border:                         none !default;
+$wdpk-listgroup-border-color:                   $wdpk-gray-200 !default;
+
+
+// Animations
+//
+// Variables setting various parameters of the animation Globally
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-animations-map | Animation properties map for all the animation classes globally for WoodPecker |
+//
+// Styleguide Shortcodes.Animations
+$wdpk-animations-map:                           (
+														duration: 1s,
+														count: 1,
+														delay: .2s,
+														function: ease,
+														fill: both
+												) !default;
+
+// Blockquotes
+//
+// Variables setting various parameters of the blockquotes
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-blockquote-font-size | Font size for the blockquote text |
+// | $wdpk-blockquote-padding | Padding about the blockquote |
+// | $wdpk-blockquote-align | Blockquote alignment `left`, `right`, `center` |
+// | $wdpk-blockquote-font-color | Font color for the Blockquote text |
+// | $wdpk-quote-color | the color of the quote mark |
+// | $wdpk-blockquote-background |  Background color map for blockquote  |
+// | $wdpk-blockquote-border-map | Border map for the blockquote element |
+//
+// Styleguide Shortcodes.Blockquotes
+$wdpk-blockquote-font-size:                     1rem !default;
+$wdpk-blockquote-padding:                       2rem !default;
+$wdpk-blockquote-align:                         left !default;
+$wdpk-blockquote-font-color:                    $wdpk-gray-700 !default;
+$wdpk-quote-color:                              rgba(0, 0, 0, .2) !default;
+
+$wdpk-blockquote-background:                    (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-blockquote-border-map:                    (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $wdpk-primary-color,
+														borderLeftWidth: 4px,
+														borderLeftStyle: solid,
+														borderRadius: $wdpk-border-radius,
+												) !default;
+
+// Navpills
+//
+// Variables setting various parameters of the Navpills
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-navpills-margin | Margin bet Navpills  |
+// | $wdpk-navpills-inactive-hover-background-color |  Hover background color for the inactive links   |
+// | $wdpk-navpills-border-radius | Border radius for the navpills background   |
+//
+// Styleguide Shortcodes.Navpills
+$wdpk-navpills-margin:                          .5rem !default;
+$wdpk-navpills-inactive-hover-background-color: $wdpk-gray-200 !default;
+$wdpk-navpills-border-radius:                   0rem !default;
+
+
+// Alerts
+//
+// Define colors, border radius, and padding for alerts
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-navpills-margin | Margin bet Navpills  |
+// | $wdpk-navpills-inactive-hover-background-color |  Hover background color for the inactive links   |+
+//
+// Styleguide Shortcodes.Navpills
+
+$wdpk-alert-padding-y:                          .75rem !default;
+$wdpk-alert-padding-x:                          1.25rem !default;
+$wdpk-alert-margin-bottom:                      1rem !default;
+$wdpk-alert-border-radius:                      $wdpk-border-radius !default;
+$wdpk-alert-link-font-weight:                   600 !default;
+$wdpk-alert-border-width:                       $wdpk-border-width !default;
+
+$alert-bg-level:                                -10 !default;
+$alert-border-level:                            -9 !default;
+$alert-color-level:                             6 !default;
+
+
+// Breadcrumbs
+//
+// Variables setting various parameters of the Breadcrumbs
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-breadcrumbs-background-color | Animations map for all the animation classes for WoodPecker |
+// | $wdpk-breadcrumbs-text-align | Alignment of the breadcrumbs `flex-start`, `center`, `flex-end`  |
+// | $wdpk-breadcrumbs-font-size | Font size for the breadcrumbs   |
+// | $wdpk-breadcrumbs-font-color | Font color for the breadcrumbs   |
+// | $wdpk-breadcrumbs-text-decoration |  Default text decoration for the elemets of breadcrumbs  |
+// | $wdpk-breadcrumbs-hover-color |  Hover color for the text in breadcrumbs  |
+// | $wdpk-breadcrumbs-hover-text-decoration |   Text decoration upon hover for breadcrumbs  |
+// | $wdpk-breadcrumb-divider: quote(">");| Add a divider for breadcrumb menu. The quote function is needed to generate the quotes around a string, so if you want > as separator . It’s also possible to use a base64 embedded SVG icon like this :  `$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);`|
+//
+// Styleguide Shortcodes.Breadcrumbs
+
+$wdpk-breadcrumbs-background-color:             $wdpk-gray-100 !default;
+$wdpk-breadcrumbs-text-align:                   flex-start !default;
+$wdpk-breadcrumbs-font-size:                    .85rem !default;
+$wdpk-breadcrumbs-font-color:                   inherit !default;
+$wdpk-breadcrumbs-text-decoration:              none !default;
+$wdpk-breadcrumbs-hover-color:                  scale_color($wdpk-primary-color, $lightness: $wdpk-lightness-value) !default;
+$wdpk-breadcrumbs-hover-text-decoration:        none !default;
+$wdpk-breadcrumb-divider:                       quote(">") !default;
+
+// Cards
+//
+// Variables setting various parameters of the Cards
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $wdpk-card-spacer-y | The padding on cards on X-Axis |
+// | $wdpk-card-spacer-x | The padding on cards on Y-Axis |
+// | $wdpk-card-border-width | The border width  |
+// | $wdpk-card-border-radius | Border radius for the cards  |
+// | $wdpk-card-border-color |  Border color for the cards |
+// | $wdpk-card-inner-border-radius | The inner radius assigned to the card body |
+// | $wdpk-card-img-overlay-padding | Image overlay padding |
+// | $wdpk-card-group-margin | Margin assigned grouped cards  |
+// | $wdpk-card-deck-margin |  Margin asssigned decked cards  |
+// | $wdpk-card-columns-count | The number of columns for the decked cards   |
+// | $wdpk-card-columns-gap |  The gap between the gutter space between cards |
+// | $wdpk-card-columns-margin | The margin assigned to card columns  |
+// | $wdpk-card-text-align | The align of text between the cards. Possible values `center`, `right` and `left` |
+// | $wdpk-card-title-font-size | The font size assigned to the title of the card |
+// | $wdpk-card-title-font-color | The titlke font color |
+// | $wdpk-card-body-font-size | The title font size |
+// | $wdpk-card-body-font-color | The body font color |
+// | $wdpk-card-header-font-size | The font size for the card header |
+// | $wdpk-card-header-font-color | card header font color |
+// | $wdpk-card-footer-font-size |  Card footer font size |
+// | $wdpk-card-footer-font-color | Card footer font color  |
+// | $wdpk-card-shadow | Map for the shadow of the card |
+// | $wdpk-card-body-background | Card background color map |
+// | $wdpk-card-header-background | Card header baqckground color map |
+// | $wdpk-card-footer-background |  Card footer baqckground color map  |
+//
+// Styleguide Shortcodes.Cards
+
+$wdpk-card-spacer-y:                            .75rem !default;
+$wdpk-card-spacer-x:                            1.25rem !default;
+$wdpk-card-border-width:                        $wdpk-border-width !default;
+$wdpk-card-border-radius:                       $wdpk-border-radius !default;
+$wdpk-card-border-color:                        rgba($wdpk-black, .125) !default;
+$wdpk-card-inner-border-radius:                 calc(#{$wdpk-card-border-radius} - #{$wdpk-card-border-width}) !default;
+
+$wdpk-card-img-overlay-padding:                 1.25rem !default;
+
+$wdpk-card-group-margin:                        $wdpk-grid-gutter-width / 2 !default;
+$wdpk-card-deck-margin:                         $wdpk-card-group-margin !default;
+
+$wdpk-card-columns-count:                       3 !default;
+$wdpk-card-columns-gap:                         .5rem !default;
+$wdpk-card-columns-margin:                      .5rem !default;
+$wdpk-card-text-align:                          left !default;
+$wdpk-card-title-font-size:                     1.1rem !default;
+$wdpk-card-title-font-color:                    inherit !default;
+$wdpk-card-body-font-size:                      inherit !default;
+$wdpk-card-body-font-color:                     inherit !default;
+$wdpk-card-header-font-size:                    inherit !default;
+$wdpk-card-header-font-color:                   inherit !default;
+$wdpk-card-footer-font-size:                    inherit !default;
+$wdpk-card-footer-font-color:                   inherit !default;
+
+$wdpk-card-shadow:                              (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+$wdpk-card-body-background:                     (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-white,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+												) !default;
+$wdpk-card-header-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$wdpk-card-footer-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// Image Hovers
+//
+// Variables setting various parameters of the Image Hover Effects
+//
+// | Variable  |Options |
+// |----------|-------|
+// |$wdpk-image-hover-image-bg | Background color for the image on hover |
+// |$wdpk-image-hover-figcaption-bg | Background color for the overlay figure |
+// |$wdpk-image-hover-figcaption-padding | Padding for the figcaption  |
+// |$wdpk-image-hover-text-color | The overlay Text Color |
+// |$wdpk-image-hover-transition-duration | The duration of the animation |
+// |$wdpk-image-hover-shift-distance | The shift distance for the animation |
+//
+// Styleguide Shortcodes.Image Hovers
+$wdpk-image-hover-image-bg:                     rgba(255, 255, 255, .8) !default;
+$wdpk-image-hover-figcaption-bg:                rgba(255, 255, 255, .8) !default;
+$wdpk-image-hover-figcaption-padding:           25px !default;
+$wdpk-image-hover-text-color:                   $wdpk-gray-600 !default;
+$wdpk-image-hover-transition-duration:          .8s !default;
+$wdpk-image-hover-shift-distance:               10px !default;
+
+
+// Social Sharing
+//
+// Variables setting various parameters of the Social Sharing Icons
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-social-sharing-theme | Sets the theme for social sharing icons. Options `classic`, `flat`, `minima`, `outlined` |
+// | $wdpk-social-sharing-shadow | Ste thee shadow for the social sharing icons |
+// | $wdpk-social-sharing-horizontal-padding | Horizontal padding for the social sharing buttons |
+// | $wdpk-social-sharing-vertical-padding | Vetical padding for the social sharing buttons |
+// | $wdpk-social-sharing-border-radius | Border radius for the social sharing icons |
+// | $wdpk-social-sharing-font-size | The font size for the button text |
+// | $wdpk-social-sharing-line-height | The line height for the button text  |
+// | $wdpk-social-sharing-font-color | The color of the fonrt of the buttons |
+// | $wdpk-social-sharing-border-color | The border color for the social sharing buttons |
+//
+// Styleguide Shortcodes.Social Sharing Icons
+
+$wdpk-social-sharing-theme:                     'classic' !default;
+$wdpk-social-sharing-shadow:                    (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 4px,
+														shadowSpread: 1px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+$wdpk-social-sharing-horizontal-padding:        1.3rem !default;
+$wdpk-social-sharing-vertical-padding:          .6rem !default;
+$wdpk-social-sharing-border-radius:             .3rem !default;
+$wdpk-social-sharing-font-size:                 .85rem !default;
+$wdpk-social-sharing-line-height:               1rem !default;
+$wdpk-social-sharing-font-color:                $wdpk-white !default;
+$wdpk-social-sharing-border-color:              inherit !default;
+
+
+// Carousel
+//
+// Variables setting various parameters of the Carousel Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-carousel-image-width | The width of the carousel image |
+// | $wdpk-carousel-image-height | the height of the carousel image |
+// | $wdpk-carousel-items-gap | The gap between carousel elements |
+//
+// Styleguide Shortcodes.Carousel
+$wdpk-carousel-image-width:                     400px !default;
+$wdpk-carousel-image-height:                    225px !default;
+$wdpk-carousel-items-gap:                       15px !default;
+
+
+// Clients
+//
+// Variables setting various parameters of the Clients Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-clients-padding | Padfding for the client items |
+// | $wdpk-clients-border-enable | Ste this to `true` if border is needed around the client items and to `false` if the border is not needed |
+// | $wdpk-clients-border-color | Boorder color for the client items |
+// | $wdpk-clients-default-color | How the logos would look like whether colored or greyscale before hover. Options Available `'grayscale'` and `'colored'` |
+// | $wdpk-clients-default-hover-color | How the logos would look on mouse hover whether colored or greyscale before hover. Options Available `'grayscale'` and `'colored'` |
+// | $wdpk-clients-hover-animation| Hover animation for client logos, doesnt work with Carousel. Options Available `'zoomIn'`, `'zoomOut'`, `'none'` |
+// | $wdpk-clients-colored-bg-hover | Background color on hover |
+// | $wdpk-clients-colored-bg-color | backgroundType option of `color` or of `gradient` and the rest of the map can be filled with the required options |
+//
+// Styleguide Shortcodes.Clients
+$wdpk-clients-padding:                          1.9rem !default;
+$wdpk-clients-border-enable:                    true !default;
+$wdpk-clients-border-color:                     $wdpk-gray-200 !default;
+$wdpk-clients-default-color:                    'grayscale' !default;
+$wdpk-clients-default-hover-color:              'colored' !default;
+$wdpk-clients-hover-animation:                  'zoomIn' !default;
+$wdpk-clients-colored-bg-hover:                 false !default;
+$wdpk-clients-colored-bg-color:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gradient-1,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+												) !default;
+
+$wdpk-clients-carousel-image-width:             140px !default;
+$wdpk-clients-carousel-image-height:            70px !default;
+$wdpk-clients-carousel-items-gap:               40px !default;
+
+
+// Timer
+//
+// Variables setting various parameters of the Timer Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-timer-counter-padding | Padding For Each Timer Section  |
+// | $wdpk-timer-counter-color |  Color of the timer font |
+// | $wdpk-timer-counter-font-size | Font size for the timer font  |
+// | $wdpk-timer-counter-font-family | Font family for the timer |
+// | $wdpk-timer-counter-font-weight | Font weight for the timer |
+// | $wdpk-timer-desc-padding | Timer description padding  |
+// | $wdpk-timer-desc-color | Timer description font color |
+// | $wdpk-timer-desc-font-size | Timer description font size |
+// | $wdpk-timer-desc-font-family | Timer description font Family  |
+// | $wdpk-timer-desc-font-weight | Timer description Font weight |
+// | $wdpk-timer-separator-enabled | Set to `true` if you need the separator to be enable and `false` if you do not neeed the separator |
+// | $wdpk-timer-separator-color | The color of the separator |
+// | $wdpk-timer-separator-symbol | The separator symbol to be used  |
+// | $wdpk-timer-counter-background | Timer background map |
+// | $wdpk-timer-desc-background | Timer description background map |
+// | $wdpk-timer-counter-border | Timer Border Map |
+// | $wdpk-timer-desc-border | Timer Description Border Map  |
+//
+// Styleguide Shortcodes.Timer
+$wdpk-timer-counter-padding:                    20px !default;
+$wdpk-timer-counter-color:                      $wdpk-white !default;
+$wdpk-timer-counter-font-size:                  2.5rem !default;
+$wdpk-timer-counter-font-family:                inherit !default;
+$wdpk-timer-counter-font-weight:                600 !default;
+$wdpk-timer-desc-padding:                       10px !default;
+$wdpk-timer-desc-color:                         $wdpk-gray-600 !default;
+$wdpk-timer-desc-font-size:                     .85rem !default;
+$wdpk-timer-desc-font-family:                   inherit !default;
+$wdpk-timer-desc-font-weight:                   300 !default;
+$wdpk-timer-separator-enabled:                  true !default;
+$wdpk-timer-separator-color:                    $wdpk-gray-400 !default;
+$wdpk-timer-separator-symbol:                   '|' !default;
+
+$wdpk-timer-counter-background:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gradient-1,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-timer-desc-background:                    (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-white,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-timer-counter-border:                     (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+$wdpk-timer-desc-border:                        (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+
+// Counter
+//
+// Variables setting various parameters of the Counter Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-counter-text-align | Text alignment for counter text available options `center`, `left` and `right` |
+// | $wdpk-counter-font-size | Font size for the counter |
+// | $wdpk-counter-font-family | Font family for the counter font |
+// | $wdpk-counter-font-weight | Font weight for the counter font |
+// | $wdpk-counter-font-color | Font color for the counter font  |
+// | $wdpk-counter-vertical-padding | Vertical padding for the counter |
+// | $wdpk-counter-prefix-font-size | Prefix font size |
+// | $wdpk-counter-prefix-font-family |Prefix font Family |
+// | $wdpk-counter-prefix-font-color |  Prefix font Color |
+// | $wdpk-counter-prefix-margin-right | Prefix right margin |
+// | $wdpk-counter-suffix-font-size | Suffix font size |
+// | $wdpk-counter-suffix-font-family | Suffix font family  |
+// | $wdpk-counter-suffix-font-color | Suffix font color |
+// | $wdpk-counter-suffix-margin-left |  Suffix left margin  |
+// | $wdpk-counter-footnote-top-margin | Footnote top margin   |
+// | $wdpk-counter-footnote-font-size | Footnote font size |
+// | $wdpk-counter-footnote-font-weight | Footnote font weight  |
+// | $wdpk-counter-footnote-font-family | Footnote font family |
+// | $wdpk-counter-footnote-font-color | Footnote font color |
+// | $wdpk-counter-footnote-vertical-padding | Footnote vertical padding |
+// | $wdpk-counter-icon-font-size | Icon font size |
+// | $wdpk-counter-icon-font-color | Icon font color |
+// | $wdpk-counter-icon-font-hover-color | Icon font hover color |
+// | $wdpk-counter-icon-padding | Icon padding |
+// | $wdpk-counter-icon-border-radius | Icon border radius |
+// | $wdpk-counter-icon-border-width | Icon border width |
+// | $wdpk-counter-icon-border-color | Icon border color |
+// | $wdpk-counter-icon-border-hover-color | Icon border hover color |
+// | $wdpk-counter-icon-background-color | Icon background color |
+// | $wdpk-counter-icon-background-hover-color | Icon background hover color |
+// | $wdpk-counter-icon-bottom-margin | Icon bottom margin |
+// | $wdpk-counter-icon-font-hover-animation | Icon font hover animation. Available options `'zoomIn'`, `'zoomOut'`, `'none'`   |
+// | $wdpk-counter-background-map | Background map for the counter area |
+// | $wdpk-counter-border | Counter border map  |
+// | $wdpk-counter-shadow | Counter shadow map  |
+//
+// Styleguide Shortcodes.Counter
+$wdpk-counter-text-align:                       center !default;
+$wdpk-counter-font-size:                        3rem !default;
+$wdpk-counter-font-family:                      inherit !default;
+$wdpk-counter-font-weight:                      600 !default;
+$wdpk-counter-font-color:                       $wdpk-gray-800 !default;
+$wdpk-counter-vertical-padding:                 30px !default;
+$wdpk-counter-prefix-font-size:                 1.5rem !default;
+$wdpk-counter-prefix-font-family:               inherit !default;
+$wdpk-counter-prefix-font-color:                $wdpk-gray-600 !default;
+$wdpk-counter-prefix-margin-right:              5px !default;
+$wdpk-counter-suffix-font-size:                 1.5rem !default;
+$wdpk-counter-suffix-font-family:               inherit !default;
+$wdpk-counter-suffix-font-color:                $wdpk-gray-600 !default;
+$wdpk-counter-suffix-margin-left:               10px !default;
+$wdpk-counter-footnote-top-margin:              10px !default;
+$wdpk-counter-footnote-font-size:               1.1rem !default;
+$wdpk-counter-footnote-font-weight:             400 !default;
+$wdpk-counter-footnote-font-family:             inherit !default;
+$wdpk-counter-footnote-font-color:              $wdpk-gray-600 !default;
+$wdpk-counter-footnote-vertical-padding:        5px !default;
+$wdpk-counter-icon-font-size:                   2rem !default;
+$wdpk-counter-icon-font-color:                  $wdpk-primary-color !default;
+$wdpk-counter-icon-font-hover-color:            $wdpk-white !default;
+$wdpk-counter-icon-padding:                     .7rem !default;
+$wdpk-counter-icon-border-radius:               50% !default;
+$wdpk-counter-icon-border-width:                1px !default;
+$wdpk-counter-icon-border-color:                $wdpk-gray-400 !default;
+$wdpk-counter-icon-border-hover-color:          $wdpk-white !default;
+$wdpk-counter-icon-background-color:            $wdpk-gray-200 !default;
+$wdpk-counter-icon-background-hover-color:      $wdpk-primary-color !default;
+$wdpk-counter-icon-bottom-margin:               15px !default;
+$wdpk-counter-icon-font-hover-animation:        'zoomIn' !default;
+$wdpk-counter-background-map:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-counter-border:                           (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+$wdpk-counter-shadow:                           (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Circle Counter
+//
+// Variables setting various parameters of the Circle Counter Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-circle-counter-font-size | Font size for the counter inside the circle |
+// | $wdpk-circle-counter-font-weight | Font weight for the counter |
+// | $wdpk-circle-counter-font-family | Font Family for the counter |
+// | $wdpk-circle-counter-font-color | Font color for the counter |
+//
+// Styleguide Shortcodes.Counter
+
+$wdpk-circle-counter-font-size:                 1.7rem !default;
+$wdpk-circle-counter-font-weight:               600 !default;
+$wdpk-circle-counter-font-family:               "Poppins", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$wdpk-circle-counter-font-color:                $wdpk-gray-500 !default;
+
+
+// Infobox
+//
+// Variables setting various parameters of the Infobox Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// |$wdpk-infobox-icon-text-align | The alignment of the icon possible values `left`, `center` and `right`|
+// |$wdpk-infobox-icon-font-size | The size assigned to the icon |
+// |$wdpk-infobox-icon-color | The color of the icon |
+// |$wdpk-infobox-icon-hover-color | Hover color for the icon |
+// |$wdpk-infobox-icon-margin-bottom | Bottom margin for the icon |
+// |$wdpk-infobox-icon-padding | The inner padding for the icon will impact the size of the background  |
+// |$wdpk-infobox-icon-background-color | Background color for the icon |
+// |$wdpk-infobox-icon-background-hover-color | Hover color for the icon background |
+// |$wdpk-infobox-icon-border-radius | Border radius for the icon background |
+// |$wdpk-infobox-icon-border-color | Border color for the icon background |
+// |$wdpk-infobox-icon-border-hover-color | Border hover color for the icon background |
+// |$wdpk-infobox-icon-border-weight | Border weight for the icon background |
+// |$wdpk-infobox-overflow-icon | Set this to `true` if you want the icon to overflow the infobox else set to `false` |
+// |$wdpk-infobox-title-font-family | Title text font family |
+// |$wdpk-infobox-title-font-size | Title text font size |
+// |$wdpk-infobox-title-font-weight | Title text font weight |
+// |$wdpk-infobox-title-color |Title text font color |
+// |$wdpk-infobox-title-margin-bottom | Title text margin bottom |
+// |$wdpk-infobox-description-font-family | Description text font family|
+// |$wdpk-infobox-description-font-size | Description text font size |
+// |$wdpk-infobox-description-font-weight | Description text font weight |
+// |$wdpk-infobox-description-color | Description text font color |
+// |$wdpk-infobox-icon-font-hover-animation | Hover animation for the icon. Possible values `zoomIn`, `zoomOut` and `none` |
+// |$wdpk-infobox-background-map | Background map for the info box |
+// |$wdpk-infobox-border | Border map for the info box  |
+// |$wdpk-infobox-shadow | Shadow map for the info box  |
+//
+// Styleguide Shortcodes.Infobox
+$wdpk-infobox-icon-text-align:                  center !default;
+$wdpk-infobox-icon-font-size:                   2rem !default;
+$wdpk-infobox-icon-color:                       $wdpk-primary-color !default;
+$wdpk-infobox-icon-hover-color:                 $wdpk-white !default;
+$wdpk-infobox-icon-margin-bottom:               10px !default;
+$wdpk-infobox-icon-padding:                     .7rem !default; // Its mandatory to have this in rem only no other units can cause errors
+$wdpk-infobox-icon-background-color:            $wdpk-gray-200 !default;
+$wdpk-infobox-icon-background-hover-color:      $wdpk-primary-color !default;
+$wdpk-infobox-icon-border-radius:               50% !default;
+$wdpk-infobox-icon-border-color:                $wdpk-gray-400 !default;
+$wdpk-infobox-icon-border-hover-color:          $wdpk-white !default;
+$wdpk-infobox-icon-border-weight:               1px !default;
+$wdpk-infobox-overflow-icon:                    false !default; // Set this to true if you need overflow icon
+$wdpk-infobox-title-font-family:                inherit !default;
+$wdpk-infobox-title-font-size:                  1.2rem !default;
+$wdpk-infobox-title-font-weight:                500 !default;
+$wdpk-infobox-title-color:                      $wdpk-gray-800 !default;
+$wdpk-infobox-title-margin-bottom:              15px !default;
+$wdpk-infobox-description-font-family:          inherit !default;
+$wdpk-infobox-description-font-size:            .9rem !default;
+$wdpk-infobox-description-font-weight:          400 !default;
+$wdpk-infobox-description-color:                $wdpk-gray-600 !default;
+$wdpk-infobox-icon-font-hover-animation:        'zoomIn' !default;
+$wdpk-infobox-background-map:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-infobox-border:                           (
+														borderTop: true,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+$wdpk-infobox-shadow:                           (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Info Card
+//
+// Variables setting various parameters of the Info Card Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-dropdown-trigger-hover | Set this to `true` if you want the dropdown to trigger on hover instead of click, esle if click is needed set this to `false` |
+// | $wdpk-dropdown-min-width | The min-width assigned to the dropdown menu|
+//
+// Styleguide Shortcodes.Dropdowns
+
+$wdpk-infocard-padding-x:                       30px !default;
+$wdpk-infocard-padding-y:                       45px !default;
+$wdpk-infocard-margin-bottom:                   30px !default;
+$wdpk-infocard-mobile-device-breakpoint:        xs !default;
+
+$wdpk-infocard-img-padding:                     24px !default;
+$wdpk-infocard-img-align-self:                  flex-start !default;
+$wdpk-infocard-img-width:                       48px !default;
+
+$wdpk-infocard-heading-font-family:             $wdpk-font-family-base !default;
+$wdpk-infocard-heading-font-size:               $wdpk-h4-font-size !default;
+$wdpk-infocard-heading-font-weight:             $wdpk-headings-font-weight !default;
+$wdpk-infocard-heading-line-height:             $wdpk-headings-line-height !default;
+$wdpk-infocard-heading-color:                   $wdpk-headings-color !default;
+$wdpk-infocard-heading-margin-bottom:           15px !default;
+
+$wdpk-infocard-desc-font-family:                $wdpk-font-family-base !default;
+$wdpk-infocard-desc-font-size:                  inherit !default;
+$wdpk-infocard-desc-font-weight:                inherit !default;
+$wdpk-infocard-desc-line-height:                inherit !default;
+$wdpk-infocard-desc-color:                      inherit !default;
+$wdpk-infocard-desc-margin-bottom:              30px !default;
+
+
+$wdpk-infocard-background-map:                  (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-infocard-border:                          (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: $wdpk-border-radius,
+												) !default;
+
+
+$wdpk-infocard-img-background:                  (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-primary-color,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-infocard-img-border:                      (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 100px,
+												) !default;
+
+
+// Dropdowns (Components)
+//
+// Variables setting various parameters of the Dropdowns Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-dropdown-trigger-hover | Set this to `true` if you want the dropdown to trigger on hover instead of click, esle if click is needed set this to `false` |
+// | $wdpk-dropdown-min-width | The min-width assigned to the dropdown menu|
+// | $wdpk-dropdown-padding-y | Y-axis paddign assigned to the dropdown component |
+// | $wdpk-dropdown-spacer | This is the top margin assigned to the dropdown menu when it is visible and from the botton which triggered visibily. `IMPORTANT: Works only when '$wdpk-dropdown-trigger-hover' is set to false|
+// | $wdpk-dropdown-font-size | Dropdowm menu items font size |
+// | $wdpk-dropdown-color |Dropdowm menu items font color  |
+// | $wdpk-dropdown-bg | Dropdown background color |
+// | $wdpk-dropdown-border-color | Dropdowm border color |
+// | $wdpk-dropdown-border-radius |Dropdowm border radius  |
+// | $wdpk-dropdown-border-width | Dropdowm border weight |
+// | $wdpk-dropdown-divider-bg | Dropdowm divider color |
+// | $wdpk-dropdown-divider-margin-y | Vertical margin assigned to the divider  |
+// | $wdpk-dropdown-box-shadow | Shadow properties for the dropdowm menu |
+// | $wdpk-dropdown-link-color | Color of the link assigned to the dropdown menu |
+// | $wdpk-dropdown-link-hover-color | Link hover color for the dropdown menu |
+// | $wdpk-dropdown-link-hover-bg | Hover background color for dropdown menu |
+// | $wdpk-dropdown-link-active-color | Active link color for dropdown menu |
+// | $wdpk-dropdown-link-active-bg: | Active link background color   |
+// | $wdpk-dropdown-link-disabled-color | Disabled link background color |
+// | $wdpk-dropdown-item-padding-y | Item Y-axis padding |
+// | $wdpk-dropdown-item-padding-x | Item X-Axis padding  |
+// | $wdpk-dropdown-header-color | Font color for the header font  |
+// | $wdpk-dropdown-header-background-color | background color for the header  |
+// | $wdpk-dropdown-icon-margin | Right margiun assigned to the menu items icons |
+//
+// Styleguide Shortcodes.Dropdowns
+$wdpk-dropdown-trigger-hover:                   true !default;
+$wdpk-dropdown-min-width:                       7rem !default;
+$wdpk-dropdown-padding-y:                       .5rem !default;
+$wdpk-dropdown-spacer:                          2rem !default;
+$wdpk-dropdown-font-size:                       $wdpk-dropdown-menu-font-size !default;
+$wdpk-dropdown-color:                           $wdpk-dropdown-menu-font-color !default;
+$wdpk-dropdown-bg:                              $wdpk-white !default;
+$wdpk-dropdown-border-color:                    rgba($wdpk-black, .15) !default;
+$wdpk-dropdown-border-radius:                   $wdpk-border-radius !default;
+$wdpk-dropdown-border-width:                    $wdpk-border-width !default;
+$wdpk-dropdown-divider-bg:                      $wdpk-gray-200 !default;
+$wdpk-dropdown-divider-margin-y:                .5rem !default;
+$wdpk-dropdown-box-shadow:                      0 .5rem 1rem rgba($wdpk-black, .175) !default;
+
+$wdpk-dropdown-link-color:                      $wdpk-dropdown-menu-font-color !default;
+$wdpk-dropdown-link-hover-color:                $wdpk-gray-100 !default;
+$wdpk-dropdown-link-hover-bg:                   $wdpk-primary-color !default;
+
+$wdpk-dropdown-link-active-color:               $wdpk-component-active-color !default;
+$wdpk-dropdown-link-active-bg:                  $wdpk-component-active-bg !default;
+
+$wdpk-dropdown-link-disabled-color:             $wdpk-gray-600 !default;
+
+$wdpk-dropdown-item-padding-y:                  .5rem !default;
+$wdpk-dropdown-item-padding-x:                  1.5rem !default;
+
+$wdpk-dropdown-header-color:                    $wdpk-gray-700 !default;
+$wdpk-dropdown-header-background-color:         $wdpk-gray-300 !default;
+
+$wdpk-dropdown-icon-margin:                     .5rem !default;
+
+
+// Comments Shortcode
+//
+// Variables setting various parameters of the Comments Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-comments-bg-color | Background color for the comments section |
+// | $wdpk-comments-author-img-border-radius | Border radius for the author image |
+//
+//  Styleguide Shortcodes.Comments
+$wdpk-comments-bg-color:                        $wdpk-gray-100 !default;
+$wdpk-comments-author-img-border-radius:        50% !default;
+$wdpk-comments-author-img-width:                50% !default;
+
+
+// Progress Bars Shortcode
+//
+// Variables setting various parameters of the Progress Bars Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-progress-height | The default height of the progress bar |
+// | $wdpk-progress-font-size | The font size of the label inside the progress bar |
+// | $wdpk-progress-bg |  Default background color for progress bar |
+// | $wdpk-progress-border-radius | Border radius for the progress bar |
+// | $wdpk-progress-box-shadow | Box shadow assign  to progress bar container  |
+// | $wdpk-progress-bar-color | The default font color for the progress bar label  |
+// | $wdpk-progress-bar-bg | The default color for the progress bar |
+// | $wdpk-progress-bar-animation-timing | The strip animation timing  |
+// | $wdpk-progress-bar-transition | Transitions properties for the progress bar  |
+// | $wdpk-progress-bar-x-margin | Bottom Margin assigned to each of the progress bars |
+//
+//  Styleguide Shortcodes.Progress Bars
+
+$wdpk-progress-height:                          1rem !default;
+$wdpk-progress-font-size:                       $wdpk-font-size-base * .75 !default;
+$wdpk-progress-bg:                              $wdpk-gray-100 !default;
+$wdpk-progress-border-radius:                   $wdpk-border-radius !default;
+$wdpk-progress-box-shadow:                      inset 0 .1rem .1rem rgba($wdpk-black, .1) !default;
+$wdpk-progress-bar-color:                       $wdpk-white !default;
+$wdpk-progress-bar-bg:                          $wdpk-primary-color !default;
+$wdpk-progress-bar-animation-timing:            1s linear infinite !default;
+$wdpk-progress-bar-transition:                  width .6s ease !default;
+$wdpk-progress-bar-x-margin:                    .7rem !default;
+
+
+// Pagination Shortcode
+//
+// Variables setting various parameters of the Paginationwdpk-
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-progress-height | The default height of the progress bar |
+// | $wdpk-progress-font-size | The font size of the label inside the progress bar |
+// | $wdpk-progress-bg |  Default background color for progress bar |
+// | $wdpk-progress-border-radius | Border radius for the progress bar |
+// | $wdpk-progress-box-shadow | Box shadow assign  to progress bar container  |
+// | $wdpk-progress-bar-color | The default font color for the progress bar label  |
+// | $wdpk-progress-bar-bg | The default color for the progress bar |
+// | $wdpk-progress-bar-animation-timing | The strip animation timing  |
+// | $wdpk-progress-bar-transition | Transitions properties for the progress bar  |
+// | $wdpk-progress-bar-x-margin | Bottom Margin assigned to each of the progress bars |
+//
+//  Styleguide Shortcodes.Pagination
+
+
+$wdpk-pagination-padding-y:                     .5rem !default;
+$wdpk-pagination-padding-x:                     .75rem !default;
+$wdpk-pagination-padding-y-sm:                  .25rem !default;
+$wdpk-pagination-padding-x-sm:                  .5rem !default;
+$wdpk-pagination-padding-y-lg:                  .75rem !default;
+$wdpk-pagination-padding-x-lg:                  1.5rem !default;
+$wdpk-pagination-line-height:                   1.25 !default;
+
+$wdpk-pagination-color:                         $wdpk-link-color !default;
+$wdpk-pagination-bg:                            $wdpk-white !default;
+$wdpk-pagination-border-width:                  $wdpk-border-width !default;
+$wdpk-pagination-border-color:                  $wdpk-gray-300 !default;
+
+$wdpk-pagination-focus-box-shadow:              $wdpk-input-btn-focus-box-shadow !default;
+$wdpk-pagination-focus-outline:                 0 !default;
+
+$wdpk-pagination-hover-color:                   $wdpk-link-hover-color !default;
+$wdpk-pagination-hover-bg:                      $wdpk-gray-200 !default;
+$wdpk-pagination-hover-border-color:            $wdpk-gray-300 !default;
+
+$wdpk-pagination-active-color:                  $wdpk-component-active-color !default;
+$wdpk-pagination-active-bg:                     $wdpk-component-active-bg !default;
+$wdpk-pagination-active-border-color:           $wdpk-pagination-active-bg !default;
+
+$wdpk-pagination-disabled-color:                $wdpk-gray-600 !default;
+$wdpk-pagination-disabled-bg:                   $wdpk-white !default;
+$wdpk-pagination-disabled-border-color:         $wdpk-gray-300 !default;
+
+
+// Video | Audio Shortcode
+//
+// Variables setting various parameters of the Video Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-plyr-badge-bg | Video Player badge background color  |
+// | $wdpk-plyr-badge-color | Video Player badge color  |
+// | $wdpk-plyr-font-size-time | Video Player Time font size   |
+// | $wdpk-plyr-font-size-badge |  Video Player badge font size    |
+// | $wdpk-plyr-font-size-menu |  Video Player menu font size   |
+// | $wdpk-plyr-font-weight-regular | Video Player regualr font weight  |
+// | $wdpk-plyr-font-weight-bold | Video Player font weight bold |
+// | $wdpk-plyr-line-height | Video Player  font line height   |
+// | $wdpk-plyr-captions-bg | Video Player captions background color  |
+// | $wdpk-plyr-captions-color |  Video Player font color  |
+// | $wdpk-plyr-color-main | Video Player  primary color  |
+// | $wdpk-plyr-control-icon-size | Video Player icon size  |
+// | $wdpk-plyr-control-spacing | Video Player spacing between controls   |
+// | $wdpk-plyr-control-radius | Video Player border radius assigned to controls   |
+// | $wdpk-plyr-video-controls-bg | Video Player controls backgrounf color  |
+// | $wdpk-plyr-video-control-color | Video Player controls color  |
+// | $wdpk-plyr-video-control-color-hover |  Video Player contorl hover color  |
+// | $wdpk-plyr-video-control-bg-hover | Video Player controlss background hover color  |
+// | $wdpk-plyr-tab-focus-default-color | Video Player tab focus default color  |
+// | $wdpk-plyr-menu-bg | Video Player menu background color  |
+// | $wdpk-plyr-menu-color | Video Player menu font color  |
+// | $wdpk-plyr-menu-arrow-size | Video Player menu arrow font size   |
+// | $wdpk-plyr-menu-border-color | Video Player menu border color  |
+// | $wdpk-plyr-menu-border-shadow-color | Video Player menu border shadow color  |
+// | $wdpk-plyr-menu-shadow | Video Player menu shadow properties  |
+// | $wdpk-plyr-progress-loading-size |  Video Player progress loading size  |
+// | $wdpk-plyr-progress-loading-bg |  Video Player progress loading background color   |
+// | $wdpk-plyr-video-progress-buffered-bg | Video Player buffered background color  |
+// | $wdpk-plyr-range-thumb-active-shadow-width |   |
+// | $wdpk-plyr-range-thumb-height |  Range thumb height |
+// | $wdpk-plyr-range-thumb-bg |  Range thumb background color |
+// | $wdpk-plyr-range-thumb-border | Range thumb Border Color  |
+// | $wdpk-plyr-range-thumb-shadow |  Range thumb shadow |
+// | $wdpk-plyr-range-track-height | Track Range height  |
+// | $wdpk-plyr-range-fill-bg |  Range bar background color |
+// | $wdpk-plyr-video-range-track-bg | Range track video background color  |
+// | $wdpk-plyr-audio-range-track-bg |  Range track audio background color   |
+// | $wdpk-plyr-audio-range-thumb-shadow-color | Range thumb audio background color    |
+// | $wdpk-plyr-tooltip-bg |  Video Player  tooltip background color   |
+// | $wdpk-plyr-tooltip-color |   Video Player tooltip font color  |
+// | $wdpk-plyr-tooltip-padding |   Video Player tolltip padding |
+// | $wdpk-plyr-tooltip-arrow-size |  Video Player tooltip arrow size  |
+// | $wdpk-plyr-tooltip-radius | Video Player tooltip border radius  |
+// | $wdpk-plyr-tooltip-shadow | Video Player tooltip shadow properties |
+// | $wdpk-plyr-audio-controls-bg | Audio player controls background color|
+// | $wdpk-plyr-audio-control-color | Audio player controls color |
+// | $wdpk-plyr-audio-control-color-hover | Audio player controls hover color |
+// | $wdpk-plyr-audio-control-bg-hover | Audio player controls background hover color |
+//
+// Styleguide Shortcodes.Video And Audio Shortcode
+
+$wdpk-plyr-badge-bg:                            $wdpk-gray-700 !default;
+$wdpk-plyr-badge-color:                         #fff !default;
+
+$wdpk-plyr-font-size-time:                      $wdpk-font-size-sm !default;
+$wdpk-plyr-font-size-badge:                     9px !default;
+$wdpk-plyr-font-size-menu:                      $wdpk-font-size-sm !default;
+
+$wdpk-plyr-font-weight-regular:                 500 !default;
+$wdpk-plyr-font-weight-bold:                    600 !default;
+
+$wdpk-plyr-line-height:                         1.7 !default;
+
+$wdpk-plyr-captions-bg:                         rgba(#000, 0.8) !default;
+$wdpk-plyr-captions-color:                      #fff !default;
+
+$wdpk-plyr-color-main:                          $wdpk-primary-color !default;
+
+$wdpk-plyr-control-icon-size:                   18px !default;
+$wdpk-plyr-control-spacing:                     10px !default;
+$wdpk-plyr-control-radius:                      3px !default;
+
+$wdpk-plyr-video-controls-bg:                   #000 !default;
+$wdpk-plyr-video-control-color:                 #fff !default;
+$wdpk-plyr-video-control-color-hover:           #fff !default;
+$wdpk-plyr-video-control-bg-hover:              $wdpk-plyr-color-main !default;
+
+
+$wdpk-plyr-tab-focus-default-color:             $wdpk-plyr-color-main !default;
+
+$wdpk-plyr-menu-bg:                             rgba(#fff, 0.9) !default;
+$wdpk-plyr-menu-color:                          $wdpk-gray-700 !default;
+$wdpk-plyr-menu-arrow-size:                     6px !default;
+$wdpk-plyr-menu-border-color:                   $wdpk-gray-200 !default;
+$wdpk-plyr-menu-border-shadow-color:            #fff !default;
+$wdpk-plyr-menu-shadow:                         0 1px 2px rgba(#000, 0.15) !default;
+
+// Loading
+$wdpk-plyr-progress-loading-size:               25px !default;
+$wdpk-plyr-progress-loading-bg:                 rgba($wdpk-gray-900, 0.6) !default;
+
+// Buffered
+$wdpk-plyr-video-progress-buffered-bg:          rgba(#fff, 0.25) !default;
+$wdpk-plyr-audio-progress-buffered-bg:          rgba($wdpk-gray-200, 0.66) !default;
+
+// Active state
+$wdpk-plyr-range-thumb-active-shadow-width:     3px !default;
+
+// Plyr Sliders ==>
+// Thumb
+$wdpk-plyr-range-thumb-height:                  13px !default;
+$wdpk-plyr-range-thumb-bg:                      #fff !default;
+$wdpk-plyr-range-thumb-border:                  2px solid transparent !default;
+$wdpk-plyr-range-thumb-shadow:                  0 1px 1px rgba(#000, 0.15), 0 0 0 1px rgba($wdpk-gray-900, 0.2) !default;
+
+// Track
+$wdpk-plyr-range-track-height:                  5px !default;
+
+
+// Fill
+$wdpk-plyr-range-fill-bg:                       $wdpk-plyr-color-main !default;
+
+// Type specific
+$wdpk-plyr-video-range-track-bg:                $wdpk-plyr-video-progress-buffered-bg !default;
+$wdpk-plyr-audio-range-track-bg:                $wdpk-plyr-audio-progress-buffered-bg !default;
+$wdpk-plyr-audio-range-thumb-shadow-color:      rgba(#000, 0.1) !default;
+// <== Plyr Sliders
+
+$wdpk-plyr-tooltip-bg:                          rgba(#fff, 0.9) !default;
+$wdpk-plyr-tooltip-color:                       $wdpk-gray-700 !default;
+$wdpk-plyr-tooltip-padding:                     ($wdpk-plyr-control-spacing / 2) !default;
+$wdpk-plyr-tooltip-arrow-size:                  4px !default;
+$wdpk-plyr-tooltip-radius:                      3px !default;
+$wdpk-plyr-tooltip-shadow:                      0 1px 2px rgba(#000, 0.25) !default;
+
+// Audio Shortcode
+$wdpk-plyr-audio-controls-bg:                   $wdpk-gray-100 !default;
+$wdpk-plyr-audio-control-color:                 $wdpk-gray-700 !default;
+$wdpk-plyr-audio-control-color-hover:           #fff !default;
+$wdpk-plyr-audio-control-bg-hover:              $wdpk-plyr-color-main !default;
+
+
+// Heading Shortcode
+//
+// Variables setting various parameters of the Heading Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-heading-head-font-size |  The Heading font size  |
+// | $wdpk-heading-head-font-family | The heading section font family   |
+// | $wdpk-heading-head-line-height | The heading fon line height  |
+// | $wdpk-heading-head-color | The heading font color  |
+// | $wdpk-heading-head-margin-bottom | Bottom margin assigned to the heading |
+// | $wdpk-heading-separator-margin-bottom | Bottom margin for the separator |
+// | $wdpk-heading-separator-height | Separator height |
+// | $wdpk-heading-separator-width |  The width of the heading separator |
+// | $wdpk-heading-separator-icon-font-size | Icon font size for the seprartor font   |
+// | $wdpk-heading-separator-icon-color |  Icon font color for the seprartor font  |
+// | $wdpk-heading-separator-icon-xpadding | Icon x-padding for the seprartor font   |
+// | $wdpk-heading-desc-font-size | Description font size   |
+// | $wdpk-heading-desc-font-family | Description font family   |
+// | $wdpk-heading-desc-line-height | Description font line height  |
+// | $wdpk-heading-desc-color |  Description font color  |
+// | $wdpk-heading-desc-margin-bottom | Description text bottom margin   |
+// | $wdpk-heading-spearator-bg-map | Heading seperator backgrodun color map |
+//
+// Styleguide Shortcodes.Heading Shortcode
+
+$wdpk-heading-head-font-size:                   2rem !default;
+$wdpk-heading-head-font-family:                 inherit !default;
+$wdpk-heading-head-line-height:                 1.3 !default;
+$wdpk-heading-head-color:                       $wdpk-gray-800 !default;
+$wdpk-heading-head-margin-bottom:               .5rem !default;
+
+
+$wdpk-heading-separator-margin-bottom:          1rem !default;
+$wdpk-heading-separator-height:                 2px !default;
+$wdpk-heading-separator-width:                  20% !default;
+
+
+$wdpk-heading-separator-icon-font-size:         1.3rem !default;
+$wdpk-heading-separator-icon-color:             $wdpk-gradient-1 !default;
+$wdpk-heading-separator-icon-xpadding:          .5rem !default;
+
+
+$wdpk-heading-desc-font-size:                   .9rem !default;
+$wdpk-heading-desc-font-family:                 inherit !default;
+$wdpk-heading-desc-line-height:                 1.4 !default;
+$wdpk-heading-desc-color:                       $wdpk-gray-600 !default;
+$wdpk-heading-desc-margin-bottom:               1rem !default;
+
+
+$wdpk-heading-spearator-bg-map:                 (
+														backgroundType: gradient,
+														gradientType: linear,
+														color1: $wdpk-gradient-1,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-heading-spearator-border:                 (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+// Lightbox Gallery Shortcode
+//
+// Variables setting various parameters of the Lightbox Gallery Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-light-gallery-hover-bg-color | Image Thumbnail Hover Color  |
+// | $wdpk-light-gallery-icon-size | The hover icon size |
+// | $wdpk-light-gallery-icon-color | The hover icon color  |
+// | $wdpk-light-gallery-icon-padding | The hover icon padding |
+// | $wdpk-light-gallery-icon-bg-color | The hover icon background color |
+// | $wdpk-light-gallery-icon-border-radius |The hover icon Background Border Radius  |
+// | $wdpk-light-gallery-icon-border | The hover icon Border properties |
+// | $wdpk-light-gallery-icon-hover-bg-color | The hover icon background color  |
+// | $wdpk-light-gallery-backdrop-opacity | Gallery backdrop opacity |
+// | $wdpk-light-gallery-toolbar-bg | Toolbar background color |
+// | $wdpk-light-gallery-border-radius-base | Base border radius for the gallery elements |
+// | $wdpk-light-gallery-theme-highlight | Gallery highlight areas like progressbar active bg, thumbnails border.. |
+// | $wdpk-light-gallery-icon-bg | Gallery icons background color |
+// | $wdpk-light-gallery-icon-color | Gallery icons color |
+// | $wdpk-light-gallery-icon-hover-color | Gallery icons color |
+// | $wdpk-light-gallery-counter-color | Gallery counter color |
+// | $wdpk-light-gallery-counter-font-size | Gallery counter font size |
+// | $wdpk-light-gallery-next-prev-bg | Next prev controls background color |
+// | $wdpk-light-gallery-next-prev-color |Next prev controls icon color |
+// | $wdpk-light-gallery-next-prev-hover-color | Next prev controls icon color on hover |
+// | $wdpk-light-gallery-progress-bar-bg | Progress bar background color |
+// | $wdpk-light-gallery-progress-bar-active-bg | $lg-theme-highlight	Progress bar highlight color |
+// | $wdpk-light-gallery-progress-bar-height | Height of the progress bar |
+// | $wdpk-light-gallery-zoomom-transition-duration | Image zoom animation duration.. |
+// | $wdpk-light-gallery-sub-html-bg | Sub html container background color |
+// | $wdpk-light-gallery-sub-html-color | Sub html color |
+// | $wdpk-light-gallery-thumb-toggle-bg | Thumbnail icon toggle icon background color |
+// | $wdpk-light-gallery-thumb-toggle-color | Thumbnail icon toggle icon color |
+// | $wdpk-light-gallery-thumb-toggle-hover-color | Thumbnail icon toggle icon color on hover |
+// | $wdpk-light-gallery-thumb-bg | Thumbnail container background color |
+//
+// Styleguide Shortcodes.Lightbox Gallery Shortcode
+$wdpk-light-gallery-hover-bg-color:             rgba(0, 0, 0, 0.5) !default;
+
+$wdpk-light-gallery-icon-size:                  1rem !default;
+$wdpk-light-gallery-icon-color:                 #ffffff !default;
+$wdpk-light-gallery-icon-padding:               10px !default;
+$wdpk-light-gallery-icon-bg-color:              $wdpk-gray-600 !default;
+$wdpk-light-gallery-icon-border-radius:         50% !default;
+$wdpk-light-gallery-icon-border:                0px solid $wdpk-gray-400 !default;
+$wdpk-light-gallery-icon-hover-bg-color:        $wdpk-gray-800 !default;
+
+$wdpk-light-gallery-backdrop-opacity:           1 !default;
+$wdpk-light-gallery-toolbar-bg:                 rgba(0, 0, 0, 0.45) !default;
+$wdpk-light-gallery-border-radius-base:         2px !default;
+$wdpk-light-gallery-theme-highlight:            rgb(169, 7, 7) !default;
+$wdpk-light-gallery-icon-bg:                    rgba(0, 0, 0, 0.45) !default;
+$wdpk-light-gallery-icon-color:                 #999 !default;
+$wdpk-light-gallery-icon-hover-color:           #eeeeee !default;
+$wdpk-light-gallery-counter-color:              #e6e6e6 !default;
+$wdpk-light-gallery-counter-font-size:          16px !default;
+$wdpk-light-gallery-next-prev-bg:               $wdpk-light-gallery-icon-bg !default;
+$wdpk-light-gallery-next-prev-color:            $wdpk-light-gallery-icon-color !default;
+$wdpk-light-gallery-next-prev-hover-color:      $wdpk-light-gallery-icon-hover-color !default;
+$wdpk-light-gallery-progress-bar-bg:            #333 !default;
+$wdpk-light-gallery-progress-bar-active-bg:     $wdpk-primary-color !default;
+$wdpk-light-gallery-progress-bar-height:        5px !default;
+$wdpk-light-gallery-zoomom-transition-duration: 0.3s !default;
+$wdpk-light-gallery-sub-html-bg:                rgba(0, 0, 0, 0.45) !default;
+$wdpk-light-gallery-sub-html-color:             #eee !default;
+$wdpk-light-gallery-thumb-toggle-bg:            #0d0a0a !default;
+$wdpk-light-gallery-thumb-toggle-color:         $wdpk-light-gallery-icon-color !default;
+$wdpk-light-gallery-thumb-toggle-hover-color:   $wdpk-light-gallery-icon-hover-color !default;
+$wdpk-light-gallery-thumb-bg:                   #0d0a0a !default;
+
+// Jumbotron Shortcode
+//
+// Variables setting various parameters of the Jumbotron Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-jumbotron-padding |  Padding inside the Jumbotron  |
+// | $wdpk-jumbotron-color |  Jumbotron Font color  |
+// | $wdpk-jumbotron-bg-map | Jumbotron background map   |
+// | $wdpk-jumbotron-border | Jumbotron border map   |
+// | $wdpk-jumbotron-shadow | Jumbotron shadow map   |
+//
+// Styleguide Shortcodes.Jumbotron Shortcode
+
+$wdpk-jumbotron-padding:                        1.5rem !default;
+$wdpk-jumbotron-color:                          $wdpk-gray-700 !default;
+$wdpk-jumbotron-bg-map:                         (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-jumbotron-border:                         (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+$wdpk-jumbotron-shadow:                         (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Badges
+//
+// Varibles for Bootstrap Badges
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-table-cell-padding | Table cell padding  |
+// | $wdpk-table-cell-padding-sm | Table sm cell padding  |
+//
+// Styleguide Shortcodes.Badges
+
+$wdpk-badge-font-size:                          75% !default;
+$wdpk-badge-font-weight:                        $wdpk-font-weight-base !default;
+$wdpk-badge-padding-y:                          .25em !default;
+$wdpk-badge-padding-x:                          .4em !default;
+$wdpk-badge-border-radius:                      $wdpk-border-radius !default;
+
+$wdpk-badge-transition:                         $wdpk-btn-transition !default;
+$wdpk-badge-focus-width:                        $wdpk-input-btn-focus-width !default;
+
+$wdpk-badge-pill-padding-x:                     .6em !default;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$wdpk-badge-pill-border-radius:                 10rem !default;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations. Impacts all table variations
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-table-cell-padding | Table cell padding  |
+// | $wdpk-table-cell-padding-sm | Table sm cell padding  |
+// | $wdpk-table-color | Table font color|
+// | $wdpk-table-bg | Table background color |
+// | $wdpk-table-accent-bg | Table accent color |
+// | $wdpk-table-hover-color | Table hover color |
+// | $wdpk-table-hover-bg | Table hover background color |
+// | $wdpk-table-active-bg | Table active background color |
+// | $wdpk-table-border-width | Table border width  |
+// | $wdpk-table-border-color | Table boder color  |
+// | $wdpk-table-head-bg | Table head background color  |
+// | $wdpk-table-head-color | Table head font color |
+// | $wdpk-table-dark-color | Table dark version font color |
+// | $wdpk-table-dark-bg | Table dark version backgrounc color |
+// | $wdpk-table-dark-accent-bg | Table dark version accent color |
+// | $wdpk-table-dark-hover-color | Table dark version hover color |
+// | $wdpk-table-dark-hover-bg | Table dark version hover background color |
+// | $wdpk-table-dark-border-color | Table dark version border color  |
+// | $wdpk-table-dark-color | Table dark version font color |
+// | $wdpk-table-striped-order | Table stripped font color |
+// | $wdpk-table-caption-color | Table caption font color |
+// | $wdpk-table-bg-level | Background color correction level  |
+// | $wdpk-table-border-level | Border color correction level |
+//
+// Styleguide Shortcodes.Table Shortcode
+
+$wdpk-table-cell-padding:                       .75rem !default;
+$wdpk-table-cell-padding-sm:                    .3rem !default;
+
+$wdpk-table-color:                              $wdpk-body-color !default;
+$wdpk-table-bg:                                 null !default;
+$wdpk-table-accent-bg:                          rgba($wdpk-black, .05) !default;
+$wdpk-table-hover-color:                        $wdpk-table-color !default;
+$wdpk-table-hover-bg:                           rgba($wdpk-black, .075) !default;
+$wdpk-table-active-bg:                          $wdpk-table-hover-bg !default;
+
+$wdpk-table-border-width:                       $wdpk-border-width !default;
+$wdpk-table-border-color:                       $wdpk-border-color !default;
+
+$wdpk-table-head-bg:                            $wdpk-gray-200 !default;
+$wdpk-table-head-color:                         $wdpk-gray-700 !default;
+
+$wdpk-table-dark-color:                         $wdpk-white !default;
+$wdpk-table-dark-bg:                            $wdpk-gray-800 !default;
+$wdpk-table-dark-accent-bg:                     rgba($wdpk-white, .05) !default;
+$wdpk-table-dark-hover-color:                   $wdpk-table-dark-color !default;
+$wdpk-table-dark-hover-bg:                      rgba($wdpk-white, .075) !default;
+$wdpk-table-dark-border-color:                  lighten($wdpk-table-dark-bg, 7.5%) !default;
+$wdpk-table-dark-color:                         $wdpk-white !default;
+
+$wdpk-table-striped-order:                      odd !default;
+
+$wdpk-table-caption-color:                      $wdpk-text-muted !default;
+
+$wdpk-table-bg-level:                           -9 !default;
+$wdpk-table-border-level:                       -6 !default;
+
+// Typing Text
+//
+// Variables to customize the Typing Text
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-typing-text-font-size | Font size for the typing text |
+// | $wdpk-typing-text-line-height | Line height for the typing text  |
+// | $wdpk-typing-text-text-align |  Text align for typing text  |
+// | $wdpk-typing-text-font-family | Font Family for typing text |
+// | $wdpk-typing-text-color | The color of the text for typing text |
+//
+// Styleguide Shortcodes.Typing Text
+$wdpk-typing-text-font-size:                    30px !default;
+$wdpk-typing-text-line-height:                  1.3 !default;
+$wdpk-typing-text-text-align:                   center !default;
+$wdpk-typing-text-font-family:                  inherit !default;
+$wdpk-typing-text-color:                        inherit !default;
+
+
+// Drop Caps
+//
+// Variables to customize the Dropcaps
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-dropcaps-color | Font color for drop caps |
+// | $wdpk-dropcaps-font-family | Font familyfor drop caps |
+// | $wdpk-dropcaps-font-size | Font size for drop caps |
+// | $wdpk-dropcaps-padding-right | Right padding for drop caps |
+// | $wdpk-dropcaps-padding-left | Left padding for drop caps |
+//
+// Styleguide Shortcodes.Drop Caps
+$wdpk-dropcaps-color:                           $wdpk-primary-color;
+$wdpk-dropcaps-font-family:                     inherit;
+$wdpk-dropcaps-font-size:                       3.5rem;
+$wdpk-dropcaps-padding-right:                   8px;
+$wdpk-dropcaps-padding-left:                    3px;
+
+
+//
+// Bootstrap Carousel
+//
+// Variables to customize the Bootstrap Carousel
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-dropcaps-color | Font color for drop caps |
+// | $wdpk-dropcaps-font-family | Font familyfor drop caps |
+// | $wdpk-dropcaps-font-size | Font size for drop caps |
+// | $wdpk-dropcaps-padding-right | Right padding for drop caps |
+// | $wdpk-dropcaps-padding-left | Left padding for drop caps |
+//
+// Styleguide Shortcodes. Bootstrap Carousel
+
+$wdpk-carousel-control-color:                   $wdpk-primary-color !default;
+$wdpk-carousel-control-width:                   15% !default;
+$wdpk-carousel-control-opacity:                 .7 !default;
+$wdpk-carousel-control-hover-opacity:           .9 !default;
+$wdpk-carousel-control-transition:              opacity .15s ease !default;
+
+$wdpk-carousel-indicator-width:                 30px !default;
+$wdpk-carousel-indicator-height:                3px !default;
+$wdpk-carousel-indicator-hit-area-height:       10px !default;
+$wdpk-carousel-indicator-spacer:                3px !default;
+$wdpk-carousel-indicator-active-bg:             $wdpk-white !default;
+$wdpk-carousel-indicator-transition:            opacity .6s ease !default;
+
+$wdpk-carousel-caption-width:                   70% !default;
+$wdpk-carousel-caption-color:                   $wdpk-white !default;
+
+$wdpk-carousel-control-icon-width:              20px !default;
+
+$wdpk-carousel-transition-duration:             .6s !default;
+$wdpk-carousel-transition:                      transform $wdpk-carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+
+// Page Title
+//
+// Variables to customize the Page Titles
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-page-title-top-space | Vertical Top padding for page title  |
+// | $wdpk-page-title-bottom-space | Vertical Bottom padding for page title  |
+// | $wdpk-page-title-head-font-size | Heading font size for page title    |
+// | $wdpk-page-title-head-font-family |  Heading forn family for page title   |
+// | $wdpk-page-title-head-line-height |  Heading line height for page title   |
+// | $wdpk-page-title-head-color | Heading font color for page title     |
+// | $wdpk-page-title-head-margin-bottom | Haading font margin bottom |
+// | $wdpk-page-title-separator-margin-bottom | Separator bottom margin  |
+// | $wdpk-page-title-separator-height | Separator height   |
+// | $wdpk-page-title-separator-width |  Separator width  |
+// | $wdpk-page-title-separator-icon-font-size | Separator icon font size  |
+// | $wdpk-page-title-separator-icon-color | Separator icon font color   |
+// | $wdpk-page-title-separator-icon-xpadding | Separator icon x padding between icon  |
+// | $wdpk-page-title-desc-font-size |  Description font size  |
+// | $wdpk-page-title-desc-font-family | Description font family    |
+// | $wdpk-page-title-desc-line-height | Description font line height   |
+// | $wdpk-page-title-desc-color | Description font  color  |
+// | $wdpk-page-title-desc-margin-bottom | Description font margin bottom   |
+// | $wdpk-page-title-spearator-bg-map |  Background color map for the separator  |
+// | $wdpk-page-title-bg-map | Page title background map  |
+// | $wdpk-page-title-overlay-color | Overlay color for page title  |
+//
+// Styleguide Layout.Page Title
+
+$wdpk-page-title-top-space:                     8rem !default;
+$wdpk-page-title-bottom-space:                  8rem !default;
+
+$wdpk-page-title-head-font-size:                2rem !default;
+$wdpk-page-title-head-font-family:              inherit !default;
+$wdpk-page-title-head-line-height:              2rem !default;
+$wdpk-page-title-head-color:                    $wdpk-white !default;
+$wdpk-page-title-head-margin-bottom:            .5rem !default;
+
+
+$wdpk-page-title-separator-margin-bottom:       1rem !default;
+$wdpk-page-title-separator-height:              2px !default;
+$wdpk-page-title-separator-width:               20% !default;
+
+
+$wdpk-page-title-separator-icon-font-size:      1.3rem !default;
+$wdpk-page-title-separator-icon-color:          $wdpk-gradient-1 !default;
+$wdpk-page-title-separator-icon-xpadding:       .5rem !default;
+
+
+$wdpk-page-title-desc-font-size:                .9rem !default;
+$wdpk-page-title-desc-font-family:              inherit !default;
+$wdpk-page-title-desc-line-height:              1.4 !default;
+$wdpk-page-title-desc-color:                    $wdpk-gray-100 !default;
+$wdpk-page-title-desc-margin-bottom:            1rem !default;
+$wdpk-page-title-overlay-color:                 rgba(0, 0, 0, .85) !default;
+
+
+$wdpk-page-title-spearator-bg-map:              (
+														backgroundType: gradient,
+														gradientType: linear,
+														color1: $wdpk-gradient-1,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+$wdpk-page-title-bg-map:                        (
+														backgroundType: image,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(/assets/images/page-title.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+$wdpk-page-title-spearator-border-map:          (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #f4f4f4,
+														borderBottomWidth: 2px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// Footer
+//
+// Variables to customize the Footer
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-footer-padding-top  |  Top padding for the footer |
+// | $wdpk-footer-padding-bottom  |  Bottom padding for the footer |
+// | $wdpk-footer-font-size  | Font size for the footer  |
+// | $wdpk-footer-color  |  Font color for the footer |
+// | $wdpk-footer-hover-color  |  Footer font hover color  |
+// | $wdpk-footer-font-family  |  Font family for the footer  |
+// | $wdpk-footer-heading-font-size  |  Footer heading font size   |
+// | $wdpk-footer-heading-color  |  Footer heading font color   |
+// | $wdpk-footer-heading-font-family  |  Footer heading font family  |
+// | $wdpk-footer-list-separators  |  Footer list item separator. Set `true` if separators are needed else set false  |
+// | $wdpk-footer-list-separators-color  | Footer list separator color  |
+// | $wdpk-footer-list-x-padding  | Footer list items `x` axis padding   |
+// | $wdpk-footer-list-y-padding  | Footer list items `y` axis padding   |
+// | $wdpk-footer-copyright-top-padding  | Footer copyright section top padding   |
+// | $wdpk-footer-copyright-bottom-padding  | Footer copyright section bottom padding  |
+// | $wdpk-footer-copyright-bg  |  Footer copyright section background color |
+// | $wdpk-footer-social-icon-size  |  Footer social icon size |
+// | $wdpk-footer-social-icon-align  | Footer social icon alignment. Option of `'left'` `'right'` `'center'`   |
+// | $wdpk-footer-social-icon-padding  | Footer social icon padding  |
+// | $wdpk-footer-social-icon-margin  |  Footer social icon margin. Sets the spaces between the social icons  |
+// | $wdpk-footer-social-icon-color  |  Social Icon color |
+// | $wdpk-footer-social-icon-hover-color  | Social icon hover color  |
+// | $wdpk-footer-bg-map  | Footer background properties map   |
+//
+// Styleguide Layout.Footer
+
+$wdpk-footer-padding-top:                       60px !default;
+$wdpk-footer-padding-bottom:                    40px !default;
+$wdpk-footer-column-margin-bottom:              30px !default;
+$wdpk-footer-font-size:                         .9rem !default;
+$wdpk-footer-color:                             $wdpk-gray-200 !default;
+$wdpk-footer-hover-color:                       $wdpk-primary-color !default;
+$wdpk-footer-font-family:                       inherit !default;
+
+$wdpk-footer-heading-font-size:                 1rem !default;
+$wdpk-footer-heading-color:                     $wdpk-gray-100 !default;
+$wdpk-footer-heading-font-family:               inherit !default;
+
+$wdpk-footer-list-separators:                   false !default;
+$wdpk-footer-list-separators-color:             rgba(255, 255, 255, 0.1) !default;
+$wdpk-footer-list-x-padding:                    .5rem !default;
+$wdpk-footer-list-y-padding:                    .8rem !default;
+
+$wdpk-footer-copyright-top-padding:             .8rem !default;
+$wdpk-footer-copyright-bottom-padding:          .8rem !default;
+$wdpk-footer-copyright-bg:                      $wdpk-black !default;
+
+$wdpk-footer-social-icon-size:                  .9rem !default;
+$wdpk-footer-social-icon-align:                 'center' !default;
+$wdpk-footer-social-icon-padding:               .5rem !default;
+$wdpk-footer-social-icon-margin:                5px !default;
+$wdpk-footer-social-icon-color:                 $wdpk-gray-300 !default;
+$wdpk-footer-social-icon-hover-color:           $wdpk-white !default;
+
+$wdpk-footer-bg-map:                            (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-900,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(/assets/images/page-title.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+
+// Blog Listing
+//
+// Variables to customize the Blog Listing
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-blog-list-col-count  | Blog listing Column Count for the masonry layout   |
+// | $wdpk-blog-list-classic-col-count  | Blog listing Column Count for classic blog layout  |
+// | $wdpk-blog-list-col-gutter  |  Gutter space between blog listing columns    |
+// | $wdpk-blog-list-col-margin-bottom  |  Margin below the blog listing columns    |
+// | $wdpk-blog-list-content-align  | Content alignment for blog listings. Possible options `center`, `left`, `right`  |
+// | $wdpk-blog-list-border-width  | The border width for the outline along the blog listing columns    |
+// | $wdpk-blog-list-border-radius  |   The border radius for the outline along the blog listing columns      |
+// | $wdpk-blog-list-border-color  |   The border color for the outline along the blog listing columns      |
+// | $wdpk-blog-list-inner-border-radius  |   The inner border radius for the outline along the blog listing columns      |
+// | $wdpk-blog-list-bg-color  |   Blog listing card background color   |
+// | $wdpk-blog-list-shadow  |  blog listing shadow map   |
+// | $wdpk-blog-list-cat-badge-top-margin  |    Blog listing category section top margin |
+// | $wdpk-blog-list-cat-badge-bottom-margin  |  Blog listing category section bottom margin   |
+// | $wdpk-blog-list-cat-badge-font-size  | Blog listing category section badge font size     |
+// | $wdpk-blog-list-cat-badge-font-family  |  Blog listing category section badge font family    |
+// | $wdpk-blog-list-cat-badge-color  |   Blog listing category section badge font color   |
+// | $wdpk-blog-list-cat-badge-font-weight  | Blog listing category section badge font weight     |
+// | $wdpk-blog-list-cat-badge-bg-color  |  Blog listing category section badge background color    |
+// | $wdpk-blog-list-title-font-size  |   Blog listing title font size  |
+// | $wdpk-blog-list-title-font-family  | Blog listing title font family     |
+// | $wdpk-blog-list-title-color  |   Blog listing title font color   |
+// | $wdpk-blog-list-title-font-weight  |   Blog listing title font weight  |
+// | $wdpk-blog-list-title-margin-bottom  | Blog listing title font margin bottom    |
+// | $wdpk-blog-list-title-margin-top  |  Blog listing title font margin top    |
+// | $wdpk-blog-list-auth-sec-font-size  |  Blog listing author meta section font size   |
+// | $wdpk-blog-list-auth-sec-font-family  |  Blog listing author meta section font family     |
+// | $wdpk-blog-list-auth-sec-color  |   Blog listing author meta section font color  |
+// | $wdpk-blog-list-auth-sec-font-weight  |  Blog listing author meta section font weight   |
+// | $wdpk-blog-list-auth-sec-margin-top  |   Blog listing author meta section margin top  |
+// | $wdpk-blog-list-auth-sec-margin-bottom  |   Blog listing author meta section margin bottom   |
+// | $wdpk-blog-list-auth-sec-padding-top  |  Blog listing author meta section padding top    |
+// | $wdpk-blog-list-auth-sec-padding-bottom  |  Blog listing author meta section padding bottom   |
+// | $wdpk-blog-list-auth-sec-background-color  | Blog listing author meta section background color      |
+// | $wdpk-blog-list-comment-font-size  |   Blog listing comment meta section font size   |
+// | $wdpk-blog-list-comment-font-family  | Blog listing comment meta section font family    |
+// | $wdpk-blog-list-comment-color  |  Blog listing comment meta section font color   |
+// | $wdpk-blog-list-comment-font-weight  |  Blog listing comment meta section font weight    |
+// | $wdpk-blog-list-comment-margin-top  |   Blog listing comment meta section margin top  |
+// | $wdpk-blog-list-comment-margin-bottom  |   Blog listing comment meta section margin bottom  |
+// | $wdpk-blog-list-comment-padding-top  |  Blog listing comment meta section padding top    |
+// | $wdpk-blog-list-comment-padding-bottom  |   Blog listing comment meta section padding bottom  |
+// | $wdpk-blog-list-comment-background-color  |   Blog listing comment meta section bacgrodun color   |
+// | $wdpk-blog-list-comment-icon-color  |  Blog listing comment meta section icon color   |
+// | $wdpk-blog-list-comment-x-padding  |   Blog listing comment meta section x-axis padding   |
+// | $wdpk-blog-list-excerpt-font-size  |  Blog listing excerpt font size    |
+// | $wdpk-blog-list-excerpt-font-family  | Blog listing excerpt font family     |
+// | $wdpk-blog-list-excerpt-color  |   Blog listing excerpt font color  |
+// | $wdpk-blog-list-excerpt-font-weight  |   Blog listing excerpt font weight  |
+// | $wdpk-blog-list-excerpt-margin-top  |  Blog listing excerpt margin top    |
+// | $wdpk-blog-list-excerpt-margin-bottom  |  Blog listing excerpt margin bottom    |
+// | $wdpk-blog-list-btn-color  |  Available Options `'primary'`,`'secondary'`,`'light'`, `'dark'`  |
+// | $wdpk-blog-list-btn-type  |  Available Options `'flat'`, `'outline'`   |
+// | $wdpk-blog-list-btn-size  |   Available Options `'small'`, `'large'`, `'default'`, `'block'`  |
+// | $wdpk-blog-list-quote-background-color  |  Blog listing quote post background color    |
+// | $wdpk-blog-list-quote-padding  |   Blog listing quote post padding   |
+// | $wdpk-blog-list-quote-font-size  |  Blog listing quote post font size   |
+// | $wdpk-blog-list-quote-font-family  |  Blog listing quote post font family    |
+// | $wdpk-blog-list-quote-color  |   Blog listing quote post font color  |
+// | $wdpk-blog-list-quote-font-weight  |   Blog listing quote post forn weight   |
+// | $wdpk-blog-list-quote-margin-bottom  |   Blog listing quote post margin below quote  |
+// | $wdpk-blog-list-quote-footer-font-color  | Blog listing quote post footer font color    |
+// | $wdpk-blog-list-footer-bg-color  | Footer Background color ofr Grid Listing. Footer is used in grid type blog listing only    |
+//
+// Styleguide Blog.Blog Listing
+
+$wdpk-blog-list-col-count:                      3 !default;
+$wdpk-blog-list-classic-col-count:              1 !default;
+$wdpk-blog-list-col-gutter:                     30px !default;
+$wdpk-blog-list-col-margin-bottom:              30px !default;
+
+
+$wdpk-blog-list-content-align:                  center !default;
+$wdpk-blog-list-border-width:                   1px !default;
+$wdpk-blog-list-border-radius:                  $wdpk-border-radius !default;
+$wdpk-blog-list-border-color:                   rgba($wdpk-black, .125) !default;
+$wdpk-blog-list-inner-border-radius:            calc(#{$wdpk-card-border-radius} - #{$wdpk-card-border-width}) !default;
+$wdpk-blog-list-bg-color:                       #ffffff !default;
+$wdpk-blog-list-shadow:                         (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+$wdpk-blog-list-cat-badge-top-margin:           0px !default;
+$wdpk-blog-list-cat-badge-bottom-margin:        1rem !default;
+$wdpk-blog-list-cat-badge-font-size:            70% !default;
+$wdpk-blog-list-cat-badge-font-family:          inherit !default;
+$wdpk-blog-list-cat-badge-color:                #ffffff !default;
+$wdpk-blog-list-cat-badge-font-weight:          500 !default;
+$wdpk-blog-list-cat-badge-bg-color:             $wdpk-primary-color !default;
+
+
+$wdpk-blog-list-title-font-size:                1.3rem !default;
+$wdpk-blog-list-title-font-family:              inherit !default;
+$wdpk-blog-list-title-color:                    $wdpk-gray-800 !default;
+$wdpk-blog-list-title-font-weight:              500 !default;
+$wdpk-blog-list-title-margin-bottom:            1rem !default;
+$wdpk-blog-list-title-margin-top:               0px !default;
+
+
+$wdpk-blog-list-auth-sec-font-size:             .8rem !default;
+$wdpk-blog-list-auth-sec-font-family:           inherit !default;
+$wdpk-blog-list-auth-sec-color:                 $wdpk-gray-600 !default;
+$wdpk-blog-list-auth-sec-font-weight:           500 !default;
+$wdpk-blog-list-auth-sec-margin-top:            0 !default;
+$wdpk-blog-list-auth-sec-margin-bottom:         .425rem !default;
+$wdpk-blog-list-auth-sec-padding-top:           5px !default;
+$wdpk-blog-list-auth-sec-padding-bottom:        5px !default;
+$wdpk-blog-list-auth-sec-background-color:      $wdpk-gray-100 !default;
+
+
+$wdpk-blog-list-comment-font-size:              .75rem !default;
+$wdpk-blog-list-comment-font-family:            inherit !default;
+$wdpk-blog-list-comment-color:                  $wdpk-gray-600 !default;
+$wdpk-blog-list-comment-font-weight:            500 !default;
+$wdpk-blog-list-comment-margin-top:             0 !default;
+$wdpk-blog-list-comment-margin-bottom:          1.1rem !default;
+$wdpk-blog-list-comment-padding-top:            0 !default;
+$wdpk-blog-list-comment-padding-bottom:         0 !default;
+$wdpk-blog-list-comment-background-color:       transparent !default;
+$wdpk-blog-list-comment-icon-color:             $wdpk-primary-color !default;
+$wdpk-blog-list-comment-x-padding:              7px !default;
+
+
+$wdpk-blog-list-excerpt-font-size:              inherit !default;
+$wdpk-blog-list-excerpt-font-family:            inherit !default;
+$wdpk-blog-list-excerpt-color:                  inherit !default;
+$wdpk-blog-list-excerpt-font-weight:            inherit !default;
+$wdpk-blog-list-excerpt-margin-top:             0 !default;
+$wdpk-blog-list-excerpt-margin-bottom:          1rem !default;
+
+
+$wdpk-blog-list-btn-color:                      'secondary' !default;
+$wdpk-blog-list-btn-type:                       'flat' !default; //
+$wdpk-blog-list-btn-size:                       'small' !default; //
+
+
+$wdpk-blog-list-quote-background-color:         $wdpk-primary-color !default;
+$wdpk-blog-list-quote-padding:                  2rem !default;
+$wdpk-blog-list-quote-font-size:                1.4rem !default;
+$wdpk-blog-list-quote-font-family:              $wdpk-blog-list-excerpt-font-family !default;
+$wdpk-blog-list-quote-color:                    #ffffff !default;
+$wdpk-blog-list-quote-font-weight:              300 !default;
+$wdpk-blog-list-quote-margin-bottom:            20px !default;
+$wdpk-blog-list-quote-footer-font-color:        #ffffff !default;
+
+$wdpk-blog-list-footer-bg-color:                #ffffff !default;
+
+
+// Blog Single
+//
+// Variables to customize the Blog Single Page
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $wdpk-blog-list-col-count  | Blog listing Column Count Works for the classic layout as well as the masonry layout   |
+// | $wdpk-blog-list-col-gutter  |  Gutter space between blog listing columns    |
+// | $wdpk-blog-list-col-margin-bottom  |  Margin below the blog listing columns    |
+//
+// Styleguide Blog.Blog Single
+$wdpk-blog-single-header-top-space:             13rem !default;
+$wdpk-blog-single-header-bottom-space:          9rem !default;
+$wdpk-blog-single-header-content-align:         left !default;
+$wdpk-blog-single-header-overlay-color:         rgba(0, 0, 0, 0) !default;
+
+$wdpk-blog-single-header-date-font-family:      $wdpk-font-family-secondary !default;
+$wdpk-blog-single-header-date-font-size:        .9rem !default;
+$wdpk-blog-single-header-date-font-style:       italic !default;
+$wdpk-blog-single-header-date-font-weight:      500 !default;
+$wdpk-blog-single-header-date-color:            $wdpk-gray-200 !default;
+$wdpk-blog-single-header-date-line-height:      1.3 !default;
+$wdpk-blog-single-header-date-margin-bottom:    2rem !default;
+
+$wdpk-blog-single-header-head-font-size:        $wdpk-display3-size !default;
+$wdpk-blog-single-header-head-font-family:      inherit !default;
+$wdpk-blog-single-header-head-line-height:      1.33 !default;
+$wdpk-blog-single-header-head-color:            $wdpk-gray-200 !default;
+$wdpk-blog-single-header-head-margin-bottom:    1rem !default;
+
+
+$wdpk-blog-single-breadcrumb-font-size:         .9rem !default;
+$wdpk-blog-single-breadcrumb-font-family:       $wdpk-font-family-base !default;
+$wdpk-blog-single-breadcrumb-line-height:       1.33 !default;
+$wdpk-blog-single-breadcrumb-color:             $wdpk-gray-100 !default;
+$wdpk-blog-single-breadcrumb-hover-color:       $wdpk-secondary !default;
+$wdpk-blog-single-breadcrumb-margin-bottom:     1rem !default;
+$wdpk-blog-single-breadcrumb-separator-color:   $wdpk-gray-300 !default;
+
+
+$wdpk-blog-single-header-spearator-bg-map:      (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-secondary,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+$wdpk-blog-single-header-bg-map:                (
+														backgroundType: image,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(/assets/template/images/homehero-bg.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+$wdpk-blog-single-header-spearator-border-map:  (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #f4f4f4,
+														borderBottomWidth: 2px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 50px,
+												) !default;

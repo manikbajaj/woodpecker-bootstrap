@@ -1,0 +1,30 @@
+// =============================>
+//  Styling Partial For Circles
+// <============================
+
+
+.wdpk-cicles-wrapper
+{
+	position:   relative;
+	text-align: center;
+
+	.wdpk-cicles-counter-number
+	{
+		display:     inline-block;
+		position:    absolute;
+		top:         50%;
+		left:        50%;
+		transform:  translate(-50%,-50%);
+		line-height: 1;
+		font-family: $wdpk-circle-counter-font-family;
+		font-size: $wdpk-circle-counter-font-size;
+		font-weight: $wdpk-circle-counter-font-weight;
+		color: $wdpk-circle-counter-font-color;
+	}
+
+	canvas
+	{
+		vertical-align: middle;
+	}
+
+}

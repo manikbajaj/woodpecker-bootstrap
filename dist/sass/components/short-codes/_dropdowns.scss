@@ -1,0 +1,33 @@
+.dropdown.wdpk-dropdown
+{
+	@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+	display: inline-block;
+
+	&:hover .dropdown-menu
+	{
+		@if ($wdpk-dropdown-trigger-hover == true)
+		{
+			display:    block;
+			margin-top: 0;
+			@include wdpk-dropdownAnimate($wdpk-dropdown-menu-animation);
+		}
+	}
+
+	i
+	{
+		margin-right: $wdpk-dropdown-icon-margin;
+		width:        $wdpk-dropdown-font-size * 1.1;
+		text-align:   center;
+	}
+
+	.dropdown-header
+	{
+		background-color: $wdpk-dropdown-header-background-color;
+	}
+
+	.dropdown-item
+	{
+		@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+
+	}
+}

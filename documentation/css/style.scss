@@ -1,0 +1,214 @@
+// =============================>
+// The Bootstrap Base Colors
+// <============================
+
+// Bootstrap Colors
+//
+// The default colors that are used by by Bootstrap and inherited by WoodPecker as well.
+//
+// $wdpk-blue -    #0056c6; Blue
+// $wdpk-indigo -  #6610f2; Indigo
+// $wdpk-purple -  #6f42c1; Purple
+// $wdpk-pink -    #e83e8c; Pink
+// $wdpk-red -     #f03a47; Red
+// $wdpk-orange -  #fd7e14; Orange
+// $wdpk-yellow -  #ffc107; Yellow
+// $wdpk-green -   #38c07b; Green
+// $wdpk-teal -    #20c997; Teal
+// $wdpk-cyan -    #0dbdcd; Cyan
+//
+// Styleguide Colors.Bootstrap Colors
+$wdpk-blue:                           #0056c6 !default;
+$wdpk-indigo:                         #6610f2 !default;
+$wdpk-purple:                         #6f42c1 !default;
+$wdpk-pink:                           #e83e8c !default;
+$wdpk-red:                            #d31a17 !default;
+$wdpk-orange:                         #fe8c03 !default;
+$wdpk-yellow:                         #ffc107 !default;
+$wdpk-green:                          #31ce78 !default;
+$wdpk-teal:                           #20c997 !default;
+$wdpk-cyan:                           #0dbdcd !default;
+
+// Bootstrap Grays
+//
+// Overriding the grays used by Bootsrap.
+//
+//$wdpk-white -     #fff; White
+//$wdpk-gray-100 -  #f8f9fa; Gray 100
+//$wdpk-gray-200 -  #e9ecef; Gray 200
+//$wdpk-gray-300 -  #dee2e6; Gray 300
+//$wdpk-gray-400 -  #ced4da; Gray 400
+//$wdpk-gray-500 -  #adb5bd; Gray 500
+//$wdpk-gray-600 -  #6c757d; Gray 600
+//$wdpk-gray-700 -  #495057; Gray 700
+//$wdpk-gray-800 -  #343a40; Gray 800
+//$wdpk-gray-900 -  #212529; Gray 900
+//$wdpk-black -     #000; Black
+//
+// Styleguide Colors.Bootstrap Grays
+$wdpk-white:                          #fff !default;
+$wdpk-gray-100:                       #f8f9fa !default;
+$wdpk-gray-200:                       #e9ecef !default;
+$wdpk-gray-300:                       #dee2e6 !default;
+$wdpk-gray-400:                       #ced4da !default;
+$wdpk-gray-500:                       #adb5bd !default;
+$wdpk-gray-600:                       #6c757d !default;
+$wdpk-gray-700:                       #495057 !default;
+$wdpk-gray-800:                       #343a40 !default;
+$wdpk-gray-900:                       #212529 !default;
+$wdpk-black:                          #000 !default;
+
+
+// 	Colors
+//
+//	WoodPecker uses these colors throughout the theme. These colors have been overriden for the default Bootstrap components as well. So overiding these colors will directly set the colors for Bootstarp as well to match the theme and you dont need to change any of the Bootstrap variables.
+//
+// ### Theme Default Values
+//
+// $wdpk-primary-color - #0056c6; Primary Color
+// $wdpk-secondary - #6c757d; Secondary Color
+// $wdpk-gradient-1: #0056c6;
+// $wdpk-gradient-2: #0BC9CD;
+// $wdpk-success - #38c07b; Success
+// $wdpk-info -  #0dbdcd; Info
+// $wdpk-warning - #ffc107; Warning
+// $wdpk-danger - #f03a47; Danger
+// $wdpk-light - #e9ecef; Light
+// $wdpk-dark - #343a40; Dark
+//
+// Styleguide Colors
+
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$wdpk-primary-color:                  #236ce0 !default;
+$wdpk-secondary:                      #172b4c !default;
+$wdpk-gradient-1:                     #236ce0 !default;
+$wdpk-gradient-2:                     #172b4c !default;
+$wdpk-success:                        $wdpk-green !default;
+$wdpk-info:                           $wdpk-cyan !default;
+$wdpk-warning:                        $wdpk-orange !default;
+$wdpk-danger:                         $wdpk-red !default;
+$wdpk-light:                          $wdpk-gray-100 !default;
+$wdpk-dark:                           $wdpk-gray-800 !default;
+
+// Font Variables
+$wdpk-font-size-base:                 1rem !default;
+
+$wdpk-display1-size:                  5.5rem !default;
+$wdpk-display2-size:                  4.5rem !default;
+$wdpk-display3-size:                  4rem !default;
+$wdpk-display4-size:                  3rem !default;
+
+$wdpk-display1-weight:                400 !default;
+$wdpk-display2-weight:                400 !default;
+$wdpk-display3-weight:                400 !default;
+$wdpk-display4-weight:                400 !default;
+
+// Topbar Variables
+$wdpk-topbar-background:              (
+											  backgroundType: color,
+											  gradientType: linear,
+											  color1: #ffffff,
+											  color2: rgba(0, 0, 0, 0.7),
+											  degree: 90deg,
+											  backgroundImage: url(../../assets/images/grey.png),
+											  backgroundRepeat: repeat-x,
+											  backgroundHorPos: center,
+											  backgroundVerPos: center,
+											  backgroundSize: initial
+									  ) !default;
+
+$wdpk-topbar-border-map:              (
+											  borderTop: false,
+											  borderTopColor: #0081a3,
+											  borderTopWidth: 2px,
+											  borderTopStyle: solid,
+											  borderRight: false,
+											  borderRightColor: #dddddd,
+											  borderRightWidth: 5px,
+											  borderRightStyle: solid,
+											  borderBottom: true,
+											  borderBottomColor: #f4f4f4,
+											  borderBottomWidth: 2px,
+											  borderBottomStyle: solid,
+											  borderLeft: false,
+											  borderLeftColor: #dddddd,
+											  borderLeftWidth: 5px,
+											  borderLeftStyle: solid,
+											  borderRadius: 0px,
+									  ) !default;
+
+// Navigation Variables
+$wdpk-menu-height:                    70px !default;
+$wdpk-menu-logo-width:                220px !default;
+$wdpk-primary-menu-border-map:        (
+											  borderTop: false,
+											  borderTopColor: #000000,
+											  borderTopWidth: 2px,
+											  borderTopStyle: solid,
+											  borderRight: false,
+											  borderRightColor: #dddddd,
+											  borderRightWidth: 5px,
+											  borderRightStyle: solid,
+											  borderBottom: true,
+											  borderBottomColor: #f4f4f4,
+											  borderBottomWidth: 2px,
+											  borderBottomStyle: solid,
+											  borderLeft: false,
+											  borderLeftColor: #dddddd,
+											  borderLeftWidth: 5px,
+											  borderLeftStyle: solid,
+											  borderRadius: 0px,
+									  ) !default;
+
+// Heading
+$wdpk-headings-color:                 #212529 !default;
+
+
+// Mobile Header
+$wdpk-mobile-header-background:       (
+											  backgroundType: color,
+											  gradientType: linear,
+											  color1: #ffffff,
+											  color2: rgba(255, 255, 255, 0.9),
+											  degree: 90deg,
+											  backgroundImage: url(../../assets/images/grey.png),
+											  backgroundRepeat: repeat-x,
+											  backgroundHorPos: center,
+											  backgroundVerPos: center,
+											  backgroundSize: initial
+									  ) !default;
+
+$wdpk-mobile-header-logo-width:       205px !default;
+$wdpk-mobile-header-vertical-padding: .75rem !default;
+
+//Sidebar
+$wdpk-sidebar-shadow:                 (
+											  shadowOn: true,
+											  hOffset: 0px,
+											  vOffset: 0px,
+											  blurRadius: 25px,
+											  shadowSpread: 2px,
+											  shadowColor: rgba(0, 0, 0, 0.2)
+									  ) !default;
+
+
+// =============================>
+//  Dark Theme Override
+//  If you you need to use the dark theme just uncomment the below line
+// <============================
+//@import "../../../sass/variables/variables-wdpk-dark";
+
+
+// =============================>
+// Import the main Scss file to import everything
+// ==============================
+@import "../../sass/woodpecker.scss";
+
+
+/**
+ * Demo Specific CSS
+ */
+

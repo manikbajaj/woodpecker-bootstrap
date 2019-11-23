@@ -1,0 +1,828 @@
+// ===========================================>
+// Contains all the variables for the WoodPecker Dark Theme
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $wdpk-nav-link-disabled-color
+// and $wdpk-modal-content-box-shadow-xs.
+// IMPORTANT: It is mandatory to use 'wdpk' prefix for all variables
+// <===========================================
+// =============================>
+//  Import the required fonts
+// <============================
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
+
+
+// General Layout And Styling Options
+//
+$wdpk-code-block-style: 'dark' !default;
+$wdpk-lightness-value: 30%;
+
+// =============================>
+// The Bootstrap Base Colors
+// <============================
+
+// Bootstrap Colors
+//
+// The default colors that are used by by Bootstrap and inherited by WoodPecker as well.
+//
+// $wdpk-blue -    #007bff; Blue
+// $wdpk-indigo -  #6610f2; Indigo
+// $wdpk-purple -  #6f42c1; Purple
+// $wdpk-pink -    #e83e8c; Pink
+// $wdpk-red -     #dc3545; Red
+// $wdpk-orange -  #fd7e14; Orange
+// $wdpk-yellow -  #ffc107; Yellow
+// $wdpk-green -   #28a745; Green
+// $wdpk-teal -    #20c997; Teal
+// $wdpk-cyan -    #17a2b8; Cyan
+//
+$wdpk-blue: #0056c6 !default;
+$wdpk-indigo: #6610f2 !default;
+$wdpk-purple: #6f42c1 !default;
+$wdpk-pink: #e83e8c !default;
+$wdpk-red: #f03a47 !default;
+$wdpk-orange: #fd7e14 !default;
+$wdpk-yellow: #ffc107 !default;
+$wdpk-green: #38c07b !default;
+$wdpk-teal: #20c997 !default;
+$wdpk-cyan: #0dbdcd !default;
+
+// Bootstrap Grays
+//
+// Overriding the grays used by Bootsrap.
+//
+//$wdpk-white -     #fff; White
+//$wdpk-gray-100 -  #f8f9fa; Gray 100
+//$wdpk-gray-200 -  #e9ecef; Gray 200
+//$wdpk-gray-300 -  #dee2e6; Gray 300
+//$wdpk-gray-400 -  #ced4da; Gray 400
+//$wdpk-gray-500 -  #adb5bd; Gray 500
+//$wdpk-gray-600 -  #6c757d; Gray 600
+//$wdpk-gray-700 -  #495057; Gray 700
+//$wdpk-gray-800 -  #343a40; Gray 800
+//$wdpk-gray-900 -  #212529; Gray 900
+//$wdpk-black -     #000; Black
+//
+$wdpk-white: #fff !default;
+$wdpk-gray-100: #e6e6e6 !default;
+$wdpk-gray-200: #cccccc !default;
+$wdpk-gray-300: #a6a6a6 !default;
+$wdpk-gray-400: #737373 !default;
+$wdpk-gray-500: #4d4d4d !default;
+$wdpk-gray-600: #2b2b2b !default;
+$wdpk-gray-700: #1c1c1c !default;
+$wdpk-gray-800: #121212 !default;
+$wdpk-gray-900: #0c0c0c !default;
+$wdpk-black: #000 !default;
+
+// 	Colors
+//
+//	WoodPecker uses these colors throughout the theme. These colors have been overriden for the default Bootstrap components as well. So overiding these colors will directly set the colors for Bootstarp as well to match the theme and you dont need to change any of the Bootstrap variables.
+//
+// ### Theme Default Values
+//
+// $wdpk-primary-color - #0098A3; Primary Color
+// $wdpk-secondary - #6c757d; Secondary Color
+// $wdpk-success - #28a745; Success
+// $wdpk-info -  #17a2b8; Info
+// $wdpk-warning - #ffc107; Warning
+// $wdpk-danger - #dc3545; Danger
+// $wdpk-light - #f8f9fa; Light
+// $wdpk-dark - #343a40; Dark
+//
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$wdpk-primary-color: #0056c6 !default;
+$wdpk-secondary: $wdpk-gray-600 !default;
+$wdpk-success: $wdpk-green !default;
+$wdpk-info: $wdpk-cyan !default;
+$wdpk-warning: $wdpk-yellow !default;
+$wdpk-danger: $wdpk-red !default;
+$wdpk-light: $wdpk-gray-100 !default;
+$wdpk-dark: $wdpk-gray-800 !default;
+
+
+// Body Colors
+//
+// Colors Applied to the `<body>` element
+//
+$wdpk-body-bg: $wdpk-gray-900 !default;
+$wdpk-body-color: $wdpk-gray-200 !default;
+
+// Components
+//
+// Define common padding and border radius sizes etc for various components. All the components use values from these variables to calculate the values.
+$wdpk-border-color: $wdpk-gray-600 !default;
+$wdpk-box-shadow-sm: 0 .125rem .25rem rgba($wdpk-white, .065) !default;
+$wdpk-box-shadow: 0 .5rem 1rem rgba($wdpk-white, .15) !default;
+$wdpk-box-shadow-lg: 0 1rem 3rem rgba($wdpk-white, .175) !default;
+$wdpk-component-active-color: $wdpk-white !default;
+
+// Font Variables
+//
+// Variables for font sizes use throught the theme. We use rem values for the fonts. By Overriding these variables various fonr sizes can be set through the theme. Can directly use rem, px, em values in these variables.
+//
+$wdpk-link-color: $wdpk-primary-color !default;
+$wdpk-link-decoration: none !default;
+$wdpk-link-hover-color: lighten($wdpk-link-color, 15%) !default;
+$wdpk-link-hover-decoration: underline !default;
+
+// Form Variables
+//
+// Variables used for modifying the look of the form input fields in forms
+//
+// ### Form Variables And Their Options
+//
+$wdpk-input-bg: $wdpk-gray-700 !default;
+$wdpk-input-disabled-bg: $wdpk-gray-600 !default;
+$wdpk-input-color: $wdpk-gray-300 !default;
+$wdpk-input-border-color: $wdpk-gray-500 !default;
+$wdpk-input-box-shadow: inset 0 1px 1px rgba($wdpk-white, .075) !default;
+$wdpk-input-placeholder-color: $wdpk-gray-400 !default;
+
+
+// =============================>
+// Navigation Menu Variables
+// <============================
+
+// Navigation Variables
+//
+// Variables impacting the Header Navigation for the theme.
+
+$wdpk-menu-background: (
+							   backgroundType: color,
+							   gradientType: linear,
+							   color1: $wdpk-gray-800,
+							   color2: rgba(0, 0, 0, 0.7),
+							   degree: 90deg,
+							   backgroundImage: url(../../assets/images/grey.png),
+							   backgroundRepeat: repeat-x,
+							   backgroundHorPos: center,
+							   backgroundVerPos: center,
+							   backgroundSize: initial
+					   ) !default;
+
+// $wdpk-primary-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-primary-menu-shadow: (
+								   shadowOn: false,
+								   hOffset: 0px,
+								   vOffset: 1px,
+								   blurRadius: 10px,
+								   shadowSpread: 2px,
+								   shadowColor: rgba(255, 255, 255, 0.15)
+						   ) !default;
+
+// $wdpk-primary-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-primary-menu-border-map: (
+									   borderTop: false,
+									   borderTopColor: #000000,
+									   borderTopWidth: 2px,
+									   borderTopStyle: solid,
+									   borderRight: false,
+									   borderRightColor: #dddddd,
+									   borderRightWidth: 5px,
+									   borderRightStyle: solid,
+									   borderBottom: true,
+									   borderBottomColor: $wdpk-gray-600,
+									   borderBottomWidth: 3px,
+									   borderBottomStyle: solid,
+									   borderLeft: false,
+									   borderLeftColor: #dddddd,
+									   borderLeftWidth: 5px,
+									   borderLeftStyle: solid,
+									   borderRadius: 0px,
+							   ) !default;
+
+// Menu Items Color
+$wdpk-menu-font-color: $wdpk-gray-200 !default;
+$wdpk-menu-font-color-hover: $wdpk-primary-color !default;
+$wdpk-menu-items-side-border-color: $wdpk-gray-500 !default;
+$wdpk-menu-extras-boder-color: $wdpk-gray-500 !default;
+$wdpk-cart-number-font-color: #ffffff !default;
+$wdpk-menu-extras-font-color: $wdpk-menu-font-color !default;
+$wdpk-menu-extras-font-hover-color: $wdpk-menu-font-color-hover !default;
+
+// $wdpk-hover-effect
+// map{} - Type of Over Effects Can Use the following values
+// @key hoverType - Type of hover effect for primary menu items range from 1-4
+// @key paddingTop -  padding from top for hover effect
+// @key paddingBottom - padding from bottom for the hover effect
+// @key paddingRight - padding from right for the hover effect
+// @key padingleft - padding from left for the hover effect
+// @key hoverThickness - thickness of the hover item, value in px
+// @key hoverColorType - Background color type for the hover effect, possible values: color, gradient
+// @key animationType - type of animation possible values topToBottom, bottomToTop, rightToLeft, leftToRight
+// @key animationDistance - Distance of the animation
+// @key animationDuration - Duration of the animation in seconds like: 0.3s
+// @key animationDelay - The Delay In Transition
+// @key col1 - Color 1 For the Hover Effect
+// @key col2 - Color 2 for the Hover effect
+$wdpk-hover-effect: (
+							hoverType: 3,
+							paddingBottom: 8px,
+							hoverThickness: 2px,
+							hoverColorType: color,
+							animationType: bottomToTop,
+							animationDistance: 10px,
+							animationDuration: 0.3s,
+							animationDelay: 0s,
+							col1: $wdpk-primary-color,
+							col2: yellow
+					) !default;
+
+
+// =============================>
+// Dropdown Menu Variables
+// <============================
+
+// Dropdown Menu Variables
+//
+// Variables impacting the dropdown menu
+$wdpk-dropdown-menu-width: 250px !default;
+$wdpk-dropdown-menu-background-color: $wdpk-gray-900 !default;
+$wdpk-dropdown-menu-font-color: $wdpk-gray-200 !default;
+$wdpk-dropdown-menu-font-hover-color: $wdpk-primary-color !default;
+$wdpk-dropdown-menu-background-hover-color: $wdpk-gray-800 !default;
+$wdpk-dropdown-menu-item-separators: (
+											 separatorsOn: true,
+											 separatorColor: $wdpk-gray-700,
+											 separatorThickness: 1px
+									 ) !default;
+
+// $wdpk-dropdown-menu-shadow-map
+// Map for shadow to be applied on the dropdown menu
+// @key shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// @key hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// @key vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// @key blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// @key shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// @key shadowColor: The color of the shadow
+$wdpk-dropdown-menu-shadow-map: (
+										shadowOn: true,
+										hOffset: 0px,
+										vOffset: 16px,
+										blurRadius: 15px,
+										shadowSpread: 2px,
+										shadowColor: rgba(255, 255, 255, 0.04)
+								) !default;
+
+// $wdpk-dropdown-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+// @key borderRadius - Border radius to be applied to the border
+$wdpk-dropdown-menu-border-map: (
+										borderTop: true,
+										borderTopColor: $wdpk-gray-600,
+										borderTopWidth: 3px,
+										borderTopStyle: solid,
+										borderRight: false,
+										borderRightColor: #dddddd,
+										borderRightWidth: 5px,
+										borderRightStyle: solid,
+										borderBottom: false,
+										borderBottomColor: $wdpk-gray-200,
+										borderBottomWidth: 3px,
+										borderBottomStyle: solid,
+										borderLeft: false,
+										borderLeftColor: #dddddd,
+										borderLeftWidth: 5px,
+										borderLeftStyle: solid,
+										borderRadius: 0px,
+								) !default;
+
+
+// =============================>
+// Mega Menu Variables
+// <============================
+
+// Mega Menu Variables
+//
+// Variables impacting the Mega Menu
+//
+$wdpk-mega-menu-separators: (
+									separatorsOn: true,
+									separatorColor: $wdpk-gray-700,
+									separatorThickness: 1px
+							) !default;
+
+
+// =============================>
+// Sticky Navbar Variables
+// <============================
+// Sticky Navbar Variables
+// Variables impacting the Sticky Navbar Theme
+$wdpk-sticky-menu-font-color: $wdpk-gray-200 !default;
+$wdpk-sticky-menu-font-color-hover: $wdpk-primary-color !default;
+$wdpk-sticky-menu-extras-font-color: $wdpk-sticky-menu-font-color !default;
+$wdpk-sticky-menu-extras-font-hover-color: $wdpk-sticky-menu-font-color-hover !default;
+
+//$wdpk-sticky-menu-background - All settings for the Sticky Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-sticky-menu-background: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $wdpk-gray-800,
+									  color2: $wdpk-gray-800,
+									  degree: 90deg,
+									  backgroundImage: url(../../assets/images/grey.png),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+// $wdpk-sticky-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-sticky-menu-shadow: (
+								  shadowOn: true,
+								  hOffset: 0px,
+								  vOffset: 2px,
+								  blurRadius: 10px,
+								  shadowSpread: 2px,
+								  shadowColor: rgba(255, 255, 255, 0.03)
+						  ) !default;
+
+
+// $wdpk-sticky-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-sticky-menu-border-map: (
+									  borderTop: false,
+									  borderTopColor: $wdpk-gray-200,
+									  borderTopWidth: 3px,
+									  borderTopStyle: solid,
+									  borderRight: false,
+									  borderRightColor: #dddddd,
+									  borderRightWidth: 5px,
+									  borderRightStyle: solid,
+									  borderBottom: false,
+									  borderBottomColor: $wdpk-gray-200,
+									  borderBottomWidth: 3px,
+									  borderBottomStyle: solid,
+									  borderLeft: false,
+									  borderLeftColor: #dddddd,
+									  borderLeftWidth: 5px,
+									  borderLeftStyle: solid,
+									  borderRadius: 0px,
+							  ) !default;
+
+
+// =============================>
+// Transparent Navbar Variables
+// <============================
+// Transparent Navbar Variables
+// Variables impacting the Transparent Navbar Theme
+$wdpk-transparent-menu-font-color: $wdpk-gray-200 !default;
+$wdpk-transparent-menu-font-color-hover: $wdpk-primary-color !default;
+$wdpk-transparent-menu-extras-font-color: $wdpk-transparent-menu-font-color !default;
+$wdpk-transparent-menu-extras-font-hover-color: $wdpk-transparent-menu-font-color-hover !default;
+
+//$wdpk-transparent-menu-background - All settings for the transparent Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-transparent-menu-background: (
+										   backgroundType: color,
+										   gradientType: linear,
+										   color1: rgba(0, 0, 0, 0),
+										   color2: rgba(0, 0, 0, 0.7),
+										   degree: 90deg,
+										   backgroundImage: url(../../assets/images/grey.png),
+										   backgroundRepeat: repeat-x,
+										   backgroundHorPos: center,
+										   backgroundVerPos: center,
+										   backgroundSize: initial
+								   ) !default;
+
+// $wdpk-transparent-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-transparent-menu-shadow: (
+									   shadowOn: false,
+									   hOffset: 0px,
+									   vOffset: 2px,
+									   blurRadius: 10px,
+									   shadowSpread: 2px,
+									   shadowColor: rgba(0, 0, 0, 0.03)
+							   ) !default;
+
+
+// =============================>
+// Top Bar Variables
+// <============================
+// Top Bar Variables
+// Variables impacting the Top Bar
+$wdpk-topbar-font-color: $wdpk-gray-300 !default;
+$wdpk-topbar-font-color-hover: $wdpk-primary-color !default;
+// $wdpk-topbar-background - All settings for the topbar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-topbar-background: (
+								 backgroundType: color,
+								 gradientType: linear,
+								 color1: $wdpk-gray-700,
+								 color2: rgba(0, 0, 0, 0.7),
+								 degree: 90deg,
+								 backgroundImage: url(../../assets/images/grey.png),
+								 backgroundRepeat: repeat-x,
+								 backgroundHorPos: center,
+								 backgroundVerPos: center,
+								 backgroundSize: initial
+						 ) !default;
+
+
+// $wdpk-topbar-border-map
+// Map for styling the borders of the topbar
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-topbar-border-map: (
+								 borderTop: false,
+								 borderTopColor: #0081a3,
+								 borderTopWidth: 2px,
+								 borderTopStyle: solid,
+								 borderRight: false,
+								 borderRightColor: #dddddd,
+								 borderRightWidth: 5px,
+								 borderRightStyle: solid,
+								 borderBottom: false,
+								 borderBottomColor: #dddddd,
+								 borderBottomWidth: 5px,
+								 borderBottomStyle: solid,
+								 borderLeft: false,
+								 borderLeftColor: #dddddd,
+								 borderLeftWidth: 5px,
+								 borderLeftStyle: solid,
+								 borderRadius: 0px,
+						 ) !default;
+
+
+// =============================>
+// Bottom Bar Variables
+// <============================
+
+// $wdpk-bottom-bar-background - All settings for the bottom bar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$wdpk-bottom-bar-background: (
+									 backgroundType: color,
+									 gradientType: linear,
+									 color1: $wdpk-gray-800,
+									 color2: $wdpk-gray-700,
+									 degree: 90deg,
+									 backgroundImage: url(../../assets/images/grey.png),
+									 backgroundRepeat: repeat-x,
+									 backgroundHorPos: center,
+									 backgroundVerPos: center,
+									 backgroundSize: initial
+							 ) !default;
+
+// $wdpk-bottom-bar-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-bottom-bar-menu-shadow: (
+									  shadowOn: false,
+									  hOffset: 0px,
+									  vOffset: 2px,
+									  blurRadius: 10px,
+									  shadowSpread: 2px,
+									  shadowColor: rgba(255, 255, 255, 0.025)
+							  ) !default;
+
+// $wdpk-bottom-bar-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$wdpk-bottom-bar-menu-border-map: (
+										  borderTop: false,
+										  borderTopColor: $wdpk-gray-200,
+										  borderTopWidth: 1px,
+										  borderTopStyle: solid,
+										  borderRight: false,
+										  borderRightColor: #dddddd,
+										  borderRightWidth: 5px,
+										  borderRightStyle: solid,
+										  borderBottom: false,
+										  borderBottomColor: #dddddd,
+										  borderBottomWidth: 5px,
+										  borderBottomStyle: solid,
+										  borderLeft: false,
+										  borderLeftColor: #dddddd,
+										  borderLeftWidth: 5px,
+										  borderLeftStyle: solid,
+										  borderRadius: 0px,
+								  ) !default;
+
+// =============================>
+// Off Canvas | Mobile Header Variables
+// <============================
+// Off Canvas | Mobile Header Variables
+// Variables impacting the Off Canvas | Mobile Header
+
+$wdpk-off-canvas-font-color: $wdpk-menu-font-color !default;
+$wdpk-off-canvas-font-hover-color: $wdpk-menu-font-color-hover !default;
+$wdpk-off-canvas-background-color: $wdpk-gray-700 !default;
+$wdpk-off-canvas-separator-color: $wdpk-gray-600 !default;
+$wdpk-off-canvas-body-color: rgba(0, 0, 0, .5) !default;
+
+
+// $wdpk-off-canvas-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-off-canvas-shadow: (
+								 shadowOn: true,
+								 hOffset: 3px,
+								 vOffset: 0px,
+								 blurRadius: 7px,
+								 shadowSpread: 2px,
+								 shadowColor: rgba(255, 255, 255, 0.025)
+						 ) !default;
+
+// =============================>
+// Mobile Header Section For Variables
+// <============================
+// $wdpk-mobile-menu-background - All settings for the mobile menu background
+$wdpk-mobile-header-background: (
+										backgroundType: color,
+										gradientType: linear,
+										color1: $wdpk-gray-800,
+										color2: $wdpk-gray-800,
+										degree: 90deg,
+										backgroundImage: url(../../assets/images/grey.png),
+										backgroundRepeat: repeat-x,
+										backgroundHorPos: center,
+										backgroundVerPos: center,
+										backgroundSize: initial
+								) !default;
+
+
+// $wdpk-mobile-menu-shadow
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$wdpk-mobile-header-shadow: (
+									shadowOn: true,
+									hOffset: 0px,
+									vOffset: 3px,
+									blurRadius: 10px,
+									shadowSpread: 2px,
+									shadowColor: rgba(255, 255, 255, 0.015)
+							) !default;
+
+
+
+// Sidebar Variables
+//
+// Variables impacting the Sidebar
+$wdpk-sidebar-background-color: $wdpk-gray-700 !default;
+$wdpk-side-border-color: $wdpk-gray-600 !default;
+
+
+// =============================>
+//  Shortcode Variables
+// <============================
+
+
+// Accordion
+//
+// Variables setting the look and feel of the accordion for the theme
+//
+
+$wdpk-accordion-title-color: $wdpk-gray-200;
+$wdpk-accordion-body-color: $wdpk-gray-700;
+$wdpk-accordion-body-font-color: $wdpk-gray-300;
+$wdpk-accordion-header-color: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $wdpk-gray-800,
+									  color2: rgba(0, 0, 0, 0.7),
+									  degree: 90deg,
+									  backgroundImage: url(../../assets/images/grey.png),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+$wdpk-accordion-border-map: (
+									borderTop: true,
+									borderTopColor: $wdpk-gray-700,
+									borderTopWidth: 1px,
+									borderTopStyle: solid,
+									borderRight: true,
+									borderRightColor: $wdpk-gray-700,
+									borderRightWidth: 1px,
+									borderRightStyle: solid,
+									borderBottom: true,
+									borderBottomColor: $wdpk-gray-700,
+									borderBottomWidth: 1px,
+									borderBottomStyle: solid,
+									borderLeft: true,
+									borderLeftColor: $wdpk-gray-700,
+									borderLeftWidth: 1px,
+									borderLeftStyle: solid,
+									borderRadius: .25rem,
+							) !default;
+
+$wdpk-accordion-header-border-map: (
+										   borderTop: false,
+										   borderTopColor: $wdpk-gray-200,
+										   borderTopWidth: 1px,
+										   borderTopStyle: solid,
+										   borderRight: false,
+										   borderRightColor: $wdpk-gray-200,
+										   borderRightWidth: 1px,
+										   borderRightStyle: solid,
+										   borderBottom: true,
+										   borderBottomColor: $wdpk-gray-700,
+										   borderBottomWidth: 1px,
+										   borderBottomStyle: solid,
+										   borderLeft: false,
+										   borderLeftColor: $wdpk-gray-200,
+										   borderLeftWidth: 1px,
+										   borderLeftStyle: solid,
+										   borderRadius: 0px,
+								   ) !default;
+
+// List Groups
+//
+// Variables setting the look and feel of the Listy Group for the theme
+$wdpk-listgroup-background-color: transparent  !default;
+$wdpk-listgroup-hover-background-color: $wdpk-gray-700 !default;
+$wdpk-listgroup-font-color: $wdpk-gray-200 !default;
+$wdpk-listgroup-font-hover-color: $wdpk-gray-100 !default;
+$wdpk-listgroup-border-color: $wdpk-gray-600 !default;
+
+
+// Navpills
+//
+// Variables setting various parameters of the Navpills
+$wdpk-navpills-margin: .5rem !default;
+$wdpk-navpills-inactive-hover-color: $wdpk-gray-200 !default;
+$wdpk-navpills-border-radius: 0rem !default;
+
+
+
+// Breadcrumbs
+//
+// Variables setting various parameters of the Breadcrumbs
+$wdpk-breadcrumbs-background-color: $wdpk-gray-800 !default;
+$wdpk-breadcrumbs-font-color: $wdpk-white !default;
+
+
+// Cards
+//
+// Variables setting various parameters of the Cards
+
+$wdpk-card-border-color: $wdpk-gray-900!default;
+$wdpk-card-title-font-color: $wdpk-white !default;
+$wdpk-card-body-font-color: $wdpk-gray-200 !default;
+$wdpk-card-header-font-color: $wdpk-gray-100 !default;
+$wdpk-card-footer-font-color: $wdpk-gray-100 !default;
+$wdpk-card-shadow: (
+						   shadowOn: false,
+						   hOffset: 0px,
+						   vOffset: 3px,
+						   blurRadius: 10px,
+						   shadowSpread: 2px,
+						   shadowColor: rgba(255, 255, 255, 0.15)
+				   ) !default;
+
+$wdpk-card-body-background: (
+									backgroundType: color,
+									gradientType: linear,
+									color1: $wdpk-gray-800,
+									color2: $wdpk-gray-800,
+									degree: 0deg,
+									backgroundImage: url(../../assets/images/background-black.jpg),
+									backgroundRepeat: repeat-x,
+									backgroundHorPos: center,
+									backgroundVerPos: center,
+									backgroundSize: initial
+							) !default;
+$wdpk-card-header-background: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $wdpk-gray-700,
+									  color2: $wdpk-gray-700,
+									  degree: 0deg,
+									  backgroundImage: url(../../assets/images/background-black.jpg),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+$wdpk-card-footer-background: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $wdpk-gray-700,
+									  color2: $wdpk-gray-700,
+									  degree: 0deg,
+									  backgroundImage: url(../../assets/images/background-black.jpg),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+// Image Hovers
+//
+// Variables setting various parameters of the Image Hover Effects
+$wdpk-image-hover-image-bg: rgba(0, 0, 0, .8) !default;
+$wdpk-image-hover-figcaption-bg: rgba(0, 0, 0, .8) !default;
+$wdpk-image-hover-figcaption-padding: 25px !default;
+$wdpk-image-hover-text-color: $wdpk-gray-100 !default;
+$wdpk-image-hover-transition-duration: .8s !default;
+$wdpk-image-hover-shift-distance: 10px !default;
+
+
+
+// Dropdowns (Components)
+// Variables for the dropdown component
+
+$wdpk-dropdown-bg: $wdpk-gray-600 !default;
+
+
+// Comments Shortcode
+// Variables setting various parameters of the Comments Shortcode
+$wdpk-comments-bg-color: $wdpk-gray-700 !default;
+
+
+// Audio Shortcode
+$wdpk-plyr-audio-controls-bg: $wdpk-gray-700 !default;
+$wdpk-plyr-audio-control-color: $wdpk-gray-200 !default;
+$wdpk-plyr-audio-control-color-hover: #fff !default;
+$wdpk-plyr-audio-control-bg-hover: $wdpk-primary-color !default;

@@ -1,0 +1,114 @@
+// =============================>
+//  Abstraction Layer For Plyr
+// <============================
+
+$plyr-badge-bg : $wdpk-plyr-badge-bg !default;
+$plyr-badge-color : $wdpk-plyr-badge-color !default;
+
+$plyr-font-size-time : $wdpk-plyr-font-size-time !default;
+$plyr-font-size-badge : $wdpk-plyr-font-size-badge !default;
+$plyr-font-size-menu : $wdpk-plyr-font-size-menu !default;
+
+$plyr-font-weight-regular : $wdpk-plyr-font-weight-regular !default;
+$plyr-font-weight-bold : $wdpk-plyr-font-weight-bold !default;
+
+$plyr-line-height : $wdpk-plyr-line-height !default;
+
+$plyr-captions-bg : $wdpk-plyr-captions-bg !default;
+$plyr-captions-color : $wdpk-plyr-captions-color !default;
+
+$plyr-color-main : $wdpk-plyr-color-main !default;
+
+
+
+$plyr-control-icon-size : $wdpk-plyr-control-icon-size !default;
+$plyr-control-spacing : $wdpk-plyr-control-spacing !default;
+$plyr-control-radius : $wdpk-plyr-control-radius !default;
+
+$plyr-video-controls-bg : $wdpk-plyr-video-controls-bg !default;
+$plyr-video-control-color : $wdpk-plyr-video-control-color !default;
+$plyr-video-control-color-hover : $wdpk-plyr-video-control-color-hover !default;
+$plyr-video-control-bg-hover : $wdpk-plyr-video-control-bg-hover !default;
+
+
+$plyr-tab-focus-default-color : $wdpk-plyr-tab-focus-default-color !default;
+
+$plyr-menu-bg : $wdpk-plyr-menu-bg !default;
+$plyr-menu-color : $wdpk-plyr-menu-color !default;
+$plyr-menu-arrow-size : $wdpk-plyr-menu-arrow-size !default;
+$plyr-menu-border-color : $wdpk-plyr-menu-border-color !default;
+$plyr-menu-border-shadow-color : $wdpk-plyr-menu-border-shadow-color !default;
+$plyr-menu-shadow : $wdpk-plyr-menu-shadow !default;
+
+// Loading
+$plyr-progress-loading-size : $wdpk-plyr-progress-loading-size !default;
+$plyr-progress-loading-bg : $wdpk-plyr-progress-loading-bg !default;
+
+// Buffered
+$plyr-video-progress-buffered-bg : $wdpk-plyr-video-progress-buffered-bg !default;
+$plyr-audio-progress-buffered-bg : $wdpk-plyr-audio-progress-buffered-bg !default;
+
+// Active state
+$plyr-range-thumb-active-shadow-width : $wdpk-plyr-range-thumb-active-shadow-width !default;
+
+// Plyr Sliders ==>
+// Thumb
+$plyr-range-thumb-height : $wdpk-plyr-range-thumb-height !default;
+$plyr-range-thumb-bg : $wdpk-plyr-range-thumb-bg !default;
+$plyr-range-thumb-border : $wdpk-plyr-range-thumb-border !default;
+$plyr-range-thumb-shadow : $wdpk-plyr-range-thumb-shadow !default;
+
+// Track
+$plyr-range-track-height : $wdpk-plyr-range-track-height !default;
+
+
+// Fill
+$plyr-range-fill-bg : $wdpk-plyr-range-fill-bg !default;
+
+// Type specific
+$plyr-video-range-track-bg : $wdpk-plyr-video-range-track-bg !default;
+$plyr-audio-range-track-bg : $wdpk-plyr-audio-range-track-bg !default;
+$plyr-audio-range-thumb-shadow-color : $wdpk-plyr-audio-range-thumb-shadow-color !default;
+// <== Plyr Sliders
+
+$plyr-tooltip-bg : $wdpk-plyr-tooltip-bg !default;
+$plyr-tooltip-color : $wdpk-plyr-tooltip-color !default;
+$plyr-tooltip-padding : $wdpk-plyr-tooltip-padding !default;
+$plyr-tooltip-arrow-size : $wdpk-plyr-tooltip-arrow-size !default;
+$plyr-tooltip-radius : $wdpk-plyr-tooltip-radius !default;
+$plyr-tooltip-shadow : $wdpk-plyr-tooltip-shadow !default;
+
+
+
+// Dependant variables and The Ones Which Do Not Change
+$plyr-color-gray-9: $wdpk-gray-900;
+$plyr-color-gray-8: $wdpk-gray-800;
+$plyr-color-gray-7: $wdpk-gray-700;
+$plyr-color-gray-6: $wdpk-gray-600;
+$plyr-color-gray-5: $wdpk-gray-500;
+$plyr-color-gray-4: $wdpk-gray-400;
+$plyr-color-gray-3: $wdpk-gray-300;
+$plyr-color-gray-2: $wdpk-gray-200;
+$plyr-color-gray-1: $wdpk-gray-100;
+$plyr-color-gray-0: $wdpk-white;
+
+$plyr-font-family: $wdpk-font-family-base !default;
+$plyr-font-size-base: $wdpk-font-size-base !default;
+$plyr-font-size-small: $wdpk-font-size-sm !default;
+$plyr-font-size-large: $wdpk-font-size-lg !default;
+$plyr-font-size-xlarge: $wdpk-font-size-lg * 1.1 !default;
+$plyr-font-smoothing: false !default;
+
+$plyr-font-size-captions-base: $plyr-font-size-base !default;
+$plyr-font-size-captions-small: $plyr-font-size-small !default;
+$plyr-font-size-captions-medium: $plyr-font-size-large !default;
+$plyr-font-size-captions-large: $plyr-font-size-xlarge !default;
+$plyr-control-padding: ($plyr-control-spacing * 0.7) !default;
+
+$plyr-range-max-height: ($plyr-range-thumb-active-shadow-width * 2) + $plyr-range-thumb-height !default;
+
+// Audio
+$plyr-audio-controls-bg: $wdpk-plyr-audio-controls-bg !default;
+$plyr-audio-control-color: $wdpk-plyr-audio-control-color !default;
+$plyr-audio-control-color-hover: $wdpk-plyr-audio-control-color-hover !default;
+$plyr-audio-control-bg-hover: $wdpk-plyr-audio-control-bg-hover !default;

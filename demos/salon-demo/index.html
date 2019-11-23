@@ -1,0 +1,2530 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8" />
+    <meta name = "viewport" content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge" />
+    
+    <script src="../assets/js/jquery.js"></script>
+
+
+<!-- Including the main style.css -->
+<link rel="stylesheet" href="../css/salon-demo/style.css" />
+</head>
+<body>
+
+<div id = "wdpk-page-load-animate" class="wdpk-page-load-animate"><div class="wdpk-spinner" role="status">
+        <span class="sr-only"></span>
+    </div></div>
+
+<div id="wdpk-main" class="wdpk-main">
+
+
+<!--  Container Fluid For Header -->
+<div class = "container-fluid wdpk-header-container wdpk-transparent-navbar">
+
+    <!-- Body Overlay element for offCanvas Menu -->
+    <div id = "wdpk-offcanvas-overlay"></div>
+
+    <!--  Row For Top Bar -->
+    <div class = "row h-100 d-none d-lg-block">
+        <!--  Wrapper For Top Bar -->
+<div class = "wdpk-topbar-wrapper">
+    <!--  Container For Contents of Top Bar -->
+    <div class = "container">
+        <div class = "row h-100">
+            <div class = "col-lg-6 h-100 align-self-center ">
+
+                <!--  Navbar For Topbar -->
+                <nav class = "wdpk-topbar-menu" role = "navigation">
+                    <!--  Parent Items ul -->
+                    <ul class = "justify-content-start">
+                        <li class = "wdpk-topbar-item">
+                            <a class = "" href = "#">
+                                <i class = "fas fa fa-paper-plane"></i><strong> Email:</strong>
+                                email@address.com
+                            </a>
+                        </li>
+
+                        <li class = "wdpk-topbar-item"> |</li>
+                        <li class = "wdpk-topbar-item">
+                            <a class = "" href = "#">
+                                <i class = "fas fa fa-phone"></i><strong> Call:</strong> +1-124-125-1234
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- / Parent Items ul -->
+                </nav>
+                <!-- / Navbar For Topbar -->
+
+            </div>
+
+            <div class = "col-lg-6
+                                justify-content-end
+                                text-right h-100
+                                align-self-center d-flex">
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-facebook">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-facebook"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-twitter">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-twitter"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-google">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-google-plus"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-behance">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-behance"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-youtube">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-youtube"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-vimeo">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-vimeo"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-linkedin">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-linkedin"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-pinterest">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-pinterest"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+                <!--  Social Item of Top Bar -->
+                <a href = "#" class = "wdpk-topbar-social wdpk-rss">
+                    <div class = "wdpk-topbar-item">
+                        <i class = "fab fa fa-rss"></i>
+                    </div>
+                </a>
+                <!--  /Social Item of Top Bar -->
+
+            </div>
+
+        </div>
+    </div>
+    <!--  /Container For Contents of Top Bar -->
+</div>
+<!--  /Wrapper For Top Bar -->
+    </div>
+    <!--  /Row For Top Bar -->
+
+    <div class = "row wdpk-mobile-header">
+
+        <div class = "container">
+            <div class = "row">
+
+                <div class = "col-6 align-self-center img-fluid wdpk-mobile-header-branding">
+                    <a href = "./index.html">
+                        <img src="../assets/demos/salon-demo/logo-mobile.png"/>
+                    </a>
+                </div>
+
+                <div class = "col-6 align-self-center wdpk-menu-icon">
+                    <a id = "wdpk-mobile-menu-icon">
+                        <i class = "fas fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--  Row For Main Navigation -->
+    <div class = "row">
+        <!--  Navbar -->
+        <div class = "wdpk-navbar">
+
+            <!-- Container For Header Contents -->
+            <div class = "container">
+                <!-- Row For Header Contents -->
+                <div class = "row h-100">
+
+                    <!--  Logo Area For Navbar -->
+                    <div class = "col-lg-8 order-lg-1 offset-lg-2 text-center wdpk-nav-branding align-self-center">
+                        <a href = "./index.html">
+                            <img class = "d-none d-lg-flex" src = "../assets/demos/salon-demo/logo.png" alt = "Logo" />
+                        </a>
+                    </div>
+                    <!-- / Logo Area Area For Navbar -->
+
+                </div>
+                <!-- /Container For Header Contents -->
+            </div>
+            <!-- /Row For Header Contents -->
+
+        </div>
+        <!-- / Navbar -->
+    </div>
+    <!-- / Row For Main Navigation -->
+
+    <!--  Row For Bottom Bar  -->
+    <div class = "row">
+        <!--  Bottom Bar -->
+<div class = "wdpk-navbar wdpk-offCanvas wdpk-bottombar wdpk-sticky-navbar">
+
+    <!-- Container For Header Contents -->
+    <div class = "container">
+        <!-- Row For Header Contents -->
+        <div class = "row h-100">
+
+            <!--  Navigation Menu Area For Navbar -->
+            <div class = "col-lg-12 align-self-center wdpk-nav-wrap ">
+                <!-- Close Button For Offcanvas Menu -->
+<div class = "wdpk-mobile-menu-close">
+    <i class = "fas fa fa-times"></i>
+</div>
+<!-- /Close Button For Offcanvas Menu -->
+
+<!--  Navbar For Header -->
+<nav class = "wdpk-nav" role = "navigation">
+    <!--  Parent Items ul -->
+    <ul class = "wdpk-menu">
+        
+            
+                <!-- Primary menu items -->
+                
+                    <li class = "wdpk-dropCorrect ">
+                        <a id = "wdpk-demos" class = "wdpk-hasDropdown wdpk-menu-hover"
+                           href = "#">
+                            Demos <i
+                                    class = "fa fa-angle-down wdpkDropdownCaret"></i>
+                            <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                        </a>
+                        
+
+                
+            
+                
+                <div class = "wdpk-menu-container">
+                    <ul class = "wdpk-dropDown">
+
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "wdpk-main-demo" href = "../../template/index.html"
+                               class = "wdpk-dropDown-item">Main Demo
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "wdpk-main-demo" href = "../../demos/app-landing/index.html"
+                               class = "wdpk-dropDown-item">Mobile App
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "wdpk-ecommerce" href = "../../demos/food-blog/index.html"
+                               class = "wdpk-dropDown-item">Blog
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "wdpk-magazine" href = "../../demos/salon-demo/index.html"
+                               class = "wdpk-dropDown-item">Salon
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "wdpk-corporate" href = "../../demos/corporate-demo/index.html"
+                               class = "wdpk-dropDown-item">Corporate
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li  class = "wdpk-hasSubMenu wdpk-dropCorrect">
+                            
+                            <a id = "wdpk-event" href = "#"
+                               class = "wdpk-dropDown-item">Finance
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                                <div class = "wdpk-menu-container">
+                                    <ul class = "wdpk-dropDown">
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-about-home"
+                                                   href = "../../demos/financial-services/index.html"
+                                                   class = "wdpk-dropDown-item">Home Page
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-about-us"
+                                                   href = "../../demos/financial-services/about-us.html"
+                                                   class = "wdpk-dropDown-item">About Us
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-about-us"
+                                                   href = "../../demos/financial-services/our-services.html"
+                                                   class = "wdpk-dropDown-item">Our Services
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-about-us"
+                                                   href = "../../demos/financial-services/our-clients.html"
+                                                   class = "wdpk-dropDown-item">Our Clients
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                    </ul>
+                                </div>
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                    </ul>
+                </div>
+                
+            
+                
+
+            
+                <!-- Primary menu items -->
+                
+                    <li class = "wdpk-dropCorrect ">
+                        <a id = "wdpk-layouts" class = "wdpk-hasDropdown wdpk-menu-hover"
+                           href = "#">
+                            Layouts <i
+                                    class = "fa fa-angle-down wdpkDropdownCaret"></i>
+                            <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                        </a>
+                        
+
+                
+            
+                
+                <div class = "wdpk-menu-container">
+                    <ul class = "wdpk-dropDown">
+
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li  class = "wdpk-hasSubMenu wdpk-dropCorrect">
+                            
+                            <a id = "wdpk-header" href = "#"
+                               class = "wdpk-dropDown-item">Header
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                                <div class = "wdpk-menu-container">
+                                    <ul class = "wdpk-dropDown">
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-header-light"
+                                                   href = "../../template/default-header.html"
+                                                   class = "wdpk-dropDown-item">Default
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-header-light"
+                                                   href = "../../template/topbar.html"
+                                                   class = "wdpk-dropDown-item">Topbar
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-header-dark"
+                                                   href = "../../template/bottombar.html"
+                                                   class = "wdpk-dropDown-item">Bottom Bar
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-transparent"
+                                                   href = "../../template/transparent.html"
+                                                   class = "wdpk-dropDown-item">Transparent
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-header-colored"
+                                                   href = "../../template/topbar.html"
+                                                   class = "wdpk-dropDown-item">Sticky
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                    </ul>
+                                </div>
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li  class = "wdpk-hasSubMenu wdpk-dropCorrect">
+                            
+                            <a id = "wdpk-main-menu" href = "#"
+                               class = "wdpk-dropDown-item">Main Menu
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                                <div class = "wdpk-menu-container">
+                                    <ul class = "wdpk-dropDown">
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-main-menu-split"
+                                                   href = "../../template/splitmenu.html"
+                                                   class = "wdpk-dropDown-item">Split
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-main-menu-searcher"
+                                                   href = "../../template/searcher.html"
+                                                   class = "wdpk-dropDown-item">Searcher
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-main-menu-advertiser"
+                                                   href = "../../template/advertiser.html"
+                                                   class = "wdpk-dropDown-item">Advertiser
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-main-menu-default"
+                                                   href = "../../template/shopping-cart.html"
+                                                   class = "wdpk-dropDown-item">Shoppping Cart
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                    </ul>
+                                </div>
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li  class = "wdpk-hasSubMenu wdpk-dropCorrect">
+                            
+                            <a id = "menu-labels" href = "#"
+                               class = "wdpk-dropDown-item">Menu Labels
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                                <div class = "wdpk-menu-container">
+                                    <ul class = "wdpk-dropDown">
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "menu-labels-new"
+                                                   href = "#"
+                                                   class = "wdpk-dropDown-item">Secondary
+                                                    
+                                                        <span class = "badge badge-secondary">Secondary</span>
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "menu-labels-hot"
+                                                   href = "#"
+                                                   class = "wdpk-dropDown-item">Primary
+                                                    
+                                                        <span class = "badge badge-primary">Primary</span>
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "menu-labels-popular"
+                                                   href = "#"
+                                                   class = "wdpk-dropDown-item">Success
+                                                    
+                                                        <span class = "badge badge-success">Success</span>
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "menu-labels-sale"
+                                                   href = "#"
+                                                   class = "wdpk-dropDown-item">Warning
+                                                    
+                                                        <span class = "badge badge-warning">Warning</span>
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "menu-labels-info"
+                                                   href = "#"
+                                                   class = "wdpk-dropDown-item">Info
+                                                    
+                                                        <span class = "badge badge-info">Info</span>
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "menu-labels-danger"
+                                                   href = "#"
+                                                   class = "wdpk-dropDown-item">Danger
+                                                    
+                                                        <span class = "badge badge-danger">Danger</span>
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                    </ul>
+                                </div>
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li  class = "wdpk-hasSubMenu wdpk-dropCorrect">
+                            
+                            <a id = "wdpk-footers" href = "#"
+                               class = "wdpk-dropDown-item">Footers
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                                <div class = "wdpk-menu-container">
+                                    <ul class = "wdpk-dropDown">
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-footers-1"
+                                                   href = "../../template/footer-default.html"
+                                                   class = "wdpk-dropDown-item">Default Footer
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-footers-2"
+                                                   href = "../../template/wider-columns.html"
+                                                   class = "wdpk-dropDown-item">Wider Column
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-footers-3"
+                                                   href = "../../template/equal-columns.html"
+                                                   class = "wdpk-dropDown-item">Equal Colums
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                            <!-- Dropdown sub menu items -->
+                                            <li>
+                                                <a id = "wdpk-footers-3"
+                                                   href = "../../template/fullwidth.html"
+                                                   class = "wdpk-dropDown-item">Full Width
+                                                    
+                                                </a>
+                                            </li>
+                                            <!-- /Dropdown sub menu items -->
+                                        
+                                    </ul>
+                                </div>
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                    </ul>
+                </div>
+                
+            
+                
+
+            
+                <!-- Primary menu items -->
+                
+                    <li class = "wdpk-dropCorrect wdpk-has-mega-menu">
+                    <a id = "wdpk-shortcodes" class = "wdpk-hasDropdown wdpk-menu-hover"
+                       href = "#">
+                        Shortcodes <i class = "fa fa-angle-down wdpkDropdownCaret"></i>
+                        <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                    </a>
+                    <!-- Container For Mega Menu -->
+                    <div class = "wdpk-menu-container wdpk-mega-menu">
+                    <div class = "container wdpk-mega-menu-wrapper">
+                    <div class = "row">
+                
+
+                
+            
+                
+
+                
+                <!-- Section for Mega Menu -->
+                
+                    <div class = "col-lg-3 col-md-12 wdpk-mega-menu-section">
+                        
+                        <ul class = "wdpk-dropDown">
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/accordion.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-bars"></i>
+                                        
+                                        Accordions
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/alerts.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-exclamation-triangle"></i>
+                                        
+                                        Alerts
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/animation.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-expand"></i>
+                                        
+                                        Animations
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/audio.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-play-circle"></i>
+                                        
+                                        Audio
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/blockquotes.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-quote-left"></i>
+                                        
+                                        Blockquotes
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/breadcrumbs.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-ellipsis-h"></i>
+                                        
+                                        Breadcrumbs
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/buttons.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-external-link"></i>
+                                        
+                                        Buttons
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/cards.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-address-card"></i>
+                                        
+                                        Cards
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/clients.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-user"></i>
+                                        
+                                        Clients
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                        </ul>
+                    </div>
+                    <!-- /Section for Mega Menu -->
+                    
+                <!-- Section for Mega Menu -->
+                
+                    <div class = "col-lg-3 col-md-12 wdpk-mega-menu-section">
+                        
+                        <ul class = "wdpk-dropDown">
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/carousel.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-clone"></i>
+                                        
+                                        Carousel
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/code.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-code"></i>
+                                        
+                                        Code
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/counter.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-list-alt"></i>
+                                        
+                                        Counters
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/circle-counter.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-adjust"></i>
+                                        
+                                        Cicle Counters
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/comments.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-comments"></i>
+                                        
+                                        Comments
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/dropdown.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-th"></i>
+                                        
+                                        Dropdown
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/dropcaps.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-font"></i>
+                                        
+                                        Drop Caps
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/forms.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-check-square"></i>
+                                        
+                                        Forms
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/flipbox.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-window-restore"></i>
+                                        
+                                        Flip Boxes
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                        </ul>
+                    </div>
+                    <!-- /Section for Mega Menu -->
+                    
+                <!-- Section for Mega Menu -->
+                
+                    <div class = "col-lg-3 col-md-12 wdpk-mega-menu-section">
+                        
+                        <ul class = "wdpk-dropDown">
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/headings.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-bars"></i>
+                                        
+                                        Headings
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/infobox.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-info"></i>
+                                        
+                                        Infobox
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/jumbotron.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-th-large"></i>
+                                        
+                                        Jumbotron
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/hovers.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-magic"></i>
+                                        
+                                        Hovers
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/lightbox.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-window-maximize"></i>
+                                        
+                                        Lightbox
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/google-maps.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-map-marker"></i>
+                                        
+                                        Google Maps
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/pagination.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-angle-double-right"></i>
+                                        
+                                        Pagination
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/parallax.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-compress"></i>
+                                        
+                                        Parallax
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/progress-bars.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-align-left"></i>
+                                        
+                                        Progress Bars
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                        </ul>
+                    </div>
+                    <!-- /Section for Mega Menu -->
+                    
+                <!-- Section for Mega Menu -->
+                
+                    <div class = "col-lg-3 col-md-12 wdpk-mega-menu-section">
+                        
+                        <ul class = "wdpk-dropDown">
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/transitions.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-barcode"></i>
+                                        
+                                        Transitions
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/sections.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-map-signs"></i>
+                                        
+                                        Sections
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/scroll-animate.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-mouse-pointer"></i>
+                                        
+                                        Scroll Animate
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/social-sharing.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-share-square"></i>
+                                        
+                                        Social Sharing
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/smooth-scroll.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-arrow-down"></i>
+                                        
+                                        Smooth Scroll
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/tables.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-table"></i>
+                                        
+                                        Tables
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/timers.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-hourglass"></i>
+                                        
+                                        Timers
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/typing-text.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-text-width"></i>
+                                        
+                                        Typing Text
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                                <!-- Mega Menu Items -->
+                                <li>
+                                    <a id = "" href = "../../template/video.html"
+                                       class = "wdpk-dropDown-item">
+                                       
+                                        <i class = "fas fa fa-play"></i>
+                                        
+                                        Video Player
+                                        
+                                    </a>
+                                </li>
+                                <!-- /Mega Menu Items -->
+                            
+                        </ul>
+                    </div>
+                    <!-- /Section for Mega Menu -->
+                    
+                </div>
+                </div>
+                </div>
+                <!-- /Container For Mega Menu -->
+                        </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+
+            
+                <!-- Primary menu items -->
+                
+                    <li class = "wdpk-dropCorrect ">
+                        <a id = "wdpk-blogs" class = "wdpk-hasDropdown wdpk-menu-hover"
+                           href = "#">
+                            Blog <i
+                                    class = "fa fa-angle-down wdpkDropdownCaret"></i>
+                            <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                        </a>
+                        
+
+                
+            
+                
+                <div class = "wdpk-menu-container">
+                    <ul class = "wdpk-dropDown">
+
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/masonry-3-col.html"
+                               class = "wdpk-dropDown-item">Masonry
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/grid-3-col.html"
+                               class = "wdpk-dropDown-item">Grid
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/blog-classic.html"
+                               class = "wdpk-dropDown-item">Classic
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/blog-single.html"
+                               class = "wdpk-dropDown-item">Single Page
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                    </ul>
+                </div>
+                
+            
+                
+
+            
+                <!-- Primary menu items -->
+                
+                    <li class = "wdpk-dropCorrect ">
+                        <a id = "wdpk-pages" class = "wdpk-hasDropdown wdpk-menu-hover"
+                           href = "#">
+                            Pages <i
+                                    class = "fa fa-angle-down wdpkDropdownCaret"></i>
+                            <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                        </a>
+                        
+
+                
+            
+                
+                <div class = "wdpk-menu-container">
+                    <ul class = "wdpk-dropDown">
+
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/user-login.html"
+                               class = "wdpk-dropDown-item">User Login
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/user-registration.html"
+                               class = "wdpk-dropDown-item">User Registration
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/recover-password.html"
+                               class = "wdpk-dropDown-item">Password Recovery
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/maintenance.html"
+                               class = "wdpk-dropDown-item">Maintenance Mode
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/contact-us.html"
+                               class = "wdpk-dropDown-item">Contact Us
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../demos/financial-services/about-us.html"
+                               class = "wdpk-dropDown-item">About Us
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../demos/financial-services/our-services.html"
+                               class = "wdpk-dropDown-item">Our Services
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../demos/financial-services/our-clients.html"
+                               class = "wdpk-dropDown-item">Our Clients
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/404.html"
+                               class = "wdpk-dropDown-item">404 Page
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                            <!-- Dropdown menu items -->
+                            
+                                <li>
+                                    
+                            <a id = "" href = "../../template/500.html"
+                               class = "wdpk-dropDown-item">500 Error
+
+                                
+
+                                <i class = "fas fa fa-angle-right wdpk-submenu-caret"></i>
+                                <i class = "fas fa fa-plus wdpk-offcanvas-plus"></i>
+                            </a>
+
+                            
+                            </li>
+                            <!-- /Dropdown menu items -->
+                        
+                    </ul>
+                </div>
+                
+            
+                
+
+            
+        
+    </ul>
+    <!-- / Parent Items ul -->
+</nav>
+<!-- / Navbar For Header -->
+            </div>
+            <!-- / Navigation Menu Area For navbar -->
+
+            <!-- Social Media Buttons For OffCanvas Menu -->
+            <div class = "col-12 order-4 wdpk-social-offcanvas">
+    <!--  Social Item of Top Bar -->
+    <a href = "#" class = "bg-primary">
+                            <span>
+                                <i class = "fab fa fa-facebook"></i>
+                            </span>
+    </a>
+    <!--  /Social Item of Top Bar -->
+
+
+    <!--  Social Item of Top Bar -->
+    <a href = "#" class = "bg-primary">
+                            <span>
+                                <i class = "fab fa fa-twitter"></i>
+                            </span>
+    </a>
+    <!--  /Social Item of Top Bar -->
+
+
+    <!--  Social Item of Top Bar -->
+    <a href = "#" class = "bg-primary">
+                            <span>
+                                <i class = "fab fa fa-google-plus"></i>
+                            </span>
+    </a>
+    <!--  /Social Item of Top Bar -->
+
+    <!--  Social Item of Top Bar -->
+    <a href = "#" class = "bg-primary">
+                            <span>
+                                <i class = "fab fa fa-linkedin"></i>
+                            </span>
+    </a>
+    <!--  /Social Item of Top Bar -->
+
+</div>
+            <!-- /Social Media Buttons For OffCanvas Menu -->
+
+        </div>
+        <!-- /Container For Header Contents -->
+    </div>
+    <!-- /Row For Header Contents -->
+
+</div>
+<!-- / Bottom Bar -->
+    </div>
+    <!-- / Row For Main Navigation -->
+</div>
+<!-- / Container Fluid For Header -->
+
+<!-- Container For The Page Title -->
+<section class = "container-fluid wdpk-page-title wdpk-bg-slider">
+    <div class = "row wdpk-page-title-wrapper">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-10 offset-lg-1 wdpk-page-title-content text-center">
+
+                    <section class = "wdpk-page-title-heading text-center" data-aos = "zoom-in-up"
+                             data-aos-delay = "100"
+                             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                             data-aos-once = "true">
+                        <p class = "wdpk-page-title-description">
+                            Making You Look
+                        </p>
+                        <div class = "wdpk-page-title-separator-wrapper justify-content-center">
+                            <span class = "wdpk-page-title-separator"></span>
+                            <i class = "fab fa fa-scissors"></i>
+                            <span class = "wdpk-page-title-separator"></span>
+                        </div>
+                        <h2 class = "wdpk-page-title-heading">AWESOME AND MANLY</h2>
+                    </section>
+                    <p class = "text-white text-center" data-aos = "zoom-in-up"
+                       data-aos-delay = "100"
+                       data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                       data-aos-once = "true">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in
+                        luctus dolor. Nullam eu dapibus lacus. Integer rutrum commodo fermentum. Nullam tempor
+                        suscipit tellus.
+                    </p>
+                    <button class = "btn btn-outline-primary wdpk-button" data-aos = "fade-up"
+                            data-aos-delay = "100"
+                            data-aos-easing = "ease-in-out-quad" data-aos-duration = "800"
+                            data-aos-once = "true">Book An Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Conatiner For The Page Title -->
+
+<!-- Container with Team Information -->
+<div class = "container-fluid our-team-section wdpk-padding" id = "parallax-1">
+    <div class = "row">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-8 offset-lg-2 mb-4">
+                    <section class = "wdpk-heading text-center" data-aos = "zoom-in-up" data-aos-delay = "100"
+                             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                             data-aos-once = "true">
+                        <p class = "wdpk-heading-description" style = "font-weight: bold;">
+                            OUR BEST TEAM
+                        </p>
+                        <div class = "wdpk-heading-separator-wrapper justify-content-center">
+                            <span class = "wdpk-heading-separator"></span>
+                            <i class = "fab fa fa-scissors"></i>
+                            <span class = "wdpk-heading-separator"></span>
+                        </div>
+                        <h2 class = "wdpk-heading-head">THE MASTER BARBERS</h2>
+                    </section>
+                    <p class = "text-center" data-aos = "zoom-in-up"
+                       data-aos-delay = "100"
+                       data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                       data-aos-once = "true">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in
+                        luctus dolor. Nullam eu dapibus lacus. Integer rutrum commodo fermentum. Nullam tempor
+                        suscipit tellus.
+                    </p>
+
+                </div>
+
+                <div class = "col-lg-3 my-3 py-3 px-2 text-center"
+                     data-aos = "fade-up"
+                     data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad"
+                     data-aos-duration = "800"
+                     data-aos-once = "true">
+                    <img src = "../assets/demos/salon-demo/barber1.jpg" class = "barber-img">
+                    <h5>Sam Allen</h5>
+                    <p class = "text-primary mb-2">Expert Barber</p>
+                    <p class = "mb-4">Suspendisse nec facilisis dui, in luctus dolor. Nullam eu dapibus lacus. Integer
+                                      rutrum commodo
+                                      fermentum</p>
+                </div>
+
+                <div class = "col-lg-3 my-3 py-3 px-2 text-center"
+                     data-aos = "fade-up"
+                     data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad"
+                     data-aos-duration = "800"
+                     data-aos-once = "true">
+                    <img src = "../assets/demos/salon-demo/barber2.jpg" class = "barber-img">
+                    <h5>Bobb Walker</h5>
+                    <p class = "text-primary mb-2">Expert Barber</p>
+                    <p class = "mb-4">Suspendisse nec facilisis dui, in luctus dolor. Nullam eu dapibus lacus. Integer
+                                      rutrum commodo
+                                      fermentum</p>
+                </div>
+
+                <div class = "col-lg-3 my-3 py-3 px-2 text-center"
+                     data-aos = "fade-up"
+                     data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad"
+                     data-aos-duration = "800"
+                     data-aos-once = "true">
+                    <img src = "../assets/demos/salon-demo/barber3.jpg" class = "barber-img">
+                    <h5>Rob Doe</h5>
+                    <p class = "text-primary mb-2">Expert Barber</p>
+                    <p class = "mb-4">Suspendisse nec facilisis dui, in luctus dolor. Nullam eu dapibus lacus. Integer
+                                      rutrum commodo
+                                      fermentum</p>
+                </div>
+
+                <div class = "col-lg-3 my-3 py-3 px-2 text-center"
+                     data-aos = "fade-up"
+                     data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad"
+                     data-aos-duration = "800"
+                     data-aos-once = "true">
+                    <img src = "../assets/demos/salon-demo/barber4.jpg" class = "barber-img">
+                    <h5>John Allen</h5>
+                    <p class = "text-primary mb-2">Expert Barber</p>
+                    <p class = "mb-4">Suspendisse nec facilisis dui, in luctus dolor. Nullam eu dapibus lacus. Integer
+                                      rutrum commodo
+                                      fermentum</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- / Container with Team Information -->
+<div class = "container-fluid">
+    <div class = "row align-items-stretch">
+        <div class = "col-lg-6 wdpk-bg-customer"></div>
+        <div class = "col-lg-6 text-center wdpk-padding bg-secondary px-4">
+            <section class = "wdpk-heading text-center" data-aos = "zoom-in-up" data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                     data-aos-once = "true">
+                <p class = "wdpk-heading-description text-white" style = "font-weight: bold;">
+                    ABOUT US
+                </p>
+                <div class = "wdpk-heading-separator-wrapper justify-content-center">
+                    <span class = "wdpk-heading-separator bg-white"></span>
+                    <i class = "fab fa fa-scissors"></i>
+                    <span class = "wdpk-heading-separator bg-white"></span>
+                </div>
+                <h2 class = "wdpk-heading-head text-white">OUR LEGACY AND EXPERIENCE</h2>
+            </section>
+            <p class = "text-center text-white" data-aos = "zoom-in-up"
+               data-aos-delay = "100"
+               data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+               data-aos-once = "true">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in luctus dolor.
+                Nullam eu dapibus lacus. Integer rutrum commodo fermentum. Nullam tempor suscipit tellus. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in luctus dolor. Nullam eu
+                dapibus lacus. Integer rutrum commodo fermentum. Nullam tempor suscipit tellus.
+            </p>
+            <button class = "btn btn-outline-primary wdpk-button" data-aos = "fade-up"
+                    data-aos-delay = "100"
+                    data-aos-easing = "ease-in-out-quad" data-aos-duration = "800"
+                    data-aos-once = "true">Book An Appointment
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class = "container">
+    <div class = "row wdpk-padding">
+        <div class = "col-lg-8 offset-lg-2 mb-4">
+            <section class = "wdpk-heading text-center" data-aos = "zoom-in-up" data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                     data-aos-once = "true">
+                <p class = "wdpk-heading-description" style = "font-weight: bold;">
+                    OUR SKILL METER
+                </p>
+                <div class = "wdpk-heading-separator-wrapper justify-content-center">
+                    <span class = "wdpk-heading-separator"></span>
+                    <i class = "fab fa fa-scissors"></i>
+                    <span class = "wdpk-heading-separator"></span>
+                </div>
+                <h2 class = "wdpk-heading-head">WE ARE A TALENTED LOT</h2>
+            </section>
+            <p class = "text-center" data-aos = "zoom-in-up"
+               data-aos-delay = "100"
+               data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+               data-aos-once = "true">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in
+                luctus dolor. Nullam eu dapibus lacus. Integer rutrum commodo fermentum. Nullam tempor
+                suscipit tellus.
+            </p>
+        </div>
+
+
+        <div class = "col-lg-3 wdpk-cicles" data-aos = "zoom-in-up" data-aos-delay = "100"
+             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+             data-aos-once = "true">
+            <div class = "wdpk-cicles-wrapper">
+                <div id = "wdpkCircle">
+                    <div class = "wdpk-cicles-counter-number"></div>
+                </div>
+            </div>
+            <h6 class = "my-3 text-center">Hair Styling</h6>
+        </div>
+
+        <div class = "col-lg-3 wdpk-cicles" data-aos = "zoom-in-up" data-aos-delay = "100"
+             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+             data-aos-once = "true">
+            <div class = "wdpk-cicles-wrapper">
+                <div id = "wdpkCircle2">
+                    <div class = "wdpk-cicles-counter-number"></div>
+                </div>
+            </div>
+            <h6 class = "my-3 text-center">Skin Care</h6>
+        </div>
+
+        <div class = "col-lg-3 wdpk-cicles" data-aos = "zoom-in-up" data-aos-delay = "100"
+             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+             data-aos-once = "true">
+            <div class = "wdpk-cicles-wrapper">
+                <div id = "wdpkCircle3">
+                    <div class = "wdpk-cicles-counter-number"></div>
+                </div>
+            </div>
+            <h6 class = "my-3 text-center">Beard Care</h6>
+        </div>
+
+        <div class = "col-lg-3 wdpk-cicles" data-aos = "zoom-in-up" data-aos-delay = "100"
+             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+             data-aos-once = "true">
+            <div class = "wdpk-cicles-wrapper">
+                <div id = "wdpkCircle4">
+                    <div class = "wdpk-cicles-counter-number"></div>
+                </div>
+            </div>
+            <h6 class = "my-3 text-center">Manicure</h6>
+        </div>
+    </div>
+</div>
+
+<div class = "container-fluid bg-secondary wdpk-padding">
+    <div class = "row">
+        <div class = "container">
+            <div class = "row">
+
+                <div class = "col-lg-10 offset-lg-1">
+                    <section class = "wdpk-heading text-center" data-aos = "zoom-in-up" data-aos-delay = "100"
+                             data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                             data-aos-once = "true">
+                        <p class = "wdpk-heading-description text-white" style = "font-weight: bold;">
+                            OUR PORTFOLIO OF SERVICES
+                        </p>
+                        <div class = "wdpk-heading-separator-wrapper justify-content-center">
+                            <span class = "wdpk-heading-separator bg-white"></span>
+                            <i class = "fab fa fa-scissors"></i>
+                            <span class = "wdpk-heading-separator bg-white"></span>
+                        </div>
+                        <h2 class = "wdpk-heading-head text-white">CATERING TO ALL MEN GROOMING NEEDS</h2>
+                    </section>
+                    <p class = "text-center text-white" data-aos = "zoom-in-up"
+                       data-aos-delay = "100"
+                       data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                       data-aos-once = "true">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in
+                        luctus dolor.
+                        Nullam eu dapibus lacus. Integer rutrum commodo fermentum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "container-fluid bg-secondary">
+    <div class = "row">
+        <div id = "wdpk-light-gallery-1" class = "card-columns wdpk-light-gallery">
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-1.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-1.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-2.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-2.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-3.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-3.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-4.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-4.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-5.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-5.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-6.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-6.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-7.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-7.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-8.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-8.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-9.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-9.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "wdpk-light-gallery-cont" data-src = "../assets/demos/salon-demo/portfolio-10.jpg">
+                    <span class = "wdpk-light-gallery-hover"><i class = "fas fa fa-search"></i></span>
+                    <img src = "../assets/demos/salon-demo/portfolio-10.jpg" class = "wdpk-light-gallery-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "container-fluid">
+    <div class = "row align-items-stretch">
+        <div class = "col-lg-6 wdpk-bg-barber wdpk-padding">
+            <section class = "wdpk-heading text-center" data-aos = "zoom-in-up" data-aos-delay = "100"
+                     data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+                     data-aos-once = "true">
+                <p class = "wdpk-heading-description" style = "font-weight: bold;">
+                    WHY CHOOSE US
+                </p>
+                <div class = "wdpk-heading-separator-wrapper justify-content-center">
+                    <span class = "wdpk-heading-separator"></span>
+                    <i class = "fab fa fa-scissors"></i>
+                    <span class = "wdpk-heading-separator"></span>
+                </div>
+                <h2 class = "wdpk-heading-head">NO ONE LIKE US IN NEW YORK</h2>
+            </section>
+            <p class = "text-center" data-aos = "zoom-in-up"
+               data-aos-delay = "100"
+               data-aos-easing = "ease-in-out-quad" data-aos-duration = "500"
+               data-aos-once = "true">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec facilisis dui, in
+                luctus dolor. Nullam eu dapibus lacus.
+            </p>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-lg-4 text-center" data-aos = "fade-up"
+                         data-aos-delay = "100"
+                         data-aos-easing = "ease-in-out-quad" data-aos-duration = "800"
+                         data-aos-once = "true">
+                        <h2 class="text-secondary" style="font-size: 4rem;">15</h2>
+                        <h6>BARBERS</h6>
+                    </div>
+
+                    <div class = "col-lg-4 text-center" data-aos = "fade-up"
+                         data-aos-delay = "100"
+                         data-aos-easing = "ease-in-out-quad" data-aos-duration = "800"
+                         data-aos-once = "true">
+                        <h2 class="text-secondary" style="font-size: 4rem;">435+</h2>
+                        <h6>CLIENTS</h6>
+                    </div>
+                    <div class = "col-lg-4 text-center" data-aos = "fade-up"
+                         data-aos-delay = "100"
+                         data-aos-easing = "ease-in-out-quad" data-aos-duration = "800"
+                         data-aos-once = "true">
+                        <h2 class="text-secondary" style="font-size: 4rem;">34</h2>
+                        <h6>YEAR'S EXPERIENCE</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class = "col-lg-6 text-center wdpk-bg-barber-colored ">
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<section id="wdpk-footer" class = "container-fluid wdpk-footer">
+    <div class = "row">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-4 wdpk-footer-column">
+                    <img src = "../assets/demos/salon-demo/logo.png" width = "50%" height = "auto" />
+                    <p class="mt-3 px-1">WoodPecker® is a modular design system crafted to make creating layouts easy for the developers.
+                                         Now instead of fucussing on the low level detail of developing these modules, you can simple use
+                                         the existing modules to create fantasstic layouts. </p>
+                </div>
+                <div class = "col-lg-8 wdpk-footer-column">
+                    <div style = "height: 350px;" id = "map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class = "container-fluid wdpk-footer-copyright">
+    <div class = "row">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-6 wdpk-footer-column d-flex">
+                    <span class = "align-self-center">
+                    &#169; 2019 WoodPecker&#174; HTML Template. All Rights Reserved
+                </span>
+                </div>
+                <div class = "col-lg-6 wdpk-footer-column wdpk-footer-social">
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-facebook"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-twitter"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-google-plus"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-behance"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-youtube"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-vimeo"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-linkedin"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-pinterest"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+
+                    <!--  Social Item for footer -->
+                    <a href = "#" class = "wdpk-footer-social-wrap">
+                        <div class = "wdpk-footer-social-item">
+                            <i class = "fab fa fa-rss"></i>
+                        </div>
+                    </a>
+                    <!--  /Social Item for footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- / Footer Section -->
+
+<script>
+	jQuery(document).ready(function ()
+	{
+		if (jQuery(".wdpk-bg-slider").length !== 0)
+		{
+			let obj = {
+				selector: '.wdpk-bg-slider',
+				autoplay: true, // Start the Slideshow automatically.
+				loop: true,  // Loop the Slideshow.
+				delay: 20000, // Delay beetween slides in milliseconds.
+				cover: true,
+				align: 'center',
+				valign: 'center',
+				animation: 'kenburnsDownRight',
+				timer: false,
+				animationDuration: 20000,
+				slides: [
+					{src: "../assets/demos/salon-demo/home-page-hero.jpg"},
+					{src: "../assets/demos/salon-demo/home-page-hero-2.jpg"},
+					{src: "../assets/demos/salon-demo/home-page-hero-3.jpg"},
+				],
+			};
+			require(["app/shortcodes/wdpkBackgroundSlider"], function (e)
+			{
+				e.publicCall(obj);
+			});
+		}
+	});
+
+	jQuery(document).ready(function ()
+	{
+		if (jQuery(".our-team-section").length !== 0)
+		{
+			let obj = {
+				selectorID: 'parallax-1',
+				factor: 0.8,        // +/- gives direction, Less means slower if no other breakpoint factor is set this value is selected
+				type: 'background',     // background, foreground
+				direction: 'vertical',// vertical, horizontal
+				transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground'
+			};
+			require(["app/shortcodes/wdpkParallax"], function (e)
+			{
+				e.publicCall(obj);
+			});
+		}
+	});
+
+
+	jQuery(document).ready(function ()
+	{
+		if (jQuery(".wdpk-cicles").length !== 0)
+		{
+			let obj = {
+				selectorID: 'wdpkCircle',
+				value: 0.95,
+				size: 125,
+				startAngle: - Math.PI / 2,
+				reverse: false,
+				thickness: 'auto',
+				lineCap: 'round',  // Arc line cap: "butt", "round" or "square"
+				fill: {gradient: ["#D69B60", "#71532c"]},
+				valueProgress: true,
+				animationProgress: false,
+				valueTotal: 2, /// can either be 1 or 100. Set `1` for one and `2` for 100
+				decimalPlaces: 2, // only applicable if valueTotal is set to 1
+				suffixSymbol: '%',
+				emptyFill: 'rgba(0,0,0,.1)',
+				animation: {duration: 1600, easing: "circleProgressEasing"},
+			};
+			let obj2 = {
+				selectorID: 'wdpkCircle2',
+				value: 0.97,
+				size: 125,
+				startAngle: - Math.PI / 2,
+				reverse: false,
+				thickness: 'auto',
+				lineCap: 'round',  // Arc line cap: "butt", "round" or "square"
+				fill: {gradient: ["#D69B60", "#71532c"]},
+				valueProgress: true,
+				animationProgress: false,
+				valueTotal: 2, /// can either be 1 or 100. Set `1` for one and `2` for 100
+				decimalPlaces: 2, // only applicable if valueTotal is set to 1
+				suffixSymbol: '%',
+				emptyFill: 'rgba(0,0,0,.1)',
+				animation: {duration: 1600, easing: "circleProgressEasing"},
+			};
+			let obj3 = {
+				selectorID: 'wdpkCircle3',
+				value: 0.93,
+				size: 125,
+				startAngle: - Math.PI / 2,
+				reverse: false,
+				thickness: 'auto',
+				lineCap: 'round',  // Arc line cap: "butt", "round" or "square"
+				fill: {gradient: ["#D69B60", "#71532c"]},
+				valueProgress: true,
+				animationProgress: false,
+				valueTotal: 2, /// can either be 1 or 100. Set `1` for one and `2` for 100
+				decimalPlaces: 2, // only applicable if valueTotal is set to 1
+				suffixSymbol: '%',
+				emptyFill: 'rgba(0,0,0,.1)',
+				animation: {duration: 1600, easing: "circleProgressEasing"},
+			};
+			let obj4 = {
+				selectorID: 'wdpkCircle4',
+				value: 0.91,
+				size: 125,
+				startAngle: - Math.PI / 2,
+				reverse: false,
+				thickness: 'auto',
+				lineCap: 'round',  // Arc line cap: "butt", "round" or "square"
+				fill: {gradient: ["#D69B60", "#71532c"]},
+				valueProgress: true,
+				animationProgress: false,
+				valueTotal: 2, /// can either be 1 or 100. Set `1` for one and `2` for 100
+				decimalPlaces: 2, // only applicable if valueTotal is set to 1
+				suffixSymbol: '%',
+				emptyFill: 'rgba(0,0,0,.1)',
+				animation: {duration: 1600, easing: "circleProgressEasing"},
+			};
+
+
+			require(["app/shortcodes/wdpkCircle"], function (e)
+			{
+				e.publicCall(obj);
+				e.publicCall(obj2);
+				e.publicCall(obj3);
+				e.publicCall(obj4);
+			});
+		}
+	});
+
+	jQuery(document).ready(function ()
+	{
+		if (jQuery(".wdpk-light-gallery").length !== 0)
+		{
+			let obj = {
+				selectorID: 'wdpk-light-gallery-1',
+				thumbnail: true,
+				animateThumb: true,
+				showThumbByDefault: true,
+			};
+
+			require(["app/shortcodes/wdpkLightGallery"], function (e)
+			{
+				e.publicCall(obj);
+			});
+		}
+	});
+
+	var map;
+	var marker;
+
+	function initMap()
+	{
+		let location = {lat: 40.730610, lng: - 73.935242};
+
+		map = new google.maps.Map(document.getElementById('map'), {
+			center: location,
+			zoom: 10,
+			disableDefaultUI: true,
+			styles: [
+				{
+					"featureType": "all",
+					"elementType": "labels.text.fill",
+					"stylers": [
+						{
+							"saturation": 36
+						},
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 40
+						}
+					]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.text.stroke",
+					"stylers": [
+						{
+							"visibility": "on"
+						},
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 16
+						}
+					]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.icon",
+					"stylers": [
+						{
+							"visibility": "off"
+						}
+					]
+				},
+				{
+					"featureType": "administrative",
+					"elementType": "geometry.fill",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 20
+						}
+					]
+				},
+				{
+					"featureType": "administrative",
+					"elementType": "geometry.stroke",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 17
+						},
+						{
+							"weight": 1.2
+						}
+					]
+				},
+				{
+					"featureType": "landscape",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 20
+						}
+					]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 21
+						}
+					]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry.fill",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 17
+						}
+					]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry.stroke",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 29
+						},
+						{
+							"weight": 0.2
+						}
+					]
+				},
+				{
+					"featureType": "road.arterial",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 18
+						}
+					]
+				},
+				{
+					"featureType": "road.local",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 16
+						}
+					]
+				},
+				{
+					"featureType": "transit",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 19
+						}
+					]
+				},
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#000000"
+						},
+						{
+							"lightness": 17
+						}
+					]
+				}
+			],
+		});
+		marker = new google.maps.Marker({
+			position: location,
+			map: map,
+			icon: '/assets/demos/salon-demo/marker.png',
+		});
+	}
+</script>
+
+<script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBXC8PsxjBlXrRXHsMunDmZ_PTQh1KRCQA&callback=initMap"
+        async defer></script>
+
+<style>
+    .our-team-section {
+        background-image: url("../assets/demos/salon-demo/team-section-background.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wdpk-padding {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .barber-img {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        width: 175px;
+        margin-bottom: 20px;
+        border: 5px solid #dddddd;
+    }
+
+    .wdpk-bg-customer {
+        background-image: url("../assets/demos/salon-demo/about-section.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wdpk-bg-barber {
+        background-image: url("../assets/demos/salon-demo/barber-background.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wdpk-bg-barber-colored {
+        background-image: url("../assets/demos/salon-demo/homepage-gentelman.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>
+
+
+
+<script src="../assets/js/bundle.js"></script>
+
+
+<!-- Including RequireJS and its Configuration Along With WoodPecker Calls -->
+<script data-main="../assets/js/requirejs-config.js"
+        src = "../assets/js/require.js">
+</script>
+
+<script src="../assets/js/custom.js"></script>
+<!-- Include Fontawesome Using CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+
+
+
+</div>
+<!-- /<div class="wdpk-main"> -->
+<a class="wdpk-scroll-to-top" href="#wdpk-main" data-scroll>
+    <i class="wdpk-scroll-up-arrow"></i>
+</a>
+
+</body>
+</html>
+

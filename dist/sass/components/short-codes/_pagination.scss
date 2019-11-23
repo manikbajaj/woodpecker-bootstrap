@@ -1,0 +1,11 @@
+// =============================>
+//  Pagination Styling Partial
+// <============================
+
+.wdpk-pagination
+{
+	.page-link
+	{
+		@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function)
+	}
+}

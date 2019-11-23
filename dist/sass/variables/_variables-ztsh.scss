@@ -1,0 +1,3229 @@
+// ===========================================>
+// Contains all the variables for the WoodPecker Theme
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $ztsh-nav-link-disabled-color
+// and $ztsh-modal-content-box-shadow-xs.
+// IMPORTANT: It is mandatory to use 'ztsh' prefix for all variables
+// <===========================================
+// =============================>
+//  Import the required fonts
+// <============================
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
+
+
+// General Layout And Styling Options
+//
+// | Variable  | Options  |
+// |-----------|:--------:|
+// |$ztsh-orientation | 'ltr' for Left To Right Text And 'rtl' For Right To Left Text |
+// | $ztsh-sm-breakpoint | Break for Breakpoint Slicer for Small Devices |
+// | $ztsh-md-breakpoint | Break for Breakpoint Slicer for Medium Device |
+// | $ztsh-lg-breakpoint | Break for Breakpoint Slicer for For Desktop Resolutions|
+// | $ztsh-xl-breakpoint | Break for Breakpoint Slicer for Xtra Large Screens |
+// | $ztsh-enable-on-desktop | Set this to true if offCanvas menu needs to be wna |
+// | $ztsh-mobile-header-breakpoint | '1' for xs, '2' for sm, '3' for md, '4' for lg set ot 5 to display on desktop only if `$ztsh-enable-on-desktop` is set to true else sass compiler will throw an error |
+// | $ztsh-code-block-style: light | Select the style of the code block `light` or `dark` |
+// | $ztsh-global-transition-duration | Transition duration set for theme animations |
+// | $ztsh-global-transition-function | Transition function used for animations for the theme |
+// | $ztsh-global-element-margin | Bottom margin used Globally for shortcodes|
+// | $ztsh-lightness-value | Lightness value used Globally throughout the theme. Needs to be negativ in case of a light theme and positive in case of a dark theme |
+//
+// Styleguide Theme.Layout and Styling
+
+
+// =============================>
+//  Set this to either 'light' or 'dark'
+// TODO: Write a function to change values throughout the SCSS based on the value assigned here
+// <============================
+$ztsh-orientation:                              'ltr' !default;
+$ztsh-sm-breakpoint:                            576px !default;
+$ztsh-md-breakpoint:                            768px !default;
+$ztsh-lg-breakpoint:                            992px !default;
+$ztsh-xl-breakpoint:                            1200px !default;
+$ztsh-mobile-header-breakpoint:                 3 !default;
+$ztsh-code-block-style:                         'light' !default;
+$ztsh-global-transition-duration:               .5s !default;
+$ztsh-global-transition-function:               ease !default;
+$ztsh-global-element-margin:                    2rem !default;
+$ztsh-lightness-value:                          -20% !default;
+
+// =============================>
+//  Grid columns
+// <============================
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+//
+$ztsh-grid-columns:                             12 !default;
+$ztsh-grid-gutter-width:                        30px !default;
+
+
+// =============================>
+// The Bootstrap Base Colors
+// <============================
+
+// Bootstrap Colors
+//
+// The default colors that are used by by Bootstrap and inherited by WoodPecker as well.
+//
+// $ztsh-blue -    #0056c6; Blue
+// $ztsh-indigo -  #6610f2; Indigo
+// $ztsh-purple -  #6f42c1; Purple
+// $ztsh-pink -    #e83e8c; Pink
+// $ztsh-red -     #f03a47; Red
+// $ztsh-orange -  #fd7e14; Orange
+// $ztsh-yellow -  #ffc107; Yellow
+// $ztsh-green -   #38c07b; Green
+// $ztsh-teal -    #20c997; Teal
+// $ztsh-cyan -    #0dbdcd; Cyan
+//
+// Styleguide Colors.Bootstrap Colors
+$ztsh-blue:                                     #0056c6 !default;
+$ztsh-indigo:                                   #6610f2 !default;
+$ztsh-purple:                                   #6f42c1 !default;
+$ztsh-pink:                                     #e83e8c !default;
+$ztsh-red:                                      #f03a47 !default;
+$ztsh-orange:                                   #fd7e14 !default;
+$ztsh-yellow:                                   #ffc107 !default;
+$ztsh-green:                                    #38c07b !default;
+$ztsh-teal:                                     #20c997 !default;
+$ztsh-cyan:                                     #0dbdcd !default;
+
+// Bootstrap Grays
+//
+// Overriding the grays used by Bootsrap.
+//
+//$ztsh-white -     #fff; White
+//$ztsh-gray-100 -  #f8f9fa; Gray 100
+//$ztsh-gray-200 -  #e9ecef; Gray 200
+//$ztsh-gray-300 -  #dee2e6; Gray 300
+//$ztsh-gray-400 -  #ced4da; Gray 400
+//$ztsh-gray-500 -  #adb5bd; Gray 500
+//$ztsh-gray-600 -  #6c757d; Gray 600
+//$ztsh-gray-700 -  #495057; Gray 700
+//$ztsh-gray-800 -  #343a40; Gray 800
+//$ztsh-gray-900 -  #212529; Gray 900
+//$ztsh-black -     #000; Black
+//
+// Styleguide Colors.Bootstrap Grays
+$ztsh-white:                                    #fff !default;
+$ztsh-gray-100:                                 #f8f9fa !default;
+$ztsh-gray-200:                                 #e9ecef !default;
+$ztsh-gray-300:                                 #dee2e6 !default;
+$ztsh-gray-400:                                 #ced4da !default;
+$ztsh-gray-500:                                 #adb5bd !default;
+$ztsh-gray-600:                                 #6c757d !default;
+$ztsh-gray-700:                                 #495057 !default;
+$ztsh-gray-800:                                 #343a40 !default;
+$ztsh-gray-900:                                 #212529 !default;
+$ztsh-black:                                    #000 !default;
+
+// 	Colors
+//
+//	WoodPecker uses these colors throughout the theme. These colors have been overriden for the default Bootstrap components as well. So overiding these colors will directly set the colors for Bootstarp as well to match the theme and you dont need to change any of the Bootstrap variables.
+//
+// ### Theme Default Values
+//
+// $ztsh-primary-color - #0056c6; Primary Color
+// $ztsh-secondary - #6c757d; Secondary Color
+// $ztsh-gradient-1: #0056c6;
+// $ztsh-gradient-2: #0BC9CD;
+// $ztsh-success - #38c07b; Success
+// $ztsh-info -  #0dbdcd; Info
+// $ztsh-warning - #ffc107; Warning
+// $ztsh-danger - #f03a47; Danger
+// $ztsh-light - #e9ecef; Light
+// $ztsh-dark - #343a40; Dark
+//
+// Styleguide Colors
+
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$ztsh-primary-color:                            #0056c6 !default;
+$ztsh-secondary:                                $ztsh-gray-600 !default;
+$ztsh-gradient-1:                               #0056c6 !default;
+$ztsh-gradient-2:                               #0bc9cd !default;
+$ztsh-success:                                  $ztsh-green !default;
+$ztsh-info:                                     $ztsh-cyan !default;
+$ztsh-warning:                                  $ztsh-yellow !default;
+$ztsh-danger:                                   $ztsh-red !default;
+$ztsh-light:                                    $ztsh-gray-200 !default;
+$ztsh-dark:                                     $ztsh-gray-800 !default;
+
+// Body Colors
+//
+// Colors Applied to the `<body>` element
+//
+//| Variable| Options |
+//|--------|:--------:|
+//|$ztsh-body-bg | Background Color for the body of the document |
+//|$ztsh-body-color | Default Font Color For the document |
+//
+// $ztsh-body-bg -  		#ffffff; Body Background
+// $ztsh-body-color - 	#212529; Body Color
+//
+// Styleguide Colors.Body Colors
+$ztsh-body-bg:                                  $ztsh-white !default;
+$ztsh-body-color:                               $ztsh-gray-600 !default;
+
+
+// Social Media Colors
+//
+// Colors used for various social media channels
+//
+// $ztsh-facebook-color -  #3b5998; Facebook Color
+// $ztsh-twitter-color -  #1da1f2; Twitter Color
+// $ztsh-google-color -  #db3236; Google Color
+// $ztsh-youtube-color -  #c4302b; YouTube Color
+// $ztsh-linkedin-color -  #0077b5; Linkedin Color
+// $ztsh-behance-color -  #053eff; Behnace Color
+// $ztsh-dribble-color -  #ea4c89; Dribble Color
+// $ztsh-pinterest-color -  #c8232c; Pinterest Color
+// $ztsh-vimeo-color -  #19b7ea; Vimeo Color
+// $ztsh-rss-color -  #ee802f; RSS Color
+//
+// Styleguide Colors.Social Media Colors
+$ztsh-facebook-color:                           #3b5998 !default;
+$ztsh-twitter-color:                            #1da1f2 !default;
+$ztsh-google-color:                             #db3236 !default;
+$ztsh-youtube-color:                            #c4302b !default;
+$ztsh-linkedin-color:                           #0077b5 !default;
+$ztsh-behance-color:                            #053eff !default;
+$ztsh-dribble-color:                            #ea4c89 !default;
+$ztsh-pinterest-color:                          #c8232c !default;
+$ztsh-vimeo-color:                              #19b7ea !default;
+$ztsh-rss-color:                                #ee802f !default;
+
+
+// Components
+//
+// Define common padding and border radius sizes etc for various components. All the components use values from these variables to calculate the values.
+//
+//| Variable  | Options  |
+//|-----------|:--------:|
+//|$ztsh-line-height-lg  | 'lg' Line height for text used in components such as buttons |
+//|$ztsh-line-height-sm  | 'sm' Line height for text used in components such as buttons |
+//|$ztsh-border-width  | Border width used in components |
+//|$ztsh-border-color  | Border color used in components |
+//|$ztsh-border-radius | Border radius used in components |
+//|$ztsh-border-radius-lg | 'lg' Border radius used in components |
+//|$ztsh-border-radius-sm | 'sm' Border radius used in components |
+//|$ztsh-box-shadow-sm | 'sm' Box Shadow used in components |
+//|$ztsh-box-shadow  | Box Shadow used in components |
+//|$ztsh-box-shadow-lg | 'lg' Box Shadow used in components |
+//|$ztsh-component-active-color	| Active color used for components |
+//|$ztsh-component-active-bg | Active background color used for components |
+//|$ztsh-caret-width | Caret width used for components |
+//|$ztsh-transition-base | base transition properties for components |
+//|$ztsh-transition-fade | fade transition properties for components |
+//|$ztsh-transition-collapse | collapse transition properties for components |
+//
+// Styleguide Theme.Components
+
+$ztsh-line-height-lg:                           1.5 !default;
+$ztsh-line-height-sm:                           1.5 !default;
+
+$ztsh-border-width:                             1px !default;
+$ztsh-border-color:                             $ztsh-gray-300 !default;
+
+$ztsh-border-radius:                            .25rem !default;
+$ztsh-border-radius-lg:                         .3rem !default;
+$ztsh-border-radius-sm:                         .2rem !default;
+
+$ztsh-box-shadow-sm:                            0 .125rem .25rem rgba($ztsh-black, .075) !default;
+$ztsh-box-shadow:                               0 .5rem 1rem rgba($ztsh-black, .15) !default;
+$ztsh-box-shadow-lg:                            0 1rem 3rem rgba($ztsh-black, .175) !default;
+
+$ztsh-component-active-color:                   $ztsh-white !default;
+$ztsh-component-active-bg:                      $ztsh-primary-color !default;
+
+$ztsh-caret-width:                              .3em !default;
+
+$ztsh-transition-base:                          all .2s ease-in-out !default;
+$ztsh-transition-fade:                          opacity .15s linear !default;
+$ztsh-transition-collapse:                      height .35s ease !default;
+
+
+// Font Variables
+//
+// Variables for font sizes use throught the theme. We use rem values for the fonts. By Overriding these variables various fonr sizes can be set through the theme. Can directly use rem, px, em values in these variables.
+//
+//| Variable  | Options |
+//|-----------|:-------:|
+//| $ztsh-font-size-base |	default font size applied to `<body>` rem value only |
+//| $ztsh-font-family-sans-serif  | The default Sans Serif font family |
+//| $ztsh-font-weight-light | Font weight for light font |
+//| $ztsh-font-weight-normal | Font weight for regular font |
+//| $ztsh-font-weight-bold | Font weight for bold font |
+//| $ztsh-line-height-base | Base line height for all fonts |
+//| $ztsh-h1-font-size | default font size applied to `<h1>` rem value only |
+//| $ztsh-h2-font-size | default font size applied to `<h2>` rem value only |
+//| $ztsh-h3-font-size | default font size applied to `<h3>` rem value only |
+//| $ztsh-h4-font-size | default font size applied to `<h4>` rem value only |
+//| $ztsh-h5-font-size | default font size applied to `<h5>` rem value only |
+//| $ztsh-h6-font-size | default font size applied to `<h6>` rem value only |
+//|$ztsh-headings-margin-bottom | Bottom margin given to each heading rem values |
+//|$ztsh-headings-font-family | Font family assigned to headings |
+//|$ztsh-headings-font-weight | Font Weight assigned to headings |
+//|$ztsh-headings-line-height | Line height assigned to headings |
+//|$ztsh-headings-color | Color assigned to headings |
+//|$ztsh-display1-size:	| display1 Font Size |
+//|$ztsh-display2-size: | display2 Font Size |
+//|$ztsh-display3-size: | display3 Font Size |
+//|$ztsh-display4-size: | display4 Font Size |
+//|$ztsh-display1-weight: | display1 Font Weight |
+//|$ztsh-display2-weight: | display2 Font Weight |
+//|$ztsh-display3-weight: | display3 Font Weight |
+//|$ztsh-display4-weight: |	display4 Font Weight |
+//|$ztsh-paragraph-margin-bottom | Margin below the <p> tag |
+//|$ztsh-link-color |  Assign a color for links	|
+//|$ztsh-link-decoration | Default link decoration |
+//|$ztsh-link-hover-color | Link Hover Color |
+//|$ztsh-link-hover-decoration | Link Hover Decoration |
+//
+// Styleguide Theme.Fonts
+$ztsh-font-size-base:                           .9rem !default;
+$ztsh-font-size-lg:                             $ztsh-font-size-base * 1.25 !default;
+$ztsh-font-size-sm:                             $ztsh-font-size-base * .875 !default;
+
+// The default Sans Serif font family
+$ztsh-font-family-sans-serif:                   'Poppins', Arial, Helvetica, sans-serif !default;
+$ztsh-font-family-monospace:                    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$ztsh-font-family-base:                         $ztsh-font-family-sans-serif !default;
+
+// cd
+$ztsh-font-weight-light:                        300 !default;
+$ztsh-font-weight-normal:                       400 !default;
+$ztsh-font-weight-bold:                         700 !default;
+$ztsh-line-height-base:                         1.5 !default;
+
+$ztsh-font-weight-base:                         $ztsh-font-weight-normal !default;
+$ztsh-line-height-base:                         1.5 !default;
+
+$ztsh-h1-font-size:                             $ztsh-font-size-base * 2.5 !default;
+$ztsh-h2-font-size:                             $ztsh-font-size-base * 2 !default;
+$ztsh-h3-font-size:                             $ztsh-font-size-base * 1.75 !default;
+$ztsh-h4-font-size:                             $ztsh-font-size-base * 1.5 !default;
+$ztsh-h5-font-size:                             $ztsh-font-size-base * 1.25 !default;
+$ztsh-h6-font-size:                             $ztsh-font-size-base * 1.1 !default;
+$ztsh-headings-margin-bottom:                   .5rem !default;
+$ztsh-headings-font-family:                     inherit !default;
+$ztsh-headings-font-weight:                     400 !default;
+$ztsh-headings-line-height:                     1.2 !default;
+$ztsh-headings-color:                           inherit !default;
+
+$ztsh-display1-size:                            6rem !default;
+$ztsh-display2-size:                            5.5rem !default;
+$ztsh-display3-size:                            4.5rem !default;
+$ztsh-display4-size:                            3.5rem !default;
+
+$ztsh-display1-weight:                          300 !default;
+$ztsh-display2-weight:                          300 !default;
+$ztsh-display3-weight:                          300 !default;
+$ztsh-display4-weight:                          300 !default;
+
+$ztsh-paragraph-margin-bottom:                  2rem !default;
+
+$ztsh-link-color:                               $ztsh-primary-color !default;
+$ztsh-link-decoration:                          none !default;
+$ztsh-link-hover-color:                         darken($ztsh-link-color, 15%) !default;
+$ztsh-link-hover-decoration:                    underline !default;
+
+$ztsh-text-muted:                               $ztsh-gray-600 !default;
+
+
+// Button + Forms Common Variables
+//
+// These are the varibales which have been commonly used to modify the look of the buttons as well as the input fields to bring about consistency in the look and feel of the forms.Shared variables that are reassigned to `$input-` and `$btn-` specific variables. Follows the same pattern as Bootstrap
+//
+// ### Button+Input Fields Variables And Their Options
+//
+//| Variable                    | Options  		         			|
+//|-----------------------------|:---------------------------------:|
+// | $ztsh-input-btn-radius | Border Radius for buttons and input fields  |
+// | $ztsh-input-btn-padding-y | Y-axis padding for buttons and input fields  |
+// | $ztsh-input-btn-padding-x | X-axis padding for buttons and input fields |
+// | $ztsh-input-btn-font-family | Font Family for buttons and input fields  |
+// | $ztsh-input-btn-line-height | Font Size for buttons and input fields  |
+// | $ztsh-input-btn-focus-width | Focus border width for buttons and input fields  |
+// | $ztsh-input-btn-focus-color | Focus border color for buttons and input fields |
+// | $ztsh-input-btn-focus-box-shadow | Box shadow properties on focus for buttons and input fields  |
+// | $ztsh-input-btn-padding-y-sm |Y-axis padding for `sm` buttons and input fields |
+// | $ztsh-input-btn-padding-x-sm |X-axis padding for `sm` buttons and input fields  |
+// | $ztsh-input-btn-font-size-sm | Font Size for `sm` buttons and input fields  |
+// | $ztsh-input-btn-line-height-sm | Line height for `sm` buttons and input fields |
+// | $ztsh-input-btn-padding-y-lg | Y-axis padding for `lg` buttons and input fields |
+// | $ztsh-input-btn-padding-x-lg | X-axis padding for `lg` buttons and input fields |
+// | $ztsh-input-btn-font-size-lg | Font size for `lg` buttons and input fields |
+// | $ztsh-input-btn-line-height-lg | Line heioght for `lg` buttons and input fields |
+// | $ztsh-input-btn-gradient-direction | Gradient direction  |
+// | $ztsh-input-btn-border-width | Border width  |
+//
+// Styleguide Shortcodes.Buttons And Forms Common Variables
+
+$ztsh-input-btn-radius:                         .2rem !default;
+$ztsh-input-btn-padding-y:                      .375rem !default;
+$ztsh-input-btn-padding-x:                      .75rem !default;
+$ztsh-input-btn-font-family:                    null !default;
+$ztsh-input-btn-font-size:                      $ztsh-font-size-base !default;
+$ztsh-input-btn-line-height:                    $ztsh-line-height-base !default;
+$ztsh-input-btn-focus-width:                    .2rem !default;
+$ztsh-input-btn-focus-color:                    rgba($ztsh-component-active-bg, .25) !default;
+$ztsh-input-btn-focus-box-shadow:               0 0 0 $ztsh-input-btn-focus-width $ztsh-input-btn-focus-color !default;
+
+$ztsh-input-btn-padding-y-sm:                   .25rem !default;
+$ztsh-input-btn-padding-x-sm:                   .5rem !default;
+$ztsh-input-btn-font-size-sm:                   $ztsh-font-size-sm !default;
+$ztsh-input-btn-line-height-sm:                 $ztsh-line-height-sm !default;
+
+$ztsh-input-btn-padding-y-lg:                   .5rem !default;
+$ztsh-input-btn-padding-x-lg:                   1rem !default;
+$ztsh-input-btn-font-size-lg:                   $ztsh-font-size-lg !default;
+$ztsh-input-btn-line-height-lg:                 $ztsh-line-height-lg !default;
+
+$ztsh-input-btn-gradient-direction:             0deg !default;
+$ztsh-input-btn-border-width:                   $ztsh-border-width !default;
+
+// Buttons Variables
+//
+// For each of buttons, define text, background, and border color.
+//
+//| Variable | Options |
+//|----------|:-------:|
+// | $ztsh-btn-padding-y | Y-axis padding for buttons |
+// | $ztsh-btn-padding-x | X-axis padding for buttons |
+// | $ztsh-btn-font-family | FOnt fmaily for buttons |
+// | $ztsh-btn-font-size | Font size for buttons |
+// | $ztsh-btn-line-height | Line height for buttons  |
+// | $ztsh-btn-padding-y-sm | Y-axis padding for `sm` buttons  |
+// | $ztsh-btn-padding-x-sm | x-axis padding for `sm` buttons |
+// | $ztsh-btn-font-size-sm | Font Size for `sm` buttons |
+// | $ztsh-btn-line-height-sm | Line Height for `sm` buttons  |
+// | $ztsh-btn-padding-y-lg | Y-axis padding for `lg` buttons  |
+// | $ztsh-btn-padding-x-lg | X-axis padding for `lg` buttons |
+// | $ztsh-btn-font-size-lg | Font size for `lg` buttons |
+// | $ztsh-btn-line-height-lg | Line height for `lg` buttons  |
+// | $ztsh-btn-border-width | Border width for buttons |
+// | $ztsh-btn-font-weight | Font weight for buttons |
+// | $ztsh-btn-box-shadow | Box shadow for buttons |
+// | $ztsh-btn-focus-width | Focus border width for buttons |
+// | $ztsh-btn-focus-box-shadow | Box shadow for buttons  |
+// | $ztsh-btn-disabled-opacity | Disbaled opacity for buttons  |
+// | $ztsh-btn-active-box-shadow |  Active state shadow properties for buttons |
+// | $ztsh-btn-link-disabled-color | Link Disabled color for buttons |
+// | $ztsh-btn-block-spacing-y | Y-axis spacing for `block` buttons  |
+// | $ztsh-btn-border-radius | Border radius for buttons  |
+// | $ztsh-btn-border-radius-lg | Bordeer radius for `lg` buttons |
+// | $ztsh-btn-border-radius-sm | Border radius for `sm` buttons  |
+// | $ztsh-btn-transition | Transition properties for buttons |
+// | $ztsh-btn-shadow | Shodow properties for buttons  |
+//
+// Styleguide Theme.Buttons
+
+$ztsh-btn-padding-y:                            $ztsh-input-btn-padding-y !default;
+$ztsh-btn-padding-x:                            $ztsh-input-btn-padding-x !default;
+$ztsh-btn-font-family:                          $ztsh-input-btn-font-family !default;
+$ztsh-btn-font-size:                            $ztsh-input-btn-font-size !default;
+$ztsh-btn-line-height:                          $ztsh-input-btn-line-height !default;
+
+$ztsh-btn-padding-y-sm:                         $ztsh-input-btn-padding-y-sm !default;
+$ztsh-btn-padding-x-sm:                         $ztsh-input-btn-padding-x-sm !default;
+$ztsh-btn-font-size-sm:                         $ztsh-input-btn-font-size-sm !default;
+$ztsh-btn-line-height-sm:                       $ztsh-input-btn-line-height-sm !default;
+
+$ztsh-btn-padding-y-lg:                         $ztsh-input-btn-padding-y-lg !default;
+$ztsh-btn-padding-x-lg:                         $ztsh-input-btn-padding-x-lg !default;
+$ztsh-btn-font-size-lg:                         $ztsh-input-btn-font-size-lg !default;
+$ztsh-btn-line-height-lg:                       $ztsh-input-btn-line-height-lg !default;
+
+$ztsh-btn-border-width:                         $ztsh-input-btn-border-width !default;
+
+$ztsh-btn-font-weight:                          $ztsh-font-weight-normal !default;
+$ztsh-btn-box-shadow:                           inset 0 1px 0 rgba($ztsh-white, .15), 0 1px 1px rgba($ztsh-black, .075) !default;
+$ztsh-btn-focus-width:                          $ztsh-input-btn-focus-width !default;
+$ztsh-btn-focus-box-shadow:                     $ztsh-input-btn-focus-box-shadow !default;
+$ztsh-btn-disabled-opacity:                     .65 !default;
+$ztsh-btn-active-box-shadow:                    inset 0 3px 5px rgba($ztsh-black, .125) !default;
+
+$ztsh-btn-link-disabled-color:                  $ztsh-gray-600 !default;
+
+$ztsh-btn-block-spacing-y:                      .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$ztsh-btn-border-radius:                        $ztsh-border-radius !default;
+$ztsh-btn-border-radius-lg:                     $ztsh-border-radius-lg !default;
+$ztsh-btn-border-radius-sm:                     $ztsh-border-radius-sm !default;
+
+$ztsh-btn-transition:                           color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$ztsh-btn-shadow:                               (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 6px,
+														shadowSpread: 0px,
+														shadowColor: rgba(0, 0, 0, 0.6)
+												) !default;
+
+
+// Form Variables
+//
+// Variables used for modifying the look of the form input fields in forms.
+//
+//
+//| Variable | Options |
+//|----------|:-------:|
+// | $ztsh-label-font-size | Form label font size   |
+// | $ztsh-label-line-height | Form label line height  |
+// | $ztsh-label-font-weight | Form label font weight   |
+// | $ztsh-label-font-color | Form label font color  |
+// | $ztsh-input-checkbox-size | Form Checbox input size |
+// | $ztsh-form-group-margin-bottom | Form group bottom margin |
+// | $ztsh-input-bg | Input field backgrodun color by default  |
+// | $ztsh-input-disabled-bg | Input field background color in disabled state |
+// | $ztsh-input-color | Input field font color  |
+// | $ztsh-input-border-color | Input field border color  |
+// | $ztsh-input-border-width | Input field border width  |
+// | $ztsh-input-box-shadow | Input field box shadow |
+// | $ztsh-input-border-radius | Input field border radius  |
+// | $ztsh-input-border-radius-lg | Input field border radies of `lg` |
+// | $ztsh-input-border-radius-sm | Input field border radius for `sm` |
+// | $ztsh-input-focus-bg | Input field focus background color |
+// | $ztsh-input-focus-border-color | Input field focus border color |
+// | $ztsh-input-focus-color | Input field focus font color |
+// | $ztsh-input-focus-width | Input field focus border width |
+// | $ztsh-input-focus-box-shadow | Input field focus box shadow  |
+// | $ztsh-input-placeholder-color | Input field placeholder font color  |
+// | $ztsh-input-plaintext-color |  Input field plaintext color |
+// | $ztsh-input-transition | Input field placeholder transition properties |
+// | $ztsh-label-margin-bottom | Input field placeholder bottom margin  |
+// | $ztsh-input-padding-y | Y-axis padding for input fields  |
+// | $ztsh-input-padding-x | X-axis padding for input fields  |
+// | $ztsh-input-font-family | Input field font family  |
+// | $ztsh-input-font-size | Input field font size  |
+// | $ztsh-input-font-weight | Input field font weight  |
+// | $ztsh-input-line-height | Input field line height |
+// | $ztsh-input-padding-y-sm | Y-axis padding for `sm` input fields  |
+// | $ztsh-input-padding-x-sm | X-axis padding for `sm` input fields |
+// | $ztsh-input-font-size-sm | Font size for `sm` input fields |
+// | $ztsh-input-line-height-sm | Line height for `sm` input fields |
+// | $ztsh-input-padding-y-lg | Y-axis padding for `lg` input fields   |
+// | $ztsh-input-padding-x-lg | X-axis padding for `lg` input fields   |
+// | $ztsh-input-font-size-lg | Font size for `lg` input fields     |
+// | $ztsh-input-line-height-lg | Line height for `lg` input fields    |
+//
+// Styleguide Theme.Form Fields
+
+// Styling Variables
+
+$ztsh-label-font-size:                          1rem !default;
+$ztsh-label-line-height:                        $ztsh-label-font-size !default;
+$ztsh-label-font-weight:                        500 !default;
+$ztsh-label-font-color:                         inherit !default;
+
+// Checkbox Variables
+$ztsh-input-checkbox-size:                      1.25rem; // accepts only units in rem
+
+$ztsh-form-group-margin-bottom:                 1.5rem !default;
+$ztsh-input-bg:                                 $ztsh-white !default;
+$ztsh-input-disabled-bg:                        $ztsh-gray-200 !default;
+$ztsh-input-color:                              $ztsh-gray-700 !default;
+$ztsh-input-border-color:                       $ztsh-gray-400 !default;
+
+$ztsh-input-border-width:                       $ztsh-input-btn-border-width !default;
+$ztsh-input-box-shadow:                         inset 0 1px 1px rgba($ztsh-black, .075) !default;
+$ztsh-input-border-radius:                      $ztsh-border-radius !default;
+$ztsh-input-border-radius-lg:                   $ztsh-border-radius-lg !default;
+$ztsh-input-border-radius-sm:                   $ztsh-border-radius-sm !default;
+
+$ztsh-input-focus-bg:                           $ztsh-input-bg !default;
+$ztsh-input-focus-border-color:                 lighten($ztsh-component-active-bg, 25%) !default;
+$ztsh-input-focus-color:                        $ztsh-input-color !default;
+$ztsh-input-focus-width:                        $ztsh-input-btn-focus-width !default;
+$ztsh-input-focus-box-shadow:                   $ztsh-input-btn-focus-box-shadow !default;
+
+$ztsh-input-placeholder-color:                  $ztsh-gray-600 !default;
+$ztsh-input-plaintext-color:                    $ztsh-body-color !default;
+$ztsh-input-transition:                         border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// Sizing variables For Forms - Edit only if necessary impacts the sizes of input fields
+$ztsh-label-margin-bottom:                      .5rem !default;
+$ztsh-input-padding-y:                          $ztsh-input-btn-padding-y !default;
+$ztsh-input-padding-x:                          $ztsh-input-btn-padding-x !default;
+$ztsh-input-font-family:                        $ztsh-input-btn-font-family !default;
+$ztsh-input-font-size:                          $ztsh-input-btn-font-size !default;
+$ztsh-input-font-weight:                        $ztsh-font-weight-base !default;
+$ztsh-input-line-height:                        $ztsh-input-btn-line-height !default;
+$ztsh-input-padding-y-sm:                       $ztsh-input-btn-padding-y-sm !default;
+$ztsh-input-padding-x-sm:                       $ztsh-input-btn-padding-x-sm !default;
+$ztsh-input-font-size-sm:                       $ztsh-input-btn-font-size-sm !default;
+$ztsh-input-line-height-sm:                     $ztsh-input-btn-line-height-sm !default;
+$ztsh-input-padding-y-lg:                       $ztsh-input-btn-padding-y-lg !default;
+$ztsh-input-padding-x-lg:                       $ztsh-input-btn-padding-x-lg !default;
+$ztsh-input-font-size-lg:                       $ztsh-input-btn-font-size-lg !default;
+$ztsh-input-line-height-lg:                     $ztsh-input-btn-line-height-lg !default;
+
+
+// =============================>
+// Navigation Menu Variables
+// <============================
+
+// Navigation Variables
+//
+// Variables impacting the Header Navigation for the theme.
+//
+// | Variable | Options |
+// |----------|:-------:|
+// |$ztsh-menu-height | Sets the height of the header default `60px` |
+// |$ztsh-menu-logo-width | Sets the width of the header default `200px` `flex-start` `flex-end` `center`|
+// $ztsh-menu-logo-align | Set the alignment for the logo in the header |
+// |$ztsh-menu-align-items | Align menu items `flex-start` `flex-end` `center` |
+// |$ztsh-padding-menu-items | Sets the padding between the primary menu items |
+// |$ztsh-menu-background | Map for mixin setting the background for Primary Menu |
+// |$ztsh-primary-menu-shadow | Map for mixin to create a shadow for Primary Menu |
+// |$ztsh-primary-menu-border-map | Map for mixin to assign a Border to Primary Menu |
+// |$ztsh-menu-extras-font-size | Font size for extras in primary menu |
+// |$ztsh-menu-extras-font-color | Font color for extras in primary menu |
+// |$ztsh-menu-extras-font-hover-color| Font hover color for extras in primary menu |
+// |$ztsh-menu-font-size | Font size for parent menu items |
+// |$ztsh-menu-font-color | Font color of the menu items |
+// |$ztsh-menu-font-family | Font family for menu items default `Arial, Helvetica, sans-serif` |
+// |$ztsh-menu-font-weight | Font weight for the menu items |
+// |$ztsh-menu-text-transform | Text Tranform for menu items 'uppercase' 'lowercase' 'capitalize' 'none' |
+// |$ztsh-menu-font-line-height | Default line height for menu items |
+// |$ztsh-menu-items-side-border | Whether to enable the border for primary menu items 'true' 'false' |
+// |$ztsh-menu-display-caret | Display caret for the dropdown menu 'true' 'false' |
+// |$ztsh-menu-extras-display-search | Enables the search icon on the primiary menu 'true' 'false' |
+// |ztsh-menu-extras-border | Enables the border for extras items in the primary menu bar |
+// |$ztsh-menu-extras-border-width | Border width for the extras section of the primary menu bar |
+// |$ztsh-menu-extras-boder-color  | Border color for the extras section of the primary menu |
+// |$ztsh-hover-effect | Map for the mixin to add hover effects to the primary items in menu |
+// |$ztsh-cart-number-font-color | Font Color for the Cart Number |
+// | $ztsh-menu-extras-font-size | Header extras font size  |
+// | $ztsh-menu-extras-font-color | Header extras font color |
+// | $ztsh-menu-extras-font-hover-color | Header extras font hover color |
+// | $ztsh-menu-split-menu | Set to `true` if the split menu is enabled else set to `false` |
+//
+//
+// Styleguide Theme.Navigation
+
+// $ztsh-menu-height - Sets the height of the header
+$ztsh-menu-height:                              60px !default;
+// $ztsh-menu-logo-width - Set the width of the logo in the navbar
+$ztsh-menu-logo-width:                          200px !default;
+// $ztsh-menu-logo-align - Set the alignment for the logo in the header
+$ztsh-menu-logo-align:                          flex-start !default;
+// $ztsh-menu-align-items - Align menu items 'flex-start' 'flex-end' 'center'
+$ztsh-menu-align-items:                         flex-end !default;
+// $ztsh-padding-menu-items - Sets the padding between the primary menu items
+$ztsh-padding-menu-items:                       10px !default;
+
+// $ztsh-menu-background - All settings for the dropdown menu background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-menu-background:                          (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 1),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $ztsh-primary-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-primary-menu-shadow:                      (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 1px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+// $ztsh-primary-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-primary-menu-border-map:                  (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+// Font size for parent menu items
+$ztsh-menu-font-size:                           .85rem !default;
+$ztsh-menu-font-color:                          $ztsh-gray-700 !default;
+$ztsh-menu-font-color-hover:                    $ztsh-primary-color !default;
+
+// Font family for menu items
+$ztsh-menu-font-family:                         'Poppins', Arial, Helvetica, sans-serif !default;
+// Font weight for the menu items
+$ztsh-menu-font-weight:                         400 !default;
+// Text Tranform properties for menu items 'uppercase' 'lowercase' 'capitalize' 'none'
+$ztsh-menu-text-transform:                      capitalize !default;
+// Default line height for menu items
+$ztsh-menu-font-line-height:                    1.4 !default;
+// Display caret for the dropdown menu 'true' 'false'
+$ztsh-menu-display-caret:                       true !default;
+// Whether to the enable the border for primary menu items or not. 'true' 'false'
+$ztsh-menu-items-side-border:                   false !default;
+// Thickness of the border on the sides of the items
+$ztsh-menu-items-side-border-thickness:         1px !default;
+// color of the border for the menu items
+$ztsh-menu-items-side-border-color:             #bbbbbb !default;
+// Border Around Extras In The Navigation Bar
+$ztsh-menu-extras-border:                       false !default;
+// Border width for the extras section of the primary menu bar
+$ztsh-menu-extras-border-width:                 1px !default;
+// Border color for the extras section of the primary menu
+$ztsh-menu-extras-boder-color:                  #666666 !default;
+// Font Color for the Cart Number
+$ztsh-cart-number-font-color:                   #ffffff !default;
+$ztsh-menu-extras-font-size:                    $ztsh-menu-font-size !default;
+$ztsh-menu-extras-font-color:                   $ztsh-menu-font-color !default;
+$ztsh-menu-extras-font-hover-color:             $ztsh-menu-font-color-hover !default;
+$ztsh-menu-split-menu:                          false !default;
+$ztsh-menu-split1-align:                        flex-start !default;
+$ztsh-menu-split2-align:                        flex-end !default;
+
+// $ztsh-hover-effect
+// map{} - Type of Over Effects Can Use the following values
+// @key hoverType - Type of hover effect for primary menu items range from 1-4
+// @key paddingTop -  padding from top for hover effect
+// @key paddingBottom - padding from bottom for the hover effect
+// @key paddingRight - padding from right for the hover effect
+// @key padingleft - padding from left for the hover effect
+// @key hoverThickness - thickness of the hover item, value in px
+// @key hoverColorType - Background color type for the hover effect, possible values: color, gradient
+// @key animationType - type of animation possible values topToBottom, bottomToTop, rightToLeft, leftToRight
+// @key animationDistance - Distance of the animation
+// @key animationDuration - Duration of the animation in seconds like: 0.3s
+// @key animationDelay - The Delay In Transition
+// @key col1 - Color 1 For the Hover Effect
+// @key col2 - Color 2 for the Hover effect
+$ztsh-hover-effect:                             (
+														hoverType: 3,
+														paddingBottom: 8px,
+														hoverThickness: 2px,
+														hoverColorType: color,
+														animationType: bottomToTop,
+														animationDistance: 10px,
+														animationDuration: 0.3s,
+														animationDelay: 0s,
+														col1: $ztsh-primary-color,
+														col2: yellow
+												) !default;
+
+
+// =============================>
+// Dropdown Menu Variables
+// <============================
+
+// Dropdown Menu Variables
+//
+// Variables impacting the dropdown menu
+//
+// | Variable  | Options |
+// |----------|-------|
+// | $ztsh-dropdown-menu-width  |Width of the dropdown menu	|
+// | $ztsh-dropdown-menu-background-color  | Background color for dropdown menu |
+// | $ztsh-dropdown-menu-item-top-bottom-padding  | Top and bottom padding for items in the dropdown menu |
+// | $ztsh-dropdown-menu-item-left-right-padding  | Left and right padding for menu items |
+// | $ztsh-dropdown-menu-text-align  | Text align for dropdown menu items 'left' 'right' 'center' |
+// | $ztsh-dropdown-menu-item-separators  | Map for mixin to enable separators |
+// | $ztsh-dropdown-menu-shadow-map  | Map for shadow to be applied on the dropdown menu |
+// | $ztsh-dropdown-menu-animation  | Map for assigning animation to teh dropdown menu |
+// | $ztsh-dropdown-menu-font-color | The color of the font for the dropdown menu |
+// | $ztsh-dropdown-menu-font-hover-color |  Hover color for the font in the dropdown menu |
+// | $ztsh-dropdown-menu-font-animate | Set `true` if you need the dropdown items to animate on hover else set it to `false` |
+// | $ztsh-dropdown-menu-background-hover-color | Background color on hover for items in dropdown |
+// | $ztsh-dropdown-menu-border-map | Map to input various parameters of assigning a border to the dropdown menu |
+//
+// Styleguide Theme.Dropdown Menu
+
+$ztsh-dropdown-menu-width:                      250px !default;
+$ztsh-dropdown-menu-background-color:           $ztsh-white !default;
+$ztsh-dropdown-menu-font-size:                  $ztsh-menu-font-size * .95;
+$ztsh-dropdown-menu-font-weight:                $ztsh-menu-font-weight;
+$ztsh-dropdown-menu-font-color:                 $ztsh-gray-600 !default;
+$ztsh-dropdown-menu-font-hover-color:           $ztsh-primary-color !default;
+$ztsh-dropdown-menu-font-animate:               true !default;
+$ztsh-dropdown-menu-background-hover-color:     $ztsh-gray-100 !default;
+$ztsh-dropdown-menu-item-top-bottom-padding:    10px !default;
+$ztsh-dropdown-menu-item-left-right-padding:    15px !default;
+$ztsh-dropdown-menu-text-align:                 left !default;
+$ztsh-dropdown-menu-item-separators:            (
+														separatorsOn: true,
+														separatorColor: $ztsh-gray-100,
+														separatorThickness: 1px
+												) !default;
+
+// $ztsh-dropdown-menu-shadow-map
+// Map for shadow to be applied on the dropdown menu
+// @key shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// @key hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// @key vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// @key blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// @key shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// @key shadowColor: The color of the shadow
+$ztsh-dropdown-menu-shadow-map:                 (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 16px,
+														blurRadius: 15px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.15)
+												) !default;
+
+
+// $ztsh-dropdown-menu-animation - {map} For assigning animation to the dropdown menu
+// @key animationType - Type of animation needed for the dropdown menu
+////=> Available options: **none still applies default transitions
+////=> none, fadeIn, fadeInDown, fadeInLeft, fadeInRight, fadeInUp, slideInDown, slideInUp, zoomIn
+// @key duration - Duration for the animation can be set in 's' or 'ms'
+// @key delay - The delay in animation upon mouse over can be set in 's' or 'ms'
+// @key function - Transition timing function for dropdown menu animation. Can use any functions from https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp
+$ztsh-dropdown-menu-animation:                  (
+														animationType: fadeInUp,
+														duration: .5s,
+														delay: 0s,
+														function: ease,
+												) !default;
+
+// $ztsh-dropdown-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+// @key borderRadius - Border radius to be applied to the border
+$ztsh-dropdown-menu-border-map:                 (
+														borderTop: true,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 3px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// =============================>
+// Mega Menu Variables
+// <============================
+
+// Mega Menu Variables
+//
+// Variables impacting the Mega Menu
+//
+// | Variable  | Options |
+// |----------|-------|
+// | $ztsh-mega-menu-separators |  Set this to True if you need dividers between Mega Menu Sections and set the rest of the properties of the map accordingly |
+// | $ztsh-mega-menu-vertical-padding | Vertical padding For Mega Menu Wrapper |
+$ztsh-mega-menu-separators:                     (
+														separatorsOn: true,
+														separatorColor: $ztsh-gray-100,
+														separatorThickness: 1px
+												) !default;
+$ztsh-mega-menu-vertical-padding:               15px !default;
+$ztsh-mega-menu-titlee-font-weight:             600 !default;
+
+
+// =============================>
+// Sticky Navbar Variables
+// <============================
+
+// Sticky Navbar Variables
+//
+// Variables impacting the Sticky Navbar Theme
+//
+// | Variable | Options |
+// |----------|:-------:|
+// | $ztsh-sticky-menu-font-color | The font color for Sticky Navbar |
+// | $ztsh-sticky-menu-font-color-hover | Hover font color for Sticky Navbar  |
+// | $ztsh-sticky-menu-height | Height of the Sticky Navbar |
+// | $ztsh-sticky-menu-logo-width | Width of the logo for sticky Navbar |
+// | $ztsh-sticky-menu-background |  Sticky Navbar background Map |
+// | $ztsh-sticky-menu-shadow | Shadow properties for Sticky Navbar |
+// | $ztsh-sticky-menu-font-size | The size of the font for the Sticky Navbar |
+// | $ztsh-sticky-menu-font-family | Font fmaily for Sticky Navbar |
+//
+// Styleguide Theme.Sticky Navbar
+$ztsh-sticky-menu-font-color:                   $ztsh-gray-700 !default;
+$ztsh-sticky-menu-font-color-hover:             $ztsh-primary-color !default;
+$ztsh-sticky-menu-height:                       60px !default;
+$ztsh-sticky-menu-logo-width:                   200px !default;
+$ztsh-sticky-menu-font-size:                    .9rem !default;
+$ztsh-sticky-menu-font-family:                  'Poppins', Arial, Helvetica, sans-serif !default;
+$ztsh-sticky-menu-extras-font-size:             1rem !default;
+$ztsh-sticky-menu-extras-font-color:            $ztsh-sticky-menu-font-color !default;
+$ztsh-sticky-menu-extras-font-hover-color:      $ztsh-sticky-menu-font-color-hover !default;
+
+//$ztsh-sticky-menu-background - All settings for the Sticky Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-sticky-menu-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 1),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $ztsh-sticky-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-sticky-menu-shadow:                       (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+
+
+// $ztsh-sticky-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-sticky-menu-border-map:                   (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 3px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// =============================>
+// Transparent Navbar Variables
+// <============================
+
+// Transparent Navbar Variables
+//
+// Variables impacting the Transparent Navbar Theme
+//
+// | Variable | Options |
+// |----------|:-------:|
+// | $ztsh-transparent-menu-font-color | The font color for Sticky Navbar |
+// | $ztsh-transparent-menu-font-color-hover | Hover font color for Sticky Navbar  |
+// | $ztsh-transparent-menu-height | Height of the Sticky Navbar |
+// | $ztsh-transparent-menu-logo-width | Width of the logo for sticky Navbar |
+// | $ztsh-transparent-menu-background |  Sticky Navbar background Map |
+// | $ztsh-transparent-menu-shadow | Shadow properties for Sticky Navbar |
+// | $ztsh-transparent-menu-font-size | The size of the font for the Sticky Navbar |
+// | $ztsh-transparent-menu-font-family | Font fmaily for Sticky Navbar |
+//
+// Styleguide Theme.Transparent Navbar
+$ztsh-transparent-menu-font-color:              $ztsh-gray-200 !default;
+$ztsh-transparent-menu-font-color-hover:        $ztsh-white !default;
+$ztsh-transparent-menu-height:                  60px !default;
+$ztsh-transparent-menu-logo-width:              200px !default;
+$ztsh-transparent-menu-extras-font-color:       $ztsh-transparent-menu-font-color !default;
+$ztsh-transparent-menu-extras-font-hover-color: $ztsh-transparent-menu-font-color-hover !default;
+
+//$ztsh-transparent-menu-background - All settings for the transparent Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-transparent-menu-background:              (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 0),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $ztsh-transparent-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-transparent-menu-shadow:                  (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+
+
+// =============================>
+// Top Bar Variables
+// <============================
+
+// Top Bar Variables
+//
+// Variables impacting the Top Bar
+//
+// | Variable  |Options|
+// |----------|-------|
+// |$ztsh-topbar-item-padding | left and right padding for the elements in the topbar|
+// |$ztsh-topbar-font-color | Font color|
+// |$ztsh-topbar-font-color-hover | Mouse over font color|
+// |$ztsh-topbar-height | Total height Of The Topbar|
+// |$ztsh-topbar-hover-transition-duration | Transition Duration On Mouseover|
+// |$ztsh-topbar-font-size | Font size for Topbar|
+// |$ztsh-topbar-font-family | Font family for Topbar|
+// |$ztsh-topbar-font-weight | Font weight for the Topbar|
+// |$ztsh-topbar-text-transform | Text Tranform properties for menu items 'uppercase' 'lowercase' 'capitalize' 'none'|
+// |$ztsh-topbar-font-line-height | Default line height for Topbar|
+// |$ztsh-topbar-background | All settings for the topbar background |
+// |$ztsh-topbar-border-map | Map for styling the borders of the topbar |
+//
+// Styleguide Theme.Topbar
+$ztsh-topbar-item-padding:                      0px 10px !default;
+$ztsh-topbar-font-color:                        $ztsh-gray-700 !default;
+$ztsh-topbar-font-color-hover:                  $ztsh-primary-color !default;
+$ztsh-topbar-height:                            35px !default;
+$ztsh-topbar-hover-transition-duration:         1s !default;
+
+// Font size for Topbar
+$ztsh-topbar-font-size:                         .8rem !default;
+// Font family for Topbar
+$ztsh-topbar-font-family:                       Arial, Helvetica, sans-serif !default;
+// Font weight for the Topbar
+$ztsh-topbar-font-weight:                       400 !default;
+// Text Tranform properties for menu items 'uppercase' 'lowercase' 'capitalize' 'none'
+$ztsh-topbar-text-transform:                    none !default;
+// Default line height for Topbar
+$ztsh-topbar-font-line-height:                  1.4 !default;
+
+// $ztsh-topbar-background - All settings for the topbar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-topbar-background:                        (
+														backgroundType: color,
+														gradientType: linear,
+														color1: #f2f2f2,
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+// $ztsh-topbar-border-map
+// Map for styling the borders of the topbar
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-topbar-border-map:                        (
+														borderTop: false,
+														borderTopColor: #0081a3,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #dddddd,
+														borderBottomWidth: 5px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// =============================>
+// Bottom Bar Variables
+// <============================
+
+// Bottom Bar Variables
+//
+// Variables impacting the Bottom Bar
+//
+// | Variable  | Options |
+// |----------|-------|
+// |$ztsh-bottom-bar-enabled | Whether Bottom bar is enabled or not |
+// |$ztsh-bottom-height | Height for the bottom bar |
+// |$ztsh-bottom-bar-background | Background properties for the bottom bar |
+// |$ztsh-bottom-bar-menu-shadow | Shadow properties for the bottom bar |
+// |$ztsh-bottom-bar-menu-border-map | Bottom bar border properties |
+//
+// Styleguide Theme.Bottom Bar
+$ztsh-bottom-bar-enabled:                       false !default;
+$ztsh-bottom-height:                            40px !default;
+
+
+// $ztsh-bottom-bar-background - All settings for the bottom bar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-bottom-bar-background:                    (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// $ztsh-bottom-bar-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-bottom-bar-menu-shadow:                   (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+
+// $ztsh-bottom-bar-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-bottom-bar-menu-border-map:               (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #dddddd,
+														borderBottomWidth: 5px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+// =============================>
+// Off Canvas | Mobile Header Variables
+// <============================
+
+// Off Canvas | Mobile Header Variables
+//
+// Variables impacting the Off Canvas | Mobile Header
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-off-canvas-open-from | Which side the menu should open from `left` or `right` |
+// | $ztsh-off-canvas-width | The width of the OffCanvas Menu  |
+// | $ztsh-off-canvas-section-margin | The vertical margin between the sections of the OffCanvas Menu |
+// | $ztsh-off-canvas-logo-align | The alignment of the logo values that can be used are `flex-start`, `center` and flex-end`  |
+// | $ztsh-off-canvas-menu-align | The alignment of the menu values that can be used are `flex-start`, `center` and flex-end`    |
+// | $ztsh-off-canvas-menu-text-align | Alignment of the text for the menu values that can be used are `left`, `right` and `center` |
+// | $ztsh-off-canvas-font-color |  The color of the font for the OffCanvas Menu  |
+// | $ztsh-off-canvas-font-hover-color |  The hover color for the font  |
+// | $ztsh-off-canvas-font-size |  The size of the font   |
+// | $ztsh-off-canvas-background-color | Background color for the OffCanvas menu  |
+// | $ztsh-off-canvas-separator | Use either `true` or `false` to enable of disable the separators for the OffCanvas Menu |
+// | $ztsh-off-canvas-separator-color | The color of the separators between the menu items  |
+// | $ztsh-off-canvas-separator-weight |  The thickness of the separators between menu items |
+// | $ztsh-off-canvas-top-bottom-padding |  The vertical padding for the menu items  |
+// | $ztsh-off-canvas-display-extras |  Set to true if the extras items need to be displayed  |
+// | $ztsh-off-canvas-extras-padding | Padding between the extras items |
+// | $ztsh-enable-on-desktop |  Set to true if you need the OffCanvas menu to be displayed on the Desktop as well  |
+// | $ztsh-off-canvas-display-social |  Set this to true if the social icons need to be displayed on the OffCanvas Menu  |
+// | $ztsh-off-canvas-social-shape |  The shape of the social icons, possible values `round`, `circle` and `square` |
+// | $ztsh-off-canvas-social-padding |  Padding around the social icons  |
+// | $ztsh-off-canvas-social-margin |  Margin between social icons in OffCanavas menu  |
+// | $ztsh-off-canvas-social-size | The size of the social icons |
+// | $ztsh-off-canvas-social-shadow | Set this to `true` if shadows are needed on hover else it can be set to `false` |
+// | $ztsh-off-canvas-shadow | The shodow map for the offcanvas menu |
+// | $ztsh-mobile-header-logo-width | The width of the logo for the mobilee header |
+// | $ztsh-mobile-header-vertical-padding | Vertical padding for mobile header |
+// | $ztsh-mobile-header-background | Mobile header background map |
+// | $ztsh-mobile-header-shadow | Mobile header shadow map |
+//
+// Styleguide Theme.Off Canvas Menu
+$ztsh-off-canvas-open-from:                     right !default;
+$ztsh-off-canvas-width:                         250px !default;
+$ztsh-off-canvas-section-margin:                1.5rem !default;
+$ztsh-off-canvas-logo-align:                    center !default;
+$ztsh-off-canvas-menu-align:                    center !default;
+$ztsh-off-canvas-menu-text-align:               left !default;
+$ztsh-off-canvas-font-color:                    $ztsh-menu-font-color !default;
+$ztsh-off-canvas-font-hover-color:              $ztsh-menu-font-color-hover !default;
+$ztsh-off-canvas-font-size:                     1rem !default;
+$ztsh-off-canvas-background-color:              #ffffff !default;
+$ztsh-off-canvas-separator:                     true !default;
+$ztsh-off-canvas-separator-color:               $ztsh-gray-100 !default;
+$ztsh-off-canvas-separator-weight:              1px !default;
+$ztsh-off-canvas-top-bottom-padding:            .6rem !default;
+$ztsh-off-canvas-extras-padding:                1.5rem !default;
+$ztsh-enable-on-desktop:                        false !default;
+$ztsh-off-canvas-display-extras:                false !default;
+$ztsh-off-canvas-display-social:                true !default;
+$ztsh-off-canvas-social-shape:                  circle !default;
+$ztsh-off-canvas-social-padding:                .6rem !default;
+$ztsh-off-canvas-social-margin:                 .5rem !default;
+$ztsh-off-canvas-social-size:                   .8rem !default;
+$ztsh-off-canvas-social-shadow:                 true !default;
+$ztsh-off-canvas-body-color:                    rgba(0, 0, 0, .5) !default;
+$ztsh-off-canvas-close-button-top:              10px !default;
+$ztsh-off-canvas-close-button-left:             15px !default;
+$ztsh-off-canvas-close-button-color:            white !default;
+$ztsh-off-canvas-close-button-background-color: $ztsh-gray-500 !default;
+$ztsh-off-canvas-close-button-padding:          4px 6px !default;
+
+
+// $ztsh-off-canvas-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-off-canvas-shadow:                        (
+														shadowOn: true,
+														hOffset: 3px,
+														vOffset: 0px,
+														blurRadius: 7px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+// =============================>
+// Mobile Header Section For Variables
+// <============================
+$ztsh-mobile-header-logo-width:                 175px !default;
+$ztsh-mobile-header-vertical-padding:           .5rem !default;
+
+
+// $ztsh-mobile-menu-background - All settings for the mobile menu background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-mobile-header-background:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: rgba(255, 255, 255, 1),
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+// $ztsh-mobile-menu-shadow
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-mobile-header-shadow:                     (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// =============================>
+// Sidebar Variables
+// <============================
+
+// Sidebar Variables
+//
+// Variables impacting the Sidebar
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-sidebar-type | `1` - Clean, `2` - Sectioned, `3` - Outlined|
+// | $ztsh-sidebar-padding | The inner padding that is applied to the sidebar |
+// | $ztsh-margin-sections | The margin between the sidebar section |
+// | $ztsh-sidebar-background-color | Background color for sidebar |
+// | $ztsh-side-border | Set to `true` to enable tyhe divider else set to false |
+// | $ztsh-side-border-color | The color of the sidebar border  |
+// | $ztsh-sidebar-shadow | Shadow map for Sidebars |
+//
+// Styleguide Theme.Sidebar
+$ztsh-sidebar-type:                             2 !default;
+$ztsh-sidebar-padding:                          1rem !default;
+$ztsh-margin-sections:                          1rem !default;
+$ztsh-sidebar-background-color:                 $ztsh-gray-100 !default;
+$ztsh-side-border:                              false !default;
+$ztsh-side-border-color:                        $ztsh-gray-200 !default;
+$ztsh-sidebar-shadow:                           (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+// Page Transitions
+//
+// Variables impacting the behaviour of animated page transitions
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-page-trans-enabled | `true` if you want the page transitions to work `false` if you want to disable the page transitions   |
+// | $ztsh-page-trans-bg-color | Background color map for animated page transistions  |
+// | $ztsh-page-trans-spinner-type |  Option of `.spinner-grow` and `.spinner-border` . Ensure the classes are passed as it iss else Sass compiler will throw an error |
+// | $ztsh-page-trans-spinner-color | Page transitions spinner color   |
+//
+// Styleguide Theme.Page Transitions
+$ztsh-page-trans-enabled:                       true !default;
+$ztsh-page-trans-bg-color:                      (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-white,
+														color2: $ztsh-gradient-2,
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$ztsh-page-trans-spinner-type:                  '.spinner-grow' !default; // Option of `.spinner-grow` and `.spinner-border` . Ensure the classes are passed as it iss else Sass compiler will throuw an error
+$ztsh-page-trans-spinner-color:                 $ztsh-primary-color !default;
+
+
+// =============================>
+//  Shortcode Variables
+// <============================
+
+// Accordion
+//
+// Variables setting the look and feel of the accordion for the theme
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-accordion-title-color | The color of the title and the button of the accordion |
+// | $ztsh-accordion-body-color | The background color of the body of the accordion  |
+// | $ztsh-accordion-body-font-color |  Body font color for the accordion |
+// | $ztsh-accordion-header-color | The background color map for the header of the accordion  |
+// | $ztsh-accordion-border-enable | Ste this to `true` if you need a border around the entire acccordion |
+// | $ztsh-accordion-border-map | Accordion Border Map |
+// | $ztsh-accordion-header-border-map | Header Border Map for the accordion |
+//
+// Styleguide Shortcodes.Accordion
+$ztsh-accordion-title-color:                    $ztsh-gray-700 !default;
+$ztsh-accordion-body-color:                     none !default;
+$ztsh-accordion-body-font-color:                $ztsh-gray-600 !default;
+$ztsh-accordion-border-enable:                  true !default;
+$ztsh-accordion-border-radius:                  .2rem !default;
+$ztsh-accordion-header-color:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: rgba(0, 0, 0, 0.7),
+														degree: 90deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$ztsh-accordion-border-map:                     (
+														borderTop: true,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: .25rem,
+												) !default;
+$ztsh-accordion-header-border-map:              (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// List Groups
+//
+// Variables setting the look and feel of the Listy Group for the theme
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-listgroup-top-radius | The border radius for the top of the Group List |
+// | $ztsh-listgroup-bottom-radius | The border radius for the bottom of the Group List |
+// | $ztsh-listgroup-background-color | Background color for the listgroup items |
+// | $ztsh-listgroup-hover-background-color | Backgeround hover color for the background of list group items |
+// | $ztsh-listgroup-font-color | The color of the font for the items of the list group |
+// | $ztsh-listgroup-font-hover-color | The hover color for the font of the items of the list group |
+// | $ztsh-listgroup-vertical-padding | Vertical padding for the list group items  |
+// | $ztsh-listgroup-horizontal-padding | Horizontal padding for the list group items  |
+// | $ztsh-listgroup-border | Border properties for the list group items |
+// | $ztsh-listgroup-border-color | Color for the list group items  |
+//
+// Styleguide Shortcodes.List Group
+$ztsh-listgroup-top-radius:                     0rem !default;
+$ztsh-listgroup-bottom-radius:                  0rem !default;
+$ztsh-listgroup-background-color:               transparent !default;
+$ztsh-listgroup-hover-background-color:         $ztsh-gray-300 !default;
+$ztsh-listgroup-font-color:                     $ztsh-gray-600 !default;
+$ztsh-listgroup-font-hover-color:               $ztsh-gray-700 !default;
+$ztsh-listgroup-vertical-padding:               .6rem !default;
+$ztsh-listgroup-horizontal-padding:             1rem !default;
+$ztsh-listgroup-border:                         none !default;
+$ztsh-listgroup-border-color:                   $ztsh-gray-200 !default;
+
+
+// Animations
+//
+// Variables setting various parameters of the animation Globally
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-animations-map | Animation properties map for all the animation classes globally for WoodPecker |
+//
+// Styleguide Shortcodes.Animations
+$ztsh-animations-map:                           (
+														duration: 1s,
+														count: 1,
+														delay: .2s,
+														function: ease,
+														fill: both
+												) !default;
+
+// Blockquotes
+//
+// Variables setting various parameters of the blockquotes
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-blockquote-font-size | Font size for the blockquote text |
+// | $ztsh-blockquote-padding | Padding about the blockquote |
+// | $ztsh-blockquote-align | Blockquote alignment `left`, `right`, `center` |
+// | $ztsh-blockquote-font-color | Font color for the Blockquote text |
+// | $ztsh-quote-color | the color of the quote mark |
+// | $ztsh-blockquote-background |  Background color map for blockquote  |
+// | $ztsh-blockquote-border-map | Border map for the blockquote element |
+//
+// Styleguide Shortcodes.Blockquotes
+$ztsh-blockquote-font-size:                     1rem !default;
+$ztsh-blockquote-padding:                       2rem !default;
+$ztsh-blockquote-align:                         left !default;
+$ztsh-blockquote-font-color:                    $ztsh-gray-700 !default;
+$ztsh-quote-color:                              rgba(0, 0, 0, .2) !default;
+
+$ztsh-blockquote-background:                    (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/grey.png),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-blockquote-border-map:                    (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $ztsh-primary-color,
+														borderLeftWidth: 4px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+// Navpills
+//
+// Variables setting various parameters of the Navpills
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-navpills-margin | Margin bet Navpills  |
+// | $ztsh-navpills-inactive-hover-background-color |  Hover background color for the inactive links   |
+// | $ztsh-navpills-border-radius | Border radius for the navpills background   |
+//
+// Styleguide Shortcodes.Navpills
+$ztsh-navpills-margin:                          .5rem !default;
+$ztsh-navpills-inactive-hover-background-color: $ztsh-gray-200 !default;
+$ztsh-navpills-border-radius:                   0rem !default;
+
+
+// Breadcrumbs
+//
+// Variables setting various parameters of the Breadcrumbs
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-breadcrumbs-background-color | Animations map for all the animation classes for WoodPecker |
+// | $ztsh-breadcrumbs-text-align | Alignment of the breadcrumbs `flex-start`, `center`, `flex-end`  |
+// | $ztsh-breadcrumbs-font-size | Font size for the breadcrumbs   |
+// | $ztsh-breadcrumbs-font-color | Font color for the breadcrumbs   |
+// | $ztsh-breadcrumbs-text-decoration |  Default text decoration for the elemets of breadcrumbs  |
+// | $ztsh-breadcrumbs-hover-color |  Hover color for the text in breadcrumbs  |
+// | $ztsh-breadcrumbs-hover-text-decoration |   Text decoration upon hover for breadcrumbs  |
+// | $ztsh-breadcrumb-divider: quote(">");| Add a divider for breadcrumb menu. The quote function is needed to generate the quotes around a string, so if you want > as separator . It’s also possible to use a base64 embedded SVG icon like this :  `$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);`|
+//
+// Styleguide Shortcodes.Breadcrumbs
+
+$ztsh-breadcrumbs-background-color:             $ztsh-gray-100 !default;
+$ztsh-breadcrumbs-text-align:                   flex-start !default;
+$ztsh-breadcrumbs-font-size:                    .85rem !default;
+$ztsh-breadcrumbs-font-color:                   inherit !default;
+$ztsh-breadcrumbs-text-decoration:              none !default;
+$ztsh-breadcrumbs-hover-color:                  scale_color($ztsh-primary-color, $lightness: $ztsh-lightness-value) !default;
+$ztsh-breadcrumbs-hover-text-decoration:        none !default;
+$ztsh-breadcrumb-divider:                       quote(">") !default;
+
+// Cards
+//
+// Variables setting various parameters of the Cards
+//
+// | Variable  |Options|
+// |----------|-------|
+// | $ztsh-card-spacer-y | The padding on cards on X-Axis |
+// | $ztsh-card-spacer-x | The padding on cards on Y-Axis |
+// | $ztsh-card-border-width | The border width  |
+// | $ztsh-card-border-radius | Border radius for the cards  |
+// | $ztsh-card-border-color |  Border color for the cards |
+// | $ztsh-card-inner-border-radius | The inner radius assigned to the card body |
+// | $ztsh-card-img-overlay-padding | Image overlay padding |
+// | $ztsh-card-group-margin | Margin assigned grouped cards  |
+// | $ztsh-card-deck-margin |  Margin asssigned decked cards  |
+// | $ztsh-card-columns-count | The number of columns for the decked cards   |
+// | $ztsh-card-columns-gap |  The gap between the gutter space between cards |
+// | $ztsh-card-columns-margin | The margin assigned to card columns  |
+// | $ztsh-card-text-align | The align of text between the cards. Possible values `center`, `right` and `left` |
+// | $ztsh-card-title-font-size | The font size assigned to the title of the card |
+// | $ztsh-card-title-font-color | The titlke font color |
+// | $ztsh-card-body-font-size | The title font size |
+// | $ztsh-card-body-font-color | The body font color |
+// | $ztsh-card-header-font-size | The font size for the card header |
+// | $ztsh-card-header-font-color | card header font color |
+// | $ztsh-card-footer-font-size |  Card footer font size |
+// | $ztsh-card-footer-font-color | Card footer font color  |
+// | $ztsh-card-shadow | Map for the shadow of the card |
+// | $ztsh-card-body-background | Card background color map |
+// | $ztsh-card-header-background | Card header baqckground color map |
+// | $ztsh-card-footer-background |  Card footer baqckground color map  |
+//
+// Styleguide Shortcodes.Cards
+
+$ztsh-card-spacer-y:                            .75rem !default;
+$ztsh-card-spacer-x:                            1.25rem !default;
+$ztsh-card-border-width:                        $ztsh-border-width !default;
+$ztsh-card-border-radius:                       $ztsh-border-radius !default;
+$ztsh-card-border-color:                        rgba($ztsh-black, .125) !default;
+$ztsh-card-inner-border-radius:                 calc(#{$ztsh-card-border-radius} - #{$ztsh-card-border-width}) !default;
+
+$ztsh-card-img-overlay-padding:                 1.25rem !default;
+
+$ztsh-card-group-margin:                        $ztsh-grid-gutter-width / 2 !default;
+$ztsh-card-deck-margin:                         $ztsh-card-group-margin !default;
+
+$ztsh-card-columns-count:                       3 !default;
+$ztsh-card-columns-gap:                         .5rem !default;
+$ztsh-card-columns-margin:                      .5rem !default;
+$ztsh-card-text-align:                          left !default;
+$ztsh-card-title-font-size:                     1.1rem !default;
+$ztsh-card-title-font-color:                    inherit !default;
+$ztsh-card-body-font-size:                      inherit !default;
+$ztsh-card-body-font-color:                     inherit !default;
+$ztsh-card-header-font-size:                    inherit !default;
+$ztsh-card-header-font-color:                   inherit !default;
+$ztsh-card-footer-font-size:                    inherit !default;
+$ztsh-card-footer-font-color:                   inherit !default;
+
+$ztsh-card-shadow:                              (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+$ztsh-card-body-background:                     (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-white,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+												) !default;
+$ztsh-card-header-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$ztsh-card-footer-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+// Image Hovers
+//
+// Variables setting various parameters of the Image Hover Effects
+//
+// | Variable  |Options |
+// |----------|-------|
+// |$ztsh-image-hover-image-bg | Background color for the image on hover |
+// |$ztsh-image-hover-figcaption-bg | Background color for the overlay figure |
+// |$ztsh-image-hover-figcaption-padding | Padding for the figcaption  |
+// |$ztsh-image-hover-text-color | The overlay Text Color |
+// |$ztsh-image-hover-transition-duration | The duration of the animation |
+// |$ztsh-image-hover-shift-distance | The shift distance for the animation |
+//
+// Styleguide Shortcodes.Image Hovers
+$ztsh-image-hover-image-bg:                     rgba(255, 255, 255, .8) !default;
+$ztsh-image-hover-figcaption-bg:                rgba(255, 255, 255, .8) !default;
+$ztsh-image-hover-figcaption-padding:           25px !default;
+$ztsh-image-hover-text-color:                   $ztsh-gray-600 !default;
+$ztsh-image-hover-transition-duration:          .8s !default;
+$ztsh-image-hover-shift-distance:               10px !default;
+
+
+// Social Sharing
+//
+// Variables setting various parameters of the Social Sharing Icons
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-social-sharing-theme | Sets the theme for social sharing icons. Options `classic`, `flat`, `minima`, `outlined` |
+// | $ztsh-social-sharing-shadow | Ste thee shadow for the social sharing icons |
+// | $ztsh-social-sharing-horizontal-padding | Horizontal padding for the social sharing buttons |
+// | $ztsh-social-sharing-vertical-padding | Vetical padding for the social sharing buttons |
+// | $ztsh-social-sharing-border-radius | Border radius for the social sharing icons |
+// | $ztsh-social-sharing-font-size | The font size for the button text |
+// | $ztsh-social-sharing-line-height | The line height for the button text  |
+// | $ztsh-social-sharing-font-color | The color of the fonrt of the buttons |
+// | $ztsh-social-sharing-border-color | The border color for the social sharing buttons |
+//
+// Styleguide Shortcodes.Social Sharing Icons
+
+$ztsh-social-sharing-theme:                     'classic' !default;
+$ztsh-social-sharing-shadow:                    (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 2px,
+														blurRadius: 4px,
+														shadowSpread: 1px,
+														shadowColor: rgba(0, 0, 0, 0.3)
+												) !default;
+$ztsh-social-sharing-horizontal-padding:        1.3rem !default;
+$ztsh-social-sharing-vertical-padding:          .6rem !default;
+$ztsh-social-sharing-border-radius:             .3rem !default;
+$ztsh-social-sharing-font-size:                 .85rem !default;
+$ztsh-social-sharing-line-height:               1rem !default;
+$ztsh-social-sharing-font-color:                $ztsh-white !default;
+$ztsh-social-sharing-border-color:              inherit !default;
+
+
+// Carousel
+//
+// Variables setting various parameters of the Carousel Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-carousel-image-width | The width of the carousel image |
+// | $ztsh-carousel-image-height | the height of the carousel image |
+// | $ztsh-carousel-items-gap | The gap between carousel elements |
+//
+// Styleguide Shortcodes.Carousel
+$ztsh-carousel-image-width:                     400px !default;
+$ztsh-carousel-image-height:                    225px !default;
+$ztsh-carousel-items-gap:                       15px !default;
+
+
+// Clients
+//
+// Variables setting various parameters of the Clients Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-clients-padding | Padfding for the client items |
+// | $ztsh-clients-border-enable | Ste this to `true` if border is needed around the client items and to `false` if the border is not needed |
+// | $ztsh-clients-border-color | Boorder color for the client items |
+// | $ztsh-clients-default-color | How the logos would look like whether colored or greyscale before hover. Options Available `'grayscale'` and `'colored'` |
+// | $ztsh-clients-default-hover-color | How the logos would look on mouse hover whether colored or greyscale before hover. Options Available `'grayscale'` and `'colored'` |
+// | $ztsh-clients-hover-animation| Hover animation for client logos, doesnt work with Carousel. Options Available `'zoomIn'`, `'zoomOut'`, `'none'` |
+// | $ztsh-clients-colored-bg-hover | Background color on hover |
+// | $ztsh-clients-colored-bg-color | backgroundType option of `color` or of `gradient` and the rest of the map can be filled with the required options |
+//
+// Styleguide Shortcodes.Clients
+$ztsh-clients-padding:                          1.9rem !default;
+$ztsh-clients-border-enable:                    true !default;
+$ztsh-clients-border-color:                     $ztsh-gray-200 !default;
+$ztsh-clients-default-color:                    'grayscale' !default;
+$ztsh-clients-default-hover-color:              'colored' !default;
+$ztsh-clients-hover-animation:                  'zoomIn' !default;
+$ztsh-clients-colored-bg-hover:                 false !default;
+$ztsh-clients-colored-bg-color:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gradient-1,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+												) !default;
+
+$ztsh-clients-carousel-image-width:             140px !default;
+$ztsh-clients-carousel-image-height:            70px !default;
+$ztsh-clients-carousel-items-gap:               40px !default;
+
+
+// Timer
+//
+// Variables setting various parameters of the Timer Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-timer-counter-padding | Padding For Each Timer Section  |
+// | $ztsh-timer-counter-color |  Color of the timer font |
+// | $ztsh-timer-counter-font-size | Font size for the timer font  |
+// | $ztsh-timer-counter-font-family | Font family for the timer |
+// | $ztsh-timer-counter-font-weight | Font weight for the timer |
+// | $ztsh-timer-desc-padding | Timer description padding  |
+// | $ztsh-timer-desc-color | Timer description font color |
+// | $ztsh-timer-desc-font-size | Timer description font size |
+// | $ztsh-timer-desc-font-family | Timer description font Family  |
+// | $ztsh-timer-desc-font-weight | Timer description Font weight |
+// | $ztsh-timer-separator-enabled | Set to `true` if you need the separator to be enable and `false` if you do not neeed the separator |
+// | $ztsh-timer-separator-color | The color of the separator |
+// | $ztsh-timer-separator-symbol | The separator symbol to be used  |
+// | $ztsh-timer-counter-background | Timer background map |
+// | $ztsh-timer-desc-background | Timer description background map |
+// | $ztsh-timer-counter-border | Timer Border Map |
+// | $ztsh-timer-desc-border | Timer Description Border Map  |
+//
+// Styleguide Shortcodes.Timer
+$ztsh-timer-counter-padding:                    20px !default;
+$ztsh-timer-counter-color:                      $ztsh-white !default;
+$ztsh-timer-counter-font-size:                  2.5rem !default;
+$ztsh-timer-counter-font-family:                inherit !default;
+$ztsh-timer-counter-font-weight:                600 !default;
+$ztsh-timer-desc-padding:                       10px !default;
+$ztsh-timer-desc-color:                         $ztsh-gray-600 !default;
+$ztsh-timer-desc-font-size:                     .85rem !default;
+$ztsh-timer-desc-font-family:                   inherit !default;
+$ztsh-timer-desc-font-weight:                   300 !default;
+$ztsh-timer-separator-enabled:                  true !default;
+$ztsh-timer-separator-color:                    $ztsh-gray-400 !default;
+$ztsh-timer-separator-symbol:                   '|' !default;
+
+$ztsh-timer-counter-background:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gradient-1,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-timer-desc-background:                    (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-white,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-timer-counter-border:                     (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+$ztsh-timer-desc-border:                        (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+
+// Counter
+//
+// Variables setting various parameters of the Counter Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-counter-text-align | Text alignment for counter text available options `center`, `left` and `right` |
+// | $ztsh-counter-font-size | Font size for the counter |
+// | $ztsh-counter-font-family | Font family for the counter font |
+// | $ztsh-counter-font-weight | Font weight for the counter font |
+// | $ztsh-counter-font-color | Font color for the counter font  |
+// | $ztsh-counter-vertical-padding | Vertical padding for the counter |
+// | $ztsh-counter-prefix-font-size | Prefix font size |
+// | $ztsh-counter-prefix-font-family |Prefix font Family |
+// | $ztsh-counter-prefix-font-color |  Prefix font Color |
+// | $ztsh-counter-prefix-margin-right | Prefix right margin |
+// | $ztsh-counter-suffix-font-size | Suffix font size |
+// | $ztsh-counter-suffix-font-family | Suffix font family  |
+// | $ztsh-counter-suffix-font-color | Suffix font color |
+// | $ztsh-counter-suffix-margin-left |  Suffix left margin  |
+// | $ztsh-counter-footnote-top-margin | Footnote top margin   |
+// | $ztsh-counter-footnote-font-size | Footnote font size |
+// | $ztsh-counter-footnote-font-weight | Footnote font weight  |
+// | $ztsh-counter-footnote-font-family | Footnote font family |
+// | $ztsh-counter-footnote-font-color | Footnote font color |
+// | $ztsh-counter-footnote-vertical-padding | Footnote vertical padding |
+// | $ztsh-counter-icon-font-size | Icon font size |
+// | $ztsh-counter-icon-font-color | Icon font color |
+// | $ztsh-counter-icon-font-hover-color | Icon font hover color |
+// | $ztsh-counter-icon-padding | Icon padding |
+// | $ztsh-counter-icon-border-radius | Icon border radius |
+// | $ztsh-counter-icon-border-width | Icon border width |
+// | $ztsh-counter-icon-border-color | Icon border color |
+// | $ztsh-counter-icon-border-hover-color | Icon border hover color |
+// | $ztsh-counter-icon-background-color | Icon background color |
+// | $ztsh-counter-icon-background-hover-color | Icon background hover color |
+// | $ztsh-counter-icon-bottom-margin | Icon bottom margin |
+// | $ztsh-counter-icon-font-hover-animation | Icon font hover animation. Available options `'zoomIn'`, `'zoomOut'`, `'none'`   |
+// | $ztsh-counter-background-map | Background map for the counter area |
+// | $ztsh-counter-border | Counter border map  |
+// | $ztsh-counter-shadow | Counter shadow map  |
+//
+// Styleguide Shortcodes.Counter
+$ztsh-counter-text-align:                       center !default;
+$ztsh-counter-font-size:                        3rem !default;
+$ztsh-counter-font-family:                      inherit !default;
+$ztsh-counter-font-weight:                      600 !default;
+$ztsh-counter-font-color:                       $ztsh-gray-800 !default;
+$ztsh-counter-vertical-padding:                 30px !default;
+$ztsh-counter-prefix-font-size:                 1.5rem !default;
+$ztsh-counter-prefix-font-family:               inherit !default;
+$ztsh-counter-prefix-font-color:                $ztsh-gray-600 !default;
+$ztsh-counter-prefix-margin-right:              5px !default;
+$ztsh-counter-suffix-font-size:                 1.5rem !default;
+$ztsh-counter-suffix-font-family:               inherit !default;
+$ztsh-counter-suffix-font-color:                $ztsh-gray-600 !default;
+$ztsh-counter-suffix-margin-left:               10px !default;
+$ztsh-counter-footnote-top-margin:              10px !default;
+$ztsh-counter-footnote-font-size:               1.1rem !default;
+$ztsh-counter-footnote-font-weight:             400 !default;
+$ztsh-counter-footnote-font-family:             inherit !default;
+$ztsh-counter-footnote-font-color:              $ztsh-gray-600 !default;
+$ztsh-counter-footnote-vertical-padding:        5px !default;
+$ztsh-counter-icon-font-size:                   2rem !default;
+$ztsh-counter-icon-font-color:                  $ztsh-primary-color !default;
+$ztsh-counter-icon-font-hover-color:            $ztsh-white !default;
+$ztsh-counter-icon-padding:                     .7rem !default;
+$ztsh-counter-icon-border-radius:               50% !default;
+$ztsh-counter-icon-border-width:                1px !default;
+$ztsh-counter-icon-border-color:                $ztsh-gray-400 !default;
+$ztsh-counter-icon-border-hover-color:          $ztsh-white !default;
+$ztsh-counter-icon-background-color:            $ztsh-gray-200 !default;
+$ztsh-counter-icon-background-hover-color:      $ztsh-primary-color !default;
+$ztsh-counter-icon-bottom-margin:               15px !default;
+$ztsh-counter-icon-font-hover-animation:        'zoomIn' !default;
+$ztsh-counter-background-map:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-counter-border:                           (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0rem,
+												) !default;
+
+$ztsh-counter-shadow:                           (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Circle Counter
+//
+// Variables setting various parameters of the Circle Counter Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-circle-counter-font-size | Font size for the counter inside the circle |
+// | $ztsh-circle-counter-font-weight | Font weight for the counter |
+// | $ztsh-circle-counter-font-family | Font Family for the counter |
+// | $ztsh-circle-counter-font-color | Font color for the counter |
+//
+// Styleguide Shortcodes.Counter
+
+$ztsh-circle-counter-font-size:                 1.7rem !default;
+$ztsh-circle-counter-font-weight:               600 !default;
+$ztsh-circle-counter-font-family:               "Poppins", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$ztsh-circle-counter-font-color:                $ztsh-gray-500 !default;
+
+
+// Infobox
+//
+// Variables setting various parameters of the Infobox Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// |$ztsh-infobox-icon-text-align | The alignment of the icon possible values `left`, `center` and `right`|
+// |$ztsh-infobox-icon-font-size | The size assigned to the icon |
+// |$ztsh-infobox-icon-color | The color of the icon |
+// |$ztsh-infobox-icon-hover-color | Hover color for the icon |
+// |$ztsh-infobox-icon-margin-bottom | Bottom margin for the icon |
+// |$ztsh-infobox-icon-padding | The inner padding for the icon will impact the size of the background  |
+// |$ztsh-infobox-icon-background-color | Background color for the icon |
+// |$ztsh-infobox-icon-background-hover-color | Hover color for the icon background |
+// |$ztsh-infobox-icon-border-radius | Border radius for the icon background |
+// |$ztsh-infobox-icon-border-color | Border color for the icon background |
+// |$ztsh-infobox-icon-border-hover-color | Border hover color for the icon background |
+// |$ztsh-infobox-icon-border-weight | Border weight for the icon background |
+// |$ztsh-infobox-overflow-icon | Set this to `true` if you want the icon to overflow the infobox else set to `false` |
+// |$ztsh-infobox-title-font-family | Title text font family |
+// |$ztsh-infobox-title-font-size | Title text font size |
+// |$ztsh-infobox-title-font-weight | Title text font weight |
+// |$ztsh-infobox-title-color |Title text font color |
+// |$ztsh-infobox-title-margin-bottom | Title text margin bottom |
+// |$ztsh-infobox-description-font-family | Description text font family|
+// |$ztsh-infobox-description-font-size | Description text font size |
+// |$ztsh-infobox-description-font-weight | Description text font weight |
+// |$ztsh-infobox-description-color | Description text font color |
+// |$ztsh-infobox-icon-font-hover-animation | Hover animation for the icon. Possible values `zoomIn`, `zoomOut` and `none` |
+// |$ztsh-infobox-background-map | Background map for the info box |
+// |$ztsh-infobox-border | Border map for the info box  |
+// |$ztsh-infobox-shadow | Shadow map for the info box  |
+//
+// Styleguide Shortcodes.Infobox
+$ztsh-infobox-icon-text-align:                  center !default;
+$ztsh-infobox-icon-font-size:                   2rem !default;
+$ztsh-infobox-icon-color:                       $ztsh-primary-color !default;
+$ztsh-infobox-icon-hover-color:                 $ztsh-white !default;
+$ztsh-infobox-icon-margin-bottom:               10px !default;
+$ztsh-infobox-icon-padding:                     .7rem !default; // Its mandatory to have this in rem only no other units can cause errors
+$ztsh-infobox-icon-background-color:            $ztsh-gray-200 !default;
+$ztsh-infobox-icon-background-hover-color:      $ztsh-primary-color !default;
+$ztsh-infobox-icon-border-radius:               50% !default;
+$ztsh-infobox-icon-border-color:                $ztsh-gray-400 !default;
+$ztsh-infobox-icon-border-hover-color:          $ztsh-white !default;
+$ztsh-infobox-icon-border-weight:               1px !default;
+$ztsh-infobox-overflow-icon:                    false !default; // Set this to true if you need overflow icon
+$ztsh-infobox-title-font-family:                inherit !default;
+$ztsh-infobox-title-font-size:                  1.2rem !default;
+$ztsh-infobox-title-font-weight:                500 !default;
+$ztsh-infobox-title-color:                      $ztsh-gray-800 !default;
+$ztsh-infobox-title-margin-bottom:              15px !default;
+$ztsh-infobox-description-font-family:          inherit !default;
+$ztsh-infobox-description-font-size:            .9rem !default;
+$ztsh-infobox-description-font-weight:          400 !default;
+$ztsh-infobox-description-color:                $ztsh-gray-600 !default;
+$ztsh-infobox-icon-font-hover-animation:        'zoomIn' !default;
+$ztsh-infobox-background-map:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-infobox-border:                           (
+														borderTop: true,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+$ztsh-infobox-shadow:                           (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Dropdowns (Components)
+//
+// Variables setting various parameters of the Dropdowns Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-dropdown-trigger-hover | Set this to `true` if you want the dropdown to trigger on hover instead of click, esle if click is needed set this to `false` |
+// | $ztsh-dropdown-min-width | The min-width assigned to the dropdown menu|
+// | $ztsh-dropdown-padding-y | Y-axis paddign assigned to the dropdown component |
+// | $ztsh-dropdown-spacer | This is the top margin assigned to the dropdown menu when it is visible and from the botton which triggered visibily. `IMPORTANT: Works only when '$ztsh-dropdown-trigger-hover' is set to false|
+// | $ztsh-dropdown-font-size | Dropdowm menu items font size |
+// | $ztsh-dropdown-color |Dropdowm menu items font color  |
+// | $ztsh-dropdown-bg | Dropdown background color |
+// | $ztsh-dropdown-border-color | Dropdowm border color |
+// | $ztsh-dropdown-border-radius |Dropdowm border radius  |
+// | $ztsh-dropdown-border-width | Dropdowm border weight |
+// | $ztsh-dropdown-divider-bg | Dropdowm divider color |
+// | $ztsh-dropdown-divider-margin-y | Vertical margin assigned to the divider  |
+// | $ztsh-dropdown-box-shadow | Shadow properties for the dropdowm menu |
+// | $ztsh-dropdown-link-color | Color of the link assigned to the dropdown menu |
+// | $ztsh-dropdown-link-hover-color | Link hover color for the dropdown menu |
+// | $ztsh-dropdown-link-hover-bg | Hover background color for dropdown menu |
+// | $ztsh-dropdown-link-active-color | Active link color for dropdown menu |
+// | $ztsh-dropdown-link-active-bg: | Active link background color   |
+// | $ztsh-dropdown-link-disabled-color | Disabled link background color |
+// | $ztsh-dropdown-item-padding-y | Item Y-axis padding |
+// | $ztsh-dropdown-item-padding-x | Item X-Axis padding  |
+// | $ztsh-dropdown-header-color | Font color for the header font  |
+// | $ztsh-dropdown-header-background-color | background color for the header  |
+// | $ztsh-dropdown-icon-margin | Right margiun assigned to the menu items icons |
+//
+// Styleguide Shortcodes.Dropdowns
+$ztsh-dropdown-trigger-hover:                   true !default;
+$ztsh-dropdown-min-width:                       7rem !default;
+$ztsh-dropdown-padding-y:                       .5rem !default;
+$ztsh-dropdown-spacer:                          2rem !default;
+$ztsh-dropdown-font-size:                       $ztsh-dropdown-menu-font-size !default;
+$ztsh-dropdown-color:                           $ztsh-dropdown-menu-font-color !default;
+$ztsh-dropdown-bg:                              $ztsh-white !default;
+$ztsh-dropdown-border-color:                    rgba($ztsh-black, .15) !default;
+$ztsh-dropdown-border-radius:                   $ztsh-border-radius !default;
+$ztsh-dropdown-border-width:                    $ztsh-border-width !default;
+$ztsh-dropdown-divider-bg:                      $ztsh-gray-200 !default;
+$ztsh-dropdown-divider-margin-y:                .5rem !default;
+$ztsh-dropdown-box-shadow:                      0 .5rem 1rem rgba($ztsh-black, .175) !default;
+
+$ztsh-dropdown-link-color:                      $ztsh-dropdown-menu-font-color !default;
+$ztsh-dropdown-link-hover-color:                $ztsh-gray-100 !default;
+$ztsh-dropdown-link-hover-bg:                   $ztsh-primary-color !default;
+
+$ztsh-dropdown-link-active-color:               $ztsh-component-active-color !default;
+$ztsh-dropdown-link-active-bg:                  $ztsh-component-active-bg !default;
+
+$ztsh-dropdown-link-disabled-color:             $ztsh-gray-600 !default;
+
+$ztsh-dropdown-item-padding-y:                  .5rem !default;
+$ztsh-dropdown-item-padding-x:                  1.5rem !default;
+
+$ztsh-dropdown-header-color:                    $ztsh-gray-700 !default;
+$ztsh-dropdown-header-background-color:         $ztsh-gray-300 !default;
+
+$ztsh-dropdown-icon-margin:                     .5rem !default;
+
+
+// Comments Shortcode
+//
+// Variables setting various parameters of the Comments Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-comments-bg-color | Background color for the comments section |
+//
+//  Styleguide Shortcodes.Comments
+$ztsh-comments-bg-color:                        $ztsh-gray-100 !default;
+
+
+// Progress Bars Shortcode
+//
+// Variables setting various parameters of the Progress Bars Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-progress-height | The default height of the progress bar |
+// | $ztsh-progress-font-size | The font size of the label inside the progress bar |
+// | $ztsh-progress-bg |  Default background color for progress bar |
+// | $ztsh-progress-border-radius | Border radius for the progress bar |
+// | $ztsh-progress-box-shadow | Box shadow assign  to progress bar container  |
+// | $ztsh-progress-bar-color | The default font color for the progress bar label  |
+// | $ztsh-progress-bar-bg | The default color for the progress bar |
+// | $ztsh-progress-bar-animation-timing | The strip animation timing  |
+// | $ztsh-progress-bar-transition | Transitions properties for the progress bar  |
+// | $ztsh-progress-bar-x-margin | Bottom Margin assigned to each of the progress bars |
+//
+//  Styleguide Shortcodes.Progress Bars
+
+$ztsh-progress-height:                          1rem !default;
+$ztsh-progress-font-size:                       $ztsh-font-size-base * .75 !default;
+$ztsh-progress-bg:                              $ztsh-gray-100 !default;
+$ztsh-progress-border-radius:                   $ztsh-border-radius !default;
+$ztsh-progress-box-shadow:                      inset 0 .1rem .1rem rgba($ztsh-black, .1) !default;
+$ztsh-progress-bar-color:                       $ztsh-white !default;
+$ztsh-progress-bar-bg:                          $ztsh-primary-color !default;
+$ztsh-progress-bar-animation-timing:            1s linear infinite !default;
+$ztsh-progress-bar-transition:                  width .6s ease !default;
+$ztsh-progress-bar-x-margin:                    .7rem !default;
+
+
+// Pagination Shortcode
+//
+// Variables setting various parameters of the Paginationztsh-
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-progress-height | The default height of the progress bar |
+// | $ztsh-progress-font-size | The font size of the label inside the progress bar |
+// | $ztsh-progress-bg |  Default background color for progress bar |
+// | $ztsh-progress-border-radius | Border radius for the progress bar |
+// | $ztsh-progress-box-shadow | Box shadow assign  to progress bar container  |
+// | $ztsh-progress-bar-color | The default font color for the progress bar label  |
+// | $ztsh-progress-bar-bg | The default color for the progress bar |
+// | $ztsh-progress-bar-animation-timing | The strip animation timing  |
+// | $ztsh-progress-bar-transition | Transitions properties for the progress bar  |
+// | $ztsh-progress-bar-x-margin | Bottom Margin assigned to each of the progress bars |
+//
+//  Styleguide Shortcodes.Pagination
+
+
+$ztsh-pagination-padding-y:                     .5rem !default;
+$ztsh-pagination-padding-x:                     .75rem !default;
+$ztsh-pagination-padding-y-sm:                  .25rem !default;
+$ztsh-pagination-padding-x-sm:                  .5rem !default;
+$ztsh-pagination-padding-y-lg:                  .75rem !default;
+$ztsh-pagination-padding-x-lg:                  1.5rem !default;
+$ztsh-pagination-line-height:                   1.25 !default;
+
+$ztsh-pagination-color:                         $ztsh-link-color !default;
+$ztsh-pagination-bg:                            $ztsh-white !default;
+$ztsh-pagination-border-width:                  $ztsh-border-width !default;
+$ztsh-pagination-border-color:                  $ztsh-gray-300 !default;
+
+$ztsh-pagination-focus-box-shadow:              $ztsh-input-btn-focus-box-shadow !default;
+$ztsh-pagination-focus-outline:                 0 !default;
+
+$ztsh-pagination-hover-color:                   $ztsh-link-hover-color !default;
+$ztsh-pagination-hover-bg:                      $ztsh-gray-200 !default;
+$ztsh-pagination-hover-border-color:            $ztsh-gray-300 !default;
+
+$ztsh-pagination-active-color:                  $ztsh-component-active-color !default;
+$ztsh-pagination-active-bg:                     $ztsh-component-active-bg !default;
+$ztsh-pagination-active-border-color:           $ztsh-pagination-active-bg !default;
+
+$ztsh-pagination-disabled-color:                $ztsh-gray-600 !default;
+$ztsh-pagination-disabled-bg:                   $ztsh-white !default;
+$ztsh-pagination-disabled-border-color:         $ztsh-gray-300 !default;
+
+
+// Video | Audio Shortcode
+//
+// Variables setting various parameters of the Video Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-plyr-badge-bg | Video Player badge background color  |
+// | $ztsh-plyr-badge-color | Video Player badge color  |
+// | $ztsh-plyr-font-size-time | Video Player Time font size   |
+// | $ztsh-plyr-font-size-badge |  Video Player badge font size    |
+// | $ztsh-plyr-font-size-menu |  Video Player menu font size   |
+// | $ztsh-plyr-font-weight-regular | Video Player regualr font weight  |
+// | $ztsh-plyr-font-weight-bold | Video Player font weight bold |
+// | $ztsh-plyr-line-height | Video Player  font line height   |
+// | $ztsh-plyr-captions-bg | Video Player captions background color  |
+// | $ztsh-plyr-captions-color |  Video Player font color  |
+// | $ztsh-plyr-color-main | Video Player  primary color  |
+// | $ztsh-plyr-control-icon-size | Video Player icon size  |
+// | $ztsh-plyr-control-spacing | Video Player spacing between controls   |
+// | $ztsh-plyr-control-radius | Video Player border radius assigned to controls   |
+// | $ztsh-plyr-video-controls-bg | Video Player controls backgrounf color  |
+// | $ztsh-plyr-video-control-color | Video Player controls color  |
+// | $ztsh-plyr-video-control-color-hover |  Video Player contorl hover color  |
+// | $ztsh-plyr-video-control-bg-hover | Video Player controlss background hover color  |
+// | $ztsh-plyr-tab-focus-default-color | Video Player tab focus default color  |
+// | $ztsh-plyr-menu-bg | Video Player menu background color  |
+// | $ztsh-plyr-menu-color | Video Player menu font color  |
+// | $ztsh-plyr-menu-arrow-size | Video Player menu arrow font size   |
+// | $ztsh-plyr-menu-border-color | Video Player menu border color  |
+// | $ztsh-plyr-menu-border-shadow-color | Video Player menu border shadow color  |
+// | $ztsh-plyr-menu-shadow | Video Player menu shadow properties  |
+// | $ztsh-plyr-progress-loading-size |  Video Player progress loading size  |
+// | $ztsh-plyr-progress-loading-bg |  Video Player progress loading background color   |
+// | $ztsh-plyr-video-progress-buffered-bg | Video Player buffered background color  |
+// | $ztsh-plyr-range-thumb-active-shadow-width |   |
+// | $ztsh-plyr-range-thumb-height |  Range thumb height |
+// | $ztsh-plyr-range-thumb-bg |  Range thumb background color |
+// | $ztsh-plyr-range-thumb-border | Range thumb Border Color  |
+// | $ztsh-plyr-range-thumb-shadow |  Range thumb shadow |
+// | $ztsh-plyr-range-track-height | Track Range height  |
+// | $ztsh-plyr-range-fill-bg |  Range bar background color |
+// | $ztsh-plyr-video-range-track-bg | Range track video background color  |
+// | $ztsh-plyr-audio-range-track-bg |  Range track audio background color   |
+// | $ztsh-plyr-audio-range-thumb-shadow-color | Range thumb audio background color    |
+// | $ztsh-plyr-tooltip-bg |  Video Player  tooltip background color   |
+// | $ztsh-plyr-tooltip-color |   Video Player tooltip font color  |
+// | $ztsh-plyr-tooltip-padding |   Video Player tolltip padding |
+// | $ztsh-plyr-tooltip-arrow-size |  Video Player tooltip arrow size  |
+// | $ztsh-plyr-tooltip-radius | Video Player tooltip border radius  |
+// | $ztsh-plyr-tooltip-shadow | Video Player tooltip shadow properties |
+// | $ztsh-plyr-audio-controls-bg | Audio player controls background color|
+// | $ztsh-plyr-audio-control-color | Audio player controls color |
+// | $ztsh-plyr-audio-control-color-hover | Audio player controls hover color |
+// | $ztsh-plyr-audio-control-bg-hover | Audio player controls background hover color |
+//
+// Styleguide Shortcodes.Video And Audio Shortcode
+
+$ztsh-plyr-badge-bg:                            $ztsh-gray-700 !default;
+$ztsh-plyr-badge-color:                         #fff !default;
+
+$ztsh-plyr-font-size-time:                      $ztsh-font-size-sm !default;
+$ztsh-plyr-font-size-badge:                     9px !default;
+$ztsh-plyr-font-size-menu:                      $ztsh-font-size-sm !default;
+
+$ztsh-plyr-font-weight-regular:                 500 !default;
+$ztsh-plyr-font-weight-bold:                    600 !default;
+
+$ztsh-plyr-line-height:                         1.7 !default;
+
+$ztsh-plyr-captions-bg:                         rgba(#000, 0.8) !default;
+$ztsh-plyr-captions-color:                      #fff !default;
+
+$ztsh-plyr-color-main:                          $ztsh-primary-color !default;
+
+$ztsh-plyr-control-icon-size:                   18px !default;
+$ztsh-plyr-control-spacing:                     10px !default;
+$ztsh-plyr-control-radius:                      3px !default;
+
+$ztsh-plyr-video-controls-bg:                   #000 !default;
+$ztsh-plyr-video-control-color:                 #fff !default;
+$ztsh-plyr-video-control-color-hover:           #fff !default;
+$ztsh-plyr-video-control-bg-hover:              $ztsh-plyr-color-main !default;
+
+
+$ztsh-plyr-tab-focus-default-color:             $ztsh-plyr-color-main !default;
+
+$ztsh-plyr-menu-bg:                             rgba(#fff, 0.9) !default;
+$ztsh-plyr-menu-color:                          $ztsh-gray-700 !default;
+$ztsh-plyr-menu-arrow-size:                     6px !default;
+$ztsh-plyr-menu-border-color:                   $ztsh-gray-200 !default;
+$ztsh-plyr-menu-border-shadow-color:            #fff !default;
+$ztsh-plyr-menu-shadow:                         0 1px 2px rgba(#000, 0.15) !default;
+
+// Loading
+$ztsh-plyr-progress-loading-size:               25px !default;
+$ztsh-plyr-progress-loading-bg:                 rgba($ztsh-gray-900, 0.6) !default;
+
+// Buffered
+$ztsh-plyr-video-progress-buffered-bg:          rgba(#fff, 0.25) !default;
+$ztsh-plyr-audio-progress-buffered-bg:          rgba($ztsh-gray-200, 0.66) !default;
+
+// Active state
+$ztsh-plyr-range-thumb-active-shadow-width:     3px !default;
+
+// Plyr Sliders ==>
+// Thumb
+$ztsh-plyr-range-thumb-height:                  13px !default;
+$ztsh-plyr-range-thumb-bg:                      #fff !default;
+$ztsh-plyr-range-thumb-border:                  2px solid transparent !default;
+$ztsh-plyr-range-thumb-shadow:                  0 1px 1px rgba(#000, 0.15), 0 0 0 1px rgba($ztsh-gray-900, 0.2) !default;
+
+// Track
+$ztsh-plyr-range-track-height:                  5px !default;
+
+
+// Fill
+$ztsh-plyr-range-fill-bg:                       $ztsh-plyr-color-main !default;
+
+// Type specific
+$ztsh-plyr-video-range-track-bg:                $ztsh-plyr-video-progress-buffered-bg !default;
+$ztsh-plyr-audio-range-track-bg:                $ztsh-plyr-audio-progress-buffered-bg !default;
+$ztsh-plyr-audio-range-thumb-shadow-color:      rgba(#000, 0.1) !default;
+// <== Plyr Sliders
+
+$ztsh-plyr-tooltip-bg:                          rgba(#fff, 0.9) !default;
+$ztsh-plyr-tooltip-color:                       $ztsh-gray-700 !default;
+$ztsh-plyr-tooltip-padding:                     ($ztsh-plyr-control-spacing / 2) !default;
+$ztsh-plyr-tooltip-arrow-size:                  4px !default;
+$ztsh-plyr-tooltip-radius:                      3px !default;
+$ztsh-plyr-tooltip-shadow:                      0 1px 2px rgba(#000, 0.25) !default;
+
+// Audio Shortcode
+$ztsh-plyr-audio-controls-bg:                   $ztsh-gray-100 !default;
+$ztsh-plyr-audio-control-color:                 $ztsh-gray-700 !default;
+$ztsh-plyr-audio-control-color-hover:           #fff !default;
+$ztsh-plyr-audio-control-bg-hover:              $ztsh-plyr-color-main !default;
+
+
+// Heading Shortcode
+//
+// Variables setting various parameters of the Heading Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-heading-head-font-size |  The Heading font size  |
+// | $ztsh-heading-head-font-family | The heading section font family   |
+// | $ztsh-heading-head-line-height | The heading fon line height  |
+// | $ztsh-heading-head-color | The heading font color  |
+// | $ztsh-heading-head-margin-bottom | Bottom margin assigned to the heading |
+// | $ztsh-heading-separator-margin-bottom | Bottom margin for the separator |
+// | $ztsh-heading-separator-height | Separator height |
+// | $ztsh-heading-separator-width |  The width of the heading separator |
+// | $ztsh-heading-separator-icon-font-size | Icon font size for the seprartor font   |
+// | $ztsh-heading-separator-icon-color |  Icon font color for the seprartor font  |
+// | $ztsh-heading-separator-icon-xpadding | Icon x-padding for the seprartor font   |
+// | $ztsh-heading-desc-font-size | Description font size   |
+// | $ztsh-heading-desc-font-family | Description font family   |
+// | $ztsh-heading-desc-line-height | Description font line height  |
+// | $ztsh-heading-desc-color |  Description font color  |
+// | $ztsh-heading-desc-margin-bottom | Description text bottom margin   |
+// | $ztsh-heading-spearator-bg-map | Heading seperator backgrodun color map |
+//
+// Styleguide Shortcodes.Heading Shortcode
+
+$ztsh-heading-head-font-size:                   2rem !default;
+$ztsh-heading-head-font-family:                 inherit !default;
+$ztsh-heading-head-line-height:                 1.3 !default;
+$ztsh-heading-head-color:                       $ztsh-gray-800 !default;
+$ztsh-heading-head-margin-bottom:               .5rem !default;
+
+
+$ztsh-heading-separator-margin-bottom:          1rem !default;
+$ztsh-heading-separator-height:                 2px !default;
+$ztsh-heading-separator-width:                  20% !default;
+
+
+$ztsh-heading-separator-icon-font-size:         1.3rem !default;
+$ztsh-heading-separator-icon-color:             $ztsh-gradient-1 !default;
+$ztsh-heading-separator-icon-xpadding:          .5rem !default;
+
+
+$ztsh-heading-desc-font-size:                   .9rem !default;
+$ztsh-heading-desc-font-family:                 inherit !default;
+$ztsh-heading-desc-line-height:                 1.4 !default;
+$ztsh-heading-desc-color:                       $ztsh-gray-600 !default;
+$ztsh-heading-desc-margin-bottom:               1rem !default;
+
+
+$ztsh-heading-spearator-bg-map:                 (
+														backgroundType: gradient,
+														gradientType: linear,
+														color1: $ztsh-gradient-1,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-heading-spearator-border:                 (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+// Lightbox Gallery Shortcode
+//
+// Variables setting various parameters of the Lightbox Gallery Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-light-gallery-hover-bg-color | Image Thumbnail Hover Color  |
+// | $ztsh-light-gallery-icon-size | The hover icon size |
+// | $ztsh-light-gallery-icon-color | The hover icon color  |
+// | $ztsh-light-gallery-icon-padding | The hover icon padding |
+// | $ztsh-light-gallery-icon-bg-color | The hover icon background color |
+// | $ztsh-light-gallery-icon-border-radius |The hover icon Background Border Radius  |
+// | $ztsh-light-gallery-icon-border | The hover icon Border properties |
+// | $ztsh-light-gallery-icon-hover-bg-color | The hover icon background color  |
+// | $ztsh-light-gallery-backdrop-opacity | Gallery backdrop opacity |
+// | $ztsh-light-gallery-toolbar-bg | Toolbar background color |
+// | $ztsh-light-gallery-border-radius-base | Base border radius for the gallery elements |
+// | $ztsh-light-gallery-theme-highlight | Gallery highlight areas like progressbar active bg, thumbnails border.. |
+// | $ztsh-light-gallery-icon-bg | Gallery icons background color |
+// | $ztsh-light-gallery-icon-color | Gallery icons color |
+// | $ztsh-light-gallery-icon-hover-color | Gallery icons color |
+// | $ztsh-light-gallery-counter-color | Gallery counter color |
+// | $ztsh-light-gallery-counter-font-size | Gallery counter font size |
+// | $ztsh-light-gallery-next-prev-bg | Next prev controls background color |
+// | $ztsh-light-gallery-next-prev-color |Next prev controls icon color |
+// | $ztsh-light-gallery-next-prev-hover-color | Next prev controls icon color on hover |
+// | $ztsh-light-gallery-progress-bar-bg | Progress bar background color |
+// | $ztsh-light-gallery-progress-bar-active-bg | $lg-theme-highlight	Progress bar highlight color |
+// | $ztsh-light-gallery-progress-bar-height | Height of the progress bar |
+// | $ztsh-light-gallery-zoomom-transition-duration | Image zoom animation duration.. |
+// | $ztsh-light-gallery-sub-html-bg | Sub html container background color |
+// | $ztsh-light-gallery-sub-html-color | Sub html color |
+// | $ztsh-light-gallery-thumb-toggle-bg | Thumbnail icon toggle icon background color |
+// | $ztsh-light-gallery-thumb-toggle-color | Thumbnail icon toggle icon color |
+// | $ztsh-light-gallery-thumb-toggle-hover-color | Thumbnail icon toggle icon color on hover |
+// | $ztsh-light-gallery-thumb-bg | Thumbnail container background color |
+//
+// Styleguide Shortcodes.Lightbox Gallery Shortcode
+$ztsh-light-gallery-hover-bg-color:             rgba(0, 0, 0, 0.5) !default;
+
+$ztsh-light-gallery-icon-size:                  1rem !default;
+$ztsh-light-gallery-icon-color:                 #ffffff !default;
+$ztsh-light-gallery-icon-padding:               10px !default;
+$ztsh-light-gallery-icon-bg-color:              $ztsh-gray-600 !default;
+$ztsh-light-gallery-icon-border-radius:         50% !default;
+$ztsh-light-gallery-icon-border:                0px solid $ztsh-gray-400 !default;
+$ztsh-light-gallery-icon-hover-bg-color:        $ztsh-gray-800 !default;
+
+$ztsh-light-gallery-backdrop-opacity:           1 !default;
+$ztsh-light-gallery-toolbar-bg:                 rgba(0, 0, 0, 0.45) !default;
+$ztsh-light-gallery-border-radius-base:         2px !default;
+$ztsh-light-gallery-theme-highlight:            rgb(169, 7, 7) !default;
+$ztsh-light-gallery-icon-bg:                    rgba(0, 0, 0, 0.45) !default;
+$ztsh-light-gallery-icon-color:                 #999 !default;
+$ztsh-light-gallery-icon-hover-color:           #eeeeee !default;
+$ztsh-light-gallery-counter-color:              #e6e6e6 !default;
+$ztsh-light-gallery-counter-font-size:          16px !default;
+$ztsh-light-gallery-next-prev-bg:               $ztsh-light-gallery-icon-bg !default;
+$ztsh-light-gallery-next-prev-color:            $ztsh-light-gallery-icon-color !default;
+$ztsh-light-gallery-next-prev-hover-color:      $ztsh-light-gallery-icon-hover-color !default;
+$ztsh-light-gallery-progress-bar-bg:            #333 !default;
+$ztsh-light-gallery-progress-bar-active-bg:     $ztsh-primary-color !default;
+$ztsh-light-gallery-progress-bar-height:        5px !default;
+$ztsh-light-gallery-zoomom-transition-duration: 0.3s !default;
+$ztsh-light-gallery-sub-html-bg:                rgba(0, 0, 0, 0.45) !default;
+$ztsh-light-gallery-sub-html-color:             #eee !default;
+$ztsh-light-gallery-thumb-toggle-bg:            #0d0a0a !default;
+$ztsh-light-gallery-thumb-toggle-color:         $ztsh-light-gallery-icon-color !default;
+$ztsh-light-gallery-thumb-toggle-hover-color:   $ztsh-light-gallery-icon-hover-color !default;
+$ztsh-light-gallery-thumb-bg:                   #0d0a0a !default;
+
+// Jumbotron Shortcode
+//
+// Variables setting various parameters of the Jumbotron Shortcode
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-jumbotron-padding |  Padding inside the Jumbotron  |
+// | $ztsh-jumbotron-color |  Jumbotron Font color  |
+// | $ztsh-jumbotron-bg-map | Jumbotron background map   |
+// | $ztsh-jumbotron-border | Jumbotron border map   |
+// | $ztsh-jumbotron-shadow | Jumbotron shadow map   |
+//
+// Styleguide Shortcodes.Jumbotron Shortcode
+
+$ztsh-jumbotron-padding:                        1.5rem !default;
+$ztsh-jumbotron-color:                          $ztsh-gray-700 !default;
+$ztsh-jumbotron-bg-map:                         (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$ztsh-jumbotron-border:                         (
+														borderTop: false,
+														borderTopColor: $ztsh-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $ztsh-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $ztsh-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $ztsh-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+$ztsh-jumbotron-shadow:                         (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations. Impacts all table variations
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-table-cell-padding | Table cell padding  |
+// | $ztsh-table-cell-padding-sm | Table sm cell padding  |
+// | $ztsh-table-color | Table font color|
+// | $ztsh-table-bg | Table background color |
+// | $ztsh-table-accent-bg | Table accent color |
+// | $ztsh-table-hover-color | Table hover color |
+// | $ztsh-table-hover-bg | Table hover background color |
+// | $ztsh-table-active-bg | Table active background color |
+// | $ztsh-table-border-width | Table border width  |
+// | $ztsh-table-border-color | Table boder color  |
+// | $ztsh-table-head-bg | Table head background color  |
+// | $ztsh-table-head-color | Table head font color |
+// | $ztsh-table-dark-color | Table dark version font color |
+// | $ztsh-table-dark-bg | Table dark version backgrounc color |
+// | $ztsh-table-dark-accent-bg | Table dark version accent color |
+// | $ztsh-table-dark-hover-color | Table dark version hover color |
+// | $ztsh-table-dark-hover-bg | Table dark version hover background color |
+// | $ztsh-table-dark-border-color | Table dark version border color  |
+// | $ztsh-table-dark-color | Table dark version font color |
+// | $ztsh-table-striped-order | Table stripped font color |
+// | $ztsh-table-caption-color | Table caption font color |
+// | $ztsh-table-bg-level | Background color correction level  |
+// | $ztsh-table-border-level | Border color correction level |
+//
+// Styleguide Shortcodes.Table Shortcode
+
+$ztsh-table-cell-padding:                       .75rem !default;
+$ztsh-table-cell-padding-sm:                    .3rem !default;
+
+$ztsh-table-color:                              $ztsh-body-color !default;
+$ztsh-table-bg:                                 null !default;
+$ztsh-table-accent-bg:                          rgba($ztsh-black, .05) !default;
+$ztsh-table-hover-color:                        $ztsh-table-color !default;
+$ztsh-table-hover-bg:                           rgba($ztsh-black, .075) !default;
+$ztsh-table-active-bg:                          $ztsh-table-hover-bg !default;
+
+$ztsh-table-border-width:                       $ztsh-border-width !default;
+$ztsh-table-border-color:                       $ztsh-border-color !default;
+
+$ztsh-table-head-bg:                            $ztsh-gray-200 !default;
+$ztsh-table-head-color:                         $ztsh-gray-700 !default;
+
+$ztsh-table-dark-color:                         $ztsh-white !default;
+$ztsh-table-dark-bg:                            $ztsh-gray-800 !default;
+$ztsh-table-dark-accent-bg:                     rgba($ztsh-white, .05) !default;
+$ztsh-table-dark-hover-color:                   $ztsh-table-dark-color !default;
+$ztsh-table-dark-hover-bg:                      rgba($ztsh-white, .075) !default;
+$ztsh-table-dark-border-color:                  lighten($ztsh-table-dark-bg, 7.5%) !default;
+$ztsh-table-dark-color:                         $ztsh-white !default;
+
+$ztsh-table-striped-order:                      odd !default;
+
+$ztsh-table-caption-color:                      $ztsh-text-muted !default;
+
+$ztsh-table-bg-level:                           -9 !default;
+$ztsh-table-border-level:                       -6 !default;
+
+// Typing Text
+//
+// Variables to customize the Typing Text
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-typing-text-font-size | Font size for the typing text |
+// | $ztsh-typing-text-line-height | Line height for the typing text  |
+// | $ztsh-typing-text-text-align |  Text align for typing text  |
+// | $ztsh-typing-text-font-family | Font Family for typing text |
+// | $ztsh-typing-text-color | The color of the text for typing text |
+//
+// Styleguide Shortcodes.Typing Text
+$ztsh-typing-text-font-size:                    30px !default;
+$ztsh-typing-text-line-height:                  1.3 !default;
+$ztsh-typing-text-text-align:                   center !default;
+$ztsh-typing-text-font-family:                  inherit !default;
+$ztsh-typing-text-color:                        inherit !default;
+
+
+// Drop Caps
+//
+// Variables to customize the Dropcaps
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-dropcaps-color | Font color for drop caps |
+// | $ztsh-dropcaps-font-family | Font familyfor drop caps |
+// | $ztsh-dropcaps-font-size | Font size for drop caps |
+// | $ztsh-dropcaps-padding-right | Right padding for drop caps |
+// | $ztsh-dropcaps-padding-left | Left padding for drop caps |
+//
+// Styleguide Shortcodes.Drop Caps
+$ztsh-dropcaps-color:                           $ztsh-primary-color;
+$ztsh-dropcaps-font-family:                     inherit;
+$ztsh-dropcaps-font-size:                       3.5rem;
+$ztsh-dropcaps-padding-right:                   8px;
+$ztsh-dropcaps-padding-left:                    3px;
+
+
+//
+// Bootstrap Carousel
+//
+// Variables to customize the Bootstrap Carousel
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-dropcaps-color | Font color for drop caps |
+// | $ztsh-dropcaps-font-family | Font familyfor drop caps |
+// | $ztsh-dropcaps-font-size | Font size for drop caps |
+// | $ztsh-dropcaps-padding-right | Right padding for drop caps |
+// | $ztsh-dropcaps-padding-left | Left padding for drop caps |
+//
+// Styleguide Shortcodes. Bootstrap Carousel
+
+$ztsh-carousel-control-color:                   $ztsh-primary-color !default;
+$ztsh-carousel-control-width:                   15% !default;
+$ztsh-carousel-control-opacity:                 .7 !default;
+$ztsh-carousel-control-hover-opacity:           .9 !default;
+$ztsh-carousel-control-transition:              opacity .15s ease !default;
+
+$ztsh-carousel-indicator-width:                 30px !default;
+$ztsh-carousel-indicator-height:                3px !default;
+$ztsh-carousel-indicator-hit-area-height:       10px !default;
+$ztsh-carousel-indicator-spacer:                3px !default;
+$ztsh-carousel-indicator-active-bg:             $ztsh-white !default;
+$ztsh-carousel-indicator-transition:            opacity .6s ease !default;
+
+$ztsh-carousel-caption-width:                   70% !default;
+$ztsh-carousel-caption-color:                   $ztsh-white !default;
+
+$ztsh-carousel-control-icon-width:              20px !default;
+
+$ztsh-carousel-transition-duration:             .6s !default;
+$ztsh-carousel-transition:                      transform $ztsh-carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+
+// Page Title
+//
+// Variables to customize the Page Titles
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-page-title-top-space | Vertical Top padding for page title  |
+// | $ztsh-page-title-bottom-space | Vertical Bottom padding for page title  |
+// | $ztsh-page-title-head-font-size | Heading font size for page title    |
+// | $ztsh-page-title-head-font-family |  Heading forn family for page title   |
+// | $ztsh-page-title-head-line-height |  Heading line height for page title   |
+// | $ztsh-page-title-head-color | Heading font color for page title     |
+// | $ztsh-page-title-head-margin-bottom | Haading font margin bottom |
+// | $ztsh-page-title-separator-margin-bottom | Separator bottom margin  |
+// | $ztsh-page-title-separator-height | Separator height   |
+// | $ztsh-page-title-separator-width |  Separator width  |
+// | $ztsh-page-title-separator-icon-font-size | Separator icon font size  |
+// | $ztsh-page-title-separator-icon-color | Separator icon font color   |
+// | $ztsh-page-title-separator-icon-xpadding | Separator icon x padding between icon  |
+// | $ztsh-page-title-desc-font-size |  Description font size  |
+// | $ztsh-page-title-desc-font-family | Description font family    |
+// | $ztsh-page-title-desc-line-height | Description font line height   |
+// | $ztsh-page-title-desc-color | Description font  color  |
+// | $ztsh-page-title-desc-margin-bottom | Description font margin bottom   |
+// | $ztsh-page-title-spearator-bg-map |  Background color map for the separator  |
+// | $ztsh-page-title-bg-map | Page title background map  |
+// | $ztsh-page-title-overlay-color | Overlay color for page title  |
+//
+// Styleguide Layout.Page Title
+
+$ztsh-page-title-top-space:                     8rem !default;
+$ztsh-page-title-bottom-space:                  8rem !default;
+
+$ztsh-page-title-head-font-size:                2rem !default;
+$ztsh-page-title-head-font-family:              inherit !default;
+$ztsh-page-title-head-line-height:              2rem !default;
+$ztsh-page-title-head-color:                    $ztsh-white !default;
+$ztsh-page-title-head-margin-bottom:            .5rem !default;
+
+
+$ztsh-page-title-separator-margin-bottom:       1rem !default;
+$ztsh-page-title-separator-height:              2px !default;
+$ztsh-page-title-separator-width:               20% !default;
+
+
+$ztsh-page-title-separator-icon-font-size:      1.3rem !default;
+$ztsh-page-title-separator-icon-color:          $ztsh-gradient-1 !default;
+$ztsh-page-title-separator-icon-xpadding:       .5rem !default;
+
+
+$ztsh-page-title-desc-font-size:                .9rem !default;
+$ztsh-page-title-desc-font-family:              inherit !default;
+$ztsh-page-title-desc-line-height:              1.4 !default;
+$ztsh-page-title-desc-color:                    $ztsh-gray-100 !default;
+$ztsh-page-title-desc-margin-bottom:            1rem !default;
+$ztsh-page-title-overlay-color:                 rgba(0, 0, 0, .85) !default;
+
+
+$ztsh-page-title-spearator-bg-map:              (
+														backgroundType: gradient,
+														gradientType: linear,
+														color1: $ztsh-gradient-1,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+$ztsh-page-title-bg-map:                        (
+														backgroundType: image,
+														gradientType: linear,
+														color1: $ztsh-gray-100,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(/assets/images/page-title.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+$ztsh-page-title-spearator-border-map:          (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #f4f4f4,
+														borderBottomWidth: 2px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+
+// Footer
+//
+// Variables to customize the Footer
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-footer-padding-top  |  Top padding for the footer |
+// | $ztsh-footer-padding-bottom  |  Bottom padding for the footer |
+// | $ztsh-footer-font-size  | Font size for the footer  |
+// | $ztsh-footer-color  |  Font color for the footer |
+// | $ztsh-footer-hover-color  |  Footer font hover color  |
+// | $ztsh-footer-font-family  |  Font family for the footer  |
+// | $ztsh-footer-heading-font-size  |  Footer heading font size   |
+// | $ztsh-footer-heading-color  |  Footer heading font color   |
+// | $ztsh-footer-heading-font-family  |  Footer heading font family  |
+// | $ztsh-footer-list-separators  |  Footer list item separator. Set `true` if separators are needed else set false  |
+// | $ztsh-footer-list-separators-color  | Footer list separator color  |
+// | $ztsh-footer-list-x-padding  | Footer list items `x` axis padding   |
+// | $ztsh-footer-list-y-padding  | Footer list items `y` axis padding   |
+// | $ztsh-footer-copyright-top-padding  | Footer copyright section top padding   |
+// | $ztsh-footer-copyright-bottom-padding  | Footer copyright section bottom padding  |
+// | $ztsh-footer-copyright-bg  |  Footer copyright section background color |
+// | $ztsh-footer-social-icon-size  |  Footer social icon size |
+// | $ztsh-footer-social-icon-align  | Footer social icon alignment. Option of `'left'` `'right'` `'center'`   |
+// | $ztsh-footer-social-icon-padding  | Footer social icon padding  |
+// | $ztsh-footer-social-icon-margin  |  Footer social icon margin. Sets the spaces between the social icons  |
+// | $ztsh-footer-social-icon-color  |  Social Icon color |
+// | $ztsh-footer-social-icon-hover-color  | Social icon hover color  |
+// | $ztsh-footer-bg-map  | Footer background properties map   |
+//
+// Styleguide Layout.Footer
+
+$ztsh-footer-padding-top:                       60px !default;
+$ztsh-footer-padding-bottom:                    40px !default;
+$ztsh-footer-font-size:                         .9rem !default;
+$ztsh-footer-color:                             $ztsh-gray-200 !default;
+$ztsh-footer-hover-color:                       $ztsh-primary-color !default;
+$ztsh-footer-font-family:                       inherit !default;
+
+$ztsh-footer-heading-font-size:                 1rem !default;
+$ztsh-footer-heading-color:                     $ztsh-gray-100 !default;
+$ztsh-footer-heading-font-family:               inherit !default;
+
+$ztsh-footer-list-separators:                   false !default;
+$ztsh-footer-list-separators-color:             rgba(255, 255, 255, 0.1) !default;
+$ztsh-footer-list-x-padding:                    .5rem !default;
+$ztsh-footer-list-y-padding:                    .8rem !default;
+
+$ztsh-footer-copyright-top-padding:             .8rem !default;
+$ztsh-footer-copyright-bottom-padding:          .8rem !default;
+$ztsh-footer-copyright-bg:                      $ztsh-black !default;
+
+$ztsh-footer-social-icon-size:                  .9rem !default;
+$ztsh-footer-social-icon-align:                 'center' !default;
+$ztsh-footer-social-icon-padding:               .5rem !default;
+$ztsh-footer-social-icon-margin:                5px !default;
+$ztsh-footer-social-icon-color:                 $ztsh-gray-300 !default;
+$ztsh-footer-social-icon-hover-color:           $ztsh-white !default;
+
+$ztsh-footer-bg-map:                            (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $ztsh-gray-900,
+														color2: $ztsh-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(/assets/images/page-title.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+
+// Blog Listing
+//
+// Variables to customize the Blog Listing
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-blog-list-col-count  | Blog listing Column Count Works for the classic layout as well as the masonry layout   |
+// | $ztsh-blog-list-col-gutter  |  Gutter space between blog listing columns    |
+// | $ztsh-blog-list-col-margin-bottom  |  Margin below the blog listing columns    |
+// | $ztsh-blog-list-content-align  | Content alignment for blog listings. Possible options `center`, `left`, `right`  |
+// | $ztsh-blog-list-border-width  | The border width for the outline along the blog listing columns    |
+// | $ztsh-blog-list-border-radius  |   The border radius for the outline along the blog listing columns      |
+// | $ztsh-blog-list-border-color  |   The border color for the outline along the blog listing columns      |
+// | $ztsh-blog-list-inner-border-radius  |   The inner border radius for the outline along the blog listing columns      |
+// | $ztsh-blog-list-bg-color  |   Blog listing card background color   |
+// | $ztsh-blog-list-shadow  |  blog listing shadow map   |
+// | $ztsh-blog-list-cat-badge-top-margin  |    Blog listing category section top margin |
+// | $ztsh-blog-list-cat-badge-bottom-margin  |  Blog listing category section bottom margin   |
+// | $ztsh-blog-list-cat-badge-font-size  | Blog listing category section badge font size     |
+// | $ztsh-blog-list-cat-badge-font-family  |  Blog listing category section badge font family    |
+// | $ztsh-blog-list-cat-badge-color  |   Blog listing category section badge font color   |
+// | $ztsh-blog-list-cat-badge-font-weight  | Blog listing category section badge font weight     |
+// | $ztsh-blog-list-cat-badge-bg-color  |  Blog listing category section badge background color    |
+// | $ztsh-blog-list-title-font-size  |   Blog listing title font size  |
+// | $ztsh-blog-list-title-font-family  | Blog listing title font family     |
+// | $ztsh-blog-list-title-color  |   Blog listing title font color   |
+// | $ztsh-blog-list-title-font-weight  |   Blog listing title font weight  |
+// | $ztsh-blog-list-title-margin-bottom  | Blog listing title font margin bottom    |
+// | $ztsh-blog-list-title-margin-top  |  Blog listing title font margin top    |
+// | $ztsh-blog-list-auth-sec-font-size  |  Blog listing author meta section font size   |
+// | $ztsh-blog-list-auth-sec-font-family  |  Blog listing author meta section font family     |
+// | $ztsh-blog-list-auth-sec-color  |   Blog listing author meta section font color  |
+// | $ztsh-blog-list-auth-sec-font-weight  |  Blog listing author meta section font weight   |
+// | $ztsh-blog-list-auth-sec-margin-top  |   Blog listing author meta section margin top  |
+// | $ztsh-blog-list-auth-sec-margin-bottom  |   Blog listing author meta section margin bottom   |
+// | $ztsh-blog-list-auth-sec-padding-top  |  Blog listing author meta section padding top    |
+// | $ztsh-blog-list-auth-sec-padding-bottom  |  Blog listing author meta section padding bottom   |
+// | $ztsh-blog-list-auth-sec-background-color  | Blog listing author meta section background color      |
+// | $ztsh-blog-list-comment-font-size  |   Blog listing comment meta section font size   |
+// | $ztsh-blog-list-comment-font-family  | Blog listing comment meta section font family    |
+// | $ztsh-blog-list-comment-color  |  Blog listing comment meta section font color   |
+// | $ztsh-blog-list-comment-font-weight  |  Blog listing comment meta section font weight    |
+// | $ztsh-blog-list-comment-margin-top  |   Blog listing comment meta section margin top  |
+// | $ztsh-blog-list-comment-margin-bottom  |   Blog listing comment meta section margin bottom  |
+// | $ztsh-blog-list-comment-padding-top  |  Blog listing comment meta section padding top    |
+// | $ztsh-blog-list-comment-padding-bottom  |   Blog listing comment meta section padding bottom  |
+// | $ztsh-blog-list-comment-background-color  |   Blog listing comment meta section bacgrodun color   |
+// | $ztsh-blog-list-comment-icon-color  |  Blog listing comment meta section icon color   |
+// | $ztsh-blog-list-comment-x-padding  |   Blog listing comment meta section x-axis padding   |
+// | $ztsh-blog-list-excerpt-font-size  |  Blog listing excerpt font size    |
+// | $ztsh-blog-list-excerpt-font-family  | Blog listing excerpt font family     |
+// | $ztsh-blog-list-excerpt-color  |   Blog listing excerpt font color  |
+// | $ztsh-blog-list-excerpt-font-weight  |   Blog listing excerpt font weight  |
+// | $ztsh-blog-list-excerpt-margin-top  |  Blog listing excerpt margin top    |
+// | $ztsh-blog-list-excerpt-margin-bottom  |  Blog listing excerpt margin bottom    |
+// | $ztsh-blog-list-btn-color  |  Available Options `'primary'`,`'secondary'`,`'light'`, `'dark'`  |
+// | $ztsh-blog-list-btn-type  |  Available Options `'flat'`, `'outline'`   |
+// | $ztsh-blog-list-btn-size  |   Available Options `'small'`, `'large'`, `'default'`, `'block'`  |
+// | $ztsh-blog-list-quote-background-color  |  Blog listing quote post background color    |
+// | $ztsh-blog-list-quote-padding  |   Blog listing quote post padding   |
+// | $ztsh-blog-list-quote-font-size  |  Blog listing quote post font size   |
+// | $ztsh-blog-list-quote-font-family  |  Blog listing quote post font family    |
+// | $ztsh-blog-list-quote-color  |   Blog listing quote post font color  |
+// | $ztsh-blog-list-quote-font-weight  |   Blog listing quote post forn weight   |
+// | $ztsh-blog-list-quote-margin-bottom  |   Blog listing quote post margin below quote  |
+// | $ztsh-blog-list-quote-footer-font-color  | Blog listing quote post footer font color    |
+//
+// Styleguide Blog.Blog Listing
+
+$ztsh-blog-list-col-count:                      3 !default;
+$ztsh-blog-list-col-gutter:                     30px !default;
+$ztsh-blog-list-col-margin-bottom:              30px !default;
+
+
+$ztsh-blog-list-content-align:                  center !default;
+$ztsh-blog-list-border-width:                   1px !default;
+$ztsh-blog-list-border-radius:                  $ztsh-border-radius !default;
+$ztsh-blog-list-border-color:                   rgba($ztsh-black, .125) !default;
+$ztsh-blog-list-inner-border-radius:            calc(#{$ztsh-card-border-radius} - #{$ztsh-card-border-width}) !default;
+$ztsh-blog-list-bg-color:                       #ffffff !default;
+$ztsh-blog-list-shadow:                         (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+$ztsh-blog-list-cat-badge-top-margin:           0px !default;
+$ztsh-blog-list-cat-badge-bottom-margin:        .5rem !default;
+$ztsh-blog-list-cat-badge-font-size:            70% !default;
+$ztsh-blog-list-cat-badge-font-family:          inherit !default;
+$ztsh-blog-list-cat-badge-color:                #ffffff !default;
+$ztsh-blog-list-cat-badge-font-weight:          700 !default;
+$ztsh-blog-list-cat-badge-bg-color:             $ztsh-gray-500 !default;
+
+
+$ztsh-blog-list-title-font-size:                1.2rem !default;
+$ztsh-blog-list-title-font-family:              inherit !default;
+$ztsh-blog-list-title-color:                    $ztsh-gray-800 !default;
+$ztsh-blog-list-title-font-weight:              300 !default;
+$ztsh-blog-list-title-margin-bottom:            1rem !default;
+$ztsh-blog-list-title-margin-top:               0px !default;
+
+
+$ztsh-blog-list-auth-sec-font-size:             .8rem !default;
+$ztsh-blog-list-auth-sec-font-family:           inherit !default;
+$ztsh-blog-list-auth-sec-color:                 $ztsh-gray-600 !default;
+$ztsh-blog-list-auth-sec-font-weight:           500 !default;
+$ztsh-blog-list-auth-sec-margin-top:            0 !default;
+$ztsh-blog-list-auth-sec-margin-bottom:         .425rem !default;
+$ztsh-blog-list-auth-sec-padding-top:           5px !default;
+$ztsh-blog-list-auth-sec-padding-bottom:        5px !default;
+$ztsh-blog-list-auth-sec-background-color:      $ztsh-gray-100 !default;
+
+
+$ztsh-blog-list-comment-font-size:              .75rem !default;
+$ztsh-blog-list-comment-font-family:            inherit !default;
+$ztsh-blog-list-comment-color:                  $ztsh-gray-600 !default;
+$ztsh-blog-list-comment-font-weight:            500 !default;
+$ztsh-blog-list-comment-margin-top:             0 !default;
+$ztsh-blog-list-comment-margin-bottom:          1.1rem !default;
+$ztsh-blog-list-comment-padding-top:            0 !default;
+$ztsh-blog-list-comment-padding-bottom:         0 !default;
+$ztsh-blog-list-comment-background-color:       transparent !default;
+$ztsh-blog-list-comment-icon-color:             $ztsh-primary-color !default;
+$ztsh-blog-list-comment-x-padding:              7px !default;
+
+
+$ztsh-blog-list-excerpt-font-size:              inherit !default;
+$ztsh-blog-list-excerpt-font-family:            inherit !default;
+$ztsh-blog-list-excerpt-color:                  inherit !default;
+$ztsh-blog-list-excerpt-font-weight:            inherit !default;
+$ztsh-blog-list-excerpt-margin-top:             0 !default;
+$ztsh-blog-list-excerpt-margin-bottom:          1rem !default;
+
+
+$ztsh-blog-list-btn-color:                      'primary' !default;
+$ztsh-blog-list-btn-type:                       'flat' !default; //
+$ztsh-blog-list-btn-size:                       'small' !default; //
+
+
+$ztsh-blog-list-quote-background-color:         $ztsh-primary-color !default;
+$ztsh-blog-list-quote-padding:                  2rem !default;
+$ztsh-blog-list-quote-font-size:                1.4rem !default;
+$ztsh-blog-list-quote-font-family:              $ztsh-blog-list-excerpt-font-family !default;
+$ztsh-blog-list-quote-color:                    #ffffff !default;
+$ztsh-blog-list-quote-font-weight:              300 !default;
+$ztsh-blog-list-quote-margin-bottom:            20px !default;
+$ztsh-blog-list-quote-footer-font-color:        #ffffff !default;
+
+
+// Blog Single
+//
+// Variables to customize the Blog Single Page
+//
+// | Variable  |Options |
+// |----------|-------|
+// | $ztsh-blog-list-col-count  | Blog listing Column Count Works for the classic layout as well as the masonry layout   |
+// | $ztsh-blog-list-col-gutter  |  Gutter space between blog listing columns    |
+// | $ztsh-blog-list-col-margin-bottom  |  Margin below the blog listing columns    |
+//
+// Styleguide Blog.Blog Single
+$ztsh-blog-single-text-align:                   center !default;
+$ztsh-blog-single-meta-margin-top:              2rem !default;
+$ztsh-blog-single-meta-margin-bottom:           2rem !default;
+
+
+$ztsh-blog-single-cat-badge-top-margin:         0px !default;
+$ztsh-blog-single-cat-badge-bottom-margin:      .5rem !default;
+$ztsh-blog-single-cat-badge-font-size:          70% !default;
+$ztsh-blog-single-cat-badge-font-family:        inherit !default;
+$ztsh-blog-single-cat-badge-color:              #ffffff !default;
+$ztsh-blog-single-cat-badge-font-weight:        700 !default;
+$ztsh-blog-single-cat-badge-bg-color:           $ztsh-primary-color !default;
+
+
+$ztsh-blog-single-title-font-size:              1.6rem !default;
+$ztsh-blog-single-title-font-family:            inherit !default;
+$ztsh-blog-single-title-color:                  $ztsh-gray-800 !default;
+$ztsh-blog-single-title-font-weight:            300 !default;
+$ztsh-blog-single-title-margin-bottom:          1rem !default; // Reset the margi:
+$ztsh-blog-single-title-margin-top:             0px !default;
+
+
+$ztsh-blog-single-auth-sec-font-size:           .8rem !default;
+$ztsh-blog-single-auth-sec-font-family:         inherit !default;
+$ztsh-blog-single-auth-sec-color:               $ztsh-gray-600 !default;
+$ztsh-blog-single-auth-sec-font-weight:         500 !default;
+$ztsh-blog-single-auth-sec-margin-top:          0 !default;
+$ztsh-blog-single-auth-sec-margin-bottom:       .425rem !default;
+$ztsh-blog-single-auth-sec-padding-top:         5px !default;
+$ztsh-blog-single-auth-sec-padding-bottom:      5px !default;
+$ztsh-blog-single-auth-sec-background-color:    $ztsh-gray-100 !default;
+
+
+$ztsh-blog-single-comment-font-size:            .75rem !default;
+$ztsh-blog-single-comment-font-family:          inherit !default;
+$ztsh-blog-single-comment-color:                $ztsh-gray-600 !default;
+$ztsh-blog-single-comment-font-weight:          500 !default;
+$ztsh-blog-single-comment-margin-top:           0 !default;
+$ztsh-blog-single-comment-margin-bottom:        1.1rem !default;
+$ztsh-blog-single-comment-padding-top:          0 !default;
+$ztsh-blog-single-comment-padding-bottom:       0 !default;
+$ztsh-blog-single-comment-background-color:     transparent !default;
+$ztsh-blog-single-comment-icon-color:           $ztsh-primary-color !default;
+$ztsh-blog-single-comment-x-padding:            7px !default;

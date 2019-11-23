@@ -1,0 +1,210 @@
+// =============================>
+//  Forms Styling Partials
+// <============================
+
+// Look at the following
+// TODO: https://www.dropzonejs.com/, https://github.com/pqina/filepond, https://github.com/transloadit/uppy
+// TODO: http://xoxco.com/projects/code/tagsinput/
+// TODO: https://github.com/lokesh-coder/pretty-checkbox
+// TODO: https://tympanus.net/Development/TextInputEffects/index.html
+
+
+.wdpk-form
+{
+	label
+	{
+		font-size:   $wdpk-label-font-size;
+		font-weight: $wdpk-label-font-weight;
+		color:       $wdpk-label-font-color;
+	}
+
+	textarea
+	{
+		border-radius: $wdpk-border-radius;
+	}
+
+	select.form-control[multiple]
+	{
+		border-radius: $wdpk-border-radius;
+	}
+
+}
+
+// =============================>
+//  Styling For Checkbox
+//  It has not beeen intentionally scoped within the `wdpk-form` class so that they can bee used independently
+// <============================
+.wdpk-checkbox-wrapper
+{
+	position:            relative;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select:    none; /* Firefox 2+ */
+	-ms-user-select:     none; /* IE 10+ */
+	user-select:         none; /* Standard syntax */
+	margin-bottom:       $wdpk-form-group-margin-bottom;
+	height:              $wdpk-input-checkbox-size;
+
+
+	&:hover .wdpk-checkmark
+	{
+		background-color: $wdpk-input-disabled-bg;
+	}
+
+
+	// Trigger To Display Checked box
+	input:checked ~ .wdpk-checkmark:after
+	{
+		display: block;
+	}
+
+	// Assign background color to checkmark
+	input:checked ~ .wdpk-checkmark
+	{
+		background-color: $wdpk-primary-color;
+	}
+
+	.wdpk-checkbox
+	{
+		position: absolute;
+		opacity:  0;
+		cursor:   pointer;
+		height:   0;
+		width:    0;
+	}
+
+	.wdpk-checkbox-label
+	{
+		left:          0;
+		padding-left:  calc(#{$wdpk-input-checkbox-size} + (#{$wdpk-label-margin-bottom} * 2));
+		cursor:        pointer;
+		margin-bottom: 0;
+		position:      absolute;
+		z-index:       2;
+		line-height:   $wdpk-label-line-height;
+		@if ($wdpk-label-line-height > $wdpk-input-checkbox-size)
+		{
+			margin-top: 0;
+		} @else
+		{
+			margin-top: (($wdpk-input-checkbox-size - $wdpk-label-line-height)/2);
+		}
+
+	}
+
+	.wdpk-checkmark
+	{
+		cursor:           pointer;
+		position:         absolute;
+		z-index:          1;
+
+		@if ($wdpk-label-line-height > $wdpk-input-checkbox-size)
+		{
+			top: (($wdpk-label-line-height - $wdpk-input-checkbox-size)/2);
+		} @else
+		{
+			top: 0;
+		}
+		left:             0;
+		height:           $wdpk-input-checkbox-size;
+		width:            $wdpk-input-checkbox-size;
+		background-color: $wdpk-white;
+		border:           $wdpk-input-border-width $wdpk-input-border-color solid;
+		border-radius:    $wdpk-input-border-radius;
+		@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+
+		// Creates the checkmark and keeps it hidden
+		&:after
+		{
+			content:           "";
+			position:          absolute;
+			display:           none;
+			left:              (($wdpk-input-checkbox-size - ($wdpk-input-checkbox-size/2))/2);
+			top:               (($wdpk-input-checkbox-size - ($wdpk-input-checkbox-size/2))/3);
+			width:             ($wdpk-input-checkbox-size/3);
+			height:            ($wdpk-input-checkbox-size/2);
+			border:            solid white;
+			border-width:      0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform:     rotate(45deg);
+			transform:         rotate(45deg);
+
+		}
+	}
+}
+
+// =============================>
+//  Styling For Radio Inputs
+//  It has not beeen intentionally scoped within the `wdpk-form` class so that they can bee used independently
+// <============================
+
+.wdpk-radio-wrapper
+{
+	@extend .wdpk-checkbox-wrapper;
+
+	&:hover .wdpk-radio-on
+	{
+		background-color: $wdpk-input-disabled-bg;
+	}
+
+
+	// Trigger To Dissplay Checked box
+	input:checked ~ .wdpk-radio-on:after
+	{
+		display: block;
+	}
+
+	// Assign background color to checkmark
+	input:checked ~ .wdpk-radio-on
+	{
+		background-color: $wdpk-primary-color;
+	}
+
+	.wdpk-radio
+	{
+		@extend .wdpk-checkbox;
+	}
+
+	.wdpk-radio-label
+	{
+		@extend .wdpk-checkbox-label;
+	}
+
+	.wdpk-radio-on
+	{
+
+		cursor:           pointer;
+		position:         absolute;
+
+		@if ($wdpk-label-line-height > $wdpk-input-checkbox-size)
+		{
+			top: (($wdpk-label-line-height - $wdpk-input-checkbox-size)/2);
+		} @else
+		{
+			top: 0;
+		}
+		left:             0;
+		height:           $wdpk-input-checkbox-size;
+		width:            $wdpk-input-checkbox-size;
+		background-color: $wdpk-white;
+		border:           $wdpk-input-border-width $wdpk-input-border-color solid;
+		@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+
+		border-radius:    50%;
+
+		// Creates the circle for the Radio and keep it hidden
+		&:after
+		{
+			content:          "";
+			position:         absolute;
+			display:          none;
+			left:             50%;
+			top:              50%;
+			width:            ($wdpk-input-checkbox-size/3);
+			height:           ($wdpk-input-checkbox-size/3);
+			border:           none;
+			border-radius:    50%;
+			background-color: $wdpk-white;
+			transform:        translate(-50%, -50%);
+		}
+	}
+}

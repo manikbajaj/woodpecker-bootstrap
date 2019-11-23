@@ -1,0 +1,878 @@
+// Import the required Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i&display=swap');
+
+// Bootstrap Colors
+$wdpk-blue:                                     #0056c6 !default;
+$wdpk-indigo:                                   #6610f2 !default;
+$wdpk-purple:                                   #6f42c1 !default;
+$wdpk-pink:                                     #e83e8c !default;
+$wdpk-red:                                      #f03a47 !default;
+$wdpk-orange:                                   #fd7e14 !default;
+$wdpk-yellow:                                   #ffc107 !default;
+$wdpk-green:                                    #38c07b !default;
+$wdpk-teal:                                     #20c997 !default;
+$wdpk-cyan:                                     #0dbdcd !default;
+
+// Bootstrap Grays
+$wdpk-white:                                    #fff !default;
+$wdpk-gray-100:                                 #f8f9fa !default;
+$wdpk-gray-200:                                 #e9ecef !default;
+$wdpk-gray-300:                                 #dee2e6 !default;
+$wdpk-gray-400:                                 #ced4da !default;
+$wdpk-gray-500:                                 #adb5bd !default;
+$wdpk-gray-600:                                 #6c757d !default;
+$wdpk-gray-700:                                 #495057 !default;
+$wdpk-gray-800:                                 #3a4147 !default;
+$wdpk-gray-900:                                 #31363a !default;
+$wdpk-black:                                    #272728 !default;
+
+
+// Base Colors
+$wdpk-primary-color:                            #021d47 !default;
+$wdpk-secondary:                                #005dd8 !default;
+$wdpk-gradient-1:                               #00245b !default;
+$wdpk-gradient-2:                               #991e94 !default;
+$wdpk-success:                                  $wdpk-green !default;
+$wdpk-info:                                     $wdpk-cyan !default;
+$wdpk-warning:                                  $wdpk-yellow !default;
+$wdpk-danger:                                   $wdpk-red !default;
+$wdpk-light:                                    #e9ecef !default;
+$wdpk-dark:                                     $wdpk-gray-800 !default;
+
+// Body Font Colors
+$wdpk-body-color:                               $wdpk-gray-600 !default;
+
+// Components
+//
+// Define common padding and border radius sizes etc for various components. All the components use values from these variables to calculate the values.
+$wdpk-line-height-lg:                           1.6 !default;
+$wdpk-line-height-sm:                           1.6 !default;
+
+$wdpk-border-width:                             1px !default;
+$wdpk-border-color:                             $wdpk-gray-200 !default;
+
+$wdpk-component-active-color:                   $wdpk-white !default;
+$wdpk-component-active-bg:                      $wdpk-primary-color !default;
+
+$wdpk-border-radius:                            .625rem !default;
+$wdpk-border-radius-lg:                         .625rem !default;
+$wdpk-border-radius-sm:                         .625rem !default;
+
+// Fonts
+$wdpk-font-size-base:                           .95rem !default;
+$wdpk-font-size-lg:                             $wdpk-font-size-base * 1.25 !default;
+$wdpk-font-size-sm:                             $wdpk-font-size-base * .875 !default;
+
+// The default Sans Serif font family
+$wdpk-font-family-sans-serif:                   'Poppins', Arial, Helvetica, sans-serif !default;
+$wdpk-font-family-monospace:                    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$wdpk-font-family-base:                         $wdpk-font-family-sans-serif !default;
+$wdpk-font-family-secondary:                    'Fira Sans', sans-serif;
+
+$wdpk-font-weight-light:                        300 !default;
+$wdpk-font-weight-normal:                       400 !default;
+$wdpk-font-weight-bold:                         700 !default;
+$wdpk-line-height-base:                         1.6 !default;
+
+$wdpk-font-weight-base:                         $wdpk-font-weight-normal !default;
+$wdpk-line-height-base:                         1.6 !default;
+
+
+$wdpk-h1-font-size:                             $wdpk-font-size-base * 2.25 !default;
+$wdpk-h2-font-size:                             $wdpk-font-size-base * 2 !default;
+$wdpk-h3-font-size:                             $wdpk-font-size-base * 1.75 !default;
+$wdpk-h4-font-size:                             $wdpk-font-size-base * 1.5 !default;
+$wdpk-h5-font-size:                             $wdpk-font-size-base * 1.25 !default;
+$wdpk-h6-font-size:                             $wdpk-font-size-base * 1.125 !default;
+$wdpk-headings-margin-bottom:                   .625rem !default;
+$wdpk-headings-font-family:                     inherit !default;
+$wdpk-headings-font-weight:                     600 !default;
+$wdpk-headings-line-height:                     1.33 !default;
+$wdpk-headings-color:                           #505050 !default;
+
+$wdpk-display1-size:                            3.625rem !default;
+$wdpk-display2-size:                            3.25rem !default;
+$wdpk-display3-size:                            2.875rem !default;
+$wdpk-display4-size:                            2.5rem !default;
+
+$wdpk-display1-weight:                          600 !default;
+$wdpk-display2-weight:                          600 !default;
+$wdpk-display3-weight:                          600 !default;
+$wdpk-display4-weight:                          600 !default;
+
+$wdpk-paragraph-margin-bottom:                  1.875rem !default;
+
+$wdpk-link-color:                               $wdpk-secondary !default;
+$wdpk-link-decoration:                          none !default;
+$wdpk-link-hover-color:                         darken($wdpk-link-color, 25%) !default;
+$wdpk-link-hover-decoration:                    none !default;
+
+$wdpk-text-muted:                               $wdpk-gray-600 !default;
+
+
+// Buttons And Forms Common Variables
+$wdpk-input-btn-radius:                         3.125rem !default;
+$wdpk-input-btn-padding-y:                      .7rem !default;
+$wdpk-input-btn-padding-x:                      1rem !default;
+$wdpk-input-btn-font-family:                    null !default;
+$wdpk-input-btn-font-size:                      $wdpk-font-size-base !default;
+$wdpk-input-btn-line-height:                    $wdpk-line-height-base !default;
+$wdpk-input-btn-focus-width:                    .2rem !default;
+$wdpk-input-btn-focus-color:                    rgba($wdpk-component-active-bg, .25) !default;
+$wdpk-input-btn-focus-box-shadow:               0 0 0 $wdpk-input-btn-focus-width $wdpk-input-btn-focus-color !default;
+
+$wdpk-input-btn-padding-y-sm:                   .625rem !default;
+$wdpk-input-btn-padding-x-sm:                   .875rem !default;
+$wdpk-input-btn-font-size-sm:                   $wdpk-font-size-sm !default;
+$wdpk-input-btn-line-height-sm:                 $wdpk-line-height-sm !default;
+
+$wdpk-input-btn-padding-y-lg:                   1rem !default;
+$wdpk-input-btn-padding-x-lg:                   2rem !default;
+$wdpk-input-btn-font-size-lg:                   $wdpk-font-size-lg !default;
+$wdpk-input-btn-line-height-lg:                 $wdpk-line-height-lg !default;
+
+$wdpk-input-btn-border-width:                   $wdpk-border-width !default;
+
+
+// Buttons
+$wdpk-input-btn-gradient-direction:             45deg !default;
+
+
+// Forms
+$wdpk-label-font-size:                          1rem !default;
+$wdpk-label-line-height:                        1.6 !default;
+$wdpk-label-font-weight:                        500 !default;
+$wdpk-label-font-color:                         inherit !default;
+
+$wdpk-form-group-margin-bottom:                 1.5rem !default;
+$wdpk-input-bg:                                 $wdpk-white !default;
+$wdpk-input-disabled-bg:                        $wdpk-gray-200 !default;
+$wdpk-input-color:                              $wdpk-gray-700 !default;
+$wdpk-input-border-color:                       $wdpk-gray-400 !default;
+
+$wdpk-input-placeholder-color:                  $wdpk-gray-500 !default;
+$wdpk-label-margin-bottom:                      .25rem !default;
+
+$wdpk-input-border-radius:                      100px !default;
+$wdpk-input-border-radius-lg:                   100px !default;
+$wdpk-input-border-radius-sm:                   100px !default;
+
+// Navigation Header Varibales
+$wdpk-menu-height:                              88px !default;
+$wdpk-menu-logo-width:                          200px !default;
+$wdpk-menu-logo-align:                          flex-start !default;
+$wdpk-menu-align-items:                         center !default;
+$wdpk-padding-menu-items:                       10px !default;
+
+$wdpk-primary-menu-shadow:                      (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 1px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+
+// Font size for parent menu items
+$wdpk-menu-font-size:                           .9rem !default;
+$wdpk-menu-font-color:                          $wdpk-gray-700 !default;
+$wdpk-menu-font-color-hover:                    $wdpk-primary-color !default;
+$wdpk-menu-font-family:                         'Poppins', Arial, Helvetica, sans-serif !default;
+$wdpk-menu-font-weight:                         500 !default;
+$wdpk-menu-text-transform:                      capitalize !default;
+$wdpk-menu-font-line-height:                    1.4 !default;
+$wdpk-menu-display-caret:                       true !default;
+$wdpk-menu-items-side-border:                   false !default;
+$wdpk-menu-items-side-border-thickness:         1px !default;
+$wdpk-menu-items-side-border-color:             #bbbbbb !default;
+$wdpk-menu-extras-border:                       false !default;
+$wdpk-menu-extras-border-width:                 1px !default;
+$wdpk-menu-extras-boder-color:                  #666666 !default;
+$wdpk-cart-number-font-color:                   #ffffff !default;
+$wdpk-menu-extras-font-size:                    $wdpk-menu-font-size !default;
+$wdpk-menu-extras-font-color:                   $wdpk-menu-font-color !default;
+$wdpk-menu-extras-font-hover-color:             $wdpk-menu-font-color-hover !default;
+$wdpk-menu-split-menu:                          false !default;
+$wdpk-menu-split1-align:                        flex-start !default;
+$wdpk-menu-split2-align:                        flex-end !default;
+
+
+$wdpk-primary-menu-border-map:                  (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 0px,
+												) !default;
+
+$wdpk-hover-effect:                             (
+														hoverType: 3,
+														paddingBottom: 8px,
+														hoverThickness: 3px,
+														hoverColorType: color,
+														animationType: bottomToTop,
+														animationDistance: 10px,
+														animationDuration: 0.3s,
+														animationDelay: 0s,
+														col1: $wdpk-white,
+														col2: $wdpk-white,
+														hoverBorderRadius:10px,
+												) !default;
+
+
+// Transparent Navbar
+$wdpk-transparent-menu-font-color:              $wdpk-gray-100 !default;
+$wdpk-transparent-menu-font-color-hover:        $wdpk-white !default;
+$wdpk-transparent-menu-height:                  60px !default;
+$wdpk-transparent-menu-logo-width:              200px !default;
+$wdpk-transparent-menu-extras-font-color:       $wdpk-transparent-menu-font-color !default;
+$wdpk-transparent-menu-extras-font-hover-color: $wdpk-transparent-menu-font-color-hover !default;
+
+
+// Sticky Navbar
+$wdpk-sticky-menu-font-size:                    .9rem !default;
+
+// Dropdown Menu
+$wdpk-dropdown-menu-border-map:                 (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 3px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: $wdpk-border-radius,
+												) !default;
+$wdpk-dropdown-menu-shadow-map:                 (
+														shadowOn: true,
+														hOffset: 0px,
+														vOffset: 10px,
+														blurRadius: 15px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.35)
+												) !default;
+
+
+// Page Title
+$wdpk-page-title-top-space:                     13rem !default;
+$wdpk-page-title-bottom-space:                  8rem !default;
+
+$wdpk-page-title-head-font-size:                $wdpk-display3-size !default;
+$wdpk-page-title-head-font-family:              inherit !default;
+$wdpk-page-title-head-line-height:              1.33 !default;
+$wdpk-page-title-head-color:                    $wdpk-white !default;
+$wdpk-page-title-head-margin-bottom:            .3rem !default;
+
+
+$wdpk-page-title-separator-margin-bottom:       1rem !default;
+$wdpk-page-title-separator-height:              10px !default;
+$wdpk-page-title-separator-width:               20% !default;
+
+
+$wdpk-page-title-separator-icon-font-size:      1.3rem !default;
+$wdpk-page-title-separator-icon-color:          $wdpk-gradient-1 !default;
+$wdpk-page-title-separator-icon-xpadding:       .5rem !default;
+
+
+$wdpk-page-title-desc-font-size:                1.1rem !default;
+$wdpk-page-title-desc-font-family:              $wdpk-font-family-secondary !default;
+$wdpk-page-title-desc-line-height:              1.6 !default;
+$wdpk-page-title-desc-color:                    $wdpk-gray-100 !default;
+$wdpk-page-title-desc-margin-bottom:            0px !default;
+$wdpk-page-title-overlay-color:                 rgba(0, 0, 0, 0) !default;
+
+
+$wdpk-page-title-spearator-bg-map:              (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-secondary,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+$wdpk-page-title-bg-map:                        (
+														backgroundType: image,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/template/images/homehero-bg.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+$wdpk-page-title-spearator-border-map:          (
+														borderTop: false,
+														borderTopColor: #000000,
+														borderTopWidth: 2px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: #dddddd,
+														borderRightWidth: 5px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: #f4f4f4,
+														borderBottomWidth: 2px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: #dddddd,
+														borderLeftWidth: 5px,
+														borderLeftStyle: solid,
+														borderRadius: 50px,
+												) !default;
+
+
+// Badges
+$wdpk-badge-font-size:                          70% !default;
+$wdpk-badge-font-weight:                        $wdpk-font-weight-base !default;
+$wdpk-badge-padding-y:                          .5em !default;
+$wdpk-badge-padding-x:                          .7em !default;
+$wdpk-badge-border-radius:                      $wdpk-border-radius !default;
+
+$wdpk-badge-focus-width:                        $wdpk-input-btn-focus-width !default;
+
+$wdpk-badge-pill-padding-x:                     .6em !default;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$wdpk-badge-pill-border-radius:                 10rem !default;
+
+
+// Heading Shortcode
+$wdpk-heading-head-font-size:                   2rem !default;
+$wdpk-heading-head-font-family:                 inherit !default;
+$wdpk-heading-head-line-height:                 1.3125 !default;
+$wdpk-heading-head-color:                       $wdpk-gray-800 !default;
+$wdpk-heading-head-margin-bottom:               .5rem !default;
+
+
+$wdpk-heading-separator-margin-bottom:          1.2rem !default;
+$wdpk-heading-separator-height:                 10px !default;
+$wdpk-heading-separator-width:                  125px !default;
+
+
+$wdpk-heading-separator-icon-font-size:         1.5rem !default;
+$wdpk-heading-separator-icon-color:             $wdpk-gradient-1 !default;
+$wdpk-heading-separator-icon-xpadding:          .8rem !default;
+
+
+$wdpk-heading-desc-font-size:                   1rem !default;
+$wdpk-heading-desc-font-family:                 $wdpk-font-family-secondary !default;
+$wdpk-heading-desc-line-height:                 1.6 !default;
+$wdpk-heading-desc-color:                       $wdpk-gray-600 !default;
+$wdpk-heading-desc-margin-bottom:               1rem !default;
+
+
+$wdpk-heading-spearator-bg-map:                 (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-secondary,
+														color2: $wdpk-secondary,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-heading-spearator-border:                 (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: 50px,
+												) !default;
+
+
+// Cards
+
+$wdpk-card-spacer-y:                            1rem !default;
+$wdpk-card-spacer-x:                            2rem !default;
+$wdpk-card-border-width:                        $wdpk-border-width !default;
+$wdpk-card-border-radius:                       $wdpk-border-radius !default;
+$wdpk-card-border-color:                        rgba($wdpk-black, .125) !default;
+$wdpk-card-inner-border-radius:                 calc(#{$wdpk-card-border-radius} - #{$wdpk-card-border-width}) !default;
+
+$wdpk-card-img-overlay-padding:                 1.25rem !default;
+
+$wdpk-card-columns-count:                       3 !default;
+$wdpk-card-columns-gap:                         .5rem !default;
+$wdpk-card-columns-margin:                      .5rem !default;
+$wdpk-card-text-align:                          left !default;
+$wdpk-card-title-font-size:                     $wdpk-h5-font-size !default;
+$wdpk-card-title-font-color:                    $wdpk-gray-900 !default;
+$wdpk-card-body-font-size:                      inherit !default;
+$wdpk-card-body-font-color:                     inherit !default;
+$wdpk-card-header-font-size:                    1.2rem !default;
+$wdpk-card-header-font-color:                   inherit !default;
+$wdpk-card-footer-font-size:                    inherit !default;
+$wdpk-card-footer-font-color:                   inherit !default;
+
+$wdpk-card-shadow:                              (
+														shadowOn: false,
+														hOffset: 0px,
+														vOffset: 3px,
+														blurRadius: 10px,
+														shadowSpread: 2px,
+														shadowColor: rgba(0, 0, 0, 0.2)
+												) !default;
+
+$wdpk-card-body-background:                     (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-white,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+												) !default;
+$wdpk-card-header-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+$wdpk-card-footer-background:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+
+// Infocards
+$wdpk-infocard-heading-font-family:             $wdpk-font-family-base !default;
+$wdpk-infocard-heading-font-size:               $wdpk-h5-font-size !default;
+$wdpk-infocard-heading-font-weight:             $wdpk-headings-font-weight !default;
+$wdpk-infocard-heading-line-height:             $wdpk-headings-line-height !default;
+$wdpk-infocard-heading-color:                   $wdpk-headings-color !default;
+$wdpk-infocard-heading-margin-bottom:           10px !default;
+
+$wdpk-infocard-desc-font-family:                $wdpk-font-family-base !default;
+$wdpk-infocard-desc-font-size:                  .95rem !default;
+$wdpk-infocard-desc-font-weight:                inherit !default;
+$wdpk-infocard-desc-line-height:                inherit !default;
+$wdpk-infocard-desc-color:                      inherit !default;
+$wdpk-infocard-desc-margin-bottom:              30px !default;
+
+
+// Jumbotron
+
+$wdpk-jumbotron-padding:                        1.5rem !default;
+$wdpk-jumbotron-color:                          $wdpk-white !default;
+$wdpk-jumbotron-bg-map:                         (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-primary-color,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-jumbotron-border:                         (
+														borderTop: false,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: false,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: false,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: false,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: $wdpk-border-radius,
+												) !default;
+
+
+// Footer
+$wdpk-footer-padding-top:                       60px !default;
+$wdpk-footer-padding-bottom:                    30px !default;
+$wdpk-footer-font-size:                         .95rem !default;
+$wdpk-footer-color:                             $wdpk-gray-600 !default;
+$wdpk-footer-hover-color:                       $wdpk-black !default;
+$wdpk-footer-font-family:                       inherit !default;
+
+$wdpk-footer-heading-font-size:                 $wdpk-h6-font-size !default;
+$wdpk-footer-heading-color:                     $wdpk-gray-800 !default;
+$wdpk-footer-heading-font-family:               inherit !default;
+
+$wdpk-footer-list-separators:                   false !default;
+$wdpk-footer-list-separators-color:             rgba(255, 255, 255, 0.1) !default;
+$wdpk-footer-list-x-padding:                    .4rem !default;
+$wdpk-footer-list-y-padding:                    .8rem !default;
+
+$wdpk-footer-copyright-top-padding:             .5rem !default;
+$wdpk-footer-copyright-bottom-padding:          .5rem !default;
+$wdpk-footer-copyright-bg:                      $wdpk-gray-200 !default;
+
+$wdpk-footer-social-icon-size:                  .9rem !default;
+$wdpk-footer-social-icon-align:                 'right' !default;
+$wdpk-footer-social-icon-padding:               .5rem !default;
+$wdpk-footer-social-icon-margin:                5px !default;
+$wdpk-footer-social-icon-color:                 $wdpk-gray-600 !default;
+$wdpk-footer-social-icon-hover-color:           $wdpk-black !default;
+
+$wdpk-footer-bg-map:                            (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/page-title.jpg),
+														backgroundRepeat: none,
+														backgroundHorPos: top,
+														backgroundVerPos: center,
+														backgroundSize: cover
+												) !default;
+
+
+// Off Canvas Menu
+$wdpk-off-canvas-close-button-top:              15px !default;
+$wdpk-off-canvas-close-button-right:            15px !default;
+$wdpk-off-canvas-section-margin:                3.25rem !default;
+$wdpk-off-canvas-separator-color:               $wdpk-gray-200 !default;
+
+// Accordion
+$wdpk-accordion-border-radius:                  .5rem !default;
+
+// Counter
+$wdpk-counter-icon-bottom-margin:               30px !default;
+$wdpk-counter-vertical-padding:                 45px !default;
+
+// Infobox
+$wdpk-infobox-icon-text-align:                  center !default;
+$wdpk-infobox-icon-font-size:                   2rem !default;
+$wdpk-infobox-icon-color:                       $wdpk-primary-color !default;
+$wdpk-infobox-icon-hover-color:                 $wdpk-white !default;
+$wdpk-infobox-icon-margin-bottom:               30px !default;
+$wdpk-infobox-icon-padding:                     1rem !default; // Its mandatory to have this in rem only no other units can cause errors
+$wdpk-infobox-icon-background-color:            $wdpk-gray-200 !default;
+$wdpk-infobox-icon-background-hover-color:      $wdpk-primary-color !default;
+$wdpk-infobox-icon-border-radius:               50% !default;
+$wdpk-infobox-icon-border-color:                $wdpk-gray-400 !default;
+$wdpk-infobox-icon-border-hover-color:          $wdpk-white !default;
+$wdpk-infobox-icon-border-weight:               1px !default;
+$wdpk-infobox-overflow-icon:                    false !default; // Set this to true if you need overflow icon
+$wdpk-infobox-title-font-family:                inherit !default;
+$wdpk-infobox-title-font-size:                  1.2rem !default;
+$wdpk-infobox-title-font-weight:                500 !default;
+$wdpk-infobox-title-color:                      $wdpk-gray-800 !default;
+$wdpk-infobox-title-margin-bottom:              .5rem !default;
+$wdpk-infobox-description-font-family:          inherit !default;
+$wdpk-infobox-description-font-size:            .9rem !default;
+$wdpk-infobox-description-font-weight:          400 !default;
+$wdpk-infobox-description-color:                $wdpk-gray-600 !default;
+$wdpk-infobox-icon-font-hover-animation:        'zoomIn' !default;
+$wdpk-infobox-background-map:                   (
+														backgroundType: color,
+														gradientType: linear,
+														color1: $wdpk-gray-100,
+														color2: $wdpk-gradient-2,
+														degree: 0deg,
+														backgroundImage: url(../../assets/images/background-black.jpg),
+														backgroundRepeat: repeat-x,
+														backgroundHorPos: center,
+														backgroundVerPos: center,
+														backgroundSize: initial
+												) !default;
+
+$wdpk-infobox-border:                           (
+														borderTop: true,
+														borderTopColor: $wdpk-gray-200,
+														borderTopWidth: 1px,
+														borderTopStyle: solid,
+														borderRight: true,
+														borderRightColor: $wdpk-gray-200,
+														borderRightWidth: 1px,
+														borderRightStyle: solid,
+														borderBottom: true,
+														borderBottomColor: $wdpk-gray-200,
+														borderBottomWidth: 1px,
+														borderBottomStyle: solid,
+														borderLeft: true,
+														borderLeftColor: $wdpk-gray-200,
+														borderLeftWidth: 1px,
+														borderLeftStyle: solid,
+														borderRadius: $wdpk-border-radius,
+												) !default;
+
+// Social Sharing
+$wdpk-social-sharing-theme:                     'flat' !default;
+$wdpk-social-sharing-border-radius:             0rem !default;
+
+// =============================>
+//  Dark Theme Override
+//  If you you need to use the dark theme just uncomment the below line
+// <============================
+//@import "../../../sass/variables/variables-wdpk-dark";
+
+
+// =============================>
+// Import the main Scss file to import everything
+// ==============================
+@import "../../sass/woodpecker.scss";
+
+
+.wdpk-home-hero
+{
+	background-image:    url(../../assets/template/images/homehero-bg.jpg);
+	background-repeat:   no-repeat;
+	background-position: bottom center;
+	background-size:     cover;
+
+
+	padding-top:         $wdpk-menu-height + 180px;
+	padding-bottom:      270px;
+}
+
+.wdpk-round-section-wrap
+{
+	overflow:   visible;
+	margin-top: -90px;
+	z-index:    2;
+	position:   relative;
+
+	svg
+	{
+		@include to(md)
+		{
+			display: none;
+		}
+	}
+
+}
+
+.wdpk-hmp-hero-btn-section
+{
+	margin-top: 75px;
+}
+
+.wdpk-heading-description
+{
+	font-style: italic;
+}
+
+.py-120
+{
+	padding-top:    120px;
+	padding-bottom: 120px;
+}
+
+.mb-60
+{
+	margin-bottom: 60px;
+}
+
+.mt-90
+{
+	margin-top: 90px;
+}
+
+.wdpk-hmp-demos
+{
+	z-index:        0;
+	margin-top:     -90px;
+	padding-top:    210px;
+	padding-bottom: 120px;
+}
+
+.wdpk-hmp-demo-img
+{
+	border-radius: $wdpk-border-radius;
+	margin-bottom: 30px;
+	border:        1px solid $wdpk-primary-color;
+
+
+	figure, img
+	{
+		border-radius: $wdpk-border-radius;
+	}
+
+	h4
+	{
+		margin-bottom: 10px;
+		font-weight:   500;
+	}
+
+	p
+	{
+		font-family:   $wdpk-font-family-secondary;
+		margin-bottom: 30px;
+		font-style:    italic;
+		color:         $wdpk-gray-600;
+	}
+}
+
+.wdpk-brd-bottom-right
+{
+	@include from(md)
+	{
+		border-right:  1px solid $wdpk-gray-200;
+		border-bottom: 1px solid $wdpk-gray-200;
+	}
+
+}
+
+.wdpk-brd-bottom
+{
+	@include from(md)
+	{
+		border-bottom: 1px solid $wdpk-gray-200;
+	}
+
+}
+
+.wdpk-brd-right
+{
+	@include from(md)
+	{
+		border-right: 1px solid $wdpk-gray-200;
+	}
+}
+
+.wdpk-hmp-core
+{
+
+	.wdpk-info-card
+	{
+		background-color: transparent;
+		border-radius:    0;
+		border:           none;
+		padding-top:      45px;
+		padding-left:     15px;
+		padding-right:    15px;
+		padding-bottom:   30px;
+		margin-bottom:    15px;
+
+
+		.wdpk-info-card-img-wrap
+		{
+			margin-bottom: 30px;
+
+			.wdpk-info-card-img-outer
+			{
+				background-color: #ffffff;
+				border:           1px solid $wdpk-secondary;
+
+			}
+		}
+	}
+}
+
+.wdpk-hmp-purchase
+{
+	padding:    120px 60px;
+	margin-top: 120px;
+
+	.wdpk-hmp-purchase-text
+	{
+		font-family: $wdpk-font-family-secondary;
+		font-style:  italic;
+		font-size:   1rem;
+	}
+
+}
+
+.wdpk-footer-card
+{
+	background-color: $wdpk-primary-color;
+	padding:          45px 30px;
+	border-radius:    $wdpk-border-radius;
+}
+
+.wdpk-page-title-heading
+{
+	font-weight: 600;
+}
+
+.wdpk-page-title-description
+{
+	font-weight: 400;
+	font-style:  italic;
+}
+
+.wdpk-sidebar-heading-demo
+{
+	font-size: $wdpk-h3-font-size !important;
+}
+
+.wdpk-demo-sidebar
+{
+	border-right: 1px solid $wdpk-gray-200;
+}
+
+.wdpk-normal-title
+{
+	.wdpk-page-title-content
+	{
+		padding-top: 9rem !important;
+	}
+}
+
+[class*=' imghvr-'] a, [class^=imghvr-] a
+{
+	position: relative;
+}

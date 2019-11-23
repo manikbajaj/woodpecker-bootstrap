@@ -1,0 +1,59 @@
+// =============================>
+//  Styling Partial For Animated Preloading
+// <============================
+
+.wdpk-page-load-animate
+{
+	position:        fixed;
+	width:           100%;
+	height:          100%;
+	opacity:         1;
+	visibility:      visible;
+	@if ($wdpk-page-trans-enabled == true)
+	{
+		@include wdpk-background($wdpk-page-trans-bg-color);
+	} @else
+	{
+		background-color: white;
+	}
+	z-index:         9999;
+	display:         flex;
+	justify-content: center;
+
+	.wdpk-spinner
+	{
+		@extend #{$wdpk-page-trans-spinner-type};
+		display:    inline-flex;
+		align-self: center;
+		text-align: center;
+		color:      $wdpk-page-trans-spinner-color;
+
+		@if ($wdpk-page-trans-enabled == false)
+		{
+			display: none;
+		}
+	}
+}
+
+.wdpk-pre-deact
+{
+	opacity:    0 !important;
+	visibility: hidden !important;
+	@include wdpk-transitions(all, .7s, ease)
+}
+
+.wdpk-main
+{
+	//@include fadeInUp(
+	//		$duration: 1.8s,
+	//		$count: 1,
+	//		$delay: .7s,
+	//		$function: ease,
+	//		$fill: both
+	//);
+}
+
+#wdpk-page-load-animate
+{
+
+}

@@ -1,0 +1,18 @@
+// =============================>
+// Consolidates all Components Main Sass files
+// <===============================
+
+// Importing all headers
+@import "header/header";
+
+// Importing all Shortcodes
+@import "short-codes/shortcodes";
+
+// Importing all layouts
+@import "layouts/layouts";
+
+// Import Footer Styling Partial
+@import "footer/footer";
+
+// Importing blog layouts
+@import "blog/blog";

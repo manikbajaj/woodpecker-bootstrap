@@ -1,0 +1,53 @@
+// =============================>
+//  Cards Shortcode Partial
+// <============================
+
+.card.wdpk-card
+{
+	@include wdpk-shadow($wdpk-card-shadow);
+
+	.card-header
+	{
+		@include wdpk-background($wdpk-card-header-background);
+		font-size:  $wdpk-card-header-font-size;
+		color:      $wdpk-card-header-font-color;
+		text-align: $wdpk-card-text-align;
+	}
+
+	.card-body
+	{
+		@include wdpk-background($wdpk-card-body-background);
+		text-align:    $wdpk-card-text-align;
+		border-radius: inherit;
+
+		.card-title
+		{
+			font-size: $wdpk-card-title-font-size;
+			color:     $wdpk-card-title-font-color;
+		}
+
+		.card-text
+		{
+			font-size: $wdpk-card-body-font-size;
+			color:     $wdpk-card-body-font-color;
+		}
+	}
+
+	.list-group
+	{
+		.list-group-item
+		{
+			padding-left:  $wdpk-card-spacer-x;
+			padding-right: $wdpk-card-spacer-x;
+		}
+	}
+
+	.card-footer
+	{
+		@include wdpk-background($wdpk-card-footer-background);
+		font-size:  $wdpk-card-footer-font-size;
+		color:      $wdpk-card-footer-font-color;
+		text-align: $wdpk-card-text-align;
+	}
+
+}

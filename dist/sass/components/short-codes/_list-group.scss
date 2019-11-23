@@ -1,0 +1,66 @@
+// =============================>
+//  Sass Partial For List Groups
+// <============================
+
+.wdpk-list-group
+{
+	color: $wdpk-listgroup-font-color;
+
+	.list-group-item
+	{
+		color: $wdpk-listgroup-font-color;
+	}
+
+	.list-group-item:first-child
+	{
+		border-top-left-radius:  $wdpk-listgroup-top-radius;
+		border-top-right-radius: $wdpk-listgroup-top-radius;
+	}
+
+	.list-group-item:last-child
+	{
+		border-bottom-left-radius:  $wdpk-listgroup-bottom-radius;
+		border-bottom-right-radius: $wdpk-listgroup-bottom-radius;
+	}
+
+	.list-group-item.active
+	{
+		background-color: $wdpk-listgroup-hover-background-color;
+		border-color:     $wdpk-listgroup-hover-background-color;
+		color:            $wdpk-listgroup-font-hover-color;
+	}
+
+	a
+	{
+		-webkit-transition: $wdpk-global-transition-function $wdpk-global-transition-duration;
+		-o-transition:      $wdpk-global-transition-function $wdpk-global-transition-duration;
+		transition:         $wdpk-global-transition-function $wdpk-global-transition-duration;
+		padding:            $wdpk-listgroup-vertical-padding $wdpk-listgroup-horizontal-padding;
+		background-color:   $wdpk-listgroup-background-color;
+		border:             $wdpk-listgroup-border $wdpk-listgroup-border-color;
+
+
+		&:hover
+		{
+
+			background-color: $wdpk-listgroup-hover-background-color;
+			border-color:     $wdpk-listgroup-hover-background-color;
+			color:            $wdpk-listgroup-font-hover-color;
+		}
+
+
+		&:hover .wdpk-list-group-text
+		{
+			margin-left: .25rem;
+			color:       $wdpk-listgroup-font-hover-color;
+		}
+
+		.wdpk-list-group-text
+		{
+			-webkit-transition: all $wdpk-global-transition-function $wdpk-global-transition-duration;
+			-o-transition:      all $wdpk-global-transition-function $wdpk-global-transition-duration;
+			transition:         all $wdpk-global-transition-function $wdpk-global-transition-duration;
+		}
+	}
+
+}

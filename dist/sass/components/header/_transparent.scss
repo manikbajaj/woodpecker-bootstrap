@@ -1,0 +1,194 @@
+// =============================>
+// Transparent Navbar Style Partial
+// <============================
+
+// Transparent Navbar Classes
+//
+// Classes for Sticky Navbar
+//
+// | Class  | Utility |
+// |----------|-------|
+// | .wdpk-transparent-navbar | When applied to the `.wdpk-navbar` class makes the Navbar Transparent. The font properties can be set to match the transpareent Navbar using the `Navigation Variables` in `SCSS` |
+//
+//
+// Styleguide CSS Classes.Transparent Navbar
+
+
+.wdpk-transparent-navbar
+{
+	position: absolute;
+
+	.wdpk-topbar-wrapper
+	{
+		@include wdpk-background($wdpk-transparent-menu-background);
+		color: $wdpk-transparent-menu-font-color !important;
+	}
+
+
+	.wdpk-navbar
+	{
+		@include wdpk-background($wdpk-transparent-menu-background);
+		color: $wdpk-transparent-menu-font-color;
+
+		// Remove Boxshadow if it has been disabled on tranparent navbar and applied on default navbar
+		@if (map-get($wdpk-transparent-menu-shadow, shadowOn) == false)
+		{
+			box-shadow: none;
+		}
+
+
+		li
+		{
+			&:hover a
+			{
+				color: $wdpk-transparent-menu-font-color-hover;
+			}
+
+			a
+			{
+				transition: color map-get($wdpk-hover-effect, animationDuration) ease;
+				color:      $wdpk-transparent-menu-font-color;
+
+				&:hover
+				{
+					color: $wdpk-transparent-menu-font-color-hover;
+				}
+			}
+		}
+	}
+
+	.wdpk-menu-extras
+	{
+		font-size: $wdpk-menu-font-size;
+		display:   -webkit-box;
+		display:   -ms-flexbox;
+		display:   flex !important;
+		height:    100%;
+		border:    none;
+		cursor:    pointer;
+
+		.wdpk-menu-cart
+		{
+
+			padding: 0 $wdpk-padding-menu-items;
+
+			i
+			{
+				position:   relative;
+				align-self: center;
+			}
+
+			.wdpk-menu-cart-items
+			{
+				color:            $wdpk-cart-number-font-color;
+				font-size:        ($wdpk-menu-extras-font-size * .75);
+				display:          -webkit-box;
+				display:          -ms-flexbox;
+				display:          flex;
+				position:         absolute;
+				top:              -60%;
+				left:             50%;
+				z-index:          101;
+				padding:          3px;
+				border-radius:    50%;
+				background-color: $wdpk-primary-color;
+
+			}
+
+		}
+
+		.wdpk-menu-search
+		{
+
+			padding: 0 $wdpk-padding-menu-items;
+
+			i
+			{
+				position:   relative;
+				align-self: center;
+			}
+		}
+
+
+		.wdpk-menu-extra-item
+		{
+			a
+			{
+				color:           $wdpk-transparent-menu-extras-font-color;
+				cursor:          pointer;
+				display:         flex;
+				text-decoration: none;
+				transition:      color map-get($wdpk-hover-effect, animationDuration) ease;
+
+				i
+				{
+					color:      $wdpk-transparent-menu-extras-font-color;
+					transition: color map-get($wdpk-hover-effect, animationDuration) ease;
+				}
+
+				&:hover
+				{
+					color: $wdpk-transparent-menu-extras-font-hover-color;
+
+					i
+					{
+						color: $wdpk-transparent-menu-extras-font-hover-color;
+					}
+				}
+			}
+
+			@if $wdpk-menu-extras-border == true
+			{
+				border-right: none;
+
+				&:first-child
+				{
+					border-left: none;
+				}
+
+			} @else
+			{
+				border:       none;
+			}
+		}
+	}
+}
+
+
+$wdpk-trans-background-map:      (
+										 backgroundType: image,
+										 gradientType: linear,
+										 color1: rgba(238, 238, 238, 1),
+										 color2: rgba(0, 0, 0, 0.7),
+										 degree: 90deg,
+										 backgroundImage: url(/assets/images/background.jpeg),
+										 backgroundRepeat: no-repeat,
+										 backgroundHorPos: top,
+										 backgroundVerPos: center,
+										 backgroundSize: cover
+								 );
+
+$wdpk-trans-background-dark-map: (
+										 backgroundType: image,
+										 gradientType: linear,
+										 color1: rgba(238, 238, 238, 1),
+										 color2: rgba(0, 0, 0, 0.7),
+										 degree: 90deg,
+										 backgroundImage: url(/assets/images/background-black.jpg),
+										 backgroundRepeat: no-repeat,
+										 backgroundHorPos: top,
+										 backgroundVerPos: center,
+										 backgroundSize: cover
+								 );
+
+.wdpk-background
+{
+	@include wdpk-background($wdpk-trans-background-map);
+	min-height: 550px;
+}
+
+.wdpk-background-dark
+{
+	@include wdpk-background($wdpk-trans-background-dark-map);
+	min-height: 550px;
+}

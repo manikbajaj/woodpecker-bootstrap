@@ -1,0 +1,173 @@
+// =============================>
+//  Imoporting Google Fonts
+// <============================
+$wdpk-font-family-sans-serif: 'Poppins', Arial, Helvetica, sans-serif !default;
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$wdpk-primary-color: #593494 !default;
+$wdpk-gradient-1: $wdpk-primary-color !default;
+$wdpk-gradient-2: #5cc9e5 !default;
+
+
+// Social Media Colors
+$wdpk-facebook-color: $wdpk-primary-color;
+$wdpk-twitter-color: $wdpk-primary-color;
+$wdpk-google-color: $wdpk-primary-color;
+$wdpk-youtube-color: $wdpk-primary-color;
+$wdpk-linkedin-color: $wdpk-primary-color;
+$wdpk-behance-color: $wdpk-primary-color;
+$wdpk-dribble-color: $wdpk-primary-color;
+$wdpk-pinterest-color: $wdpk-primary-color;
+$wdpk-vimeo-color: $wdpk-primary-color;
+$wdpk-rss-color: $wdpk-primary-color;
+
+// Fonts
+$wdpk-font-size-base: 1.1rem !default;
+$wdpk-headings-font-weight: 700 !default;
+
+// Navigation Variables
+$wdpk-menu-height: 70px !default;
+$wdpk-menu-logo-width: 150px !default;
+$wdpk-primary-menu-border-map: (
+									   borderTop: false,
+									   borderTopColor: #000000,
+									   borderTopWidth: 2px,
+									   borderTopStyle: solid,
+									   borderRight: false,
+									   borderRightColor: #dddddd,
+									   borderRightWidth: 5px,
+									   borderRightStyle: solid,
+									   borderBottom: false,
+									   borderBottomColor: #dddddd,
+									   borderBottomWidth: 3px,
+									   borderBottomStyle: solid,
+									   borderLeft: false,
+									   borderLeftColor: #dddddd,
+									   borderLeftWidth: 5px,
+									   borderLeftStyle: solid,
+									   borderRadius: 0px,
+							   ) !default;
+
+
+// Mobile Header
+$wdpk-mobile-header-background: (
+										backgroundType: color,
+										gradientType: linear,
+										color1: #ffffff,
+										color2: rgba(255, 255, 255, 0.9),
+										degree: 90deg,
+										backgroundImage: url(../../assets/images/grey.png),
+										backgroundRepeat: repeat-x,
+										backgroundHorPos: center,
+										backgroundVerPos: center,
+										backgroundSize: initial
+								) !default;
+
+$wdpk-mobile-header-logo-width: 120px !default;
+$wdpk-mobile-header-vertical-padding: .75rem !default;
+
+
+
+// Buttons
+$wdpk-input-btn-padding-y: .75rem !default;
+$wdpk-input-btn-padding-x: 1.25rem !default;
+$wdpk-input-btn-radius: 50px !default;
+$wdpk-input-btn-padding-y-sm: .75rem !default;
+$wdpk-input-btn-padding-x-sm: 1rem !default;
+$wdpk-input-btn-padding-y-lg: 1.25rem !default;
+$wdpk-input-btn-padding-x-lg: 1.75rem !default;
+$wdpk-input-btn-gradient-direction: 90deg !default;
+
+
+// Headings
+$wdpk-heading-head-font-size: 2.5rem !default;
+$wdpk-heading-head-font-family: inherit !default;
+$wdpk-heading-head-line-height: 1.3 !default;
+$wdpk-heading-head-color: $wdpk-primary-color !default;
+$wdpk-heading-head-margin-bottom: .5rem !default;
+
+$wdpk-heading-separator-margin-bottom: 1rem !default;
+$wdpk-heading-separator-height: 15px !default;
+$wdpk-heading-separator-width: 30% !default;
+
+$wdpk-heading-desc-font-size: 1.1rem !default;
+$wdpk-heading-desc-color: #959ea6 !default;
+
+$wdpk-heading-spearator-bg-map: (
+										backgroundType: gradient,
+										gradientType: linear,
+										color1: $wdpk-gradient-1,
+										color2: $wdpk-gradient-2,
+										degree: 90deg,
+										backgroundImage: url(../../assets/images/background-black.jpg),
+										backgroundRepeat: repeat-x,
+										backgroundHorPos: center,
+										backgroundVerPos: center,
+										backgroundSize: initial
+								) !default;
+
+// Footer
+$wdpk-footer-padding-top: 150px !default;
+$wdpk-footer-padding-bottom: 75px !default;
+$wdpk-footer-hover-color: #5CC9E5 !default;
+
+
+$wdpk-footer-bg-map: (
+							 backgroundType: image,
+							 gradientType: linear,
+							 color1: #ffffff,
+							 color2: #ffffff,
+							 degree: 0deg,
+							 backgroundImage: url(../../assets/demos/app-landing/footer-background.png),
+							 backgroundRepeat: none,
+							 backgroundHorPos: top,
+							 backgroundVerPos: center,
+							 backgroundSize: cover
+					 ) !default;
+$wdpk-footer-copyright-bg: $wdpk-primary-color !default;
+$wdpk-footer-social-icon-color: #ffffff !default;
+$wdpk-footer-color: #ffffff !default;
+
+$wdpk-footer-list-x-padding: .5rem !default;
+$wdpk-footer-list-y-padding: 1.5rem !default;
+
+// Counters
+$wdpk-gray-300: #dee2e6 !default;
+$wdpk-gradient-1: #0056c6 !default;
+$wdpk-gradient-2: #0bc9cd !default;
+$wdpk-counter-font-color: #ffffff !default;
+$wdpk-counter-prefix-font-color: rgba(255,255,255,0.8) !default;
+$wdpk-counter-suffix-font-color: $wdpk-counter-prefix-font-color !default;
+$wdpk-counter-footnote-font-color: rgba(255,255,255,0.8) !default;
+$wdpk-counter-icon-font-color: #ffffff !default;
+$wdpk-counter-icon-font-hover-color: $wdpk-primary-color !default;
+$wdpk-counter-icon-border-width: 0px !default;
+$wdpk-counter-icon-border-color: none !default;
+$wdpk-counter-icon-background-color: none !default;
+$wdpk-counter-icon-background-hover-color: #ffffff !default;
+$wdpk-counter-background-map: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $wdpk-gradient-1,
+									  color2: $wdpk-gradient-2,
+									  degree: 0deg,
+									  backgroundImage: url(../../assets/images/background-black.jpg),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+// =============================>
+//  Dark Theme Override
+//  If you you need to use the dark theme just uncomment the below line
+// <============================
+//@import "../../../sass/variables/variables-wdpk-dark";
+
+
+// =============================>
+// Import the main Scss file to import everything
+// ==============================
+@import "../../../sass/woodpecker.scss";

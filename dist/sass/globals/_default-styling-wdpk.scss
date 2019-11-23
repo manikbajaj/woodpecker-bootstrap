@@ -1,0 +1,215 @@
+// =============================>
+// Override the Styling Of The Base HTML Elements
+// With The CSS variables Declared So That The
+// WoodPecker Styling Is Inherited By Bootstrap 4
+// <==============================
+
+
+// Global Classes
+//
+// Classes that can be assigned to any component thoughout the theme and have been defined with a Global Scope in the theme.
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-facebook | Class assigned to facebook icon to assign the set backgrodun color for the social network |
+// | wdpk-twitter | Class assigned to twitter icon to assign the set backgrodun color for the social network |
+// | wdpk-google | Class assigned to Google icon to assign the set backgrodun color for the social network |
+// | wdpk-youtube | Class assigned to YouTube icon to assign the set backgrodun color for the social network |
+// | wdpk-linkedin | Class assigned to LinkedIn icon to assign the set backgrodun color for the social network |
+// | wdpk-behance | Class assigned to Behance icon to assign the set backgrodun color for the social network |
+// | wdpk-dribble | Class assigned to Dribble icon to assign the set backgrodun color for the social network |
+// | wdpk-pinterest | Class assigned to Pinterest icon to assign the set backgrodun color for the social network |
+// | wdpk-rss | Class assigned to RSS icon to assign the set backgrodun color for the social network |
+//
+// Styleguide CSS Classes.Global
+
+
+html
+{
+	#wdpk-main
+	{
+		transition:         margin-right .5s ease;
+		-o-transition:      margin-right .5s ease;
+		-webkit-transition: margin-right .5s ease;
+	}
+
+	.wdpk-offcanvas-margin
+	{
+		@include to($wdpk-mobile-header-breakpoint)
+		{
+			@if ($wdpk-off-canvas-open-from == right)
+			{
+				margin-right: $wdpk-off-canvas-width !important;
+				.wdpk-menu-icon
+				{
+					a
+					{
+						right: $wdpk-off-canvas-width + 10px;
+					}
+				}
+			} @else if ($wdpk-off-canvas-open-from == left)
+			{
+				margin-left:  $wdpk-off-canvas-width !important;
+				.wdpk-menu-icon
+				{
+					a
+					{
+						left: $wdpk-off-canvas-width + 10px;
+					}
+				}
+			}
+
+			.wdpk-menu-icon
+			{
+
+				a
+				{
+					position:         fixed;
+					top:              10px;
+					z-index:          1004;
+					background-color: rgba(0, 0, 0, .8);
+					padding:          5px 10px;
+					color:            #ffffff;
+
+					&:hover
+					{
+						color: #ffffff;
+					}
+				}
+
+
+			}
+
+		}
+	}
+
+
+	@include rem-baseline; // Default zoom to 100%
+
+	// Social Icon Classes
+	.wdpk-facebook
+	{
+		overflow:         hidden;
+		background-color: $wdpk-facebook-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-facebook-color, $lightness: $wdpk-lightness-value);
+		}
+
+	}
+
+	.wdpk-twitter
+	{
+		overflow:         hidden;
+		background-color: $wdpk-twitter-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-twitter-color, $lightness: $wdpk-lightness-value);
+		}
+
+	}
+
+	.wdpk-google
+	{
+		overflow:         hidden;
+		background-color: $wdpk-google-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-google-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-youtube
+	{
+		overflow:         hidden;
+		background-color: $wdpk-youtube-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-youtube-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-linkedin
+	{
+		overflow:         hidden;
+		background-color: $wdpk-linkedin-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-linkedin-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-behance
+	{
+		overflow:         hidden;
+		background-color: $wdpk-behance-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-behance-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-dribble
+	{
+		overflow:         hidden;
+		background-color: $wdpk-dribble-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-dribble-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-pinterest
+	{
+		overflow:         hidden;
+		background-color: $wdpk-pinterest-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-pinterest-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-vimeo
+	{
+		overflow:         hidden;
+		background-color: $wdpk-vimeo-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-vimeo-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-rss
+	{
+		overflow:         hidden;
+		background-color: $wdpk-rss-color;
+
+		&:hover
+		{
+			background-color: scale_color($wdpk-rss-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+	.wdpk-hide
+	{
+		visibility: hidden;
+		opacity: 0;
+		display: none;
+	}
+
+	.wdpk-display
+	{
+		visibility: visible;
+		opacity: 1;
+		display: flex;
+	}
+}

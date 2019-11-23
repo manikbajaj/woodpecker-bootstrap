@@ -1,0 +1,35 @@
+.wdpk-nav-pills
+{
+
+	.nav-item
+	{
+		margin-right:  $wdpk-navpills-margin;
+		border-radius: $wdpk-navpills-border-radius;
+
+		&:last-of-type
+		{
+			margin-right: 0;
+		}
+
+		a
+		{
+			-webkit-transition: all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-moz-transition:    all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-ms-transition:     all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			-o-transition:      all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+		}
+
+		&:hover > a
+		{
+			background-color: $wdpk-navpills-inactive-hover-background-color;
+		}
+
+		&:hover > .nav-link.active
+		{
+			background-color: scale_color($wdpk-primary-color, $lightness: $wdpk-lightness-value);
+		}
+	}
+
+
+}

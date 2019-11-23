@@ -1,0 +1,89 @@
+// =============================>
+//  Infobox Styling Partial
+// <============================
+
+.wdpk-infobox
+{
+	text-align: $wdpk-infobox-icon-text-align;
+	cursor:     pointer;
+	position:   relative;
+	border: none;
+
+	@include wdpk-background($wdpk-infobox-background-map);
+	@include wdpk-addBorder($wdpk-infobox-border);
+	@include wdpk-shadow($wdpk-infobox-shadow);
+
+	&:hover .wdpk-infobox-icon
+	{
+		@if ($wdpk-infobox-overflow-icon != true)
+		{
+			@include wdpk-hoverAnimations($wdpk-infobox-icon-font-hover-animation);
+		}
+		background-color: $wdpk-infobox-icon-background-hover-color;
+		border-color:     $wdpk-infobox-icon-border-hover-color;
+	}
+
+	&:hover i
+	{
+		color: $wdpk-infobox-icon-hover-color;
+	}
+
+	.wdpk-infobox-icon
+	{
+		font-size:        $wdpk-infobox-icon-font-size;
+		color:            $wdpk-infobox-icon-color;
+		margin-bottom:    $wdpk-infobox-icon-margin-bottom;
+		height:           $wdpk-infobox-icon-font-size * 1.2;
+		width:            $wdpk-infobox-icon-font-size * 1.2;
+		display:          inline-flex;
+		justify-content:  center;
+		padding:          $wdpk-infobox-icon-padding;
+		box-sizing:       content-box;
+		background-color: $wdpk-infobox-icon-background-color;
+		border-radius:    $wdpk-infobox-icon-border-radius;
+		border:           $wdpk-infobox-icon-border-weight solid $wdpk-infobox-icon-border-color;
+		@include wdpk-transitions(all, $wdpk-global-transition-duration, $wdpk-global-transition-function);
+
+		@if ($wdpk-infobox-overflow-icon == true)
+		{
+			position:  absolute;
+			top:       -((.5rem)+(($wdpk-infobox-icon-font-size * 1.2)/2));
+			left:      50%;
+			transform: translate(-50%);
+		}
+
+		i
+		{
+			vertical-align: middle;
+			align-self:     center;
+		}
+
+		img
+		{
+			vertical-align: middle;
+			width:          100%;
+			height:         auto;
+		}
+	}
+
+	.wdpk-infobox-title
+	{
+		@if ($wdpk-infobox-overflow-icon == true)
+		{
+			margin-top: ((.5rem)+(($wdpk-infobox-icon-font-size * 1.2)/2));
+		}
+		font-family:   $wdpk-infobox-title-font-family;
+		font-size:     $wdpk-infobox-title-font-size;
+		font-weight:   $wdpk-infobox-title-font-weight;
+		color:         $wdpk-infobox-title-color;
+		margin-bottom: $wdpk-infobox-title-margin-bottom;
+	}
+
+	.wdpk-infobox-text
+	{
+		font-family:   $wdpk-infobox-description-font-family;
+		font-size:     $wdpk-infobox-description-font-size;
+		font-weight:   $wdpk-infobox-description-font-weight;
+		color:         $wdpk-infobox-description-color;
+	}
+}

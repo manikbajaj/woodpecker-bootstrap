@@ -1,0 +1,692 @@
+// =============================>
+// Header Style Partial
+// <=============================\
+
+// Header Classes
+//
+// Classes for Header
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-header-container | This is a mandatory class for the header which encapsulates the `Primary Menu` , `Topbar` as well as the `Bottom Bar`  |
+// | wdpk-navbar | Main class for creating a primary menu in the header |
+// | wdpk-nav-wrap | Class used for wrapping a div around the primary menu and assigns important layout properties |
+// | wdpk-menu-extras | Class assigned to the dic around the extras in the primary menu. Extras include links with Icon such as `Social Links`, `Cart Link`, `Search Link` etc |
+// | wdpk-menu-cart | Class Assign specifically to the Shopping cart item in the header |
+// | wdpk-menu-cart-items | Class assigned to the number of items being displayed on the shopping cart icon |
+// | wdpk-menu-search | Class assigned to the search icon in the header |
+// | wdpk-menu-extra-item | Every item in the extras section needs to have this class to inherit the properties set in `SCSS variables` |
+// | wdpk-nav-branding | Class assigned to the wraopper around the logo in the primary menu |
+// | wdpk-menu | The parent wrapper class assigned to the dropdown menu `ul` element which is a child element of one of the `li` elements in the primary menu |
+// | wdpk-hasDropdown | Identifier class to signal the existence of a dropdown menu for an item. Must be assigned to all the elements of the primary menu which have a dropdwon menu |
+// | wdpk-menu-container | The container class for the dropdown menu which inherits the style properties from `SCSS` |
+// | wdpk-dropDown | The class for dropdwon 'ul' element which further has list items |
+// | wdpk-dropDown-item | The class assigned to each dropdown element in the dropdown menu to inherit the properties of assigned to drodpwn elements in `SCSS` |
+// | wdpk-hasSubMenu | Assigned to each `<a>` tag in dropdown menu which has a sub dropdown menu |
+//
+// Styleguide CSS Classes.Header
+
+// Pending Tasks List
+// 1. TODO: Dropdown Menu hover dissapear issue only With JS Left Look At class - wdpk-menuEdge
+// 2. TODO: Convert the nested CSS to a loop to simplify the code
+
+
+.wdpk-header-container
+{
+	position: relative;
+	z-index:  1001;
+}
+
+.wdpk-menu-container
+{
+	transition: all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+}
+
+.wdpk-navbar
+{
+	@include wdpk-background($wdpk-menu-background);
+	@include wdpk-shadow($wdpk-primary-menu-shadow);
+	@include wdpk-addBorder($wdpk-primary-menu-border-map);
+	width:          100%;
+	display:        -webkit-box !important;
+	display:        -ms-flexbox !important;
+	display:        flex !important;
+	font-family:    $wdpk-menu-font-family;
+	font-weight:    $wdpk-menu-font-weight;
+	text-transform: $wdpk-menu-text-transform;
+	height:         $wdpk-menu-height;
+	line-height:    $wdpk-menu-font-line-height;
+	z-index:        1005;
+
+	.wdpk-nav-split-1
+	{
+		justify-content: $wdpk-menu-split1-align !important;
+	}
+
+
+	.wdpk-nav-split-2
+	{
+		justify-content: $wdpk-menu-split2-align !important;
+	}
+
+
+	.wdpk-menu-search
+	{
+		display:          -webkit-box;
+		display:          -ms-flexbox;
+		display:          flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack:    end;
+		justify-content:  flex-end;
+		width:            100%;
+
+		input
+		{
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex;
+		}
+
+		i
+		{
+			display:      -webkit-inline-box;
+			display:      -ms-inline-flexbox;
+			display:      inline-flex;
+			align-self:   center;
+			padding-left: $wdpk-padding-menu-items;
+
+		}
+	}
+
+	.wdpk-nav-wrap-extras
+	{
+		height:   100%;
+		display:  -webkit-box !important;
+		display:  -ms-flexbox !important;
+		display:  flex !important;
+		position: inherit !important;
+
+
+		.wdpk-menu-extras
+		{
+			font-size: $wdpk-menu-font-size;
+			display:   -webkit-box !important;
+			display:   -ms-flexbox !important;
+			display:   flex !important;
+			height:    100%;
+			border:    none;
+			cursor:    pointer;
+
+			.wdpk-menu-cart
+			{
+
+				padding: 0 $wdpk-padding-menu-items;
+
+
+				i
+				{
+					position:   relative;
+					align-self: center;
+				}
+
+				.wdpk-menu-cart-items
+				{
+					color:            $wdpk-cart-number-font-color;
+					font-size:        ($wdpk-menu-extras-font-size * .75);
+					display:          -webkit-box;
+					display:          -ms-flexbox;
+					display:          flex;
+					position:         absolute;
+					top:              -60%;
+					left:             50%;
+					z-index:          101;
+					padding:          3px;
+					border-radius:    50%;
+					background-color: $wdpk-primary-color;
+
+				}
+
+			}
+
+			.wdpk-menu-search
+			{
+
+				padding: 0 $wdpk-padding-menu-items;
+
+				i
+				{
+					position:   relative;
+					align-self: center;
+				}
+			}
+
+
+			.wdpk-menu-extra-item
+			{
+				a
+				{
+					color:              $wdpk-menu-extras-font-color;
+					font-size:          $wdpk-menu-extras-font-size;
+					cursor:             pointer;
+					display:            flex;
+					text-decoration:    none;
+					-webkit-transition: color map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+					-o-transition:      color map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+					transition:         color map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+
+					&:hover
+					{
+						color: $wdpk-menu-extras-font-hover-color;
+					}
+				}
+
+				@if $wdpk-menu-extras-border == true
+				{
+					border-right: $wdpk-menu-extras-boder-color $wdpk-menu-extras-border-width solid;
+
+					&:first-child
+					{
+						border-left: $wdpk-menu-extras-boder-color $wdpk-menu-extras-border-width solid;
+					}
+
+				} @else
+				{
+					border:       none;
+				}
+			}
+		}
+	}
+
+	.wdpk-nav-wrap
+	{
+		height:   100%;
+		display:  -webkit-box !important;
+		display:  -ms-flexbox !important;
+		display:  flex !important;
+		position: inherit !important;
+		@if ($wdpk-menu-split-menu == false)
+		{
+			justify-content: $wdpk-menu-align-items !important;
+		}
+	}
+
+}
+
+.wdpk-nav-branding
+{
+	height: 100%;
+
+
+	a
+	{
+		display:         flex;
+		justify-content: $wdpk-menu-logo-align;
+		height:          100%;
+
+		img
+		{
+			align-self: center;
+			width:      $wdpk-menu-logo-width;
+		}
+	}
+}
+
+.wdpk-nav
+{
+	height:  100%;
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+
+	.wdpk-menu
+	{
+		justify-content: $wdpk-menu-align-items !important;
+		font-size:       $wdpk-menu-font-size;
+		display:         -webkit-box !important;
+		display:         -ms-flexbox !important;
+		display:         flex !important;
+		position:        inherit;
+		margin:          0;
+		padding:         0;
+		width:           100%;
+		@if ($wdpk-enable-on-desktop == false)
+		{
+			.wdpk-offcanvas-plus
+			{
+				display: none;
+			}
+		}
+
+		> li
+		{
+			padding: 0 $wdpk-padding-menu-items;
+
+			@if $wdpk-menu-items-side-border == true
+			{
+				border-right: $wdpk-menu-items-side-border-color $wdpk-menu-items-side-border-thickness solid;
+
+				&:first-child
+				{
+					border-left: $wdpk-menu-items-side-border-color $wdpk-menu-items-side-border-thickness solid;
+				}
+
+			} @else
+			{
+				border:       none;
+			}
+		}
+
+		// First Level Dropdown List Item
+		li
+		{
+			display:            -webkit-box;
+			display:            -ms-flexbox;
+			display:            flex;
+			cursor:             pointer;
+			text-align:         center;
+			position:           relative;
+			transition:         all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+			-o-transition:      all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+			-webkit-transition: all map-get($wdpk-hover-effect, animationDuration) ease map-get($wdpk-hover-effect, animationDelay);
+
+
+			&:hover
+			{
+				@if map-get($wdpk-hover-effect, hoverType) == 4
+				{
+					background-color: map-get($wdpk-hover-effect, col1);
+				}
+			}
+
+			&:hover a
+			{
+				color: $wdpk-menu-font-color-hover;
+			}
+
+			&:hover .wdpk-menu-hover
+			{
+				@include wdpk-menuHover($wdpk-hover-effect);
+			}
+
+			.wdpk-menu-container
+			{
+				width:         $wdpk-dropdown-menu-width;
+				@include wdpk-shadow($wdpk-dropdown-menu-shadow-map);
+				@include wdpk-addBorder($wdpk-dropdown-menu-border-map);
+
+				top:           wdpkCalculateTop(
+											   false,
+											   $wdpk-bottom-height,
+											   $wdpk-menu-height,
+											   $wdpk-bottom-bar-menu-border-map,
+											   $wdpk-primary-menu-border-map
+							   );
+
+				text-align:    $wdpk-dropdown-menu-text-align;
+				position:      absolute;
+				left:          0;
+				right:         0;
+				margin-bottom: 30px;
+				visibility:    hidden;
+				display:       none;
+				opacity:       0;
+				z-index:       1;
+
+				> .wdpk-dropDown
+				{
+					border-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+
+					li:first-of-type
+					{
+						border-top-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+						border-top-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+
+						a
+						{
+							border-top-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+							border-top-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+						}
+					}
+
+					li:last-of-type
+					{
+						border-bottom-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+						border-bottom-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+
+						a
+						{
+							border-bottom-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+							border-bottom-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+						}
+					}
+				}
+
+				.wdpk-dropDown
+				{
+					display: block;
+					width:   100%;
+					margin:  0;
+					padding: 0;
+					border:  none;
+
+
+					li
+					{
+
+						text-align: $wdpk-dropdown-menu-text-align;
+
+						a
+						{
+							i
+							{
+								display: none;
+							}
+						}
+					}
+
+					.wdpk-dropDown-item
+					{
+						display:          block;
+						background-color: $wdpk-dropdown-menu-background-color;
+						padding:          $wdpk-dropdown-menu-item-top-bottom-padding $wdpk-dropdown-menu-item-left-right-padding;
+						color:            $wdpk-dropdown-menu-font-color;
+						font-size:        $wdpk-dropdown-menu-font-size;
+						font-weight:      $wdpk-dropdown-menu-font-weight;
+
+						// Conditional to check ir top and bottom borders are activated and add them
+						@if map-get($wdpk-dropdown-menu-item-separators, separatorsOn ) == true
+						{
+							border-bottom: map-get($wdpk-dropdown-menu-item-separators, separatorThickness) solid map-get($wdpk-dropdown-menu-item-separators, separatorColor);
+						}
+
+						transition:       color map-get($wdpk-hover-effect, animationDuration) ease,
+										  padding-left map-get($wdpk-hover-effect, animationDuration) ease,
+										  background-color map-get($wdpk-hover-effect, animationDuration) ease;
+
+						&:hover
+						{
+							color:            $wdpk-dropdown-menu-font-hover-color;
+							background-color: $wdpk-dropdown-menu-background-hover-color;
+
+							// Animate Only if animation is enabled
+							@if ($wdpk-dropdown-menu-font-animate == true)
+							{
+								padding-left: $wdpk-dropdown-menu-item-left-right-padding + 5px;
+							}
+						}
+
+					}
+				}
+			}
+
+			// Trigger to display menu on mouseOver
+			&:hover > .wdpk-menu-container
+			{
+				visibility: visible;
+				opacity:    1;
+				display:    block;
+				@include wdpk-dropdownAnimate($wdpk-dropdown-menu-animation);
+			}
+
+			.wdpk-hasSubMenu
+			{
+				i
+				{
+					float:   right;
+					display: inline-block !important;
+				}
+
+				@if ($wdpk-enable-on-desktop == false)
+				{
+					.wdpk-offcanvas-plus
+					{
+						display: none !important;
+					}
+				}
+
+
+				.wdpk-menu-container
+				{
+					left:       $wdpk-dropdown-menu-width;
+					top:        0px;
+					position:   absolute;
+					visibility: hidden;
+					opacity:    0;
+					z-index:    2;
+
+					// Resetting Border Radius and assigning it again
+					.wdpk-dropDown
+					{
+						li
+						{
+							border-radius: 0;
+
+							a
+							{
+								border-radius: 0;
+							}
+						}
+
+						li:first-of-type
+						{
+							border-top-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+							border-top-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+
+							a
+							{
+								border-top-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+								border-top-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+							}
+						}
+
+						li:last-of-type
+						{
+							border-bottom-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+							border-bottom-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+
+							a
+							{
+								border-bottom-right-radius: map-get($wdpk-dropdown-menu-border-map, borderRadius);
+								border-bottom-left-radius:  map-get($wdpk-dropdown-menu-border-map, borderRadius);
+							}
+						}
+
+					}
+				}
+
+				@if ($wdpk-enable-on-desktop == false)
+				{
+					@include from($wdpk-mobile-header-breakpoint + 1)
+					{
+						// Adding Extra Space For Hover Intent
+						&:hover
+						{
+							&::after
+							{
+								content:  '';
+								width:    $wdpk-dropdown-menu-width/1.5;
+								position: absolute;
+								right:    -20px;
+								top:      -50%;
+								z-index:  1;
+								height:   600%;
+							}
+						}
+					}
+				}
+
+				&:hover > .wdpk-menu-container
+				{
+					visibility: visible;
+					display:    block;
+					opacity:    1;
+					@include wdpk-dropdownAnimate($wdpk-dropdown-menu-animation);
+
+				}
+
+				.wdpk-hasSubMenu
+				{
+					.wdpk-menu-container
+					{
+						left:       $wdpk-dropdown-menu-width;
+						top:        0px;
+						position:   absolute;
+						visibility: hidden;
+						opacity:    0;
+						z-index:    3;
+					}
+
+					&:hover > .wdpk-menu-container
+					{
+						visibility: visible;
+						display:    block;
+						opacity:    1;
+						@include wdpk-dropdownAnimate($wdpk-dropdown-menu-animation);
+					}
+
+					@if ($wdpk-enable-on-desktop == false)
+					{
+						@include from($wdpk-mobile-header-breakpoint + 1)
+						{
+							// Adding Extra Space For Hover Intent
+							&:hover
+							{
+								&::after
+								{
+									content:  '';
+									width:    $wdpk-dropdown-menu-width/1.75;
+									position: absolute;
+									right:    -20px;
+									top:      -50%;
+									z-index:  2;
+									height:   600%;
+								}
+							}
+						}
+					}
+
+					.wdpk-hasSubMenu
+					{
+						.wdpk-menu-container
+						{
+							left:       $wdpk-dropdown-menu-width;
+							top:        0px;
+							position:   absolute;
+							visibility: hidden;
+							opacity:    0;
+							z-index:    3;
+						}
+
+						&:hover > .wdpk-menu-container
+						{
+							visibility: visible;
+							display:    block;
+							opacity:    1;
+							@include wdpk-dropdownAnimate($wdpk-dropdown-menu-animation);
+						}
+
+						@if ($wdpk-enable-on-desktop == false)
+						{
+							@include from($wdpk-mobile-header-breakpoint + 1)
+							{
+								// Adding Extra Space For Hover Intent
+								&:hover
+								{
+									&::after
+									{
+										content:  '';
+										width:    $wdpk-dropdown-menu-width/1.75;
+										position: absolute;
+										right:    -20px;
+										top:      -50%;
+										z-index:  3;
+										height:   600%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		a
+		{
+			flex:            1;
+			justify-content: center;
+			align-self:      center;
+			display:         inline-flex;
+			text-decoration: none;
+			color:           $wdpk-menu-font-color;
+			text-decoration: none;
+			position:        relative;
+
+			.wdpkDropdownCaret
+			{
+				@if $wdpk-menu-display-caret == false
+				{
+					display:     none;
+				} @else
+				{
+					font-weight: bold;
+					margin-left: rem(8px);
+					display:     inline-flex;
+					display:     -ms-inline-flexbox;
+					align-self:  center;
+				}
+			}
+
+			.wdpk-hasDropdown:after
+			{
+				position:         absolute;
+				bottom:           -16px;
+				left:             50%;
+				transform:        translateX(-50%);
+				height:           0;
+				width:            0;
+				border:           8px solid transparent;
+				border-top-color: #25283d;
+				z-index:          100;
+				content:          '';
+			}
+		}
+	}
+}
+
+
+//
+.wdpk-menuEdge
+{
+	left:    -$wdpk-dropdown-menu-width !important;
+	z-index: 102;
+}
+
+
+// Change the dropdown top position when bottombar is enabled
+
+.wdpk-bottombar
+{
+	.wdpk-nav
+	{
+		.wdpk-menu
+		{
+
+			>li
+			{
+
+				>.wdpk-menu-container
+				{
+					top: wdpkCalculateTop(
+										 true,
+										 $wdpk-bottom-height,
+										 $wdpk-menu-height,
+										 $wdpk-bottom-bar-menu-border-map,
+										 $wdpk-primary-menu-border-map
+						 );
+
+				}
+			}
+		}
+	}
+}
+

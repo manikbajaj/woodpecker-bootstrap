@@ -1,0 +1,56 @@
+// =============================>
+//  Timer Styling Partial
+// <============================
+
+.wdpk-timer
+{
+	.wdpk-timer-item
+	{
+		text-align: center;
+		position:   relative;
+
+		.wdpk-timer-counter
+		{
+			padding:     $wdpk-timer-counter-padding;
+			@include wdpk-background($wdpk-timer-counter-background);
+			@include wdpk-addBorder($wdpk-timer-counter-border);
+			color:       $wdpk-timer-counter-color;
+			font-size:   $wdpk-timer-counter-font-size;
+			line-height: 1.1;
+			font-family: $wdpk-timer-counter-font-family;
+			font-weight: $wdpk-timer-counter-font-weight;
+		}
+
+		.wdpk-timer-desc
+		{
+			padding:     $wdpk-timer-desc-padding;
+			@include wdpk-background($wdpk-timer-desc-background);
+			@include wdpk-addBorder($wdpk-timer-desc-border);
+			color:       $wdpk-timer-desc-color;
+			font-size:   $wdpk-timer-desc-font-size;
+			line-height: 1.1;
+			font-family: $wdpk-timer-desc-font-family;
+			font-weight: $wdpk-timer-desc-font-weight;
+		}
+
+		@if ($wdpk-timer-separator-enabled == true)
+		{
+			&:after
+			{
+				content:     $wdpk-timer-separator-symbol;
+				position:    absolute;
+				color:       $wdpk-timer-separator-color;
+				font-size:   $wdpk-timer-counter-font-size;
+				line-height: 1.3;
+				right:       -($wdpk-grid-gutter-width/4);
+				top:         $wdpk-timer-counter-padding;
+			}
+
+			&:last-of-type:after
+			{
+				content: '';
+				display: none;
+			}
+		}
+	}
+}

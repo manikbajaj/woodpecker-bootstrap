@@ -1,0 +1,255 @@
+// =============================>
+// Topbar Style Partial
+// <=============================
+
+// Topbar Classes
+//
+// Classes for Topbar. There are specific classes for certain social networks to assign background colors. Classes with same properties can be created to add any social network of your choice.
+//
+// | Class  | Utility |
+// |----------|-------|
+// | wdpk-topbar-wrapper | Class for the wrapping div of the Topbar |
+// | wdpk-topbar-item | Class for the each item of the Topbar |
+// | wdpk-topbar-menu | Class assigned to the menu of the Topbar |
+// | wdpk-facebook | Class assigned to facebook icon in the Topbar |
+// | wdpk-twitter | Class assigned to twitter icon in the Topbar |
+// | wdpk-google | Class assigned to Google icon in the Topbar |
+// | wdpk-youtube | Class assigned to YouTube icon in the Topbar |
+// | wdpk-linkedin | Class assigned to LinkedIn icon in the Topbar |
+// | wdpk-behance | Class assigned to Behance icon in the Topbar |
+// | wdpk-dribble | Class assigned to Dribble icon in the Topbar |
+// | wdpk-pinterest | Class assigned to Pinterest icon in the Topbar |
+// | wdpk-rss | Class assigned to RSS icon in the Topbar |
+//
+// Styleguide CSS Classes.Header
+
+.wdpk-topbar-wrapper
+{
+	@include wdpk-background($wdpk-topbar-background);
+	@include wdpk-addBorder($wdpk-topbar-border-map);
+	height:         $wdpk-topbar-height;
+	width:          100%;
+	display:        -webkit-box;
+	display:        -ms-flexbox;
+	display:        flex;
+	font-family:    $wdpk-topbar-font-family;
+	font-size:      $wdpk-topbar-font-size;
+	font-weight:    $wdpk-topbar-font-weight;
+	text-transform: $wdpk-topbar-text-transform;
+	line-height:    $wdpk-topbar-font-line-height;
+	color:          $wdpk-topbar-font-color;
+	position: relative;
+
+
+	i
+	{
+		color: $wdpk-topbar-font-color;
+
+	}
+
+	a
+	{
+		&:hover
+		{
+			text-decoration: none;
+		}
+
+	}
+
+	.wdpk-topbar-item
+	{
+		padding:             $wdpk-topbar-item-padding;
+		display:             -webkit-box !important;
+		display:             -ms-flexbox !important;
+		display:             flex !important;
+		-ms-flex-item-align: center;
+		-ms-grid-row-align:  center;
+		align-self:          center;
+	}
+
+	.wdpk-topbar-social
+	{
+		display:            -webkit-box;
+		display:            -ms-flexbox;
+		display:            flex;
+		height:             100% !important;
+		-webkit-transition: background-color $wdpk-topbar-hover-transition-duration ease;
+		-o-transition:      background-color $wdpk-topbar-hover-transition-duration ease;
+		transition:         background-color $wdpk-topbar-hover-transition-duration ease;
+
+		&:hover i
+		{
+			@include bounceInDown(
+					$duration: .8s,
+					$count: 1,
+					$delay: 0s,
+					$function: ease,
+					$fill: both
+			);
+			color:           $wdpk-white;
+			text-decoration: none !important;
+		}
+	}
+
+
+	.wdpk-topbar-menu
+	{
+
+		display:             -webkit-box;
+		display:             -ms-flexbox;
+		display:             flex;
+		margin:              0px;
+		-ms-flex-item-align: center;
+		-ms-grid-row-align:  center;
+		align-self:          center;
+		height:              100%;
+
+		ul
+		{
+			margin:                0px;
+			display:               -webkit-box;
+			display:               -ms-flexbox;
+			display:               flex;
+			-ms-flex-item-align:   center;
+			-ms-grid-row-align:    center;
+			align-self:            center;
+			-webkit-padding-start: 0px;
+			padding-inline-start:  0px;
+		}
+
+		li
+		{
+			list-style: none;
+			display:    flex;
+
+			a
+			{
+				text-decoration: none;
+				font-family:     $wdpk-topbar-font-family;
+				font-size:       $wdpk-topbar-font-size;
+				font-weight:     $wdpk-topbar-font-weight;
+				text-transform:  $wdpk-topbar-text-transform;
+				line-height:     $wdpk-topbar-font-line-height;
+				color:           $wdpk-topbar-font-color;
+				text-transform:  $wdpk-topbar-text-transform;
+				transition:      color $wdpk-topbar-hover-transition-duration ease;
+
+				&:hover
+				{
+					color: $wdpk-topbar-font-color-hover;
+				}
+			}
+		}
+	}
+
+	.wdpk-facebook
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-facebook-color;
+		}
+	}
+
+	.wdpk-twitter
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-twitter-color;
+		}
+	}
+
+	.wdpk-google
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-google-color;
+		}
+	}
+
+	.wdpk-youtube
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-youtube-color;
+		}
+	}
+
+	.wdpk-linkedin
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-linkedin-color;
+		}
+	}
+
+	.wdpk-behance
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-behance-color;
+		}
+	}
+
+	.wdpk-dribble
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-dribble-color;
+		}
+	}
+
+	.wdpk-pinterest
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-pinterest-color;
+		}
+	}
+
+	.wdpk-vimeo
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-vimeo-color;
+		}
+	}
+
+	.wdpk-rss
+	{
+		overflow:   hidden;
+		background: none;
+
+		&:hover
+		{
+			background-color: $wdpk-rss-color;
+		}
+	}
+}
+

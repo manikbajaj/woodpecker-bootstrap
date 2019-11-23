@@ -1,0 +1,247 @@
+// =============================>
+//  Blog Listing Styling Partial
+// <============================
+// TODO: Add star rating to Blogs
+// TODO: Author image in the blog
+// TODO: Add Code Snippets and SCSS Variables that can be copied for all blog layouts
+
+.wdpk-blog-card
+{
+	@extend .card;
+	@include wdpk-shadow($wdpk-blog-list-shadow);
+	text-align:       $wdpk-blog-list-content-align;
+	border-radius:    $wdpk-blog-list-border-radius;
+	border:           $wdpk-blog-list-border-width solid $wdpk-blog-list-border-color;
+	background-color: $wdpk-blog-list-bg-color;
+	margin-bottom:    $wdpk-blog-list-col-margin-bottom !important;
+
+
+	.blog-img-top
+	{
+		@extend .card-img-top;
+		border-top-left-radius:  $wdpk-blog-list-inner-border-radius;
+		border-top-right-radius: $wdpk-blog-list-inner-border-radius;
+	}
+
+	.wdpk-blog-card-body
+	{
+		@extend .card-body;
+
+
+		.wdpk-cat-badge-wrap
+		{
+			margin-top:    $wdpk-blog-list-cat-badge-top-margin;
+			margin-bottom: $wdpk-blog-list-cat-badge-bottom-margin;
+
+			.wdpk-blog-cat-badge
+			{
+				@extend .badge;
+				font-size:        $wdpk-blog-list-cat-badge-font-size;
+				font-family:      $wdpk-blog-list-cat-badge-font-family;
+				color:            $wdpk-blog-list-cat-badge-color;
+				font-weight:      $wdpk-blog-list-cat-badge-font-weight;
+				background-color: $wdpk-blog-list-cat-badge-bg-color;
+			}
+
+		}
+
+		.wdpk-blog-title
+		{
+			@extend .card-title;
+			font-size:     $wdpk-blog-list-title-font-size;
+			font-family:   $wdpk-blog-list-title-font-family;
+			color:         $wdpk-blog-list-title-color;
+			font-weight:   $wdpk-blog-list-title-font-weight;
+			margin-bottom: $wdpk-blog-list-title-margin-bottom; // Reset the margin
+			margin-top:    $wdpk-blog-list-title-margin-top;
+		}
+
+		.wdpk-blog-auth-section
+		{
+
+			font-size:        $wdpk-blog-list-auth-sec-font-size;
+			font-family:      $wdpk-blog-list-auth-sec-font-family;
+			color:            $wdpk-blog-list-auth-sec-color;
+			font-weight:      $wdpk-blog-list-auth-sec-font-weight;
+			margin-top:       $wdpk-blog-list-auth-sec-margin-top;
+			margin-bottom:    $wdpk-blog-list-auth-sec-margin-bottom;
+			padding-top:      $wdpk-blog-list-auth-sec-padding-top;
+			padding-bottom:   $wdpk-blog-list-auth-sec-padding-bottom;
+			background-color: $wdpk-blog-list-auth-sec-background-color;
+			padding-left:     $wdpk-blog-list-auth-sec-padding-top;
+			padding-right:    $wdpk-blog-list-auth-sec-padding-top;
+		}
+
+		.wdpk-blog-comment-section
+		{
+			font-size:        $wdpk-blog-list-comment-font-size;
+			font-family:      $wdpk-blog-list-comment-font-family;
+			color:            $wdpk-blog-list-comment-color;
+			font-weight:      $wdpk-blog-list-comment-font-weight;
+			margin-top:       $wdpk-blog-list-comment-margin-top;
+			margin-bottom:    $wdpk-blog-list-comment-margin-bottom;
+			padding-top:      $wdpk-blog-list-comment-padding-top;
+			padding-bottom:   $wdpk-blog-list-comment-padding-bottom;
+			background-color: $wdpk-blog-list-comment-background-color;
+
+			i, .wdpk-blog-list-icon
+			{
+				color: $wdpk-blog-list-comment-icon-color;
+			}
+
+			.wdpk-blog-comments, .wdpk-blog-views
+			{
+				padding-left:  $wdpk-blog-list-comment-x-padding;
+				padding-right: $wdpk-blog-list-comment-x-padding;
+
+			}
+
+		}
+
+		.wdpk-blog-text
+		{
+			@extend .card-text;
+			font-size:     $wdpk-blog-list-excerpt-font-size;
+			font-family:   $wdpk-blog-list-excerpt-font-family;
+			color:         $wdpk-blog-list-excerpt-color;
+			font-weight:   $wdpk-blog-list-excerpt-font-weight;
+			margin-top:    $wdpk-blog-list-excerpt-margin-top;
+			margin-bottom: $wdpk-blog-list-excerpt-margin-bottom;
+		}
+
+
+	}
+
+	.wdpk-blog-list-btn
+	{
+		@extend .btn;
+		@extend .wdpk-button;
+
+		@if ($wdpk-blog-list-btn-color == 'primary' and $wdpk-blog-list-btn-type == 'flat')
+		{
+			@extend .btn-primary;
+		} @else if ($wdpk-blog-list-btn-color == 'secondary' and $wdpk-blog-list-btn-type == 'flat')
+		{
+			@extend .btn-secondary;
+		} @else if ($wdpk-blog-list-btn-color == 'light' and $wdpk-blog-list-btn-type == 'flat')
+		{
+			@extend .btn-light;
+		} @else if ($wdpk-blog-list-btn-color == 'dark' and $wdpk-blog-list-btn-type == 'flat')
+		{
+			@extend .btn-dark;
+		}
+
+		@if ($wdpk-blog-list-btn-color == 'primary' and $wdpk-blog-list-btn-type == 'outline')
+		{
+			@extend .btn-outline-primary;
+		} @else if ($wdpk-blog-list-btn-color == 'secondary' and $wdpk-blog-list-btn-type == 'outline')
+		{
+			@extend .btn-outline-secondary;
+		} @else if ($wdpk-blog-list-btn-color == 'light' and $wdpk-blog-list-btn-type == 'outline')
+		{
+			@extend .btn-outline-light;
+		} @else if ($wdpk-blog-list-btn-color == 'dark' and $wdpk-blog-list-btn-type == 'outline')
+		{
+			@extend .btn-outline-dark;
+		}
+
+		@if ($wdpk-blog-list-btn-size == 'small')
+		{
+			@extend .btn-sm;
+		} @else if ($wdpk-blog-list-btn-size == 'large')
+		{
+			@extend .btn-lg;
+		} @else if ($wdpk-blog-list-btn-size == 'block')
+		{
+			@extend .btn-block;
+		}
+
+	}
+
+
+	.wdpk-blog-list-video
+	{
+		border-top-left-radius:  $wdpk-blog-list-inner-border-radius;
+		border-top-right-radius: $wdpk-blog-list-inner-border-radius;
+		border:                  $wdpk-blog-list-border-width solid $wdpk-blog-list-border-color;
+
+		.plyr
+		{
+			border-top-left-radius:  $wdpk-blog-list-inner-border-radius;
+			border-top-right-radius: $wdpk-blog-list-inner-border-radius;
+		}
+	}
+
+	.wdpk-blog-card-footer
+	{
+		@extend .card-footer;
+		background-color: $wdpk-blog-list-footer-bg-color;
+
+	}
+
+}
+
+.wdpk-quote-card
+{
+	@extend .wdpk-blog-card;
+	background-color: $wdpk-blog-list-quote-background-color;
+
+	.blockquote
+	{
+		font-size:   $wdpk-blog-list-quote-font-size;
+		font-family: $wdpk-blog-list-quote-font-family;
+		color:       $wdpk-blog-list-quote-color;
+		font-weight: $wdpk-blog-list-quote-font-weight;
+		padding:     $wdpk-blog-list-quote-padding;
+		margin: 0;
+
+		p
+		{
+			margin-bottom: $wdpk-blog-list-quote-margin-bottom;
+		}
+	}
+
+	.blockquote-footer
+	{
+		color: $wdpk-blog-list-quote-footer-font-color;
+	}
+}
+
+.wdpk-masonry
+{
+	@extend .card-columns;
+	@include from(2)
+	{
+		column-count: $wdpk-blog-list-col-count;
+		column-gap:   $wdpk-blog-list-col-gutter;
+	}
+}
+
+.wdpk-grid
+{
+	.wdpk-quote-card
+	{
+		.blockquote
+		{
+			margin-top:    50%;
+			margin-bottom: 50%;
+		}
+	}
+
+}
+
+
+.wdpk-classic
+{
+	@extend .card-columns;
+	@include from(2)
+	{
+		column-count: $wdpk-blog-list-classic-col-count;
+		column-gap:   $wdpk-blog-list-col-gutter;
+	}
+}
+
+.wdpk-grid
+{
+	@extend .card-deck;
+}

@@ -1,0 +1,71 @@
+{
+  "_args": [
+    [
+      "breakpoint-slicer@2.0.0",
+      "/Volumes/Business/apps/woodpecker"
+    ]
+  ],
+  "_from": "breakpoint-slicer@2.0.0",
+  "_id": "breakpoint-slicer@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-3HDGPentdgV7tChfq7IwMVHJBFw=",
+  "_location": "/breakpoint-slicer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "breakpoint-slicer@2.0.0",
+    "name": "breakpoint-slicer",
+    "escapedName": "breakpoint-slicer",
+    "rawSpec": "2.0.0",
+    "saveSpec": null,
+    "fetchSpec": "2.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/breakpoint-slicer/-/breakpoint-slicer-2.0.0.tgz",
+  "_spec": "2.0.0",
+  "_where": "/Volumes/Business/apps/woodpecker",
+  "author": {
+    "name": "Andrey Mikhaylov",
+    "url": "lolmaus"
+  },
+  "bugs": {
+    "url": "https://github.com/lolmaus/breakpoint-slicer/issues"
+  },
+  "description": "A very quick and efficient syntax for Breakpoint",
+  "devDependencies": {
+    "breakpoint-sass": "^2.6.1"
+  },
+  "eyeglass": {
+    "exports": "eyeglass-exports.js"
+  },
+  "homepage": "https://github.com/lolmaus/breakpoint-slicer#readme",
+  "keywords": [
+    "breakpoint",
+    "slicer",
+    "media",
+    "query",
+    "queries",
+    "media",
+    "responsive",
+    "web",
+    "design",
+    "rwd",
+    "sass",
+    "scss",
+    "eyeglass-module"
+  ],
+  "license": "MIT",
+  "main": "stylesheets/_breakpoint-slicer.sass",
+  "name": "breakpoint-slicer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolmaus/breakpoint-slicer.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.0"
+}

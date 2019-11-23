@@ -1,0 +1,828 @@
+// ===========================================>
+// Contains all the variables for the WoodPecker Dark Theme
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $ztsh-nav-link-disabled-color
+// and $ztsh-modal-content-box-shadow-xs.
+// IMPORTANT: It is mandatory to use 'ztsh' prefix for all variables
+// <===========================================
+// =============================>
+//  Import the required fonts
+// <============================
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
+
+
+// General Layout And Styling Options
+//
+$ztsh-code-block-style: 'dark' !default;
+$ztsh-lightness-value: 30%;
+
+// =============================>
+// The Bootstrap Base Colors
+// <============================
+
+// Bootstrap Colors
+//
+// The default colors that are used by by Bootstrap and inherited by WoodPecker as well.
+//
+// $ztsh-blue -    #007bff; Blue
+// $ztsh-indigo -  #6610f2; Indigo
+// $ztsh-purple -  #6f42c1; Purple
+// $ztsh-pink -    #e83e8c; Pink
+// $ztsh-red -     #dc3545; Red
+// $ztsh-orange -  #fd7e14; Orange
+// $ztsh-yellow -  #ffc107; Yellow
+// $ztsh-green -   #28a745; Green
+// $ztsh-teal -    #20c997; Teal
+// $ztsh-cyan -    #17a2b8; Cyan
+//
+$ztsh-blue: #0056c6 !default;
+$ztsh-indigo: #6610f2 !default;
+$ztsh-purple: #6f42c1 !default;
+$ztsh-pink: #e83e8c !default;
+$ztsh-red: #f03a47 !default;
+$ztsh-orange: #fd7e14 !default;
+$ztsh-yellow: #ffc107 !default;
+$ztsh-green: #38c07b !default;
+$ztsh-teal: #20c997 !default;
+$ztsh-cyan: #0dbdcd !default;
+
+// Bootstrap Grays
+//
+// Overriding the grays used by Bootsrap.
+//
+//$ztsh-white -     #fff; White
+//$ztsh-gray-100 -  #f8f9fa; Gray 100
+//$ztsh-gray-200 -  #e9ecef; Gray 200
+//$ztsh-gray-300 -  #dee2e6; Gray 300
+//$ztsh-gray-400 -  #ced4da; Gray 400
+//$ztsh-gray-500 -  #adb5bd; Gray 500
+//$ztsh-gray-600 -  #6c757d; Gray 600
+//$ztsh-gray-700 -  #495057; Gray 700
+//$ztsh-gray-800 -  #343a40; Gray 800
+//$ztsh-gray-900 -  #212529; Gray 900
+//$ztsh-black -     #000; Black
+//
+$ztsh-white: #fff !default;
+$ztsh-gray-100: #e6e6e6 !default;
+$ztsh-gray-200: #cccccc !default;
+$ztsh-gray-300: #a6a6a6 !default;
+$ztsh-gray-400: #737373 !default;
+$ztsh-gray-500: #4d4d4d !default;
+$ztsh-gray-600: #2b2b2b !default;
+$ztsh-gray-700: #1c1c1c !default;
+$ztsh-gray-800: #121212 !default;
+$ztsh-gray-900: #0c0c0c !default;
+$ztsh-black: #000 !default;
+
+// 	Colors
+//
+//	WoodPecker uses these colors throughout the theme. These colors have been overriden for the default Bootstrap components as well. So overiding these colors will directly set the colors for Bootstarp as well to match the theme and you dont need to change any of the Bootstrap variables.
+//
+// ### Theme Default Values
+//
+// $ztsh-primary-color - #0098A3; Primary Color
+// $ztsh-secondary - #6c757d; Secondary Color
+// $ztsh-success - #28a745; Success
+// $ztsh-info -  #17a2b8; Info
+// $ztsh-warning - #ffc107; Warning
+// $ztsh-danger - #dc3545; Danger
+// $ztsh-light - #f8f9fa; Light
+// $ztsh-dark - #343a40; Dark
+//
+
+// =============================>
+// Base Color Schema For The Theme
+// <============================
+$ztsh-primary-color: #0056c6 !default;
+$ztsh-secondary: $ztsh-gray-600 !default;
+$ztsh-success: $ztsh-green !default;
+$ztsh-info: $ztsh-cyan !default;
+$ztsh-warning: $ztsh-yellow !default;
+$ztsh-danger: $ztsh-red !default;
+$ztsh-light: $ztsh-gray-100 !default;
+$ztsh-dark: $ztsh-gray-800 !default;
+
+
+// Body Colors
+//
+// Colors Applied to the `<body>` element
+//
+$ztsh-body-bg: $ztsh-gray-900 !default;
+$ztsh-body-color: $ztsh-gray-200 !default;
+
+// Components
+//
+// Define common padding and border radius sizes etc for various components. All the components use values from these variables to calculate the values.
+$ztsh-border-color: $ztsh-gray-600 !default;
+$ztsh-box-shadow-sm: 0 .125rem .25rem rgba($ztsh-white, .065) !default;
+$ztsh-box-shadow: 0 .5rem 1rem rgba($ztsh-white, .15) !default;
+$ztsh-box-shadow-lg: 0 1rem 3rem rgba($ztsh-white, .175) !default;
+$ztsh-component-active-color: $ztsh-white !default;
+
+// Font Variables
+//
+// Variables for font sizes use throught the theme. We use rem values for the fonts. By Overriding these variables various fonr sizes can be set through the theme. Can directly use rem, px, em values in these variables.
+//
+$ztsh-link-color: $ztsh-primary-color !default;
+$ztsh-link-decoration: none !default;
+$ztsh-link-hover-color: lighten($ztsh-link-color, 15%) !default;
+$ztsh-link-hover-decoration: underline !default;
+
+// Form Variables
+//
+// Variables used for modifying the look of the form input fields in forms
+//
+// ### Form Variables And Their Options
+//
+$ztsh-input-bg: $ztsh-gray-700 !default;
+$ztsh-input-disabled-bg: $ztsh-gray-600 !default;
+$ztsh-input-color: $ztsh-gray-300 !default;
+$ztsh-input-border-color: $ztsh-gray-500 !default;
+$ztsh-input-box-shadow: inset 0 1px 1px rgba($ztsh-white, .075) !default;
+$ztsh-input-placeholder-color: $ztsh-gray-400 !default;
+
+
+// =============================>
+// Navigation Menu Variables
+// <============================
+
+// Navigation Variables
+//
+// Variables impacting the Header Navigation for the theme.
+
+$ztsh-menu-background: (
+							   backgroundType: color,
+							   gradientType: linear,
+							   color1: $ztsh-gray-800,
+							   color2: rgba(0, 0, 0, 0.7),
+							   degree: 90deg,
+							   backgroundImage: url(../../assets/images/grey.png),
+							   backgroundRepeat: repeat-x,
+							   backgroundHorPos: center,
+							   backgroundVerPos: center,
+							   backgroundSize: initial
+					   ) !default;
+
+// $ztsh-primary-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-primary-menu-shadow: (
+								   shadowOn: false,
+								   hOffset: 0px,
+								   vOffset: 1px,
+								   blurRadius: 10px,
+								   shadowSpread: 2px,
+								   shadowColor: rgba(255, 255, 255, 0.15)
+						   ) !default;
+
+// $ztsh-primary-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-primary-menu-border-map: (
+									   borderTop: false,
+									   borderTopColor: #000000,
+									   borderTopWidth: 2px,
+									   borderTopStyle: solid,
+									   borderRight: false,
+									   borderRightColor: #dddddd,
+									   borderRightWidth: 5px,
+									   borderRightStyle: solid,
+									   borderBottom: true,
+									   borderBottomColor: $ztsh-gray-600,
+									   borderBottomWidth: 3px,
+									   borderBottomStyle: solid,
+									   borderLeft: false,
+									   borderLeftColor: #dddddd,
+									   borderLeftWidth: 5px,
+									   borderLeftStyle: solid,
+									   borderRadius: 0px,
+							   ) !default;
+
+// Menu Items Color
+$ztsh-menu-font-color: $ztsh-gray-200 !default;
+$ztsh-menu-font-color-hover: $ztsh-primary-color !default;
+$ztsh-menu-items-side-border-color: $ztsh-gray-500 !default;
+$ztsh-menu-extras-boder-color: $ztsh-gray-500 !default;
+$ztsh-cart-number-font-color: #ffffff !default;
+$ztsh-menu-extras-font-color: $ztsh-menu-font-color !default;
+$ztsh-menu-extras-font-hover-color: $ztsh-menu-font-color-hover !default;
+
+// $ztsh-hover-effect
+// map{} - Type of Over Effects Can Use the following values
+// @key hoverType - Type of hover effect for primary menu items range from 1-4
+// @key paddingTop -  padding from top for hover effect
+// @key paddingBottom - padding from bottom for the hover effect
+// @key paddingRight - padding from right for the hover effect
+// @key padingleft - padding from left for the hover effect
+// @key hoverThickness - thickness of the hover item, value in px
+// @key hoverColorType - Background color type for the hover effect, possible values: color, gradient
+// @key animationType - type of animation possible values topToBottom, bottomToTop, rightToLeft, leftToRight
+// @key animationDistance - Distance of the animation
+// @key animationDuration - Duration of the animation in seconds like: 0.3s
+// @key animationDelay - The Delay In Transition
+// @key col1 - Color 1 For the Hover Effect
+// @key col2 - Color 2 for the Hover effect
+$ztsh-hover-effect: (
+							hoverType: 3,
+							paddingBottom: 8px,
+							hoverThickness: 2px,
+							hoverColorType: color,
+							animationType: bottomToTop,
+							animationDistance: 10px,
+							animationDuration: 0.3s,
+							animationDelay: 0s,
+							col1: $ztsh-primary-color,
+							col2: yellow
+					) !default;
+
+
+// =============================>
+// Dropdown Menu Variables
+// <============================
+
+// Dropdown Menu Variables
+//
+// Variables impacting the dropdown menu
+$ztsh-dropdown-menu-width: 250px !default;
+$ztsh-dropdown-menu-background-color: $ztsh-gray-900 !default;
+$ztsh-dropdown-menu-font-color: $ztsh-gray-200 !default;
+$ztsh-dropdown-menu-font-hover-color: $ztsh-primary-color !default;
+$ztsh-dropdown-menu-background-hover-color: $ztsh-gray-800 !default;
+$ztsh-dropdown-menu-item-separators: (
+											 separatorsOn: true,
+											 separatorColor: $ztsh-gray-700,
+											 separatorThickness: 1px
+									 ) !default;
+
+// $ztsh-dropdown-menu-shadow-map
+// Map for shadow to be applied on the dropdown menu
+// @key shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// @key hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// @key vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// @key blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// @key shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// @key shadowColor: The color of the shadow
+$ztsh-dropdown-menu-shadow-map: (
+										shadowOn: true,
+										hOffset: 0px,
+										vOffset: 16px,
+										blurRadius: 15px,
+										shadowSpread: 2px,
+										shadowColor: rgba(255, 255, 255, 0.04)
+								) !default;
+
+// $ztsh-dropdown-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+// @key borderRadius - Border radius to be applied to the border
+$ztsh-dropdown-menu-border-map: (
+										borderTop: true,
+										borderTopColor: $ztsh-gray-600,
+										borderTopWidth: 3px,
+										borderTopStyle: solid,
+										borderRight: false,
+										borderRightColor: #dddddd,
+										borderRightWidth: 5px,
+										borderRightStyle: solid,
+										borderBottom: false,
+										borderBottomColor: $ztsh-gray-200,
+										borderBottomWidth: 3px,
+										borderBottomStyle: solid,
+										borderLeft: false,
+										borderLeftColor: #dddddd,
+										borderLeftWidth: 5px,
+										borderLeftStyle: solid,
+										borderRadius: 0px,
+								) !default;
+
+
+// =============================>
+// Mega Menu Variables
+// <============================
+
+// Mega Menu Variables
+//
+// Variables impacting the Mega Menu
+//
+$ztsh-mega-menu-separators: (
+									separatorsOn: true,
+									separatorColor: $ztsh-gray-700,
+									separatorThickness: 1px
+							) !default;
+
+
+// =============================>
+// Sticky Navbar Variables
+// <============================
+// Sticky Navbar Variables
+// Variables impacting the Sticky Navbar Theme
+$ztsh-sticky-menu-font-color: $ztsh-gray-200 !default;
+$ztsh-sticky-menu-font-color-hover: $ztsh-primary-color !default;
+$ztsh-sticky-menu-extras-font-color: $ztsh-sticky-menu-font-color !default;
+$ztsh-sticky-menu-extras-font-hover-color: $ztsh-sticky-menu-font-color-hover !default;
+
+//$ztsh-sticky-menu-background - All settings for the Sticky Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-sticky-menu-background: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $ztsh-gray-800,
+									  color2: $ztsh-gray-800,
+									  degree: 90deg,
+									  backgroundImage: url(../../assets/images/grey.png),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+// $ztsh-sticky-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-sticky-menu-shadow: (
+								  shadowOn: true,
+								  hOffset: 0px,
+								  vOffset: 2px,
+								  blurRadius: 10px,
+								  shadowSpread: 2px,
+								  shadowColor: rgba(255, 255, 255, 0.03)
+						  ) !default;
+
+
+// $ztsh-sticky-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-sticky-menu-border-map: (
+									  borderTop: false,
+									  borderTopColor: $ztsh-gray-200,
+									  borderTopWidth: 3px,
+									  borderTopStyle: solid,
+									  borderRight: false,
+									  borderRightColor: #dddddd,
+									  borderRightWidth: 5px,
+									  borderRightStyle: solid,
+									  borderBottom: false,
+									  borderBottomColor: $ztsh-gray-200,
+									  borderBottomWidth: 3px,
+									  borderBottomStyle: solid,
+									  borderLeft: false,
+									  borderLeftColor: #dddddd,
+									  borderLeftWidth: 5px,
+									  borderLeftStyle: solid,
+									  borderRadius: 0px,
+							  ) !default;
+
+
+// =============================>
+// Transparent Navbar Variables
+// <============================
+// Transparent Navbar Variables
+// Variables impacting the Transparent Navbar Theme
+$ztsh-transparent-menu-font-color: $ztsh-gray-200 !default;
+$ztsh-transparent-menu-font-color-hover: $ztsh-primary-color !default;
+$ztsh-transparent-menu-extras-font-color: $ztsh-transparent-menu-font-color !default;
+$ztsh-transparent-menu-extras-font-hover-color: $ztsh-transparent-menu-font-color-hover !default;
+
+//$ztsh-transparent-menu-background - All settings for the transparent Menu
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-transparent-menu-background: (
+										   backgroundType: color,
+										   gradientType: linear,
+										   color1: rgba(0, 0, 0, 0),
+										   color2: rgba(0, 0, 0, 0.7),
+										   degree: 90deg,
+										   backgroundImage: url(../../assets/images/grey.png),
+										   backgroundRepeat: repeat-x,
+										   backgroundHorPos: center,
+										   backgroundVerPos: center,
+										   backgroundSize: initial
+								   ) !default;
+
+// $ztsh-transparent-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-transparent-menu-shadow: (
+									   shadowOn: false,
+									   hOffset: 0px,
+									   vOffset: 2px,
+									   blurRadius: 10px,
+									   shadowSpread: 2px,
+									   shadowColor: rgba(0, 0, 0, 0.03)
+							   ) !default;
+
+
+// =============================>
+// Top Bar Variables
+// <============================
+// Top Bar Variables
+// Variables impacting the Top Bar
+$ztsh-topbar-font-color: $ztsh-gray-300 !default;
+$ztsh-topbar-font-color-hover: $ztsh-primary-color !default;
+// $ztsh-topbar-background - All settings for the topbar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-topbar-background: (
+								 backgroundType: color,
+								 gradientType: linear,
+								 color1: $ztsh-gray-700,
+								 color2: rgba(0, 0, 0, 0.7),
+								 degree: 90deg,
+								 backgroundImage: url(../../assets/images/grey.png),
+								 backgroundRepeat: repeat-x,
+								 backgroundHorPos: center,
+								 backgroundVerPos: center,
+								 backgroundSize: initial
+						 ) !default;
+
+
+// $ztsh-topbar-border-map
+// Map for styling the borders of the topbar
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-topbar-border-map: (
+								 borderTop: false,
+								 borderTopColor: #0081a3,
+								 borderTopWidth: 2px,
+								 borderTopStyle: solid,
+								 borderRight: false,
+								 borderRightColor: #dddddd,
+								 borderRightWidth: 5px,
+								 borderRightStyle: solid,
+								 borderBottom: false,
+								 borderBottomColor: #dddddd,
+								 borderBottomWidth: 5px,
+								 borderBottomStyle: solid,
+								 borderLeft: false,
+								 borderLeftColor: #dddddd,
+								 borderLeftWidth: 5px,
+								 borderLeftStyle: solid,
+								 borderRadius: 0px,
+						 ) !default;
+
+
+// =============================>
+// Bottom Bar Variables
+// <============================
+
+// $ztsh-bottom-bar-background - All settings for the bottom bar background
+// @key backgroundType: Type of background needed, possible values 'color' 'gradient' 'image' 'overlay'
+// @key gradientType:  Type of gradient needed, possible values 'linear' 'radial'
+// @key color1: Color 1 for gradient also used as primary color posible value rgba(0, 0, 0, 0.5)
+// @key color2:  Color 1 for gradient, possible value rgba(0, 0, 0, 0.7),
+// @key degree: 90deg,
+// @key backgroundImage: url("img_tree.gif"),
+// @key backgroundRepeat: no-repeat, repeat-x, repeat-y, repeat
+// @key backgroundHorPos: (x-axis) Options: center, left, right
+// @key backgroundVerPos: (y-axis) Options: center, top, bottom
+// @key backgroundSize: cover, contain, initial, inherit
+$ztsh-bottom-bar-background: (
+									 backgroundType: color,
+									 gradientType: linear,
+									 color1: $ztsh-gray-800,
+									 color2: $ztsh-gray-700,
+									 degree: 90deg,
+									 backgroundImage: url(../../assets/images/grey.png),
+									 backgroundRepeat: repeat-x,
+									 backgroundHorPos: center,
+									 backgroundVerPos: center,
+									 backgroundSize: initial
+							 ) !default;
+
+// $ztsh-bottom-bar-menu-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-bottom-bar-menu-shadow: (
+									  shadowOn: false,
+									  hOffset: 0px,
+									  vOffset: 2px,
+									  blurRadius: 10px,
+									  shadowSpread: 2px,
+									  shadowColor: rgba(255, 255, 255, 0.025)
+							  ) !default;
+
+// $ztsh-bottom-bar-menu-border-map
+// Map for styling the borders of the primary menu
+// @key borderTop - Set to false if top border is not needed
+// @key borderTopColor - Color Of top border
+// @key borderTopWidth - Width Of top border
+// @key borderTopStyle - Style Of top border
+$ztsh-bottom-bar-menu-border-map: (
+										  borderTop: false,
+										  borderTopColor: $ztsh-gray-200,
+										  borderTopWidth: 1px,
+										  borderTopStyle: solid,
+										  borderRight: false,
+										  borderRightColor: #dddddd,
+										  borderRightWidth: 5px,
+										  borderRightStyle: solid,
+										  borderBottom: false,
+										  borderBottomColor: #dddddd,
+										  borderBottomWidth: 5px,
+										  borderBottomStyle: solid,
+										  borderLeft: false,
+										  borderLeftColor: #dddddd,
+										  borderLeftWidth: 5px,
+										  borderLeftStyle: solid,
+										  borderRadius: 0px,
+								  ) !default;
+
+// =============================>
+// Off Canvas | Mobile Header Variables
+// <============================
+// Off Canvas | Mobile Header Variables
+// Variables impacting the Off Canvas | Mobile Header
+
+$ztsh-off-canvas-font-color: $ztsh-menu-font-color !default;
+$ztsh-off-canvas-font-hover-color: $ztsh-menu-font-color-hover !default;
+$ztsh-off-canvas-background-color: $ztsh-gray-700 !default;
+$ztsh-off-canvas-separator-color: $ztsh-gray-600 !default;
+$ztsh-off-canvas-body-color: rgba(0, 0, 0, .5) !default;
+
+
+// $ztsh-off-canvas-shadow:
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-off-canvas-shadow: (
+								 shadowOn: true,
+								 hOffset: 3px,
+								 vOffset: 0px,
+								 blurRadius: 7px,
+								 shadowSpread: 2px,
+								 shadowColor: rgba(255, 255, 255, 0.025)
+						 ) !default;
+
+// =============================>
+// Mobile Header Section For Variables
+// <============================
+// $ztsh-mobile-menu-background - All settings for the mobile menu background
+$ztsh-mobile-header-background: (
+										backgroundType: color,
+										gradientType: linear,
+										color1: $ztsh-gray-800,
+										color2: $ztsh-gray-800,
+										degree: 90deg,
+										backgroundImage: url(../../assets/images/grey.png),
+										backgroundRepeat: repeat-x,
+										backgroundHorPos: center,
+										backgroundVerPos: center,
+										backgroundSize: initial
+								) !default;
+
+
+// $ztsh-mobile-menu-shadow
+// shadowOn: whether shadow needs to be applied to element or not 'true' 'false'
+// hOffset: The horizontal offset of the shadow in px. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box
+// vOffset: The vertical offset of the shadow in px. A positive value puts the shadow below the box, a negative value puts the shadow above the box
+// blurRadius: The blur radius in px. The higher the number, the more blurred the shadow will be
+// shadowSpread: The spread radius in px. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// shadowColor: The color of the shadow
+$ztsh-mobile-header-shadow: (
+									shadowOn: true,
+									hOffset: 0px,
+									vOffset: 3px,
+									blurRadius: 10px,
+									shadowSpread: 2px,
+									shadowColor: rgba(255, 255, 255, 0.015)
+							) !default;
+
+
+
+// Sidebar Variables
+//
+// Variables impacting the Sidebar
+$ztsh-sidebar-background-color: $ztsh-gray-700 !default;
+$ztsh-side-border-color: $ztsh-gray-600 !default;
+
+
+// =============================>
+//  Shortcode Variables
+// <============================
+
+
+// Accordion
+//
+// Variables setting the look and feel of the accordion for the theme
+//
+
+$ztsh-accordion-title-color: $ztsh-gray-200;
+$ztsh-accordion-body-color: $ztsh-gray-700;
+$ztsh-accordion-body-font-color: $ztsh-gray-300;
+$ztsh-accordion-header-color: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $ztsh-gray-800,
+									  color2: rgba(0, 0, 0, 0.7),
+									  degree: 90deg,
+									  backgroundImage: url(../../assets/images/grey.png),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+$ztsh-accordion-border-map: (
+									borderTop: true,
+									borderTopColor: $ztsh-gray-700,
+									borderTopWidth: 1px,
+									borderTopStyle: solid,
+									borderRight: true,
+									borderRightColor: $ztsh-gray-700,
+									borderRightWidth: 1px,
+									borderRightStyle: solid,
+									borderBottom: true,
+									borderBottomColor: $ztsh-gray-700,
+									borderBottomWidth: 1px,
+									borderBottomStyle: solid,
+									borderLeft: true,
+									borderLeftColor: $ztsh-gray-700,
+									borderLeftWidth: 1px,
+									borderLeftStyle: solid,
+									borderRadius: .25rem,
+							) !default;
+
+$ztsh-accordion-header-border-map: (
+										   borderTop: false,
+										   borderTopColor: $ztsh-gray-200,
+										   borderTopWidth: 1px,
+										   borderTopStyle: solid,
+										   borderRight: false,
+										   borderRightColor: $ztsh-gray-200,
+										   borderRightWidth: 1px,
+										   borderRightStyle: solid,
+										   borderBottom: true,
+										   borderBottomColor: $ztsh-gray-700,
+										   borderBottomWidth: 1px,
+										   borderBottomStyle: solid,
+										   borderLeft: false,
+										   borderLeftColor: $ztsh-gray-200,
+										   borderLeftWidth: 1px,
+										   borderLeftStyle: solid,
+										   borderRadius: 0px,
+								   ) !default;
+
+// List Groups
+//
+// Variables setting the look and feel of the Listy Group for the theme
+$ztsh-listgroup-background-color: transparent  !default;
+$ztsh-listgroup-hover-background-color: $ztsh-gray-700 !default;
+$ztsh-listgroup-font-color: $ztsh-gray-200 !default;
+$ztsh-listgroup-font-hover-color: $ztsh-gray-100 !default;
+$ztsh-listgroup-border-color: $ztsh-gray-600 !default;
+
+
+// Navpills
+//
+// Variables setting various parameters of the Navpills
+$ztsh-navpills-margin: .5rem !default;
+$ztsh-navpills-inactive-hover-color: $ztsh-gray-200 !default;
+$ztsh-navpills-border-radius: 0rem !default;
+
+
+
+// Breadcrumbs
+//
+// Variables setting various parameters of the Breadcrumbs
+$ztsh-breadcrumbs-background-color: $ztsh-gray-800 !default;
+$ztsh-breadcrumbs-font-color: $ztsh-white !default;
+
+
+// Cards
+//
+// Variables setting various parameters of the Cards
+
+$ztsh-card-border-color: $ztsh-gray-900!default;
+$ztsh-card-title-font-color: $ztsh-white !default;
+$ztsh-card-body-font-color: $ztsh-gray-200 !default;
+$ztsh-card-header-font-color: $ztsh-gray-100 !default;
+$ztsh-card-footer-font-color: $ztsh-gray-100 !default;
+$ztsh-card-shadow: (
+						   shadowOn: false,
+						   hOffset: 0px,
+						   vOffset: 3px,
+						   blurRadius: 10px,
+						   shadowSpread: 2px,
+						   shadowColor: rgba(255, 255, 255, 0.15)
+				   ) !default;
+
+$ztsh-card-body-background: (
+									backgroundType: color,
+									gradientType: linear,
+									color1: $ztsh-gray-800,
+									color2: $ztsh-gray-800,
+									degree: 0deg,
+									backgroundImage: url(../../assets/images/background-black.jpg),
+									backgroundRepeat: repeat-x,
+									backgroundHorPos: center,
+									backgroundVerPos: center,
+									backgroundSize: initial
+							) !default;
+$ztsh-card-header-background: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $ztsh-gray-700,
+									  color2: $ztsh-gray-700,
+									  degree: 0deg,
+									  backgroundImage: url(../../assets/images/background-black.jpg),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+$ztsh-card-footer-background: (
+									  backgroundType: color,
+									  gradientType: linear,
+									  color1: $ztsh-gray-700,
+									  color2: $ztsh-gray-700,
+									  degree: 0deg,
+									  backgroundImage: url(../../assets/images/background-black.jpg),
+									  backgroundRepeat: repeat-x,
+									  backgroundHorPos: center,
+									  backgroundVerPos: center,
+									  backgroundSize: initial
+							  ) !default;
+
+// Image Hovers
+//
+// Variables setting various parameters of the Image Hover Effects
+$ztsh-image-hover-image-bg: rgba(0, 0, 0, .8) !default;
+$ztsh-image-hover-figcaption-bg: rgba(0, 0, 0, .8) !default;
+$ztsh-image-hover-figcaption-padding: 25px !default;
+$ztsh-image-hover-text-color: $ztsh-gray-100 !default;
+$ztsh-image-hover-transition-duration: .8s !default;
+$ztsh-image-hover-shift-distance: 10px !default;
+
+
+
+// Dropdowns (Components)
+// Variables for the dropdown component
+
+$ztsh-dropdown-bg: $ztsh-gray-600 !default;
+
+
+// Comments Shortcode
+// Variables setting various parameters of the Comments Shortcode
+$ztsh-comments-bg-color: $ztsh-gray-700 !default;
+
+
+// Audio Shortcode
+$ztsh-plyr-audio-controls-bg: $ztsh-gray-700 !default;
+$ztsh-plyr-audio-control-color: $ztsh-gray-200 !default;
+$ztsh-plyr-audio-control-color-hover: #fff !default;
+$ztsh-plyr-audio-control-bg-hover: $ztsh-primary-color !default;

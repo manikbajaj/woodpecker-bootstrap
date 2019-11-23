@@ -1,0 +1,124 @@
+// =============================>
+//  Clients Style Partial
+// <============================
+// TODO: Border is currently hidden on mobile devices see if you want to do anything about it later
+
+.wdpk-clients
+{
+
+	@if ($wdpk-clients-border-enable == true)
+	{
+		border-bottom: 1px solid $wdpk-clients-border-color;
+		@include to(md)
+		{
+			border-bottom: none;
+		}
+	}
+
+	&:last-of-type
+	{
+		border-bottom: none;
+	}
+
+	.wdpk-client-item
+	{
+		cursor:             pointer;
+		padding:            $wdpk-clients-padding;
+		text-align:         center;
+		align-self:         center;
+
+
+
+		@if ($wdpk-clients-border-enable == true)
+		{
+			border-right: 1px solid $wdpk-clients-border-color;
+			@include to(md)
+			{
+				border-right: none;
+			}
+		}
+
+		&:last-of-type
+		{
+			border: none;
+		}
+
+		&:hover
+		{
+
+			@if ($wdpk-clients-colored-bg-hover == true)
+			{
+				@include wdpk-background($wdpk-clients-colored-bg-color);
+			}
+		}
+
+
+		img
+		{
+
+			transition:         all $wdpk-global-transition-duration $wdpk-global-transition-function;
+			width:              100%;
+			height:             auto;
+
+			@if ($wdpk-clients-default-color == 'colored')
+			{
+				-webkit-filter: grayscale(0%);
+				-moz-filter:    grayscale(0%);
+				-o-filter:      grayscale(0%);
+				filter:         grayscale(0%);
+			} @else if ($wdpk-clients-default-color  == 'grayscale')
+			{
+				-webkit-filter: grayscale(100%);
+				-moz-filter:    grayscale(100%);
+				-o-filter:      grayscale(100%);
+				filter:         grayscale(100%);
+			}
+		}
+
+		&:hover img
+		{
+
+			@include wdpk-hoverAnimations($wdpk-clients-hover-animation);
+
+			@if ($wdpk-clients-default-hover-color == 'colored')
+			{
+				-webkit-filter: grayscale(0%);
+				-moz-filter:    grayscale(0%);
+				-o-filter:      grayscale(0%);
+				filter:         grayscale(0%);
+			} @else if ($wdpk-clients-default-hover-color  == 'grayscale')
+			{
+				-webkit-filter: grayscale(100%);
+				-moz-filter:    grayscale(100%);
+				-o-filter:      grayscale(100%);
+				filter:         grayscale(100%);
+			}
+			@if ($wdpk-clients-colored-bg-hover == true)
+			{
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+}
+
+.wdpk-clients-carousel
+{
+	.flickity-viewport
+	{
+		margin: 0 0 40px 0;
+
+		.carousel-cell
+		{
+			margin-right: $wdpk-clients-carousel-items-gap;
+
+			img
+			{
+				width:  $wdpk-clients-carousel-image-width;
+				height: $wdpk-clients-carousel-image-height;
+			}
+
+		}
+
+	}
+
+}

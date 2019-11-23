@@ -1,0 +1,17 @@
+// =============================>
+//  Styling Partial For DropCaps
+// <============================
+
+.wdpk-dropcaps
+{
+
+	color:         $wdpk-dropcaps-color;
+	float:         left;
+	font-family:   $wdpk-dropcaps-font-family;
+	font-size:     $wdpk-dropcaps-font-size;
+	line-height:   $wdpk-dropcaps-font-size;
+	padding-top:   0px;
+	padding-right: $wdpk-dropcaps-padding-right;
+	padding-left:  $wdpk-dropcaps-padding-left;
+
+}

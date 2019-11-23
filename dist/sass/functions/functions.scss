@@ -1,0 +1,64 @@
+// ===========================================>
+// Contains all the functions that are specific to
+// the WoodPecker Theme
+// Functions should follow the `wdpk-what-it-does()` formula for
+// consistent naming.
+// IMPORTANT: It is mandatory to use 'variables-wdpk' prefix for all functions
+// <===========================================
+
+@function wdpkCaculateBorder($map, $key, $value)
+{
+	@if (map-get($map,$key) == true)
+	{
+		@return map-get($map, $value);
+	} @else
+	{
+		@return 0px;
+	}
+}
+
+// @Function variables-wdpkCalculateTop
+// Calculates the top value that must be assigned to the dropdown menu to align it properly to the navbar
+//
+// @param
+@function wdpkCalculateTop(
+	$wdpk-bottom-bar-enabled,
+	$wdpk-bottom-height,
+	$wdpk-menu-height,
+	$wdpk-bottom-bar-menu-border-map,
+	$wdpk-primary-menu-border-map
+)
+{
+	$primary-top-border: wdpkCaculateBorder($wdpk-primary-menu-border-map, borderTop, borderTopWidth);
+	$primary-bottom-border: wdpkCaculateBorder($wdpk-primary-menu-border-map, borderBottom, borderBottomWidth);
+	$bottom-top-border: wdpkCaculateBorder($wdpk-bottom-bar-menu-border-map, borderTop, borderTopWidth);
+	$bottom-bottom-border: wdpkCaculateBorder($wdpk-bottom-bar-menu-border-map, borderBottom, borderBottomWidth);
+
+
+	// Calculate the Total For the Borders
+	$primary-border-total: ($primary-top-border + $primary-bottom-border);
+	$bottom-border-total: ($bottom-top-border + $bottom-bottom-border );
+
+	$primary-total: $primary-border-total ;
+	$bottom-total:  $bottom-border-total;
+	@if ($wdpk-bottom-bar-enabled == true)
+	{
+		@return $wdpk-bottom-height - $bottom-total;
+
+	} @else
+	{
+		@return $wdpk-menu-height - $primary-total;
+	}
+}
+
+// =============================>
+// Calculates the size of the image of the lightbox grid
+// <=============================
+// @function - wdpk-lightboxImageSize
+// @author Uneebox
+// @since Version 1.0.0
+
+@function wdpk-lightboxImageSize($colCount,$gutterSpace)
+{
+	@return calc((100% - ((#{$gutterSpace} * 2)* #{$colCount})) / #{$colCount});
+}

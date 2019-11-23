@@ -1,0 +1,878 @@
+// =============================>
+//  Abstraction layer for the Animate.Css
+// <============================
+
+// Animations
+//
+// Various Classes that can be used for animations
+//
+// | Class  | Utility |
+// |----------|-------|
+// |wdpk-fadeInRightBig | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeInUp | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeInUpBig | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOut | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutDown | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutDownBig | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutLeftBig | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutRightBig | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutUp | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-fadeOutUpBig | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-flipInX | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker//demos/main-demo/shortcodes/animations.html)  |
+// |wdpk-flipInY | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-flipOutX | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-flipOutY | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-lightSpeedIn | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-lightSpeedOut | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateIn | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateInDownLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateInDownRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateInUpLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateInUpRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateOut | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateOutDownLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateOutDownRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateOutUpLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rotateOutUpRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-hinge | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rollIn | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-rollOut | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomIn | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomInDown | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomInLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomInRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomInUp | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomOut | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomOutDown | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomOutLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomOutRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-zoomOutUp | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideInDown | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideInLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideInRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideInUp | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideOutDown | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideOutLeft | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideOutRight | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+// |wdpk-slideOutUp | Check the animations on the following link [Check All Animations Here](https://uneebox.com/woodpecker/demos/main-demo/shortcodes/animations.html) |
+//
+// Styleguide CSS Classes.Animations (organization)
+
+.wdpk-bounce
+{
+
+	@include bounce(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-flash
+{
+	@include flash(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-pulse
+{
+	@include pulse(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rubberBand
+{
+	@include rubberBand(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-shake
+{
+	@include shake(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+
+.wdpk-swing
+{
+	@include swing(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-tada
+{
+	@include tada(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-wobble
+{
+	@include wobble(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-jello
+{
+	@include jello(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceIn
+{
+	@include bounceIn(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceInDown
+{
+	@include bounceInDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceInLeft
+{
+	@include bounceInLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceInRight
+{
+	@include bounceInRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceInUp
+{
+	@include bounceInUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceOut
+{
+	@include bounceOut(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceOutDown
+{
+	@include bounceOutDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceOutLeft
+{
+	@include bounceOutLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceOutRight
+{
+	@include bounceOutRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-bounceOutUp
+{
+	@include bounceOutUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeIn
+{
+	@include fadeIn(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInDown
+{
+	@include fadeInDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInDownBig
+{
+	@include fadeInDownBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInLeft
+{
+	@include fadeInLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInLeftBig
+{
+	@include fadeInLeftBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInRight
+{
+	@include fadeInRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInRightBig
+{
+	@include fadeInRightBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInUp
+{
+	@include fadeInUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeInUpBig
+{
+	@include fadeInUpBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOut
+{
+	@include fadeOut(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutDown
+{
+	@include fadeOutDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutDownBig
+{
+	@include fadeOutDownBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutLeft
+{
+	@include fadeOutLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutLeftBig
+{
+	@include fadeOutLeftBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutRight
+{
+	@include fadeOutRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutRightBig
+{
+	@include fadeOutRightBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutUp
+{
+	@include fadeOutUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-fadeOutUpBig
+{
+	@include fadeOutUpBig(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-flipInX
+{
+	@include flipInX(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-flipInY
+{
+	@include flipInY(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-flipOutX
+{
+	@include flipOutX(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-flipOutY
+{
+	@include flipOutY(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-lightSpeedIn
+{
+	@include lightSpeedIn(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-lightSpeedOut
+{
+	@include lightSpeedOut(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateIn
+{
+	@include rotateIn(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateInDownLeft
+{
+	@include rotateInDownLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateInDownRight
+{
+	@include rotateInDownRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateInUpLeft
+{
+	@include rotateInUpLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateInUpRight
+{
+	@include rotateInUpRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateOut
+{
+	@include rotateOut(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateOutDownLeft
+{
+	@include rotateOutDownLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateOutDownRight
+{
+	@include rotateOutDownRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateOutUpLeft
+{
+	@include rotateOutUpLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rotateOutUpRight
+{
+	@include rotateOutUpRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-hinge
+{
+	@include hinge(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+
+.wdpk-rollIn
+{
+	@include rollIn(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-rollOut
+{
+	@include rollOut(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomIn
+{
+	@include zoomIn(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomInDown
+{
+	@include zoomInDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomInLeft
+{
+	@include zoomInLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomInRight
+{
+	@include zoomInRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomInUp
+{
+	@include zoomInUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomOut
+{
+	@include zoomOut(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomOutDown
+{
+	@include zoomOutDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomOutLeft
+{
+	@include zoomOutLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomOutRight
+{
+	@include zoomOutRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-zoomOutUp
+{
+	@include zoomOutUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideInDown
+{
+	@include slideInDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideInLeft
+{
+	@include slideInLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideInRight
+{
+	@include slideInRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideInUp
+{
+	@include slideInUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideOutDown
+{
+	@include slideOutDown(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideOutLeft
+{
+	@include slideOutLeft(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideOutRight
+{
+	@include slideOutRight(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}
+
+.wdpk-slideOutUp
+{
+	@include slideOutUp(
+			$duration: map_get($wdpk-animations-map, duration),
+			$count: map_get($wdpk-animations-map, count),
+			$delay: map_get($wdpk-animations-map, delay),
+			$function: map_get($wdpk-animations-map, function),
+			$fill: map_get($wdpk-animations-map, fill)
+	)
+}

@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      "git+https://github.com/geoffgraham/animate.scss.git",
+      "/Volumes/Business/apps/woodpecker"
+    ]
+  ],
+  "_from": "git+https://github.com/geoffgraham/animate.scss.git",
+  "_id": "animatewithsass@git+https://github.com/geoffgraham/animate.scss.git#4e59b638a75cb06e2a4c73526b9f0436595aca3b",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/animatewithsass",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/geoffgraham/animate.scss.git",
+    "rawSpec": "git+https://github.com/geoffgraham/animate.scss.git",
+    "saveSpec": "git+https://github.com/geoffgraham/animate.scss.git",
+    "fetchSpec": "https://github.com/geoffgraham/animate.scss.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/geoffgraham/animate.scss.git#4e59b638a75cb06e2a4c73526b9f0436595aca3b",
+  "_spec": "git+https://github.com/geoffgraham/animate.scss.git",
+  "_where": "/Volumes/Business/apps/woodpecker",
+  "author": {
+    "name": "geoffgraham",
+    "email": "@geoffreygraham"
+  },
+  "bugs": {
+    "url": "https://github.com/geoffgraham/animate.scss/issues"
+  },
+  "description": "A SASS port of Dan Eden's Animate.css",
+  "homepage": "https://github.com/geoffgraham/animate.scss#readme",
+  "keywords": [
+    "animate.scss",
+    "animate.css",
+    "animate"
+  ],
+  "license": "MIT",
+  "main": "animate.scss",
+  "name": "animatewithsass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffgraham/animate.scss.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "3.2.1"
+}

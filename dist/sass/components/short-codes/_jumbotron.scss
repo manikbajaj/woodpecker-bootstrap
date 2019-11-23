@@ -1,0 +1,10 @@
+// =============================>
+//  Jumbotron Style Partial
+// <============================
+
+.wdpk-jumbotron
+{
+	@include wdpk-background($wdpk-jumbotron-bg-map);
+	@include wdpk-shadow($wdpk-jumbotron-shadow);
+	@include wdpk-addBorder($wdpk-jumbotron-border);
+}
