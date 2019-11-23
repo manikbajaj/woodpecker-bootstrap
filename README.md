@@ -31,7 +31,6 @@ Once you download and unzip the contents of the WoodPecker® Multipurpose Bootst
 │   ├── documentation           -   (Documentation files for WoodPecker®)
 │   ├── template                -   (The main theme folder)
 │   ├── demos                   -   (Contains all the demo sites)
-│   └── Licensing               -   (License details for WoodPecker®)
 
 ```
 
